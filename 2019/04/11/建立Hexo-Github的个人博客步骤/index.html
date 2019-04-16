@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">324</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">385</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -412,11 +412,10 @@ height:50vh;
 </code></pre><blockquote>
 <p>hexo new “New blog”<br>    此处可简化为 <figure class="highlight m"><figcaption><span>> hexo n ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### Step4 上传</span><br><span class="line">&gt;hexo g</span><br><span class="line">&gt;hexo s</span><br><span class="line">&gt;hexo d</span><br><span class="line"></span><br><span class="line">### appendix1 hexo命令</span><br><span class="line">### appendix2 theme修改</span><br><span class="line"></span><br><span class="line">## 链接github</span><br><span class="line">### Step1 新建repo</span><br><span class="line">### Step2 修改blog配置文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 链接域名(Namesilo)</span><br><span class="line">### Step1 DNS解析</span><br><span class="line">### Step2 链接github</span><br><span class="line">### Step3 使用</span><br><span class="line"></span><br><span class="line">## 其他使用</span><br><span class="line">### part <span class="number">1</span> 增加本地图片</span><br><span class="line">#### 方法一 使用标签插件</span><br><span class="line">这个是HEXO <span class="number">3</span> 之前一位网友为图片路径开发的插件，被集成在了Hexo3 里面，官方文档的使用方法如下：</span><br><span class="line">```md</span><br><span class="line">&#123;<span class="comment">% asset_path slug %&#125;</span></span><br><span class="line">&#123;<span class="comment">% asset_img slug [title] %&#125;</span></span><br><span class="line">&#123;<span class="comment">% asset_link slug [title] %&#125;</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p>使用案例：</p>
-<pre><code class="md">
-</code></pre>
-<p>这种方式的问题在于，使用markdown文档编辑器时不能看到图片，只能显示标签代码</p>
-<h2 id="小尾巴"><a href="#小尾巴" class="headerlink" title="小尾巴"></a>小尾巴</h2><pre><code>啪啦啪啦，简单地就建立玩玩看呀~~至于残留的问题我，不管了先哼唧~
+<p>使用案例：<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```</span></span><br><span class="line"><span class="code">这种方式的问题在于，使用markdown文档编辑器时不能看到图片，只能显示标签代码</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">#### 方法二 markdown使用路径</span></span><br><span class="line"><span class="code">传统的markdown语法插入方式：</span></span><br><span class="line"><span class="code">```md</span></span><br><span class="line"><span class="code">![描述文字](url)</span></span><br></pre></td></tr></table></figure></p>
+<p>实例代码<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">阁楼图片</span>](<span class="link">\photos\Notre-Dame_de_Paris_1.jpg</span>)</span><br></pre></td></tr></table></figure></p>
+<p>然而这种方法的问题在于不能够设置大小</p>
+<h4 id="方法三-CDN引用"><a href="#方法三-CDN引用" class="headerlink" title="方法三 CDN引用"></a>方法三 CDN引用</h4><h2 id="小尾巴"><a href="#小尾巴" class="headerlink" title="小尾巴"></a>小尾巴</h2><pre><code>啪啦啪啦，简单地就建立玩玩看呀~~至于残留的问题我，不管了先哼唧~
 </code></pre>
     </article>
     <!-- license  -->
@@ -425,7 +424,7 @@ height:50vh;
             <p>原文作者：<a href="http://www.microyue.com">glazia_luna</a>
             </p><p>原文链接：<a href="http://www.microyue.com/2019/04/11/建立Hexo-Github的个人博客步骤/">http://www.microyue.com/2019/04/11/建立Hexo-Github的个人博客步骤/</a>
             </p><p>发表日期：<a href="http://www.microyue.com/2019/04/11/建立Hexo-Github的个人博客步骤/">April 11th 2019, 1:51:03 pm</a>
-            </p><p>更新日期：<a href="http://www.microyue.com/2019/04/11/建立Hexo-Github的个人博客步骤/">April 16th 2019, 3:47:59 pm</a>
+            </p><p>更新日期：<a href="http://www.microyue.com/2019/04/11/建立Hexo-Github的个人博客步骤/">April 16th 2019, 4:05:31 pm</a>
             </p><p>版权声明：<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">可转载不可商用</a></p>
         </div>
     
@@ -555,7 +554,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备材料"><span class="toc-number">2.</span> <span class="toc-text">准备材料</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖"><span class="toc-number">2.1.</span> <span class="toc-text">安装依赖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地hexo"><span class="toc-number">3.</span> <span class="toc-text">本地hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1-建立文件夹"><span class="toc-number">3.1.</span> <span class="toc-text">Step1 建立文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2-初始化Hexo"><span class="toc-number">3.2.</span> <span class="toc-text">Step2 初始化Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step3-新建post"><span class="toc-number">3.3.</span> <span class="toc-text">Step3 新建post</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小尾巴"><span class="toc-number">4.</span> <span class="toc-text">小尾巴</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备材料"><span class="toc-number">2.</span> <span class="toc-text">准备材料</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖"><span class="toc-number">2.1.</span> <span class="toc-text">安装依赖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地hexo"><span class="toc-number">3.</span> <span class="toc-text">本地hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1-建立文件夹"><span class="toc-number">3.1.</span> <span class="toc-text">Step1 建立文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2-初始化Hexo"><span class="toc-number">3.2.</span> <span class="toc-text">Step2 初始化Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step3-新建post"><span class="toc-number">3.3.</span> <span class="toc-text">Step3 新建post</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法三-CDN引用"><span class="toc-number">3.3.1.</span> <span class="toc-text">方法三 CDN引用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小尾巴"><span class="toc-number">4.</span> <span class="toc-text">小尾巴</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -568,8 +567,6 @@ top:50vh;
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-panel-archives">
     <!-- 在ejs中将archive按照时间排序 -->
-    
-    
     
     
     
@@ -681,9 +678,9 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="Ucadity"><span class="iconfont-archer">&#xe606;</span>Ucadity</span>
     
-        <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
-    
         <span class="sidebar-tag-name" data-tags="Hexo"><span class="iconfont-archer">&#xe606;</span>Hexo</span>
+    
+        <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
     
         <span class="sidebar-tag-name" data-tags="labview"><span class="iconfont-archer">&#xe606;</span>labview</span>
     
@@ -722,15 +719,15 @@ jsonContent:
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="考试整理"><span class="iconfont-archer">&#xe60a;</span>考试整理</span>
-    
         <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
+    
+        <span class="sidebar-category-name" data-categories="考试整理"><span class="iconfont-archer">&#xe60a;</span>考试整理</span>
     
         <span class="sidebar-category-name" data-categories="Study"><span class="iconfont-archer">&#xe60a;</span>Study</span>
     
-        <span class="sidebar-category-name" data-categories="Others"><span class="iconfont-archer">&#xe60a;</span>Others</span>
-    
         <span class="sidebar-category-name" data-categories="Skill"><span class="iconfont-archer">&#xe60a;</span>Skill</span>
+    
+        <span class="sidebar-category-name" data-categories="Others"><span class="iconfont-archer">&#xe60a;</span>Others</span>
     
         <span class="sidebar-category-name" data-categories="Robotics"><span class="iconfont-archer">&#xe60a;</span>Robotics</span>
     
