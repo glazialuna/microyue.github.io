@@ -22,7 +22,7 @@
     <meta name="description" content>
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>建立Hexo + Github的个人博客步骤 · Bonny &amp; Ponny</title>
+    <title>Codelab · Bonny &amp; Ponny</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -217,7 +217,7 @@
                 <a href="/">Bonny &amp; Ponny.</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">建立Hexo + Github的个人博客步骤</a>
+                <a href="#" class="post-name">Codelab</a>
             </div>
     </div>
     
@@ -247,7 +247,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            建立Hexo + Github的个人博客步骤
+            Codelab
             <!-- 404 -->
             
         </h1>
@@ -255,6 +255,8 @@ height:50vh;
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+                CodeLab-Anti
             
             <!-- 404 -->
             
@@ -264,20 +266,14 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
-                    <div class="post-intro-tags">
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Hexo">Hexo</a>
-    
-</div>
-                
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">485</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">389</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/04/11</span>
+                    <span class="post-intro-time">2019/05/11</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -401,36 +397,23 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  写着作业觉得可以尝试一波blog记录了，搜索了一下，hexo作为一种比较简单，依赖较少，安装方便且支持markdown语言的优秀工具……嘿嘿</p>
-<h2 id="准备材料"><a href="#准备材料" class="headerlink" title="准备材料"></a>准备材料</h2><h3 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h3><p>1.<strong>node.js</strong>安装<a href="https://classroom.udacity.com/courses/ud187" target="_blank" rel="noopener">官网传送门</a><br>2.git安装<br><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">git官网传送门</a><br><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">git教程</a><br>3.hexo安装</p>
-<blockquote>
-<p>a</p>
-</blockquote>
-<h2 id="本地hexo"><a href="#本地hexo" class="headerlink" title="本地hexo"></a>本地hexo</h2><h3 id="Step1-建立文件夹"><a href="#Step1-建立文件夹" class="headerlink" title="Step1 建立文件夹"></a>Step1 建立文件夹</h3><pre><code>用以储存：
-文件夹的内容展示如下：
-</code></pre><h3 id="Step2-初始化Hexo"><a href="#Step2-初始化Hexo" class="headerlink" title="Step2 初始化Hexo"></a>Step2 初始化Hexo</h3><h3 id="Step3-新建post"><a href="#Step3-新建post" class="headerlink" title="Step3 新建post"></a>Step3 新建post</h3><pre><code>分解
-</code></pre><blockquote>
-<p>hexo new “New blog”<br>    此处可简化为 <figure class="highlight m"><figcaption><span>> hexo n ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### Step4 上传</span><br><span class="line">&gt;hexo g</span><br><span class="line">&gt;hexo s</span><br><span class="line">&gt;hexo d</span><br><span class="line"></span><br><span class="line">### appendix1 hexo命令</span><br><span class="line">### appendix2 theme修改</span><br><span class="line"></span><br><span class="line">## 链接github</span><br><span class="line">### Step1 新建repo</span><br><span class="line">### Step2 修改blog配置文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 链接域名(Namesilo)</span><br><span class="line">### Step1 DNS解析</span><br><span class="line">### Step2 链接github</span><br><span class="line">### Step3 使用</span><br><span class="line"></span><br><span class="line">## 其他使用</span><br><span class="line">### part <span class="number">1</span> 增加本地图片</span><br><span class="line">#### 方法一 使用标签插件</span><br><span class="line">这个是HEXO <span class="number">3</span> 之前一位网友为图片路径开发的插件，被集成在了Hexo3 里面，官方文档的使用方法如下：</span><br><span class="line">```md</span><br><span class="line">&#123;<span class="comment">% asset_path slug %&#125;</span></span><br><span class="line">&#123;<span class="comment">% asset_img slug [title] %&#125;</span></span><br><span class="line">&#123;<span class="comment">% asset_link slug [title] %&#125;</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>使用案例：<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p>这种方式的问题在于，使用markdown文档编辑器时不能看到图片，只能显示标签代码</p>
-<h4 id="方法二-markdown使用路径"><a href="#方法二-markdown使用路径" class="headerlink" title="方法二 markdown使用路径"></a>方法二 markdown使用路径</h4><p>传统的markdown语法插入方式：<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">描述文字</span>](<span class="link">url</span>)</span><br></pre></td></tr></table></figure></p>
-<p>实例代码<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">阁楼图片</span>](<span class="link">\photos\Notre-Dame_de_Paris_1.jpg</span>)</span><br></pre></td></tr></table></figure></p>
-<p>然而这种方法的问题在于不能够设置大小</p>
-<h4 id="方法三-CDN引用（加速）"><a href="#方法三-CDN引用（加速）" class="headerlink" title="方法三 CDN引用（加速）"></a>方法三 CDN引用（加速）</h4><h3 id="part-2-增加表格"><a href="#part-2-增加表格" class="headerlink" title="part 2 增加表格"></a>part 2 增加表格</h3><h4 id="方法一-markdown语言"><a href="#方法一-markdown语言" class="headerlink" title="方法一 markdown语言"></a>方法一 markdown语言</h4><h4 id="方法二-html标签"><a href="#方法二-html标签" class="headerlink" title="方法二 html标签"></a>方法二 html标签</h4><blockquote>
-<p>rowspan<br>colspan<br>style=”width: 10px;height:=12;”<br>实例:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">"2"</span> <span class="attr">style</span>=<span class="string">"width: 10px;"</span>&gt;</span>输入重定向<span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">        &lt;td &gt;语法：command &lt; input-file&lt;/td&gt;  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span> &gt;</span>行三列二<span class="tag">&lt;/<span class="name">td</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>  可以改变表格的宽度、长度、跨行等操作</p>
-<h2 id="小尾巴"><a href="#小尾巴" class="headerlink" title="小尾巴"></a>小尾巴</h2><pre><code>啪啦啪啦，简单地就建立玩玩看呀~~至于残留的问题我，不管了先哼唧~
-</code></pre>
+        <p>OceanBase?<br>金融级分布式架构<br>–三地五中心（五地，保证安全可靠性）</p>
+<h1 id="mPaaS"><a href="#mPaaS" class="headerlink" title="mPaaS"></a>mPaaS</h1><p><a href="https://blog.csdn.net/itachi85/article/details/79522200" target="_blank" rel="noopener">热修复</a><br>蚂蚁金服-晟章</p>
+<h2 id="移动端动态化方案：小程序，H5"><a href="#移动端动态化方案：小程序，H5" class="headerlink" title="移动端动态化方案：小程序，H5"></a>移动端动态化方案：小程序，H5</h2><p>：阿里构架<br>应用层：扫一扫 转账<br>服务层：指纹<br>框架：<br>组件：<br>容器：bundle resource<br>：<br>Nebula（H5），小程序：止血，动态，避审核</p>
+<h2 id="mPaaS技术架构和能力"><a href="#mPaaS技术架构和能力" class="headerlink" title="mPaaS技术架构和能力"></a>mPaaS技术架构和能力</h2><p>（IOS）<br>介入组件可变；<br>升级包、hotpatch、离线包<br>MDS（H5，小程序，hotpatch）</p>
+<h2 id="Android-开发"><a href="#Android-开发" class="headerlink" title="Android 开发"></a>Android 开发</h2><p>mPaaS<br>JDM：<br>java（），xml（描述，布局）</p>
+<h3 id="布局-简单的Android应用程序"><a href="#布局-简单的Android应用程序" class="headerlink" title="布局,简单的Android应用程序"></a>布局,简单的Android应用程序</h3><p>Linearlayout:<br> horizon<br> vertical<br> <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">package</span> com.alipay.helloworld;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.support.v7.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> android.widget.Button;</span><br><span class="line"><span class="keyword">import</span> android.widget.EditText;</span><br><span class="line"><span class="keyword">import</span> android.widget.Toast;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    EditText nameEt;</span><br><span class="line">    EditText passwordEt;</span><br><span class="line">    Button button;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        nameEt = (EditText)findViewById(R.id.et_name);</span><br><span class="line">        passwordEt = (EditText)findViewById(R.id.et_password);</span><br><span class="line"></span><br><span class="line">        button = (Button)findViewById(R.id.btn_login);</span><br><span class="line"></span><br><span class="line">        button.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">                String name = nameEt.getText().toString();</span><br><span class="line">                String password = passwordEt.getText().toString();</span><br><span class="line"></span><br><span class="line">                <span class="comment">// 登录操作</span></span><br><span class="line">                Toast.makeText(MainActivity.<span class="keyword">this</span>, String.format(<span class="string">"name: %s, password:%s"</span>, name, password), Toast.LENGTH_LONG).show();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span>?&gt;</span><br><span class="line">&lt;LinearLayout</span><br><span class="line">    xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    xmlns:app=<span class="string">"http://schemas.android.com/apk/res-auto"</span></span><br><span class="line">    xmlns:tools=<span class="string">"http://schemas.android.com/tools"</span></span><br><span class="line">    android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">    android:layout_height=<span class="string">"match_parent"</span></span><br><span class="line">    android:orientation=<span class="string">"vertical"</span></span><br><span class="line">    tools:context=<span class="string">"com.alipay.helloworld.MainActivity"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:hint=<span class="string">"用户名"</span></span><br><span class="line">        android:id=<span class="string">"@+id/et_name"</span> /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;EditText</span><br><span class="line">        android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:hint=<span class="string">"密码"</span></span><br><span class="line">        android:id=<span class="string">"@+id/et_password"</span> /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;Button</span><br><span class="line">        android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:text=<span class="string">"登录"</span></span><br><span class="line">        android:textSize=<span class="string">"40sp"</span></span><br><span class="line">        android:id=<span class="string">"@+id/btn_login"</span> /&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/LinearLayout&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="mPaaS热修复简单操作"><a href="#mPaaS热修复简单操作" class="headerlink" title="mPaaS热修复简单操作"></a>mPaaS热修复简单操作</h3><p><a href="https://www.yuque.com/tutorials/college/hotpatch" target="_blank" rel="noopener">热修复-语雀</a></p>
+<h2 id="？？"><a href="#？？" class="headerlink" title="？？"></a>？？</h2><h3 id="node-js-react"><a href="#node-js-react" class="headerlink" title="node.js,react"></a>node.js,react</h3><p>brew.sh<br>developer.android.com<br>developer.apple.com<br>Flutter<br><a href="https://tools.ietf.org/html/rfc2616" target="_blank" rel="noopener">https://tools.ietf.org/html/rfc2616</a></p>
+
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="http://www.microyue.com">glazia_luna</a>
-            </p><p>原文链接：<a href="http://www.microyue.com/2019/04/11/建立Hexo-Github的个人博客步骤/">http://www.microyue.com/2019/04/11/建立Hexo-Github的个人博客步骤/</a>
-            </p><p>发表日期：<a href="http://www.microyue.com/2019/04/11/建立Hexo-Github的个人博客步骤/">April 11th 2019, 1:51:03 pm</a>
-            </p><p>更新日期：<a href="http://www.microyue.com/2019/04/11/建立Hexo-Github的个人博客步骤/">April 17th 2019, 11:24:25 pm</a>
+            </p><p>原文链接：<a href="http://www.microyue.com/2019/05/11/codelab/">http://www.microyue.com/2019/05/11/codelab/</a>
+            </p><p>发表日期：<a href="http://www.microyue.com/2019/05/11/codelab/">May 11th 2019, 9:00:00 am</a>
+            </p><p>更新日期：<a href="http://www.microyue.com/2019/05/11/codelab/">May 11th 2019, 7:24:07 pm</a>
             </p><p>版权声明：<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">copyright@bonny</a></p>
         </div>
     
@@ -438,17 +421,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2019/04/13/小车全局规划路径/" title="小车全局规划路径">
-                    <div class="nextTitle">小车全局规划路径</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2019/04/10/Notes-for-Udacity-class/" title="ud187">
-                    <div class="prevTitle">ud187</div>
+                <a href="/2019/05/08/DataBase/" title="DB">
+                    <div class="prevTitle">DB</div>
                 </a>
             
         </li>
@@ -560,7 +538,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备材料"><span class="toc-number">2.</span> <span class="toc-text">准备材料</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖"><span class="toc-number">2.1.</span> <span class="toc-text">安装依赖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地hexo"><span class="toc-number">3.</span> <span class="toc-text">本地hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1-建立文件夹"><span class="toc-number">3.1.</span> <span class="toc-text">Step1 建立文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2-初始化Hexo"><span class="toc-number">3.2.</span> <span class="toc-text">Step2 初始化Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step3-新建post"><span class="toc-number">3.3.</span> <span class="toc-text">Step3 新建post</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法二-markdown使用路径"><span class="toc-number">3.3.1.</span> <span class="toc-text">方法二 markdown使用路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法三-CDN引用（加速）"><span class="toc-number">3.3.2.</span> <span class="toc-text">方法三 CDN引用（加速）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#part-2-增加表格"><span class="toc-number">3.4.</span> <span class="toc-text">part 2 增加表格</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法一-markdown语言"><span class="toc-number">3.4.1.</span> <span class="toc-text">方法一 markdown语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法二-html标签"><span class="toc-number">3.4.2.</span> <span class="toc-text">方法二 html标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小尾巴"><span class="toc-number">4.</span> <span class="toc-text">小尾巴</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#mPaaS"><span class="toc-number">1.</span> <span class="toc-text">mPaaS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端动态化方案：小程序，H5"><span class="toc-number">1.1.</span> <span class="toc-text">移动端动态化方案：小程序，H5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#mPaaS技术架构和能力"><span class="toc-number">1.2.</span> <span class="toc-text">mPaaS技术架构和能力</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Android-开发"><span class="toc-number">1.3.</span> <span class="toc-text">Android 开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#布局-简单的Android应用程序"><span class="toc-number">1.3.1.</span> <span class="toc-text">布局,简单的Android应用程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#mPaaS热修复简单操作"><span class="toc-number">1.3.2.</span> <span class="toc-text">mPaaS热修复简单操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#？？"><span class="toc-number">1.4.</span> <span class="toc-text">？？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#node-js-react"><span class="toc-number">1.4.1.</span> <span class="toc-text">node.js,react</span></a></li></ol></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
