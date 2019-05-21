@@ -402,7 +402,7 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  看这个创建时间，如果仔细查课表，这时候我本来在上课的，然后小孔说她的blog建好了，然后我就想起来typora不好看，然后我就查了一下下，然后就被sublime吸引了。。。</p>
-<h2 id="Part-One-伟大的sublime"><a href="#Part-One-伟大的sublime" class="headerlink" title="Part One 伟大的sublime"></a>Part One 伟大的sublime</h2><p>  sublime真漂亮，高亮真漂亮，长得真漂亮，黑底色真漂亮。。。<br>  而且免费（讲道理要买license）使用。<br>  <a href="https://www.sublimetext.com/" target="_blank" rel="noopener">Sublime官网</a><br>  当然鼓励购买，虽然license的限制，至少我还不知道是什么~~~<br>  <a href="https://www.52pojie.cn/thread-922128-1-1.html" target="_blank" rel="noopener">吾爱破解</a><br>  大神的破解，我还没有时间尝试，先把地址马在这里。</p>
+<h2 id="Part-One-伟大的sublime"><a href="#Part-One-伟大的sublime" class="headerlink" title="Part One 伟大的sublime"></a>Part One 伟大的sublime</h2><p>  sublime真漂亮，高亮真漂亮，长得真漂亮，黑底色真漂亮。。。<br>  而且免费（讲道理要买license）使用。<br><br>  <a href="https://www.sublimetext.com/" target="_blank" rel="noopener">Sublime官网</a><br>  当然鼓励购买，虽然license的限制，至少我还不知道是什么~~~<br>  <a href="https://www.52pojie.cn/thread-922128-1-1.html" target="_blank" rel="noopener">吾爱破解</a><br>  大神的破解，我还没有时间尝试，先把地址马在这里。</p>
 <h2 id="Part-Two-Package-Install"><a href="#Part-Two-Package-Install" class="headerlink" title="Part Two Package Install"></a>Part Two Package Install</h2><p>Sublime 有非常多的Package可供安装，安装过程如下：<br><strong>Step 1 安装Package Install</strong><br>“Ctrl+`” 打开控制台（也可以View -&gt; Show Console）<br><img src="\photos\Sublime1.jpg" alt="Sublime控制台"><br>在控制台下输入以下语句：<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> urllib.request,os,hashlib; </span><br><span class="line">h = <span class="string">'6f4c264a24d933ce70df5dedcf1dcaee'</span> + <span class="string">'ebe013ee18cced0ef93d5f746d80ef60'</span>; </span><br><span class="line">pf = <span class="string">'Package Control.sublime-package'</span>; </span><br><span class="line">ipp = sublime.installed_packages_path(); </span><br><span class="line">urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); </span><br><span class="line">by = urllib.request.urlopen( <span class="string">'http://packagecontrol.io/'</span> + pf.replace(<span class="string">' '</span>, <span class="string">'%20'</span>)).read(); </span><br><span class="line">dh = hashlib.sha256(by).hexdigest(); </span><br><span class="line">print(<span class="string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h)) <span class="keyword">if</span> dh != h <span class="keyword">else</span> open(os.path.join( ipp, pf), <span class="string">'wb'</span> ).write(by)</span><br></pre></td></tr></table></figure></p>
 <p>这段代码具体参照<a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">安装指南</a></p>
 <p><strong>Step 2 安装插件</strong><br>‘ctrl+shift+p’打开Command Palette (Tools)里面<br>输入Package Install ,点击，然后找到需要安装的插件<br><img src="\photos\Sublime2.jpg" alt="SublimePackage"><br>（<strong>！注意有两个步骤，不要在command里面搜索插件，我开始就愚蠢地这么做了</strong>)<br><img src="\photos\Sublime3.jpg" alt="Sublime插件"><br>这里注意，可能会需要一点时间寻找package，不过就我的经验来看，没有立刻出现一般就是有点问题了。貌似和Sublime的代理信息有关，因为连接代理就失败，校网也不太行，外网全局才可以。</p>
@@ -424,7 +424,7 @@ height:50vh;
             <p>原文作者：<a href="http://www.microyue.com">glazia_luna</a>
             </p><p>原文链接：<a href="http://www.microyue.com/2019/05/21/U-sublime插件们/">http://www.microyue.com/2019/05/21/U-sublime插件们/</a>
             </p><p>发表日期：<a href="http://www.microyue.com/2019/05/21/U-sublime插件们/">May 21st 2019, 11:50:00 am</a>
-            </p><p>更新日期：<a href="http://www.microyue.com/2019/05/21/U-sublime插件们/">May 21st 2019, 3:30:02 pm</a>
+            </p><p>更新日期：<a href="http://www.microyue.com/2019/05/21/U-sublime插件们/">May 21st 2019, 6:16:21 pm</a>
             </p><p>版权声明：<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">copyright@bonny</a></p>
         </div>
     
@@ -916,18 +916,6 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 25
@@ -966,12 +954,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/20</span><a class="archive-post-title" href="/2019/05/20/A-GPU高性能编程CUDA实战/">《GPU高性能编程CUDA实战》学习笔记</a>
+            <span class="archive-post-date">05/20</span><a class="archive-post-title" href="/2019/05/20/A-深入理解计算机系统/">《深入理解计算机系统》学习笔记</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/20</span><a class="archive-post-title" href="/2019/05/20/A-深入理解计算机系统/">《深入理解计算机系统》学习笔记</a>
+            <span class="archive-post-date">05/20</span><a class="archive-post-title" href="/2019/05/20/A-GPU高性能编程CUDA实战/">《GPU高性能编程CUDA实战》学习笔记</a>
         </li>
     
     
@@ -996,12 +984,12 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/06</span><a class="archive-post-title" href="/2019/05/06/Class-for-ADS/">ADS</a>
+            <span class="archive-post-date">05/06</span><a class="archive-post-title" href="/2019/05/06/Class-for-ORG/">ORG</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/06</span><a class="archive-post-title" href="/2019/05/06/Class-for-ORG/">ORG</a>
+            <span class="archive-post-date">05/06</span><a class="archive-post-title" href="/2019/05/06/Class-for-ADS/">ADS</a>
         </li>
     
     
@@ -1076,11 +1064,11 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="ORG"><span class="iconfont-archer">&#xe606;</span>ORG</span>
     
+        <span class="sidebar-tag-name" data-tags="ADS"><span class="iconfont-archer">&#xe606;</span>ADS</span>
+    
         <span class="sidebar-tag-name" data-tags="labview"><span class="iconfont-archer">&#xe606;</span>labview</span>
     
         <span class="sidebar-tag-name" data-tags="Dani"><span class="iconfont-archer">&#xe606;</span>Dani</span>
-    
-        <span class="sidebar-tag-name" data-tags="ADS"><span class="iconfont-archer">&#xe606;</span>ADS</span>
     
         <span class="sidebar-tag-name" data-tags="Sublime"><span class="iconfont-archer">&#xe606;</span>Sublime</span>
     
@@ -1123,17 +1111,17 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="ML"><span class="iconfont-archer">&#xe60a;</span>ML</span>
     
-        <span class="sidebar-category-name" data-categories="Class"><span class="iconfont-archer">&#xe60a;</span>Class</span>
-    
         <span class="sidebar-category-name" data-categories="SCT"><span class="iconfont-archer">&#xe60a;</span>SCT</span>
     
-        <span class="sidebar-category-name" data-categories="Robotics"><span class="iconfont-archer">&#xe60a;</span>Robotics</span>
+        <span class="sidebar-category-name" data-categories="Class"><span class="iconfont-archer">&#xe60a;</span>Class</span>
     
         <span class="sidebar-category-name" data-categories="Skill"><span class="iconfont-archer">&#xe60a;</span>Skill</span>
     
-        <span class="sidebar-category-name" data-categories="号外"><span class="iconfont-archer">&#xe60a;</span>号外</span>
+        <span class="sidebar-category-name" data-categories="Robotics"><span class="iconfont-archer">&#xe60a;</span>Robotics</span>
     
         <span class="sidebar-category-name" data-categories="Others"><span class="iconfont-archer">&#xe60a;</span>Others</span>
+    
+        <span class="sidebar-category-name" data-categories="号外"><span class="iconfont-archer">&#xe60a;</span>号外</span>
     
         <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
     
