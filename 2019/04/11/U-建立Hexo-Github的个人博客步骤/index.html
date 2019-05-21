@@ -272,7 +272,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">485</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">267</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -410,19 +410,16 @@ height:50vh;
 文件夹的内容展示如下：
 </code></pre><h3 id="Step2-初始化Hexo"><a href="#Step2-初始化Hexo" class="headerlink" title="Step2 初始化Hexo"></a>Step2 初始化Hexo</h3><h3 id="Step3-新建post"><a href="#Step3-新建post" class="headerlink" title="Step3 新建post"></a>Step3 新建post</h3><pre><code>分解
 </code></pre><blockquote>
-<p>hexo new “New blog”<br>    此处可简化为 <figure class="highlight m"><figcaption><span>> hexo n ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### Step4 上传</span><br><span class="line">&gt;hexo g</span><br><span class="line">&gt;hexo s</span><br><span class="line">&gt;hexo d</span><br><span class="line"></span><br><span class="line">### appendix1 hexo命令</span><br><span class="line">### appendix2 theme修改</span><br><span class="line"></span><br><span class="line">## 链接github</span><br><span class="line">### Step1 新建repo</span><br><span class="line">### Step2 修改blog配置文件</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 链接域名(Namesilo)</span><br><span class="line">### Step1 DNS解析</span><br><span class="line">### Step2 链接github</span><br><span class="line">### Step3 使用</span><br><span class="line"></span><br><span class="line">## 其他使用</span><br><span class="line">### part <span class="number">1</span> 增加本地图片</span><br><span class="line">#### 方法一 使用标签插件</span><br><span class="line">这个是HEXO <span class="number">3</span> 之前一位网友为图片路径开发的插件，被集成在了Hexo3 里面，官方文档的使用方法如下：</span><br><span class="line">```md</span><br><span class="line">&#123;<span class="comment">% asset_path slug %&#125;</span></span><br><span class="line">&#123;<span class="comment">% asset_img slug [title] %&#125;</span></span><br><span class="line">&#123;<span class="comment">% asset_link slug [title] %&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>hexo new “New blog”<br>    此处可简化为 <code>m &gt; hexo n</code></p>
 </blockquote>
-<p>使用案例：<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
-<p>这种方式的问题在于，使用markdown文档编辑器时不能看到图片，只能显示标签代码</p>
-<h4 id="方法二-markdown使用路径"><a href="#方法二-markdown使用路径" class="headerlink" title="方法二 markdown使用路径"></a>方法二 markdown使用路径</h4><p>传统的markdown语法插入方式：<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">描述文字</span>](<span class="link">url</span>)</span><br></pre></td></tr></table></figure></p>
-<p>实例代码<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">阁楼图片</span>](<span class="link">\photos\Notre-Dame_de_Paris_1.jpg</span>)</span><br></pre></td></tr></table></figure></p>
-<p>然而这种方法的问题在于不能够设置大小</p>
-<h4 id="方法三-CDN引用（加速）"><a href="#方法三-CDN引用（加速）" class="headerlink" title="方法三 CDN引用（加速）"></a>方法三 CDN引用（加速）</h4><h3 id="part-2-增加表格"><a href="#part-2-增加表格" class="headerlink" title="part 2 增加表格"></a>part 2 增加表格</h3><h4 id="方法一-markdown语言"><a href="#方法一-markdown语言" class="headerlink" title="方法一 markdown语言"></a>方法一 markdown语言</h4><h4 id="方法二-html标签"><a href="#方法二-html标签" class="headerlink" title="方法二 html标签"></a>方法二 html标签</h4><blockquote>
-<p>rowspan<br>colspan<br>style=”width: 10px;height:=12;”<br>实例:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span> <span class="attr">rowspan</span>=<span class="string">"2"</span> <span class="attr">style</span>=<span class="string">"width: 10px;"</span>&gt;</span>输入重定向<span class="tag">&lt;/<span class="name">td</span>&gt;</span>    </span><br><span class="line">        &lt;td &gt;语法：command &lt; input-file&lt;/td&gt;  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">td</span> &gt;</span>行三列二<span class="tag">&lt;/<span class="name">td</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Step4-上传"><a href="#Step4-上传" class="headerlink" title="Step4 上传"></a>Step4 上传</h3><blockquote>
+<p>hexo g<br>hexo s<br>hexo d</p>
 </blockquote>
-<p>  可以改变表格的宽度、长度、跨行等操作</p>
+<h3 id="appendix1-hexo命令"><a href="#appendix1-hexo命令" class="headerlink" title="appendix1 hexo命令"></a>appendix1 hexo命令</h3><h3 id="appendix2-theme修改"><a href="#appendix2-theme修改" class="headerlink" title="appendix2 theme修改"></a>appendix2 theme修改</h3><h2 id="链接github"><a href="#链接github" class="headerlink" title="链接github"></a>链接github</h2><h3 id="Step1-新建repo"><a href="#Step1-新建repo" class="headerlink" title="Step1 新建repo"></a>Step1 新建repo</h3><h3 id="Step2-修改blog配置文件"><a href="#Step2-修改blog配置文件" class="headerlink" title="Step2 修改blog配置文件"></a>Step2 修改blog配置文件</h3><h2 id="链接域名-Namesilo"><a href="#链接域名-Namesilo" class="headerlink" title="链接域名(Namesilo)"></a>链接域名(Namesilo)</h2><h3 id="Step1-DNS解析"><a href="#Step1-DNS解析" class="headerlink" title="Step1 DNS解析"></a>Step1 DNS解析</h3><h3 id="Step2-链接github"><a href="#Step2-链接github" class="headerlink" title="Step2 链接github"></a>Step2 链接github</h3><h3 id="Step3-使用"><a href="#Step3-使用" class="headerlink" title="Step3 使用"></a>Step3 使用</h3><h2 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h2><p>theme文档设置</p>
+<h2 id="博客的其他东西"><a href="#博客的其他东西" class="headerlink" title="博客的其他东西"></a>博客的其他东西</h2><p>既然是一个开放性的blog，搜索功能就是一个必然有较多联系的地方，所以关于搜索引擎的一些东西~~<br>关于SEO和Robotic.txt<br><a href="http://www.jeyzhang.com/hexo-website-seo.html" target="_blank" rel="noopener">教程</a></p>
 <h2 id="小尾巴"><a href="#小尾巴" class="headerlink" title="小尾巴"></a>小尾巴</h2><pre><code>啪啦啪啦，简单地就建立玩玩看呀~~至于残留的问题我，不管了先哼唧~
-</code></pre>
+</code></pre><p>[^1]: </p>
+
     </article>
     <!-- license  -->
     
@@ -430,7 +427,7 @@ height:50vh;
             <p>原文作者：<a href="http://www.microyue.com">glazia_luna</a>
             </p><p>原文链接：<a href="http://www.microyue.com/2019/04/11/U-建立Hexo-Github的个人博客步骤/">http://www.microyue.com/2019/04/11/U-建立Hexo-Github的个人博客步骤/</a>
             </p><p>发表日期：<a href="http://www.microyue.com/2019/04/11/U-建立Hexo-Github的个人博客步骤/">April 11th 2019, 1:51:03 pm</a>
-            </p><p>更新日期：<a href="http://www.microyue.com/2019/04/11/U-建立Hexo-Github的个人博客步骤/">May 12th 2019, 11:43:26 pm</a>
+            </p><p>更新日期：<a href="http://www.microyue.com/2019/04/11/U-建立Hexo-Github的个人博客步骤/">May 21st 2019, 6:14:53 pm</a>
             </p><p>版权声明：<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">copyright@bonny</a></p>
         </div>
     
@@ -560,7 +557,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备材料"><span class="toc-number">2.</span> <span class="toc-text">准备材料</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖"><span class="toc-number">2.1.</span> <span class="toc-text">安装依赖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地hexo"><span class="toc-number">3.</span> <span class="toc-text">本地hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1-建立文件夹"><span class="toc-number">3.1.</span> <span class="toc-text">Step1 建立文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2-初始化Hexo"><span class="toc-number">3.2.</span> <span class="toc-text">Step2 初始化Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step3-新建post"><span class="toc-number">3.3.</span> <span class="toc-text">Step3 新建post</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法二-markdown使用路径"><span class="toc-number">3.3.1.</span> <span class="toc-text">方法二 markdown使用路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法三-CDN引用（加速）"><span class="toc-number">3.3.2.</span> <span class="toc-text">方法三 CDN引用（加速）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#part-2-增加表格"><span class="toc-number">3.4.</span> <span class="toc-text">part 2 增加表格</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#方法一-markdown语言"><span class="toc-number">3.4.1.</span> <span class="toc-text">方法一 markdown语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法二-html标签"><span class="toc-number">3.4.2.</span> <span class="toc-text">方法二 html标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小尾巴"><span class="toc-number">4.</span> <span class="toc-text">小尾巴</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备材料"><span class="toc-number">2.</span> <span class="toc-text">准备材料</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖"><span class="toc-number">2.1.</span> <span class="toc-text">安装依赖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地hexo"><span class="toc-number">3.</span> <span class="toc-text">本地hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1-建立文件夹"><span class="toc-number">3.1.</span> <span class="toc-text">Step1 建立文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2-初始化Hexo"><span class="toc-number">3.2.</span> <span class="toc-text">Step2 初始化Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step3-新建post"><span class="toc-number">3.3.</span> <span class="toc-text">Step3 新建post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step4-上传"><span class="toc-number">3.4.</span> <span class="toc-text">Step4 上传</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#appendix1-hexo命令"><span class="toc-number">3.5.</span> <span class="toc-text">appendix1 hexo命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#appendix2-theme修改"><span class="toc-number">3.6.</span> <span class="toc-text">appendix2 theme修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接github"><span class="toc-number">4.</span> <span class="toc-text">链接github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1-新建repo"><span class="toc-number">4.1.</span> <span class="toc-text">Step1 新建repo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2-修改blog配置文件"><span class="toc-number">4.2.</span> <span class="toc-text">Step2 修改blog配置文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#链接域名-Namesilo"><span class="toc-number">5.</span> <span class="toc-text">链接域名(Namesilo)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Step1-DNS解析"><span class="toc-number">5.1.</span> <span class="toc-text">Step1 DNS解析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step2-链接github"><span class="toc-number">5.2.</span> <span class="toc-text">Step2 链接github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Step3-使用"><span class="toc-number">5.3.</span> <span class="toc-text">Step3 使用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#主题设置"><span class="toc-number">6.</span> <span class="toc-text">主题设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#博客的其他东西"><span class="toc-number">7.</span> <span class="toc-text">博客的其他东西</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小尾巴"><span class="toc-number">8.</span> <span class="toc-text">小尾巴</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -834,9 +831,109 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 21
+        Total : 25
         </div>
         <!-- search  -->
         
@@ -849,6 +946,21 @@ top:50vh;
     
     <div class="archive-year"> 2019 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/22</span><a class="archive-post-title" href="/2019/05/22/Class-for-ORG - Mips/">ORG的mips汇编器</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/21</span><a class="archive-post-title" href="/2019/05/21/U-面试题目集合/">面试题目集合</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/21</span><a class="archive-post-title" href="/2019/05/21/U-sublime插件们/">Sublime的插件们（一）</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -887,22 +999,22 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/06</span><a class="archive-post-title" href="/2019/05/06/Class-for-ORG/">ORG</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">05/06</span><a class="archive-post-title" href="/2019/05/06/Class-for-ADS/">ADS</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">04/30</span><a class="archive-post-title" href="/2019/04/30/A-Coursera-ML/">Coursera by Ng.Andrew</a>
+            <span class="archive-post-date">05/06</span><a class="archive-post-title" href="/2019/05/06/Class-for-ORG/">ORG</a>
         </li>
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">04/30</span><a class="archive-post-title" href="/2019/04/30/A-CS291d/">ud730</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/30</span><a class="archive-post-title" href="/2019/04/30/A-Coursera-ML/">Coursera by Ng.Andrew</a>
         </li>
     
     
@@ -955,6 +1067,11 @@ top:50vh;
             <span class="archive-post-date">04/10</span><a class="archive-post-title" href="/2019/04/10/U-introduction/">introduction</a>
         </li>
     
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span><a class="archive-post-title" href="/2019/01/01/U-Markdown语言记录/">Markdown语言记录</a>
+        </li>
+    
     </ul></div>
   </div>
         <div class="sidebar-panel-tags">
@@ -962,15 +1079,17 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="ORG"><span class="iconfont-archer">&#xe606;</span>ORG</span>
     
-        <span class="sidebar-tag-name" data-tags="ADS"><span class="iconfont-archer">&#xe606;</span>ADS</span>
-    
         <span class="sidebar-tag-name" data-tags="labview"><span class="iconfont-archer">&#xe606;</span>labview</span>
     
         <span class="sidebar-tag-name" data-tags="Dani"><span class="iconfont-archer">&#xe606;</span>Dani</span>
     
-        <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
+        <span class="sidebar-tag-name" data-tags="ADS"><span class="iconfont-archer">&#xe606;</span>ADS</span>
+    
+        <span class="sidebar-tag-name" data-tags="Sublime"><span class="iconfont-archer">&#xe606;</span>Sublime</span>
     
         <span class="sidebar-tag-name" data-tags="Hexo"><span class="iconfont-archer">&#xe606;</span>Hexo</span>
+    
+        <span class="sidebar-tag-name" data-tags="others"><span class="iconfont-archer">&#xe606;</span>others</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -1007,17 +1126,19 @@ jsonContent:
     
         <span class="sidebar-category-name" data-categories="ML"><span class="iconfont-archer">&#xe60a;</span>ML</span>
     
-        <span class="sidebar-category-name" data-categories="SCT"><span class="iconfont-archer">&#xe60a;</span>SCT</span>
-    
         <span class="sidebar-category-name" data-categories="Class"><span class="iconfont-archer">&#xe60a;</span>Class</span>
     
+        <span class="sidebar-category-name" data-categories="SCT"><span class="iconfont-archer">&#xe60a;</span>SCT</span>
+    
         <span class="sidebar-category-name" data-categories="Robotics"><span class="iconfont-archer">&#xe60a;</span>Robotics</span>
+    
+        <span class="sidebar-category-name" data-categories="Skill"><span class="iconfont-archer">&#xe60a;</span>Skill</span>
+    
+        <span class="sidebar-category-name" data-categories="号外"><span class="iconfont-archer">&#xe60a;</span>号外</span>
     
         <span class="sidebar-category-name" data-categories="Others"><span class="iconfont-archer">&#xe60a;</span>Others</span>
     
         <span class="sidebar-category-name" data-categories="随笔"><span class="iconfont-archer">&#xe60a;</span>随笔</span>
-    
-        <span class="sidebar-category-name" data-categories="Skill"><span class="iconfont-archer">&#xe60a;</span>Skill</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
