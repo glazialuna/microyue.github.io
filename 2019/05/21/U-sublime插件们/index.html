@@ -7,19 +7,19 @@
 
 
 
-    <meta name="description" content="前言  看这个创建时间，如果仔细查课表，这时候我本来在上课的，然后小孔说她的blog建好了，然后我就想起来typora不好看，然后我就查了一下下，然后就被sublime吸引了。。。 Part One 伟大的sublime  sublime真漂亮，高亮真漂亮，长得真漂亮，黑底色真漂亮。。。  而且免费（讲道理要买license）使用。  Sublime官网  当然鼓励购买，虽然license的限制，">
+    <meta name="description" content="Sublime真好看，可爱又可爱">
 <meta name="keywords" content="Sublime">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sublime的插件们（一）">
 <meta property="og:url" content="http://www.microyue.com/2019/05/21/U-sublime插件们/index.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="前言  看这个创建时间，如果仔细查课表，这时候我本来在上课的，然后小孔说她的blog建好了，然后我就想起来typora不好看，然后我就查了一下下，然后就被sublime吸引了。。。 Part One 伟大的sublime  sublime真漂亮，高亮真漂亮，长得真漂亮，黑底色真漂亮。。。  而且免费（讲道理要买license）使用。  Sublime官网  当然鼓励购买，虽然license的限制，">
+<meta property="og:description" content="Sublime真好看，可爱又可爱">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-05-22T09:11:02.286Z">
+<meta property="og:updated_time" content="2019-05-25T04:38:33.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sublime的插件们（一）">
-<meta name="twitter:description" content="前言  看这个创建时间，如果仔细查课表，这时候我本来在上课的，然后小孔说她的blog建好了，然后我就想起来typora不好看，然后我就查了一下下，然后就被sublime吸引了。。。 Part One 伟大的sublime  sublime真漂亮，高亮真漂亮，长得真漂亮，黑底色真漂亮。。。  而且免费（讲道理要买license）使用。  Sublime官网  当然鼓励购买，虽然license的限制，">
+<meta name="twitter:description" content="Sublime真好看，可爱又可爱">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
@@ -155,7 +155,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 minutes read (About 681 words)
+                    5 minutes read (About 692 words)
                 </span>
                 
                 
@@ -168,7 +168,8 @@
             
         </h1>
         <div class="content">
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  看这个创建时间，如果仔细查课表，这时候我本来在上课的，然后小孔说她的blog建好了，然后我就想起来typora不好看，然后我就查了一下下，然后就被sublime吸引了。。。</p>
+            <p>Sublime真好看，可爱又可爱<br><a id="more"></a></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  看这个创建时间，如果仔细查课表，这时候我本来在上课的，然后小孔说她的blog建好了，然后我就想起来typora不好看，然后我就查了一下下，然后就被sublime吸引了。。。</p>
 <h2 id="Part-One-伟大的sublime"><a href="#Part-One-伟大的sublime" class="headerlink" title="Part One 伟大的sublime"></a>Part One 伟大的sublime</h2><p>  sublime真漂亮，高亮真漂亮，长得真漂亮，黑底色真漂亮。。。<br>  而且免费（讲道理要买license）使用。<br><br>  <a href="https://www.sublimetext.com/" target="_blank" rel="noopener">Sublime官网</a><br>  当然鼓励购买，虽然license的限制，至少我还不知道是什么~~~<br>  <a href="https://www.52pojie.cn/thread-922128-1-1.html" target="_blank" rel="noopener">吾爱破解</a><br>  大神的破解，我还没有时间尝试，先把地址马在这里。</p>
 <h2 id="Part-Two-Package-Install"><a href="#Part-Two-Package-Install" class="headerlink" title="Part Two Package Install"></a>Part Two Package Install</h2><p>Sublime 有非常多的Package可供安装，安装过程如下：</p>
 <h3 id="01-Step-1-安装Package-Install"><a href="#01-Step-1-安装Package-Install" class="headerlink" title="01 Step 1 安装Package Install"></a>01 <strong>Step 1 安装Package Install</strong></h3><p>“Ctrl+`” 打开控制台（也可以View -&gt; Show Console）<br><img src="\photos\Sublime1.jpg" alt="Sublime控制台"><br>在控制台下输入以下语句：<br><figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> urllib.request,os,hashlib; </span><br><span class="line">h = <span class="hljs-string">'6f4c264a24d933ce70df5dedcf1dcaee'</span> + <span class="hljs-string">'ebe013ee18cced0ef93d5f746d80ef60'</span>; </span><br><span class="line">pf = <span class="hljs-string">'Package Control.sublime-package'</span>; </span><br><span class="line">ipp = sublime.installed_packages_path(); </span><br><span class="line">urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); </span><br><span class="line">by = urllib.request.urlopen( <span class="hljs-string">'http://packagecontrol.io/'</span> + pf.replace(<span class="hljs-string">' '</span>, <span class="hljs-string">'%20'</span>)).read(); </span><br><span class="line">dh = hashlib.sha256(by).hexdigest(); </span><br><span class="line">print(<span class="hljs-string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h)) <span class="hljs-keyword">if</span> dh != h <span class="hljs-keyword">else</span> open(os.path.join( ipp, pf), <span class="hljs-string">'wb'</span> ).write(by)</span><br></pre></td></tr></table></figure></p>
@@ -277,22 +278,22 @@
             <div class="level-item has-text-centered">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Your name">
+                        <img class="image is-128x128 has-mb-6" src="/images/avatar.png" alt="Bonny &amp; Ponny">
                     
                     
                     <p class="is-size-4 is-block">
-                        Your name
+                        Bonny &amp; Ponny
                     </p>
                     
                     
                     <p class="is-size-6 is-block">
-                        Your title
+                        Rabit
                     </p>
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>Your location</span>
+                        <span>HZ,ZJ</span>
                     </p>
                     
                 </div>
