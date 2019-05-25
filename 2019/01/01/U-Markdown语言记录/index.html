@@ -15,7 +15,7 @@
 <meta property="og:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-05-25T13:47:06.719Z">
+<meta property="og:updated_time" content="2019-05-25T14:45:13.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown语言记录">
 <meta name="twitter:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
@@ -149,7 +149,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 minutes read (About 722 words)
+                    5 minutes read (About 756 words)
                 </span>
                 
                 
@@ -163,36 +163,63 @@
         </h1>
         <div class="content">
             <p>Markdown的语言模式以及一些关于插件等的快捷键介绍<br><a id="more"></a></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h1 id="Part-One-文本标记语言"><a href="#Part-One-文本标记语言" class="headerlink" title="Part One 文本标记语言"></a>Part One 文本标记语言</h1><p>&ensp;&ensp;markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
-<h2 id="01-输入操作"><a href="#01-输入操作" class="headerlink" title="01 输入操作"></a>01 输入操作</h2><p>1.换行<br>Method1：使用br标签<br><br>Method2：在句末加上两个空格后换行,这种方法可能会因为其他标记导致顺序混乱，除非大段文本，不然轻易别用。<br><br>Method3：两个换行号。<br><br>2.首行缩进<br>Method1：使用特殊占位符,<em>注意后面的分号不能省略</em>。<br>[1] <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&amp;ensp;半角字符款式  </span><br><span class="line">[2] ```&amp;emsp;```或者```&amp;#8195;```&lt;br&gt;</span><br><span class="line">&amp;emsp;全角字符款式   </span><br><span class="line">[2] ```&amp;nbsp;```或者```&amp;#160;```&lt;br&gt;</span><br><span class="line">&amp;nbsp;最小缩进款式&lt;br&gt;</span><br><span class="line">Method2：全角输入情况下双击两次空格，转换全角(shift+空格)，暂时没发现能用的方法。  </span><br><span class="line"></span><br><span class="line">3.居中  </span><br><span class="line">Method1:引用html标签```&lt;center&gt;str&lt;center&gt;```  </span><br><span class="line">    &lt;center&gt;--center--&lt;/center&gt;</span><br><span class="line"></span><br><span class="line">## 02 编辑操作</span><br><span class="line">1.字体&lt;br&gt;</span><br><span class="line">   大小：&lt;font size=&quot;5&quot;&gt;5&lt;/font&gt;  ```&lt;font size=&quot;5&quot;&gt;5&lt;/font&gt;```  </span><br><span class="line">    颜色：&lt;font color=&quot;red&quot;&gt;Red&lt;/font&gt; ```&lt;font color=&quot;red&quot;&gt;Red&lt;/font&gt;```  </span><br><span class="line">    字体：&lt;font face=&quot;微软雅黑&quot;&gt;微软雅黑&lt;/font&gt; ```&lt;font face=&quot;微软雅黑&quot;&gt;微软雅黑&lt;/font&gt;```  </span><br><span class="line">    加粗：**加粗** ```*加粗* 或者 __加粗__```  </span><br><span class="line">    倾斜：*倾斜* ```*倾斜* 或者 _倾斜_```  </span><br><span class="line"></span><br><span class="line"># Part Two 插入</span><br><span class="line">## 01 代码</span><br><span class="line">## 02 增加本地图片</span><br><span class="line">### 方法一 使用标签插件</span><br><span class="line">&amp;ensp;&amp;ensp;这个是HEXO 3 之前一位网友为图片路径开发的插件，被集成在了Hexo3 里面，官方文档的使用方法如下：</span><br><span class="line">```md</span><br><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><!-- part 1 -->
+<h1 id="文本标记语言"><a href="#文本标记语言" class="headerlink" title="文本标记语言"></a>文本标记语言</h1><p>&ensp;&ensp;markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br><!-- 01 --></p>
+<h2 id="输入操作"><a href="#输入操作" class="headerlink" title="输入操作"></a>输入操作</h2><ol>
+<li><p><strong>换行</strong><br>Method1：使用br标签 <code>&lt;br&gt;</code><br>Method2：在句末加上两个空格后换行,这种方法可能会因为其他标记导致顺序混乱，除非大段文本，不然轻易别用。<br>Method3：两个换行号。(虽然尝试不行，但文档里说可以)  </p>
+</li>
+<li><p><strong>首行缩进</strong><br>Method1：使用特殊占位符,<em>注意后面的分号不能省略</em>。<br>[1] <code>&amp;ensp;</code>或者<code>&amp;#8194</code><br>&ensp;半角字符款式<br>[2] <code>&amp;emsp;</code>或者<code>&amp;#8195;</code><br>&emsp;全角字符款式<br>[3] <code>&amp;nbsp;</code>或者<code>&amp;#160;</code><br>&nbsp;最小缩进款式<br>Method2：全角输入情况下双击两次空格，转换全角(shift+空格)，暂时没发现能用的方法。  </p>
+</li>
+<li><p><strong>居中</strong><br>Method1:引用html标签<code>&lt;center&gt;str&lt;center&gt;</code></p>
+ <center>–center–</center>
+
+</li>
+</ol>
+<h2 id="编辑操作"><a href="#编辑操作" class="headerlink" title="编辑操作"></a>编辑操作</h2><ol>
+<li>字体<br>大小：<font size="5">5</font>  <code>&lt;font size=&quot;5&quot;&gt;5&lt;/font&gt;</code><br> 颜色：<font color="red">Red</font> <code>&lt;font color=&quot;red&quot;&gt;Red&lt;/font&gt;</code><br> 字体：<font face="微软雅黑">微软雅黑</font> <code>&lt;font face=&quot;微软雅黑&quot;&gt;微软雅黑&lt;/font&gt;</code><br> 加粗：<strong>加粗</strong> <code>*加粗*</code> 或者 <code>__加粗__</code><br> 倾斜：<em>倾斜</em> <code>*倾斜*</code> 或者 <code>_倾斜_</code>  <!-- part 2 -->
+</li>
+</ol>
+<h1 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h1><!-- 01 -->
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
+<li>插入代码段<code>&#39;&#39;&#39; code &#39;&#39;&#39;</code>  <figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>&#123;<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<!-- 02 -->
+<h2 id="增加本地图片"><a href="#增加本地图片" class="headerlink" title="增加本地图片"></a>增加本地图片</h2><h3 id="方法一-使用标签插件"><a href="#方法一-使用标签插件" class="headerlink" title="方法一 使用标签插件"></a><strong>方法一 使用标签插件</strong></h3><p>&ensp;&ensp;这个是HEXO 3 之前一位网友为图片路径开发的插件，被集成在了Hexo3 里面，官方文档的使用方法如下：<br><figure class="highlight md hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure></p>
 <p>使用案例：<br><figure class="highlight ebnf hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attribute">meixie</span></span><br></pre></td></tr></table></figure></p>
 <p>这种方式的问题在于，使用markdown文档编辑器时不能看到图片，只能显示标签代码</p>
-<h3 id="方法二-markdown使用路径"><a href="#方法二-markdown使用路径" class="headerlink" title="方法二 markdown使用路径"></a>方法二 markdown使用路径</h3><p>传统的markdown语法插入方式：<br><figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="hljs-string">描述文字</span>](<span class="hljs-link">url</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="方法二-markdown使用路径"><a href="#方法二-markdown使用路径" class="headerlink" title="方法二 markdown使用路径"></a><strong>方法二 markdown使用路径</strong></h3><p>传统的markdown语法插入方式：<br><figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="hljs-string">描述文字</span>](<span class="hljs-link">url</span>)</span><br></pre></td></tr></table></figure></p>
 <p>实例代码<br><figure class="highlight md hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="hljs-string">阁楼图片</span>](<span class="hljs-link">\photos\Notre-Dame_de_Paris_1.jpg</span>)</span><br></pre></td></tr></table></figure></p>
 <p>然而这种方法的问题在于不能够设置大小</p>
-<h3 id="方法三-CDN引用（加速）"><a href="#方法三-CDN引用（加速）" class="headerlink" title="方法三 CDN引用（加速）"></a>方法三 CDN引用（加速）</h3><h2 id="03-增加表格"><a href="#03-增加表格" class="headerlink" title="03 增加表格"></a>03 增加表格</h2><h3 id="方法一-markdown语言"><a href="#方法一-markdown语言" class="headerlink" title="方法一 markdown语言"></a>方法一 markdown语言</h3><h3 id="方法二-html标签"><a href="#方法二-html标签" class="headerlink" title="方法二 html标签"></a>方法二 html标签</h3><blockquote>
+<h3 id="方法三-CDN引用（加速）"><a href="#方法三-CDN引用（加速）" class="headerlink" title="方法三 CDN引用（加速）"></a><strong>方法三 CDN引用（加速）</strong></h3><!-- 03 -->
+<h2 id="增加表格"><a href="#增加表格" class="headerlink" title="增加表格"></a>增加表格</h2><h3 id="方法一-markdown语言"><a href="#方法一-markdown语言" class="headerlink" title="方法一 markdown语言"></a>方法一 markdown语言</h3><h3 id="方法二-html标签"><a href="#方法二-html标签" class="headerlink" title="方法二 html标签"></a>方法二 html标签</h3><blockquote>
 <p>rowspan<br>colspan<br>style=”width: 10px;height:=12;”<br>实例:<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">rowspan</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 10px;"</span>&gt;</span>输入重定向<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>    </span><br><span class="line">        &lt;td &gt;语法：command &lt; input-file&lt;/td&gt;  </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> &gt;</span>行三列二<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <p>  可以改变表格的宽度、长度、跨行等操作</p>
-<h1 id="Part-Three-各类快捷键"><a href="#Part-Three-各类快捷键" class="headerlink" title="Part Three 各类快捷键"></a>Part Three 各类快捷键</h1><h2 id="01-Sublime-MarkdownEditing"><a href="#01-Sublime-MarkdownEditing" class="headerlink" title="01 Sublime-MarkdownEditing"></a>01 Sublime-MarkdownEditing</h2><p>&emsp;&emsp;主要东西可以参见官方文档，主要的几个如下:<br>图片标记：mdi+tab<br>连接标记：mdl+tab<br><a href="link">MarkdownEditing官方文档</a></p>
+<!-- part 3 -->
+<h1 id="各类快捷键"><a href="#各类快捷键" class="headerlink" title="各类快捷键"></a>各类快捷键</h1><h2 id="01-Sublime-MarkdownEditing"><a href="#01-Sublime-MarkdownEditing" class="headerlink" title="01 Sublime-MarkdownEditing"></a>01 Sublime-MarkdownEditing</h2><p>&emsp;&emsp;主要东西可以参见官方文档，主要的几个如下:<br>图片标记：mdi+tab<br>连接标记：mdl+tab<br><a href="link">MarkdownEditing官方文档</a></p>
 <h2 id="02-Sublime-OmniMarkupPreviewer"><a href="#02-Sublime-OmniMarkupPreviewer" class="headerlink" title="02 Sublime-OmniMarkupPreviewer"></a>02 Sublime-OmniMarkupPreviewer</h2><ol>
-<li><p>快捷键1<br>[“ctrl+alt+o”] 显示 omni_markup_preview<br>可能会报错:<br><img src="/photo/Hexo1.jpg" alt="ctrl+alt+o报错" title="报错"><br>解决方案：<br>在setting-user中加入</p>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "renderer_options-MarkdownRenderer": &#123;</span><br><span class="line">        "extensions": ["tables", "fenced_code", "codehilite"]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>快捷键2 </p>
-</li>
+<li>快捷键1<br> [“ctrl+alt+o”] 显示 omni_markup_preview  </li>
 </ol>
-<p>[“ctrl+alt+x”] omni_markup_export</p>
-<ol start="3">
-<li>快捷键3<br>[“ctrl+alt+c”]</li>
+<p><strong>注意，可能会报错:</strong><br><img src="\photos\Hexo1.jpg" alt="ctrl+alt+o报错" title="Optional title"><br><strong>解决方案：</strong><br>在setting-user中加入<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "renderer_options-MarkdownRenderer": &#123;</span><br><span class="line">        "extensions": ["tables", "fenced_code", "codehilite"]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li><p>快捷键2<br>[“ctrl+alt+x”] omni_markup_export</p>
+</li>
+<li><p>快捷键3<br>[“ctrl+alt+c”]</p>
+</li>
 </ol>
 <h2 id="03-Typora"><a href="#03-Typora" class="headerlink" title="03 Typora"></a>03 Typora</h2><h2 id="04-MarkdownTOC"><a href="#04-MarkdownTOC" class="headerlink" title="04 MarkdownTOC"></a>04 MarkdownTOC</h2><p>编写heading较多的长文档，希望生成目录方便跳转</p>
 <h2 id="05-Table-Editor"><a href="#05-Table-Editor" class="headerlink" title="05 Table Editor"></a>05 Table Editor</h2><p><a href="https://github.com/naokazuterada/MarkdownTOC#usage" target="_blank" rel="noopener">Usage</a></p>
-<h1 id="Part-Four-数学公式"><a href="#Part-Four-数学公式" class="headerlink" title="Part Four 数学公式"></a>Part Four 数学公式</h1><p>$$E=mc$$</p>
-<h1 id="Part-Six-一些莫名的规则（适用用于我的theme）"><a href="#Part-Six-一些莫名的规则（适用用于我的theme）" class="headerlink" title="Part Six 一些莫名的规则（适用用于我的theme）"></a>Part Six 一些莫名的规则（适用用于我的theme）</h1><ol>
-<li>代码框写法<code>1. （带空格）</code><h1 id="Part-Five-遗留问题"><a href="#Part-Five-遗留问题" class="headerlink" title="Part Five 遗留问题"></a>Part Five 遗留问题</h1></li>
+<!-- part 5 -->
+<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><ol>
+<li>写法<code>$$ mathscript $$</code>,例如（自动居中）：<br>$$E=mc$$</li>
 </ol>
-
+<!-- part 6 -->
+<h1 id="一些莫名的规则（适用用于我的theme）"><a href="#一些莫名的规则（适用用于我的theme）" class="headerlink" title="一些莫名的规则（适用用于我的theme）"></a>一些莫名的规则（适用用于我的theme）</h1><ol>
+<li>代码框写法<code>1. （带空格）</code></li>
+</ol>
+<!-- part7 -->
+<h1 id="遗留问题"><a href="#遗留问题" class="headerlink" title="遗留问题"></a>遗留问题</h1>
         </div>
         
         
@@ -338,69 +365,89 @@
         <span class="has-mr-6">1</span>
         <span>前言</span>
         </a></li><li>
-        <a class="is-flex" href="#Part-One-文本标记语言">
+        <a class="is-flex" href="#文本标记语言">
         <span class="has-mr-6">2</span>
-        <span>Part One 文本标记语言</span>
+        <span>文本标记语言</span>
         </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#01-输入操作">
+        <a class="is-flex" href="#输入操作">
         <span class="has-mr-6">2.1</span>
-        <span>01 输入操作</span>
+        <span>输入操作</span>
+        </a></li><li>
+        <a class="is-flex" href="#编辑操作">
+        <span class="has-mr-6">2.2</span>
+        <span>编辑操作</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#插入">
+        <span class="has-mr-6">3</span>
+        <span>插入</span>
         </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#代码">
+        <span class="has-mr-6">3.1</span>
+        <span>代码</span>
+        </a></li><li>
+        <a class="is-flex" href="#增加本地图片">
+        <span class="has-mr-6">3.2</span>
+        <span>增加本地图片</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#方法一-使用标签插件">
+        <span class="has-mr-6">3.2.1</span>
+        <span>方法一 使用标签插件</span>
+        </a></li><li>
         <a class="is-flex" href="#方法二-markdown使用路径">
-        <span class="has-mr-6">2.1.1</span>
+        <span class="has-mr-6">3.2.2</span>
         <span>方法二 markdown使用路径</span>
         </a></li><li>
         <a class="is-flex" href="#方法三-CDN引用（加速）">
-        <span class="has-mr-6">2.1.2</span>
+        <span class="has-mr-6">3.2.3</span>
         <span>方法三 CDN引用（加速）</span>
         </a></li></ul></li><li>
-        <a class="is-flex" href="#03-增加表格">
-        <span class="has-mr-6">2.2</span>
-        <span>03 增加表格</span>
+        <a class="is-flex" href="#增加表格">
+        <span class="has-mr-6">3.3</span>
+        <span>增加表格</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#方法一-markdown语言">
-        <span class="has-mr-6">2.2.1</span>
+        <span class="has-mr-6">3.3.1</span>
         <span>方法一 markdown语言</span>
         </a></li><li>
         <a class="is-flex" href="#方法二-html标签">
-        <span class="has-mr-6">2.2.2</span>
+        <span class="has-mr-6">3.3.2</span>
         <span>方法二 html标签</span>
         </a></li></ul></li></ul></li><li>
-        <a class="is-flex" href="#Part-Three-各类快捷键">
-        <span class="has-mr-6">3</span>
-        <span>Part Three 各类快捷键</span>
+        <a class="is-flex" href="#各类快捷键">
+        <span class="has-mr-6">4</span>
+        <span>各类快捷键</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#01-Sublime-MarkdownEditing">
-        <span class="has-mr-6">3.1</span>
+        <span class="has-mr-6">4.1</span>
         <span>01 Sublime-MarkdownEditing</span>
         </a></li><li>
         <a class="is-flex" href="#02-Sublime-OmniMarkupPreviewer">
-        <span class="has-mr-6">3.2</span>
+        <span class="has-mr-6">4.2</span>
         <span>02 Sublime-OmniMarkupPreviewer</span>
         </a></li><li>
         <a class="is-flex" href="#03-Typora">
-        <span class="has-mr-6">3.3</span>
+        <span class="has-mr-6">4.3</span>
         <span>03 Typora</span>
         </a></li><li>
         <a class="is-flex" href="#04-MarkdownTOC">
-        <span class="has-mr-6">3.4</span>
+        <span class="has-mr-6">4.4</span>
         <span>04 MarkdownTOC</span>
         </a></li><li>
         <a class="is-flex" href="#05-Table-Editor">
-        <span class="has-mr-6">3.5</span>
+        <span class="has-mr-6">4.5</span>
         <span>05 Table Editor</span>
         </a></li></ul></li><li>
-        <a class="is-flex" href="#Part-Four-数学公式">
-        <span class="has-mr-6">4</span>
-        <span>Part Four 数学公式</span>
-        </a></li><li>
-        <a class="is-flex" href="#Part-Six-一些莫名的规则（适用用于我的theme）">
+        <a class="is-flex" href="#数学公式">
         <span class="has-mr-6">5</span>
-        <span>Part Six 一些莫名的规则（适用用于我的theme）</span>
+        <span>数学公式</span>
         </a></li><li>
-        <a class="is-flex" href="#Part-Five-遗留问题">
+        <a class="is-flex" href="#一些莫名的规则（适用用于我的theme）">
         <span class="has-mr-6">6</span>
-        <span>Part Five 遗留问题</span>
+        <span>一些莫名的规则（适用用于我的theme）</span>
+        </a></li><li>
+        <a class="is-flex" href="#遗留问题">
+        <span class="has-mr-6">7</span>
+        <span>遗留问题</span>
         </a></li></ul>
         </div>
     </div>
@@ -430,69 +477,89 @@
         <span class="has-mr-6">1</span>
         <span>前言</span>
         </a></li><li>
-        <a class="is-flex" href="#Part-One-文本标记语言">
+        <a class="is-flex" href="#文本标记语言">
         <span class="has-mr-6">2</span>
-        <span>Part One 文本标记语言</span>
+        <span>文本标记语言</span>
         </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#01-输入操作">
+        <a class="is-flex" href="#输入操作">
         <span class="has-mr-6">2.1</span>
-        <span>01 输入操作</span>
+        <span>输入操作</span>
+        </a></li><li>
+        <a class="is-flex" href="#编辑操作">
+        <span class="has-mr-6">2.2</span>
+        <span>编辑操作</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#插入">
+        <span class="has-mr-6">3</span>
+        <span>插入</span>
         </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#代码">
+        <span class="has-mr-6">3.1</span>
+        <span>代码</span>
+        </a></li><li>
+        <a class="is-flex" href="#增加本地图片">
+        <span class="has-mr-6">3.2</span>
+        <span>增加本地图片</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#方法一-使用标签插件">
+        <span class="has-mr-6">3.2.1</span>
+        <span>方法一 使用标签插件</span>
+        </a></li><li>
         <a class="is-flex" href="#方法二-markdown使用路径">
-        <span class="has-mr-6">2.1.1</span>
+        <span class="has-mr-6">3.2.2</span>
         <span>方法二 markdown使用路径</span>
         </a></li><li>
         <a class="is-flex" href="#方法三-CDN引用（加速）">
-        <span class="has-mr-6">2.1.2</span>
+        <span class="has-mr-6">3.2.3</span>
         <span>方法三 CDN引用（加速）</span>
         </a></li></ul></li><li>
-        <a class="is-flex" href="#03-增加表格">
-        <span class="has-mr-6">2.2</span>
-        <span>03 增加表格</span>
+        <a class="is-flex" href="#增加表格">
+        <span class="has-mr-6">3.3</span>
+        <span>增加表格</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#方法一-markdown语言">
-        <span class="has-mr-6">2.2.1</span>
+        <span class="has-mr-6">3.3.1</span>
         <span>方法一 markdown语言</span>
         </a></li><li>
         <a class="is-flex" href="#方法二-html标签">
-        <span class="has-mr-6">2.2.2</span>
+        <span class="has-mr-6">3.3.2</span>
         <span>方法二 html标签</span>
         </a></li></ul></li></ul></li><li>
-        <a class="is-flex" href="#Part-Three-各类快捷键">
-        <span class="has-mr-6">3</span>
-        <span>Part Three 各类快捷键</span>
+        <a class="is-flex" href="#各类快捷键">
+        <span class="has-mr-6">4</span>
+        <span>各类快捷键</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#01-Sublime-MarkdownEditing">
-        <span class="has-mr-6">3.1</span>
+        <span class="has-mr-6">4.1</span>
         <span>01 Sublime-MarkdownEditing</span>
         </a></li><li>
         <a class="is-flex" href="#02-Sublime-OmniMarkupPreviewer">
-        <span class="has-mr-6">3.2</span>
+        <span class="has-mr-6">4.2</span>
         <span>02 Sublime-OmniMarkupPreviewer</span>
         </a></li><li>
         <a class="is-flex" href="#03-Typora">
-        <span class="has-mr-6">3.3</span>
+        <span class="has-mr-6">4.3</span>
         <span>03 Typora</span>
         </a></li><li>
         <a class="is-flex" href="#04-MarkdownTOC">
-        <span class="has-mr-6">3.4</span>
+        <span class="has-mr-6">4.4</span>
         <span>04 MarkdownTOC</span>
         </a></li><li>
         <a class="is-flex" href="#05-Table-Editor">
-        <span class="has-mr-6">3.5</span>
+        <span class="has-mr-6">4.5</span>
         <span>05 Table Editor</span>
         </a></li></ul></li><li>
-        <a class="is-flex" href="#Part-Four-数学公式">
-        <span class="has-mr-6">4</span>
-        <span>Part Four 数学公式</span>
-        </a></li><li>
-        <a class="is-flex" href="#Part-Six-一些莫名的规则（适用用于我的theme）">
+        <a class="is-flex" href="#数学公式">
         <span class="has-mr-6">5</span>
-        <span>Part Six 一些莫名的规则（适用用于我的theme）</span>
+        <span>数学公式</span>
         </a></li><li>
-        <a class="is-flex" href="#Part-Five-遗留问题">
+        <a class="is-flex" href="#一些莫名的规则（适用用于我的theme）">
         <span class="has-mr-6">6</span>
-        <span>Part Five 遗留问题</span>
+        <span>一些莫名的规则（适用用于我的theme）</span>
+        </a></li><li>
+        <a class="is-flex" href="#遗留问题">
+        <span class="has-mr-6">7</span>
+        <span>遗留问题</span>
         </a></li></ul>
         </div>
     </div>
