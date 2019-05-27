@@ -15,7 +15,7 @@
 <meta property="og:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-05-25T14:45:13.445Z">
+<meta property="og:updated_time" content="2019-05-27T05:09:13.067Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown语言记录">
 <meta name="twitter:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
@@ -149,7 +149,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 minutes read (About 756 words)
+                    7 minutes read (About 1064 words)
                 </span>
                 
                 
@@ -181,10 +181,46 @@
 </ol>
 <h1 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h1><!-- 01 -->
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
-<li>插入代码段<code>&#39;&#39;&#39; code &#39;&#39;&#39;</code>  <figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>&#123;<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;&#125;</span><br></pre></td></tr></table></figure>
+<li>插入代码段<code>&#39;&#39;&#39; code &#39;&#39;&#39;</code>  <figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <!-- 02 -->
+<h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><blockquote>
+<p>Markdown语法支持采用LaTex语法写数学公式，而在网页中使用Mathjax插件来显示数学公式。</p>
+</blockquote>
+<ol>
+<li>写法在行内公式为<code>$math$</code>,段内公式为<code>$$math$$</code>  <ul>
+<li>行内公式：$E=mc^2$,可以让公式在文中与文字或其他东西混编，不独占一行.</li>
+<li>段内公式：使公式单独占一行，不与文中其他文字等混编。<br>$$E=mc^2$$  </li>
+</ul>
+</li>
+</ol>
+<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><ol>
+<li>上下标：<ul>
+<li>上标<code>^</code>,下标<code>_</code>,扩号为整体<code>{}</code>  </li>
+<li>两边都有<code>$\sideset{^2_2}{^3_4}A$</code>,例如：$\sideset{^2_2}{^3_4}A$</li>
+</ul>
+</li>
+<li><p>括号：</p>
+<ul>
+<li>普通的<code>(</code>,<code>[</code>,<code>{</code>因为有特殊作用想要显示的时候得<code>\lbrace或者\rbrace</code></li>
+</ul>
+</li>
+<li><p>分数：</p>
+<ul>
+<li><code>\frac{numerator}{denmorator}</code>，例如：<code>$\frac{1}{2}$</code>显示为$\frac{1}{2}$</li>
+<li>将公式放的清楚一点可以用<code>\cfrac{numerator}{denmorator}</code>，例如：$\cfrac{1}{2}$</li>
+</ul>
+</li>
+<li>开方：<ul>
+<li>开方使用<code>\sqrt[次数]{被开方数}</code>这样的语法</li>
+</ul>
+</li>
+</ol>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><!-- 1） -->
+<h4 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h4><center><table><br>    <tr align="center" style="font:bold;"><br>        <td>代码</td><br>        <td>大写</td><br>        <td>代码</td><br>        <td>小写</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$A</code></td><br>        <td>$A$</td><br>        <td><code>$\alpha$</code></td><br>        <td>$\alpha$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$B$</code></td><br>        <td>$B$</td><br>        <td><code>$\beta$</code></td><br>        <td>$\beta$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Gamma$</code></td><br>        <td>$\Gamma$</td><br>        <td><code>$\gamma$</code></td><br>        <td>$\gamma$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Delta$</code></td><br>        <td>$\Delta$</td><br>        <td><code>$\delta$</code></td><br>        <td>$\delta$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$E$</code></td><br>        <td>$E$</td><br>        <td><code>$\epsilon$</code></td><br>        <td>$\epsilon$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$Z$</code></td><br>        <td>$Z$</td><br>        <td><code>$\zeta$</code></td><br>        <td>$\zeta$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$H$</code></td><br>        <td>$H$</td><br>        <td><code>$\eta$</code></td><br>        <td>$\eta$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Theta$</code></td><br>        <td>$\Theta$</td><br>        <td><code>$\theta$</code></td><br>        <td>$\theta$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$I$</code></td><br>        <td>$I$</td><br>        <td><code>$\iota$</code></td><br>        <td>$\iota$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$K$</code></td><br>        <td>$K$</td><br>        <td><code>$\kappa$</code></td><br>        <td>$\kappa$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Lambda$</code></td><br>        <td>$\Lambda$</td><br>        <td><code>$\lambda$</code></td><br>        <td>$\lambda$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$M$</code></td><br>        <td>$M$</td><br>        <td><code>$\mu$</code></td><br>        <td>$\mu$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$N$</code></td><br>        <td>$N$</td><br>        <td><code>$\nu$</code></td><br>        <td>$\nu$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Xi$</code></td><br>        <td>$\Xi$</td><br>        <td><code>$\xi$</code></td><br>        <td>$\xi$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$O$</code></td><br>        <td>$O$</td><br>        <td><code>$\omicron$</code></td><br>        <td>$\omicron$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Pi$</code></td><br>        <td>$\Pi$</td><br>        <td><code>$\pi$</code></td><br>        <td>$\pi$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Sigma$</code></td><br>        <td>$\Sigma$</td><br>        <td><code>$\sigma$</code></td><br>        <td>$\sigma$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$T$</code></td><br>        <td>$T$</td><br>        <td><code>$\tau$</code></td><br>        <td>$\tau$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Upsilon$</code></td><br>        <td>$\Upsilon$</td><br>        <td><code>$\upsilon$</code></td><br>        <td>$\upsilon$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Phi$</code></td><br>        <td>$\Phi$</td><br>        <td><code>$\phi$</code></td><br>        <td>$\phi$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$X$</code></td><br>        <td>$X$</td><br>        <td><code>$\chi$</code></td><br>        <td>$\chi$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Psi$</code></td><br>        <td>$\Psi$</td><br>        <td><code>$\psi$</code></td><br>        <td>$\psi$</td><br>    </tr><br>    <tr align="center"><br>        <td><code>$\Omega$</code></td><br>        <td>$\Omega$</td><br>        <td><code>$\omega$</code></td><br>        <td>$\omega$</td><br>    </tr><br></table></center>
+
+<h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><!-- 02 -->
 <h2 id="增加本地图片"><a href="#增加本地图片" class="headerlink" title="增加本地图片"></a>增加本地图片</h2><h3 id="方法一-使用标签插件"><a href="#方法一-使用标签插件" class="headerlink" title="方法一 使用标签插件"></a><strong>方法一 使用标签插件</strong></h3><p>&ensp;&ensp;这个是HEXO 3 之前一位网友为图片路径开发的插件，被集成在了Hexo3 里面，官方文档的使用方法如下：<br><figure class="highlight md hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure></p>
 <p>使用案例：<br><figure class="highlight ebnf hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attribute">meixie</span></span><br></pre></td></tr></table></figure></p>
 <p>这种方式的问题在于，使用markdown文档编辑器时不能看到图片，只能显示标签代码</p>
@@ -210,10 +246,6 @@
 </ol>
 <h2 id="03-Typora"><a href="#03-Typora" class="headerlink" title="03 Typora"></a>03 Typora</h2><h2 id="04-MarkdownTOC"><a href="#04-MarkdownTOC" class="headerlink" title="04 MarkdownTOC"></a>04 MarkdownTOC</h2><p>编写heading较多的长文档，希望生成目录方便跳转</p>
 <h2 id="05-Table-Editor"><a href="#05-Table-Editor" class="headerlink" title="05 Table Editor"></a>05 Table Editor</h2><p><a href="https://github.com/naokazuterada/MarkdownTOC#usage" target="_blank" rel="noopener">Usage</a></p>
-<!-- part 5 -->
-<h1 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h1><ol>
-<li>写法<code>$$ mathscript $$</code>,例如（自动居中）：<br>$$E=mc$$</li>
-</ol>
 <!-- part 6 -->
 <h1 id="一些莫名的规则（适用用于我的theme）"><a href="#一些莫名的规则（适用用于我的theme）" class="headerlink" title="一些莫名的规则（适用用于我的theme）"></a>一些莫名的规则（适用用于我的theme）</h1><ol>
 <li>代码框写法<code>1. （带空格）</code></li>
@@ -385,32 +417,44 @@
         <span class="has-mr-6">3.1</span>
         <span>代码</span>
         </a></li><li>
-        <a class="is-flex" href="#增加本地图片">
+        <a class="is-flex" href="#数学公式">
         <span class="has-mr-6">3.2</span>
+        <span>数学公式</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#格式">
+        <span class="has-mr-6">3.2.1</span>
+        <span>格式</span>
+        </a></li><li>
+        <a class="is-flex" href="#代码-1">
+        <span class="has-mr-6">3.2.2</span>
+        <span>代码</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#增加本地图片">
+        <span class="has-mr-6">3.3</span>
         <span>增加本地图片</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#方法一-使用标签插件">
-        <span class="has-mr-6">3.2.1</span>
+        <span class="has-mr-6">3.3.1</span>
         <span>方法一 使用标签插件</span>
         </a></li><li>
         <a class="is-flex" href="#方法二-markdown使用路径">
-        <span class="has-mr-6">3.2.2</span>
+        <span class="has-mr-6">3.3.2</span>
         <span>方法二 markdown使用路径</span>
         </a></li><li>
         <a class="is-flex" href="#方法三-CDN引用（加速）">
-        <span class="has-mr-6">3.2.3</span>
+        <span class="has-mr-6">3.3.3</span>
         <span>方法三 CDN引用（加速）</span>
         </a></li></ul></li><li>
         <a class="is-flex" href="#增加表格">
-        <span class="has-mr-6">3.3</span>
+        <span class="has-mr-6">3.4</span>
         <span>增加表格</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#方法一-markdown语言">
-        <span class="has-mr-6">3.3.1</span>
+        <span class="has-mr-6">3.4.1</span>
         <span>方法一 markdown语言</span>
         </a></li><li>
         <a class="is-flex" href="#方法二-html标签">
-        <span class="has-mr-6">3.3.2</span>
+        <span class="has-mr-6">3.4.2</span>
         <span>方法二 html标签</span>
         </a></li></ul></li></ul></li><li>
         <a class="is-flex" href="#各类快捷键">
@@ -437,16 +481,12 @@
         <span class="has-mr-6">4.5</span>
         <span>05 Table Editor</span>
         </a></li></ul></li><li>
-        <a class="is-flex" href="#数学公式">
-        <span class="has-mr-6">5</span>
-        <span>数学公式</span>
-        </a></li><li>
         <a class="is-flex" href="#一些莫名的规则（适用用于我的theme）">
-        <span class="has-mr-6">6</span>
+        <span class="has-mr-6">5</span>
         <span>一些莫名的规则（适用用于我的theme）</span>
         </a></li><li>
         <a class="is-flex" href="#遗留问题">
-        <span class="has-mr-6">7</span>
+        <span class="has-mr-6">6</span>
         <span>遗留问题</span>
         </a></li></ul>
         </div>
@@ -497,32 +537,44 @@
         <span class="has-mr-6">3.1</span>
         <span>代码</span>
         </a></li><li>
-        <a class="is-flex" href="#增加本地图片">
+        <a class="is-flex" href="#数学公式">
         <span class="has-mr-6">3.2</span>
+        <span>数学公式</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#格式">
+        <span class="has-mr-6">3.2.1</span>
+        <span>格式</span>
+        </a></li><li>
+        <a class="is-flex" href="#代码-1">
+        <span class="has-mr-6">3.2.2</span>
+        <span>代码</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#增加本地图片">
+        <span class="has-mr-6">3.3</span>
         <span>增加本地图片</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#方法一-使用标签插件">
-        <span class="has-mr-6">3.2.1</span>
+        <span class="has-mr-6">3.3.1</span>
         <span>方法一 使用标签插件</span>
         </a></li><li>
         <a class="is-flex" href="#方法二-markdown使用路径">
-        <span class="has-mr-6">3.2.2</span>
+        <span class="has-mr-6">3.3.2</span>
         <span>方法二 markdown使用路径</span>
         </a></li><li>
         <a class="is-flex" href="#方法三-CDN引用（加速）">
-        <span class="has-mr-6">3.2.3</span>
+        <span class="has-mr-6">3.3.3</span>
         <span>方法三 CDN引用（加速）</span>
         </a></li></ul></li><li>
         <a class="is-flex" href="#增加表格">
-        <span class="has-mr-6">3.3</span>
+        <span class="has-mr-6">3.4</span>
         <span>增加表格</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#方法一-markdown语言">
-        <span class="has-mr-6">3.3.1</span>
+        <span class="has-mr-6">3.4.1</span>
         <span>方法一 markdown语言</span>
         </a></li><li>
         <a class="is-flex" href="#方法二-html标签">
-        <span class="has-mr-6">3.3.2</span>
+        <span class="has-mr-6">3.4.2</span>
         <span>方法二 html标签</span>
         </a></li></ul></li></ul></li><li>
         <a class="is-flex" href="#各类快捷键">
@@ -549,16 +601,12 @@
         <span class="has-mr-6">4.5</span>
         <span>05 Table Editor</span>
         </a></li></ul></li><li>
-        <a class="is-flex" href="#数学公式">
-        <span class="has-mr-6">5</span>
-        <span>数学公式</span>
-        </a></li><li>
         <a class="is-flex" href="#一些莫名的规则（适用用于我的theme）">
-        <span class="has-mr-6">6</span>
+        <span class="has-mr-6">5</span>
         <span>一些莫名的规则（适用用于我的theme）</span>
         </a></li><li>
         <a class="is-flex" href="#遗留问题">
-        <span class="has-mr-6">7</span>
+        <span class="has-mr-6">6</span>
         <span>遗留问题</span>
         </a></li></ul>
         </div>
