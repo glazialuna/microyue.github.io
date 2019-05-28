@@ -163,18 +163,22 @@
             
         </h1>
         <div class="content">
-            <p>Sublime真好看，可爱又可爱<br><a id="more"></a></p>
+            <p>Sublime真好看，可爱又可爱</p>
+<a id="more"></a>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>  看这个创建时间，如果仔细查课表，这时候我本来在上课的，然后小孔说她的blog建好了，然后我就想起来typora不好看，然后我就查了一下下，然后就被sublime吸引了。。。</p>
-<h2 id="Part-One-伟大的sublime"><a href="#Part-One-伟大的sublime" class="headerlink" title="Part One 伟大的sublime"></a>Part One 伟大的sublime</h2><p>  sublime真漂亮，高亮真漂亮，长得真漂亮，黑底色真漂亮。。。<br>  而且免费（讲道理要买license）使用。<br><br>  <a href="https://www.sublimetext.com/" target="_blank" rel="noopener">Sublime官网</a><br>  当然鼓励购买，虽然license的限制，至少我还不知道是什么~~~<br>  <a href="https://www.52pojie.cn/thread-922128-1-1.html" target="_blank" rel="noopener">吾爱破解</a><br>  大神的破解，我还没有时间尝试，先把地址马在这里。</p>
+<h2 id="Part-One-伟大的sublime"><a href="#Part-One-伟大的sublime" class="headerlink" title="Part One 伟大的sublime"></a>Part One 伟大的sublime</h2><p>  sublime真漂亮，高亮真漂亮，长得真漂亮，黑底色真漂亮。。。<br>  而且免费（讲道理要买license）使用。<br><br>  <a href="https://www.sublimetext.com/" target="_blank" rel="noopener">Sublime官网</a><br>  当然鼓励购买，虽然license的限制，至少我还不知道是什么<del>~</del><br>  <a href="https://www.52pojie.cn/thread-922128-1-1.html" target="_blank" rel="noopener">吾爱破解</a><br>  大神的破解，我还没有时间尝试，先把地址马在这里。</p>
 <h2 id="Part-Two-Package-Install"><a href="#Part-Two-Package-Install" class="headerlink" title="Part Two Package Install"></a>Part Two Package Install</h2><p>Sublime 有非常多的Package可供安装，安装过程如下：</p>
-<h3 id="01-Step-1-安装Package-Install"><a href="#01-Step-1-安装Package-Install" class="headerlink" title="01 Step 1 安装Package Install"></a>01 <strong>Step 1 安装Package Install</strong></h3><p>“Ctrl+`” 打开控制台（也可以View -&gt; Show Console）<br><img src="\photos\Sublime1.jpg" alt="Sublime控制台"><br>在控制台下输入以下语句：<br><figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> urllib.request,os,hashlib; </span><br><span class="line">h = <span class="hljs-string">'6f4c264a24d933ce70df5dedcf1dcaee'</span> + <span class="hljs-string">'ebe013ee18cced0ef93d5f746d80ef60'</span>; </span><br><span class="line">pf = <span class="hljs-string">'Package Control.sublime-package'</span>; </span><br><span class="line">ipp = sublime.installed_packages_path(); </span><br><span class="line">urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); </span><br><span class="line">by = urllib.request.urlopen( <span class="hljs-string">'http://packagecontrol.io/'</span> + pf.replace(<span class="hljs-string">' '</span>, <span class="hljs-string">'%20'</span>)).read(); </span><br><span class="line">dh = hashlib.sha256(by).hexdigest(); </span><br><span class="line">print(<span class="hljs-string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h)) <span class="hljs-keyword">if</span> dh != h <span class="hljs-keyword">else</span> open(os.path.join( ipp, pf), <span class="hljs-string">'wb'</span> ).write(by)</span><br></pre></td></tr></table></figure></p>
+<h3 id="01-Step-1-安装Package-Install"><a href="#01-Step-1-安装Package-Install" class="headerlink" title="01 Step 1 安装Package Install"></a>01 <strong>Step 1 安装Package Install</strong></h3><p>“Ctrl+`” 打开控制台（也可以View -&gt; Show Console）<br><img src="%5Cphotos%5CSublime1.jpg" alt="Sublime控制台"><br>在控制台下输入以下语句：</p>
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> urllib.request,os,hashlib; </span><br><span class="line">h = <span class="hljs-string">'6f4c264a24d933ce70df5dedcf1dcaee'</span> + <span class="hljs-string">'ebe013ee18cced0ef93d5f746d80ef60'</span>; </span><br><span class="line">pf = <span class="hljs-string">'Package Control.sublime-package'</span>; </span><br><span class="line">ipp = sublime.installed_packages_path(); </span><br><span class="line">urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); </span><br><span class="line">by = urllib.request.urlopen( <span class="hljs-string">'http://packagecontrol.io/'</span> + pf.replace(<span class="hljs-string">' '</span>, <span class="hljs-string">'%20'</span>)).read(); </span><br><span class="line">dh = hashlib.sha256(by).hexdigest(); </span><br><span class="line">print(<span class="hljs-string">'Error validating download (got %s instead of %s), please try manual install'</span> % (dh, h)) <span class="hljs-keyword">if</span> dh != h <span class="hljs-keyword">else</span> open(os.path.join( ipp, pf), <span class="hljs-string">'wb'</span> ).write(by)</span><br></pre></td></tr></table></figure>
+
 <p>这段代码具体参照<a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">安装指南</a></p>
-<h3 id="02-Step-2-安装插件"><a href="#02-Step-2-安装插件" class="headerlink" title="02 Step 2 安装插件"></a>02 <strong>Step 2 安装插件</strong></h3><p>‘ctrl+shift+p’打开Command Palette (Tools)里面<br>输入Package Install ,点击，然后找到需要安装的插件<br><img src="\photos\Sublime2.jpg" alt="SublimePackage"><br>（<strong>！注意有两个步骤，不要在command里面搜索插件，我开始就愚蠢地这么做了</strong>)<br><img src="\photos\Sublime3.jpg" alt="Sublime插件"><br>这里注意，可能会需要一点时间寻找package，不过就我的经验来看，没有立刻出现一般就是有点问题了。貌似和Sublime的代理信息有关，因为连接代理就失败，校网也不太行，外网全局才可以。</p>
+<h3 id="02-Step-2-安装插件"><a href="#02-Step-2-安装插件" class="headerlink" title="02 Step 2 安装插件"></a>02 <strong>Step 2 安装插件</strong></h3><p>‘ctrl+shift+p’打开Command Palette (Tools)里面<br>输入Package Install ,点击，然后找到需要安装的插件<br><img src="%5Cphotos%5CSublime2.jpg" alt="SublimePackage"><br>（<strong>！注意有两个步骤，不要在command里面搜索插件，我开始就愚蠢地这么做了</strong>)
+<img src="%5Cphotos%5CSublime3.jpg" alt="Sublime插件"><br>这里注意，可能会需要一点时间寻找package，不过就我的经验来看，没有立刻出现一般就是有点问题了。貌似和Sublime的代理信息有关，因为连接代理就失败，校网也不太行，外网全局才可以。</p>
 <p>下载完成了以后就可以快乐地使用啦~如果有对插件的更改问题，可以在Preference -&gt; Package Setting 中设置。</p>
 <h3 id="我安装的插件们"><a href="#我安装的插件们" class="headerlink" title="我安装的插件们"></a>我安装的插件们</h3><!-- 01 -->
 <h4 id="Twig-支持swig高亮"><a href="#Twig-支持swig高亮" class="headerlink" title="Twig:支持swig高亮"></a>Twig:支持swig高亮</h4><!-- 02 -->
 <h4 id="MarkdownEdit：支持Markdown高亮"><a href="#MarkdownEdit：支持Markdown高亮" class="headerlink" title="MarkdownEdit：支持Markdown高亮"></a>MarkdownEdit：支持Markdown高亮</h4><!-- 03 -->
-<h4 id="OmniXX"><a href="#OmniXX" class="headerlink" title="OmniXX"></a>OmniXX</h4><h2 id="Part-Two-Sublime的调试"><a href="#Part-Two-Sublime的调试" class="headerlink" title="Part Two Sublime的调试"></a>Part Two Sublime的调试</h2><h2 id="Part-Three-Sublime的一些操作"><a href="#Part-Three-Sublime的一些操作" class="headerlink" title="Part Three Sublime的一些操作"></a>Part Three Sublime的一些操作</h2><p><strong>注意所有默认设置都需要重启sublime来生效！</strong><br><img src="\photos\Sublime4.jpg" alt="Sublime偏好设置"></p>
+<h4 id="OmniXX"><a href="#OmniXX" class="headerlink" title="OmniXX"></a>OmniXX</h4><h2 id="Part-Two-Sublime的调试"><a href="#Part-Two-Sublime的调试" class="headerlink" title="Part Two Sublime的调试"></a>Part Two Sublime的调试</h2><h2 id="Part-Three-Sublime的一些操作"><a href="#Part-Three-Sublime的一些操作" class="headerlink" title="Part Three Sublime的一些操作"></a>Part Three Sublime的一些操作</h2><p><strong>注意所有默认设置都需要重启sublime来生效！</strong><br><img src="%5Cphotos%5CSublime4.jpg" alt="Sublime偏好设置"></p>
 <h3 id="偏好设置"><a href="#偏好设置" class="headerlink" title="偏好设置"></a>偏好设置</h3><p>Preference - Settings</p>
 <h4 id="01-default-settings"><a href="#01-default-settings" class="headerlink" title="01 default settings"></a>01 default settings</h4><p>其实都有注释，自己看着理解就好了。操作简单，讲default的内容复制到user中进行更改。</p>
 <p>自动换行 word_wrap</p>
@@ -296,7 +300,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        7
                     </p>
                 </div>
             </div>
@@ -306,17 +310,17 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        4
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tag
+                        Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        1
+                        2
                     </p>
                 </div>
             </div>
