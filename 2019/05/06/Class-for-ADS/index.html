@@ -16,7 +16,7 @@
 <meta property="og:description" content="ADS 课程笔记+代码复习+拓展">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-05-28T16:17:41.961Z">
+<meta property="og:updated_time" content="2019-05-28T16:32:03.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ADS">
 <meta name="twitter:description" content="ADS 课程笔记+代码复习+拓展">
@@ -150,7 +150,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 368 words)
+                    2 minutes read (About 367 words)
                 </span>
                 
                 
@@ -174,7 +174,8 @@
 <li>applications: distributed system(<font color="Red">?</font>)</li>
 </ul>
 <h3 id="example-1-hiring-problem"><a href="#example-1-hiring-problem" class="headerlink" title="example 1 : hiring problem:"></a>example 1 : <strong>hiring problem:</strong></h3><ul>
-<li>case 1:  <ul>
+<li><p>case 1:  </p>
+<ul>
 <li>Interview for N days, Interview Cost=$C_i$ $\ll$ Hiring Cost=$C_h$, assume M people was hired</li>
 <li>Total Cost: $O(NC_i + MC_h)$ , Worst Case: M=N</li>
 <li>Random Order: $O(C_hInN + NC_i)$  </li>
@@ -185,21 +186,18 @@
 </li>
 </ul>
 </li>
-</ul>
-<p>$$</p>
+<li><p>case 2: Online(Hire only once)  </p>
 <ul>
-<li>case 2: Online(Hire only once)  <ul>
 <li>The probability for hire the best qualified candidate, is $\cfrac{1}{e}$ when k=$\cfrac{N}{e}$</li>
 <li>Prove: <ul>
 <li>$S_i$:the $i^{th}$ applicant is the best</li>
-<li>{A:= the best one is at position i} $\cap$ {B:=no one at position k+1 ~ i-1 are hired}<br>$$<br>\begin{split}<br>Pr[S_i] = Pr[A \times B] &amp;= Pr[A] \times Pr[B] \\<pre><code>&amp;= \frac{1}{N} \frac {k}{i-1} \\\\
-&amp;= \frac {k}{N(i-1)} \\\\
-\\\\</code></pre>  Pr[S] = \sum_{i=k+1}^{N}Pr[S_i] &amp;=\sum_{i=k+1}^{N}\frac {k}{N(i-1)} = \frac {N}{k} \sum_{i=k}^{N-1} \frac {1}{i}\\<br>\end{split}<br>$$<br>comments: We can find that $$ \int_k^N\frac{1}{x}dx \leq \sum_{i=k}^{N-1} \frac{1}{x}dx \leq \int_{k-1}^{N-1}\frac{1}{x}dx $$<br>thus,<br>$$<br>\frac{k}{N}\ln(\frac{N}{k}) \leq  \frac {k}{N}In(\frac {N}{k}) \leq \frac{k}{N}\ln(\frac{N-1}{k-1} )<br>$$<br>For a given k, we can find the maximum value of $f(k)=\frac{k}{N}\ln(\frac{N}{k})$ is $\frac{1}{e}$</li>
+<li>{A:= the best one is at position i} $\cap$ {B:=no one at position k+1 ~ i-1 are hired}</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+<p>$$<br>\begin{align}<br>Pr[S_i] &amp;= Pr[A \times B] = Pr[A] \times Pr[B] \\<br>&amp;= \frac{1}{N} \frac {k}{i-1} \\<br>                  &amp;= \frac {k}{N(i-1)} \\<br>            Pr[S] &amp;= \sum_{i=k+1}^{N}Pr[S_i] \\<br>            &amp;=\sum_{i=k+1}^{N}\frac {k}{N(i-1)} = \frac {N}{k} \sum_{i=k}^{N-1} \frac {1}{i}\\<br>\end{align}<br>$$<br>We can find that<br>$$ \int_k^N\frac{1}{x}dx \leq \sum_{i=k}^{N-1} \frac{1}{x}dx \leq \int_{k-1}^{N-1}\frac{1}{x}dx<br>$$<br>thus,<br>$$<br> \frac{k}{N}\ln(\frac{N}{k}) \leq  \frac {k}{N}In(\frac {N}{k}) \leq \frac{k}{N}\ln(\frac{N-1}{k-1} )<br>$$<br>For a given k, we can find the maximum value of $f(k)=\frac{k}{N}\ln(\frac{N}{k})$ is $\frac{1}{e}$</p>
 <h3 id="example-2-Quicksort"><a href="#example-2-Quicksort" class="headerlink" title="example 2: Quicksort"></a>example 2: <strong>Quicksort</strong></h3><ul>
 <li>worst running time: $\Theta(N^2)$  </li>
 <li>average case running time: $\Theta(N\log N)$, assuming every permutation is eually likely</li>
