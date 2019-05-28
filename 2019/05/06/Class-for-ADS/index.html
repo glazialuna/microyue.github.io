@@ -163,9 +163,7 @@
             
         </h1>
         <div class="content">
-            <p>ADS 课程笔记+代码复习+拓展</p>
-<a id="more"></a>
-
+            <p>ADS 课程笔记+代码复习+拓展<br><a id="more"></a></p>
 <!-- part one -->
 <h1 id="Class-Notes"><a href="#Class-Notes" class="headerlink" title="Class Notes"></a>Class Notes</h1><!-- class 12 -->
 <h2 id="ADS12-local-Search"><a href="#ADS12-local-Search" class="headerlink" title="ADS12 local Search"></a>ADS12 local Search</h2><!-- class 13 -->
@@ -181,7 +179,13 @@
 <li>Random Order: $O(C_hInN + NC_i)$  </li>
 <li>Permute Array: <code>A[i].P=1+rand()%(N^3)</code>  </li>
 <li><em>Prove:</em>  <ul>
-<li>$E[X_i]$=Pr[candidate is hired]<br>$$<br>\begin{split}<br>E[X]= \sum_{j==1}^N(j*Pr[X=j]) \\<br>E[X]=E[\sum_{i=1}^N X_i] = \sum_{i=1}^NE[X_i]  \\<br>=\sum_{i=1}^N=InN+O(1) \\<br>time = O(C_hInN + NC_i)<br>\end{split}<br>$$  </li>
+<li>$E[X_i]$=Pr[candidate is hired] <script type="math/tex; mode=display">
+\begin{split}
+E[X]= \sum_{j==1}^N(j*Pr[X=j]) \\\\
+E[X]=E[\sum_{i=1}^N X_i] = \sum_{i=1}^NE[X_i]  \\\\
+=\sum_{i=1}^N=InN+O(1) \\\\
+time = O(C_hInN + NC_i)
+\end{split}</script></li>
 </ul>
 </li>
 </ul>
@@ -197,7 +201,17 @@
 </ul>
 </li>
 </ul>
-<p>$$<br>\begin{align}<br>Pr[S_i] &amp;= Pr[A \times B] = Pr[A] \times Pr[B] \\<br>&amp;= \frac{1}{N} \frac {k}{i-1} \\<br>                  &amp;= \frac {k}{N(i-1)} \\<br>            Pr[S] &amp;= \sum_{i=k+1}^{N}Pr[S_i] \\<br>            &amp;=\sum_{i=k+1}^{N}\frac {k}{N(i-1)} = \frac {N}{k} \sum_{i=k}^{N-1} \frac {1}{i}\\<br>\end{align}<br>$$<br>We can find that<br>$$ \int_k^N\frac{1}{x}dx \leq \sum_{i=k}^{N-1} \frac{1}{x}dx \leq \int_{k-1}^{N-1}\frac{1}{x}dx<br>$$<br>thus,<br>$$<br> \frac{k}{N}\ln(\frac{N}{k}) \leq  \frac {k}{N}In(\frac {N}{k}) \leq \frac{k}{N}\ln(\frac{N-1}{k-1} )<br>$$<br>For a given k, we can find the maximum value of $f(k)=\frac{k}{N}\ln(\frac{N}{k})$ is $\frac{1}{e}$</p>
+<script type="math/tex; mode=display">
+\begin{align}
+Pr[S_i] &= Pr[A \times B] = Pr[A] \times Pr[B] \\\\
+&= \frac{1}{N} \frac {k}{i-1} \\\\
+                  &= \frac {k}{N(i-1)} \\\\
+            Pr[S] &= \sum_{i=k+1}^{N}Pr[S_i] \\\\
+            &=\sum_{i=k+1}^{N}\frac {k}{N(i-1)} = \frac {N}{k} \sum_{i=k}^{N-1} \frac {1}{i}\\\\           
+\end{align}</script><p>We can find that </p>
+<script type="math/tex; mode=display">\int_k^N\frac{1}{x}dx \leq \sum_{i=k}^{N-1} \frac{1}{x}dx \leq \int_{k-1}^{N-1}\frac{1}{x}dx</script><p>thus,</p>
+<script type="math/tex; mode=display">
+ \frac{k}{N}\ln(\frac{N}{k}) \leq  \frac {k}{N}In(\frac {N}{k}) \leq \frac{k}{N}\ln(\frac{N-1}{k-1} )</script><p>For a given k, we can find the maximum value of $f(k)=\frac{k}{N}\ln(\frac{N}{k})$ is $\frac{1}{e}$</p>
 <h3 id="example-2-Quicksort"><a href="#example-2-Quicksort" class="headerlink" title="example 2: Quicksort"></a>example 2: <strong>Quicksort</strong></h3><ul>
 <li>worst running time: $\Theta(N^2)$  </li>
 <li>average case running time: $\Theta(N\log N)$, assuming every permutation is eually likely</li>
