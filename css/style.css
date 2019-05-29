@@ -259,33 +259,6 @@ img.thumbnail {
 0.7),
 #         .is-active,
 #             display: block,
-divdown,
-#toc ol.toc li.toc-item i {
-  display: inline-block;
-  margin-left: -0.9em;
-  width: 0.9em;
-  color: #b3b3b3;
-  font-weight: bold;
-  cursor: pointer;
-}
-#toc ol.toc li.toc-item i:hover {
-  color: #000;
-}
-/*关联图标的 Class*/
-#toc ol.toc li.toc-item i.hide {
-  display: none;
-}
-/*关联总标题的 Class*/
-#toc .toc-title.clickable {
-  cursor: pointer;
-}
-#toc .toc-title.clickable:hover {
-  color: #88acdb;
-}
-#toc .toc-title.clickable:active {
-  color: #d3d3d3;
-}
-/*其他目录相关*/
 #toc {
   font-size: 0.9em;
   line-height: 1.65em;
@@ -307,9 +280,6 @@ divdown,
 }
 #toc ol.toc a.toc-link {
   color: #808080;
-}
-#toc ol.toc a.toc-link:visited {
-  color: #f48385;
 }
 #toc ol.toc a.toc-link:hover {
   color: #88acdb;
