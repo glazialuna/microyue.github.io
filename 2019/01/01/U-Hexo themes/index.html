@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>Hexo themes撰写 - Bonny &amp; Pony</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="&amp;ensp;&amp;ensp;主要就是关于我的主题的构建，本人小白一枚，html和ejs都不大精通，就是对自己的主题什么时候有要求了或者是空闲了就来加点内容。">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo themes撰写">
+<meta property="og:url" content="http://www.microyue.com/2019/01/01/U-Hexo themes/index.html">
+<meta property="og:site_name" content="Bonny &amp; Pony">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;主要就是关于我的主题的构建，本人小白一枚，html和ejs都不大精通，就是对自己的主题什么时候有要求了或者是空闲了就来加点内容。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://www.microyue.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-05-29T17:02:46.097Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo themes撰写">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;主要就是关于我的主题的构建，本人小白一枚，html和ejs都不大精通，就是对自己的主题什么时候有要求了或者是空闲了就来加点内容。">
+<meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="dd" title="Hexo themes撰写" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/pitty.jpg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/Bonny2.png" alt="Hexo themes撰写" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-12-31T16:00:00.000Z">2019-01-01</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 minutes read (About 1458 words)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span> visits
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <div class="has-title-style">Hexo themes撰写</div>
+            
+        </h1>
+        <div class="content">
+            <p>&ensp;&ensp;主要就是关于我的主题的构建，本人小白一枚，html和ejs都不大精通，就是对自己的主题什么时候有要求了或者是空闲了就来加点内容。</p>
+<a id="more"></a>
+<!-- Part 1 -->
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><!-- 01 -->
+<h2 id="Hexo博客"><a href="#Hexo博客" class="headerlink" title="Hexo博客"></a>Hexo博客</h2><p>这里是默认已经了解hexo的基本操作，如果对于hexo的操作还不了解或者已经不太熟练的话，可以查看我的另外一篇博客。</p>
+<!-- 02 -->
+<h2 id="相关知识"><a href="#相关知识" class="headerlink" title="相关知识"></a>相关知识</h2><h3 id="语言工具"><a href="#语言工具" class="headerlink" title="语言工具"></a>语言工具</h3><p>制作Hexo主题，需要了解 HTML / CSS / JavaScript，此外Hexo还有依赖<br></p>
+<ul>
+<li>模板引擎： Hexo支持 EJS / Jade /Haml / Swig<br></li>
+<li>CSS 预处理：SASS / LESS / Stylus<br></li>
+<li>在本文中选用Swig<a href="https://myvin.github.io/swig.zh-CN/docs/index.html" target="_blank" rel="noopener">语法文档</a>和Stylus<a href="http://stylus-lang.com/" target="_blank" rel="noopener">语法文档</a></li>
+</ul>
+<!-- 03 -->
+<h3 id="Hexo主题要求"><a href="#Hexo主题要求" class="headerlink" title="Hexo主题要求"></a>Hexo主题要求</h3><p>&emsp;theme主题在./themes/路径之下，一个主题包含结构有： <br></p>
+<ul>
+<li>__ <em>config.yml_</em> ： 主题的配置文件。修改时会自动更新，无需重启服务器。 <br></li>
+<li><strong>languages</strong>：语言文件夹。[Hexo-语言文档]<a href="https://hexo.io/zh-cn/docs/templates" target="_blank" rel="noopener">Hexo-模板文档</a> <br></li>
+<li><strong>layout</strong>：布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式。<a href="https://hexo.io/zh-cn/docs/templates" target="_blank" rel="noopener">Hexo-模板文档</a>  <br></li>
+<li><strong>scripts</strong>：脚本文件夹。在启动时，Hexo 会载入此文件夹内的 JavaScript 文件，这里包含插件信息。<a href="https://hexo.io/zh-cn/docs/plugins" target="_blank" rel="noopener">Hexo-插件文档</a> <br></li>
+<li><strong>source</strong>：资源文件夹，除了模板以外的 Asset，例如 CSS、JavaScript 文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 _（下划线线）或隐藏的文件会被忽略。 <br></li>
+</ul>
+<p>&emsp;可以参考<a href="https://hexo.io/zh-cn/docs/themes.html" target="_blank" rel="noopener">Hexo-主题文档</a>获得更多信息 <br></p>
+<p>&emsp;其中layout文件夹中包含的对各个页面的要求文件为：<br><br>· 首页（index.swig）<br><br>· 存档页（archive.swig）<br><br>· 标签文章列表页（tag.swig）<br><br>· 分类文章列表页（category.swig）<br><br>· 文章详情（post.swig）<br><br>· 页面详情（page.swig）<br></p>
+<!-- 04 -->
+<h3 id="制作属于自己的hexo主题"><a href="#制作属于自己的hexo主题" class="headerlink" title="制作属于自己的hexo主题"></a>制作属于自己的hexo主题</h3><h4 id="Step-1：建立自己的theme文件夹"><a href="#Step-1：建立自己的theme文件夹" class="headerlink" title="Step 1：建立自己的theme文件夹"></a>Step 1：建立自己的theme文件夹</h4><p>现在开始项目之前，我都会搜索一下 yeoman 有没有库，生成 Hexo 主题就有 generator-hexo-theme 。如果还没有安装 yeoman ，那先用 npm 全局安装。<br>接着安装生成器的库：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i -g yo</span><br><span class="line">npm i -g generator-hexo-theme</span><br></pre></td></tr></table></figure>
+
+<p>然后到自己的博客目录之下，进入到 themes 目录，创建一个用主题名命名的新文件夹，比如test，进入新文件夹，先设置一下目录的权限，否则 yeoman 会提示权限不足：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 675 ./</span><br></pre></td></tr></table></figure>
+
+<p>然后选择一些基本的配置，比如使用什么模板引擎，使用什么 CSS 预编译等，这里分别选择 Swig 和 Stylus。完成之后，主题目录下就会生成一些如下结构的文件：</p>
+<figure class="highlight stylus hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">├── _config<span class="hljs-selector-class">.yml</span> <span class="hljs-comment">// 主题配置文件</span></span><br><span class="line">├── languages <span class="hljs-comment">// 多语言文件夹</span></span><br><span class="line">├── layout</span><br><span class="line">│   ├── archive<span class="hljs-selector-class">.swig</span> <span class="hljs-comment">// 存档页模板</span></span><br><span class="line">│   ├── category<span class="hljs-selector-class">.swig</span> <span class="hljs-comment">// 分类文章列表页模板</span></span><br><span class="line">│   ├── includes <span class="hljs-comment">// 各页面共享的模板</span></span><br><span class="line">│   │   ├── layout<span class="hljs-selector-class">.swig</span> <span class="hljs-comment">// 页面布局模板，其它的页面模板都是根据它扩展来的</span></span><br><span class="line">│   │   ├── pagination<span class="hljs-selector-class">.swig</span> <span class="hljs-comment">// 翻页按钮模板</span></span><br><span class="line">│   │   └── recent-posts<span class="hljs-selector-class">.swig</span> <span class="hljs-comment">// 文章列表模板</span></span><br><span class="line">│   ├── index<span class="hljs-selector-class">.swig</span> <span class="hljs-comment">// 首页模板</span></span><br><span class="line">│   ├── page<span class="hljs-selector-class">.swig</span> <span class="hljs-comment">// 页面详情页模板</span></span><br><span class="line">│   ├── post<span class="hljs-selector-class">.swig</span> <span class="hljs-comment">// 文章详情页模板</span></span><br><span class="line">│   └── tag<span class="hljs-selector-class">.swig</span> <span class="hljs-comment">// 标签文章列表页模板</span></span><br><span class="line">└── source</span><br><span class="line">    ├── css</span><br><span class="line">    │   └── theme<span class="hljs-selector-class">.styl</span> <span class="hljs-comment">// 主题自定义 CSS 文件</span></span><br><span class="line">    ├── favicon.ico</span><br><span class="line">    └── js</span><br><span class="line">        └── theme<span class="hljs-selector-class">.js</span> <span class="hljs-comment">// 主题 JavaScript 文件</span></span><br></pre></td></tr></table></figure>
+
+<p>赶紧在 Hexo 的主配置文件中使用新主题，到博客根目录下找到 _config.yml 文件，找到theme行，修改如下：</p>
+<figure class="highlight avrasm hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-symbol">theme:</span> test</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-2：建立内容"><a href="#Step-2：建立内容" class="headerlink" title="Step 2：建立内容"></a>Step 2：建立内容</h4><p>没有然后了，你就可以开始建立自己的内容了。</p>
+<h1 id="标准配置"><a href="#标准配置" class="headerlink" title="标准配置"></a>标准配置</h1><pre><code>标准配置包括主页，404页，分类，about等。</code></pre><hr>
+<hr>
+<h2 id="修改Toc可折叠"><a href="#修改Toc可折叠" class="headerlink" title="修改Toc可折叠"></a>修改Toc可折叠</h2><hr>
+<h3 id="Icarus建立Toc的方法"><a href="#Icarus建立Toc的方法" class="headerlink" title="Icarus建立Toc的方法"></a>Icarus建立Toc的方法</h3><pre><code>我的主题的标签是算在widget里面，并自己生成Table of Calague的，相关的文件有</code></pre><blockquote>
+<p>\layout\widget\toc.ejs : 定义了Toc生成函数buildToc函数<br>\source\js\main.js ： 定义了tocmask active的函数<br>\source\css\style.styl : 定义了toc样式和tocmask的样式</p>
+</blockquote>
+<h3 id="修改方式"><a href="#修改方式" class="headerlink" title="修改方式"></a>修改方式</h3><pre><code>主要建立在Hexo自带的目录生成函数上面。具体可参见Hexo文档</code></pre><ul>
+<li><a href="https://hexo.io/zh-cn/docs/helpers.html#toc" target="_blank" rel="noopener">Hexo TOC辅助函数 文档</a> </li>
+</ul>
+<br>
+
+<p><strong>Step 01:修改toc.ejs文件使用自带的生成函数</strong></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- toc(post.content, &#123;list_number: true&#125;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><strong>Step 02:在main.js中增加单击折叠的效果</strong></p>
+<figure class="highlight js hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//目录生成及隐藏函数</span></span><br><span class="line"><span class="hljs-keyword">var</span> $itemHasChild = $(<span class="hljs-string">"#toc .toc-item:has(&gt; .toc-child)"</span>);</span><br><span class="line"><span class="hljs-keyword">var</span> $titleHasChild = $itemHasChild.children(<span class="hljs-string">".toc-link"</span>);</span><br><span class="line"><span class="hljs-comment">// 默认被隐藏</span></span><br><span class="line">$titleHasChild.siblings(<span class="hljs-string">".toc-child"</span>).hide(<span class="hljs-number">100</span>);  </span><br><span class="line"><span class="hljs-comment">//点击大标题</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">clickTitle</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line"><span class="hljs-comment">//单击折叠或展开目录</span></span><br><span class="line">$titleHasChild.click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line"><span class="hljs-keyword">if</span>($(<span class="hljs-keyword">this</span>).siblings(<span class="hljs-string">".toc-child"</span>).is(<span class="hljs-string">":hidden"</span>))&#123;</span><br><span class="line">        $(<span class="hljs-keyword">this</span>).siblings(<span class="hljs-string">".toc-child"</span>).show(<span class="hljs-number">100</span>);</span><br><span class="line">    &#125;<span class="hljs-keyword">else</span>&#123;</span><br><span class="line">        $(<span class="hljs-keyword">this</span>).siblings(<span class="hljs-string">".toc-child"</span>).hide(<span class="hljs-number">100</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line">clickTitle();</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><strong>Step 03:在style.styl中增加目录的格式</strong></p>
+<figure class="highlight plain hljs"><figcaption><span>text</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">/*目录设置*/</span><br><span class="line">#toc &#123;</span><br><span class="line">        font-size: 0.9em;</span><br><span class="line">        line-height: 1.65em;</span><br><span class="line">    &#125;</span><br><span class="line">    #toc .toc-title &#123;</span><br><span class="line">        font-weight: bold;</span><br><span class="line">        color: #808080;</span><br><span class="line">    &#125;</span><br><span class="line">    #toc ol.toc &#123;</span><br><span class="line">        margin-left: 0;</span><br><span class="line">        padding: 0.7em;</span><br><span class="line">        padding-right: 0;</span><br><span class="line">    &#125;</span><br><span class="line">    #toc ol.toc li.toc-item &#123;</span><br><span class="line">        list-style-type: none;</span><br><span class="line">    &#125;</span><br><span class="line">    #toc ol.toc li.toc-item:hover &#123;</span><br><span class="line">        background: none;</span><br><span class="line">    &#125;</span><br><span class="line">    #toc ol.toc a.toc-link &#123;</span><br><span class="line">        color: #808080;</span><br><span class="line">    &#125;</span><br><span class="line">    #toc ol.toc a.toc-link:visited &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    #toc ol.toc a.toc-link:hover &#123;</span><br><span class="line">        color: #88acdb;</span><br><span class="line">        text-decoration: none;</span><br><span class="line">        background: rgba(158,188,226,0.21);</span><br><span class="line">    &#125;</span><br><span class="line">    #toc ol.toc ol.toc-child &#123;</span><br><span class="line">        padding-left: 1.25em;</span><br><span class="line">        margin: 4px 0;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="http://moxfive.xyz/2016/06/13/hexo-collapsible-toc/" target="_blank" rel="noopener">Yelee主题参考</a></li>
+</ul>
+<h1 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://chensd.com/2016-06/hexo-theme-guide.html" target="_blank" rel="noopener">Hexo主题开发指南 by 不可能不确定</a>  <br></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">Next主题文档</a></li>
+</ol>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Hexo/">Hexo</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>Alipay</span>
+    <div class="qrcode"><img src="C:\blog\themes\icarus\source\images\alipay.jpg" alt="Alipay"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>Wechat</span>
+    <div class="qrcode"><img src="C:\blog\themes\icarus\source\images\wechat.jpg" alt="Wechat"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/01/01/U-Markdown语言记录/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Markdown语言记录</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'TPBtxcsBL7twTkvXDy2IXo5w-gzGzoHsz',
+        app_key: 'KRkeN0cpUJjjfeqwXrvVrfkR',
+        placeholder: 'have something to say......'
+    });
+</script>
+
+    </div>
+</div>
+</div>
+                
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-3 column-right is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/pitty.jpg" alt="Bonny &amp; Ponny">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Bonny &amp; Ponny
+                    </p>
+                    
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>HZ,ZJ</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        8
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/glazialuna" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#准备"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo博客"><span class="toc-number">1.1.</span> <span class="toc-text">Hexo博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关知识"><span class="toc-number">1.2.</span> <span class="toc-text">相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语言工具"><span class="toc-number">1.2.1.</span> <span class="toc-text">语言工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo主题要求"><span class="toc-number">1.2.2.</span> <span class="toc-text">Hexo主题要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#制作属于自己的hexo主题"><span class="toc-number">1.2.3.</span> <span class="toc-text">制作属于自己的hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-1：建立自己的theme文件夹"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">Step 1：建立自己的theme文件夹</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-2：建立内容"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">Step 2：建立内容</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#标准配置"><span class="toc-number">2.</span> <span class="toc-text">标准配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改Toc可折叠"><span class="toc-number">2.1.</span> <span class="toc-text">修改Toc可折叠</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Icarus建立Toc的方法"><span class="toc-number">2.1.1.</span> <span class="toc-text">Icarus建立Toc的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改方式"><span class="toc-number">2.1.2.</span> <span class="toc-text">修改方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">2.1.3.</span> <span class="toc-text">参考</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考-1"><span class="toc-number">3.</span> <span class="toc-text">参考</span></a></li></ol>
+        </div>
+    </div>
+</div>
+
+    
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/pitty.jpg" alt="Bonny &amp; Ponny">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Bonny &amp; Ponny
+                    </p>
+                    
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>HZ,ZJ</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        8
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/glazialuna" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+        
+            
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#准备"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo博客"><span class="toc-number">1.1.</span> <span class="toc-text">Hexo博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关知识"><span class="toc-number">1.2.</span> <span class="toc-text">相关知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#语言工具"><span class="toc-number">1.2.1.</span> <span class="toc-text">语言工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo主题要求"><span class="toc-number">1.2.2.</span> <span class="toc-text">Hexo主题要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#制作属于自己的hexo主题"><span class="toc-number">1.2.3.</span> <span class="toc-text">制作属于自己的hexo主题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-1：建立自己的theme文件夹"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">Step 1：建立自己的theme文件夹</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-2：建立内容"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">Step 2：建立内容</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#标准配置"><span class="toc-number">2.</span> <span class="toc-text">标准配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改Toc可折叠"><span class="toc-number">2.1.</span> <span class="toc-text">修改Toc可折叠</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Icarus建立Toc的方法"><span class="toc-number">2.1.1.</span> <span class="toc-text">Icarus建立Toc的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改方式"><span class="toc-number">2.1.2.</span> <span class="toc-text">修改方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考"><span class="toc-number">2.1.3.</span> <span class="toc-text">参考</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考-1"><span class="toc-number">3.</span> <span class="toc-text">参考</span></a></li></ol>
+        </div>
+    </div>
+</div>
+
+        
+        </div>
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/Bonny2.png" alt="Hexo themes撰写" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 glazia_luna&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
