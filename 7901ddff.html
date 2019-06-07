@@ -17,7 +17,7 @@
 <meta property="og:description" content="&amp;ensp;&amp;ensp;主要就是关于我的主题的构建，本人小白一枚，html和ejs都不大精通，就是对自己的主题什么时候有要求了或者是空闲了就来加点内容。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-07T12:01:30.906Z">
+<meta property="og:updated_time" content="2019-06-07T12:46:22.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo|主题优化">
 <meta name="twitter:description" content="&amp;ensp;&amp;ensp;主要就是关于我的主题的构建，本人小白一枚，html和ejs都不大精通，就是对自己的主题什么时候有要求了或者是空闲了就来加点内容。">
@@ -156,7 +156,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    12 minutes read (About 1857 words)
+                    13 minutes read (About 1944 words)
                 </span>
                 
                 
@@ -272,7 +272,17 @@
 <li><p>添加robots.txt在source文件夹中</p>
 <figure class="highlight groovy hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">User-<span class="hljs-string">agent:</span> *</span><br><span class="line"><span class="hljs-string">Allow:</span> /</span><br><span class="line"><span class="hljs-string">Allow:</span> <span class="hljs-regexp">/archives/</span></span><br><span class="line"><span class="hljs-string">Allow:</span> <span class="hljs-regexp">/categories/</span></span><br><span class="line"><span class="hljs-string">Allow:</span> <span class="hljs-regexp">/tags/</span> </span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/vendors/</span></span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/js/</span></span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/css/</span></span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/fonts/</span></span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/vendors/</span></span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/fancybox/</span></span><br><span class="line"><span class="hljs-string">Sitemap:</span> <span class="hljs-string">http:</span><span class="hljs-comment">//www.hunao.info/sitemap.xml</span></span><br><span class="line"><span class="hljs-string">Sitemap:</span> <span class="hljs-string">http:</span><span class="hljs-comment">//www.hunao.info/baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>提交站点</p>
+<li><p>提交站点<br><a href="https://www.google.com/webmasters/" target="_blank" rel="noopener">Google Search Console</a><br><a href="https://ziyuan.baidu.com/" target="_blank" rel="noopener">Baidu站长</a></p>
+<ul>
+<li>先提交站点检验：有很多方法这里选择了html头检验，即在head.ejs中增加<blockquote>
+<meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">  </blockquote>
+</li>
+<li>验证完成后需要几天时间才能提取信息</li>
+<li>增加sitemap地图<ul>
+<li>这里有个小坑，<a href="http://www.host/baidusitemap" target="_blank" rel="noopener">www.host/baidusitemap</a> 和 <a href="http://www.host/sitemap.xml" target="_blank" rel="noopener">www.host/sitemap.xml</a> 原因不知道</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 <h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><ul>
@@ -409,7 +419,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        11
+                        10
                     </p>
                 </div>
             </div>
