@@ -16,7 +16,7 @@
 <meta property="og:description" content="&amp;ensp;&amp;ensp;主要就是关于我的主题的构建，本人小白一枚，html和ejs都不大精通，就是对自己的主题什么时候有要求了或者是空闲了就来加点内容。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-07T04:09:56.670Z">
+<meta property="og:updated_time" content="2019-06-07T12:01:30.906Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo|主题优化">
 <meta name="twitter:description" content="&amp;ensp;&amp;ensp;主要就是关于我的主题的构建，本人小白一枚，html和ejs都不大精通，就是对自己的主题什么时候有要求了或者是空闲了就来加点内容。">
@@ -155,7 +155,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    12 minutes read (About 1756 words)
+                    12 minutes read (About 1857 words)
                 </span>
                 
                 
@@ -258,13 +258,24 @@
 <li><p>其他方法：修改perlink为title.html</p>
 </li>
 </ul>
-<h3 id="添加站点地图"><a href="#添加站点地图" class="headerlink" title="添加站点地图"></a>添加站点地图</h3><pre><code>站点地图是一种文件，可以列出博客网站上的网页，从而将网站内容的组织构架告知谷歌以及其他搜索引擎。Googlebot等抓取工具会读取此文件以便抓取</code></pre><ul>
-<li><p>安装插件： </p>
-<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="hljs-keyword">install</span> hexo-generator-sitemap <span class="hljs-comment">--save</span></span><br><span class="line">npm <span class="hljs-keyword">install</span> hexo-generator-baidu-sitemap <span class="hljs-comment">--save</span></span><br></pre></td></tr></table></figure>
+<h3 id="添加站点地图"><a href="#添加站点地图" class="headerlink" title="添加站点地图"></a>添加站点地图</h3><blockquote>
+<p>站点地图是一种文件，可以列出博客网站上的网页，从而将网站内容的组织构架告知谷歌以及其他搜索引擎。Googlebot等抓取工具会读取此文件以便抓取</p>
+</blockquote>
+<ul>
+<li><p>安装插件： generate 后可以在public文件夹中看见baidusitemap.xml 和 sitemap.xml文件</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="hljs-keyword">install</span> hexo-generator-sitemap <span class="hljs-comment">--save</span></span><br><span class="line">npm <span class="hljs-keyword">install</span> hexo-generator-baidu-sitemap <span class="hljs-comment">--save</span></span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 </li>
-<li><h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3></li>
-<li><p><a href="https://www.jianshu.com/p/86557c34b671" target="_blank" rel="noopener">Hexo SEO优化</a></p>
+<li><p>修改主题配置文件：在主题配置文件中增加</p>
+<figure class="highlight less hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attribute">sitemap</span>: </span><br><span class="line">    <span class="hljs-attribute">path</span>: sitemap.xml</span><br><span class="line"><span class="hljs-attribute">baidusitemap</span>:</span><br><span class="line">    <span class="hljs-attribute">path</span>: baidusitemap.xml</span><br><span class="line"><span class="hljs-attribute">url</span>: <span class="hljs-attribute">http</span>:<span class="hljs-comment">//hunao.info</span></span><br></pre></td></tr></table></figure>
 </li>
+<li><p>添加robots.txt在source文件夹中</p>
+<figure class="highlight groovy hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">User-<span class="hljs-string">agent:</span> *</span><br><span class="line"><span class="hljs-string">Allow:</span> /</span><br><span class="line"><span class="hljs-string">Allow:</span> <span class="hljs-regexp">/archives/</span></span><br><span class="line"><span class="hljs-string">Allow:</span> <span class="hljs-regexp">/categories/</span></span><br><span class="line"><span class="hljs-string">Allow:</span> <span class="hljs-regexp">/tags/</span> </span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/vendors/</span></span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/js/</span></span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/css/</span></span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/fonts/</span></span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/vendors/</span></span><br><span class="line"><span class="hljs-string">Disallow:</span> <span class="hljs-regexp">/fancybox/</span></span><br><span class="line"><span class="hljs-string">Sitemap:</span> <span class="hljs-string">http:</span><span class="hljs-comment">//www.hunao.info/sitemap.xml</span></span><br><span class="line"><span class="hljs-string">Sitemap:</span> <span class="hljs-string">http:</span><span class="hljs-comment">//www.hunao.info/baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交站点</p>
+</li>
+</ul>
+<h3 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="https://www.jianshu.com/p/86557c34b671" target="_blank" rel="noopener">Hexo SEO优化</a></li>
 </ul>
 <h1 id="参考-2"><a href="#参考-2" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a href="http://chensd.com/2016-06/hexo-theme-guide.html" target="_blank" rel="noopener">Hexo主题开发指南 by 不可能不确定</a>  <br></li>
