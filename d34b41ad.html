@@ -4,31 +4,31 @@
     <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
 <meta name="baidu-site-verification" content="SiMVCIxqau">
 <meta charset="utf-8">
-<title>Notes for cypto test - Bonny &amp; Pony</title>
+<title>Deep exploration via randomized value - Bonny &amp; Pony</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="小白老师的密码学">
-<meta name="keywords" content="cypto">
+    <meta name="description" content="Deep exploration via randomized value 论文笔记">
+<meta name="keywords" content="RL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Notes for cypto test">
-<meta property="og:url" content="http://www.microyue.com/30a87a31.html">
+<meta property="og:title" content="Deep exploration via randomized value">
+<meta property="og:url" content="http://www.microyue.com/d34b41ad.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="小白老师的密码学">
+<meta property="og:description" content="Deep exploration via randomized value 论文笔记">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-06-27T18:10:40.642Z">
+<meta property="og:updated_time" content="2019-07-16T00:11:23.200Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Notes for cypto test">
-<meta name="twitter:description" content="小白老师的密码学">
+<meta name="twitter:title" content="Deep exploration via randomized value">
+<meta name="twitter:description" content="Deep exploration via randomized value 论文笔记">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
 
 
 
-<link rel="alternative" href="dd" title="Notes for cypto test" type="application/atom+xml">
+<link rel="alternative" href="dd" title="Deep exploration via randomized value" type="application/atom+xml">
 
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/Bonny2.png" alt="Notes for cypto test" height="28">
+                <img src="/images/Bonny2.png" alt="Deep exploration via randomized value" height="28">
             
             </a>
         </div>
@@ -147,17 +147,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-25T16:32:28.000Z">2019-06-26</time>
+                <time class="level-item has-text-grey" datetime="2019-07-15T19:58:28.000Z">2019-07-15</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Class/">Class</a>
+                <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 259 words)
+                    a minute read (About 158 words)
                 </span>
                 
                 
@@ -171,79 +171,48 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <div class="has-title-style">Notes for cypto test</div>
+                <div class="has-title-style">Deep exploration via randomized value</div>
             
         </h1>
         <div class="content">
-            <h1 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a>提纲</h1><ul>
-<li>Enigma</li>
-<li>散列算法：sha、md5</li>
-<li>加密算法 aes、des、rsa、ecc</li>
-<li>加密方法：ecb、cbc、cfb，rc4</li>
-<li>四个证明：RSA、gcd、Euler准则、中国剩余定理</li>
+            <h1 id="Randomized-Value-Function"><a href="#Randomized-Value-Function" class="headerlink" title="Randomized Value Function"></a>Randomized Value Function</h1><ul>
+<li>对于tuple {$S$ , $A$ , $R$ , $P$ , $\rho$}<ul>
+<li></li>
 </ul>
-<h1 id="Enigma"><a href="#Enigma" class="headerlink" title="Enigma"></a>Enigma</h1><ul>
-<li>过程（5轮 + message key + ring setting</li>
-<li>double stepping</li>
+</li>
 </ul>
-<h1 id="散列算法"><a href="#散列算法" class="headerlink" title="散列算法"></a>散列算法</h1><h2 id="SHA"><a href="#SHA" class="headerlink" title="SHA"></a>SHA</h2><ul>
-<li>位数</li>
-<li>大致过程</li>
+<h1 id="Deep-Exploration"><a href="#Deep-Exploration" class="headerlink" title="Deep Exploration"></a>Deep Exploration</h1><h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><h2 id="description"><a href="#description" class="headerlink" title="description"></a>description</h2><h1 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h1><h2 id="Value-Function-Learning"><a href="#Value-Function-Learning" class="headerlink" title="Value Function Learning"></a>Value Function Learning</h2><p>&ensp;&ensp;总体的框架，学习计算value Function</p>
+<ul>
+<li>主要有three steps<ul>
+<li>act： 选择actions，ex，greedy</li>
+<li>update：</li>
+<li>learn : update value estimate </li>
 </ul>
-<h2 id="md5"><a href="#md5" class="headerlink" title="md5"></a>md5</h2><ul>
-<li>位数</li>
-<li>报文填块</li>
-<li>过程</li>
-<li>碰撞</li>
-<li>彩虹表</li>
+</li>
 </ul>
-<h1 id="加密算法"><a href="#加密算法" class="headerlink" title="加密算法"></a>加密算法</h1><h2 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h2><ul>
-<li>AES过程</li>
-<li>AES密钥生成</li>
-<li>sbox生成</li>
-<li>permute（）</li>
-<li>f（）</li>
+<h2 id="Least-square-value-iteration"><a href="#Least-square-value-iteration" class="headerlink" title="Least-square value iteration"></a>Least-square value iteration</h2><p>&ensp;&Ensp;LSVI , 寻找一个 H time period，获取一个$Q^*$</p>
+<ul>
+<li>主要函数<ul>
+<li>vi（value iteration）： full knowledge</li>
+<li>learn lsvi：loss function : observed data<ul>
+<li>may use $\epsilon$-greedy or Boltzmann</li>
+<li>discussion in Section 4 prove: randomly perturbing 无法实现深度搜索（差异在 exp级别，所以增加 randomized value function</li>
+<li><h2 id="Randomoized-least-squares-value-iteration"><a href="#Randomoized-least-squares-value-iteration" class="headerlink" title="Randomoized least-squares value iteration"></a>Randomoized least-squares value iteration</h2>&ensp;&Ensp;</li>
 </ul>
-<h2 id="DES"><a href="#DES" class="headerlink" title="DES"></a>DES</h2><ul>
-<li>DES过程</li>
-<li>Mixcoloum</li>
-<li>农夫算法</li>
+</li>
 </ul>
-<h2 id="RSA"><a href="#RSA" class="headerlink" title="RSA"></a>RSA</h2><ul>
-<li>过程</li>
+</li>
 </ul>
-<h2 id="ECC"><a href="#ECC" class="headerlink" title="ECC"></a>ECC</h2><ul>
-<li>椭圆定理</li>
-<li>ecdsa</li>
-<li>ecnr</li>
+<h2 id="Code-analysis"><a href="#Code-analysis" class="headerlink" title="Code analysis"></a>Code analysis</h2><h1 id="Prove"><a href="#Prove" class="headerlink" title="Prove"></a>Prove</h1><h1 id="referen"><a href="#referen" class="headerlink" title="referen"></a>referen</h1><ul>
+<li><a href="https://arxiv.org/pdf/1703.07608.pdf" target="_blank" rel="noopener">Deep exploration via randomized value</a></li>
 </ul>
-<h1 id="加密过程"><a href="#加密过程" class="headerlink" title="加密过程"></a>加密过程</h1><h2 id="ECB"><a href="#ECB" class="headerlink" title="ECB"></a>ECB</h2><ul>
-<li>stealing</li>
-<li>过程</li>
-</ul>
-<h2 id="CBC"><a href="#CBC" class="headerlink" title="CBC"></a>CBC</h2><ul>
-<li>stealing</li>
-<li>过程</li>
-</ul>
-<h2 id="CFB"><a href="#CFB" class="headerlink" title="CFB"></a>CFB</h2><ul>
-<li>过程</li>
-</ul>
-<h1 id="四个证明"><a href="#四个证明" class="headerlink" title="四个证明"></a>四个证明</h1><h2 id="RSA-1"><a href="#RSA-1" class="headerlink" title="RSA"></a>RSA</h2><pre><code>m^e=c mod n --&gt; c^d = m mod n</code></pre><ul>
-<li>gcd(m,n) = 1</li>
-<li>gcd(m,n) != 1</li>
-</ul>
-<h2 id="GCD"><a href="#GCD" class="headerlink" title="GCD"></a>GCD</h2><pre><code>gcd(n,u)=an+bu，一定有这样的表示方式</code></pre><ul>
-<li>step 1：欧几里得辗转相除法</li>
-<li>step 2：数学归纳法</li>
-</ul>
-<h2 id="Euler准则"><a href="#Euler准则" class="headerlink" title="Euler准则"></a>Euler准则</h2><h2 id="中国剩余定理"><a href="#中国剩余定理" class="headerlink" title="中国剩余定理"></a>中国剩余定理</h2><h1 id="关于考试不会的题"><a href="#关于考试不会的题" class="headerlink" title="关于考试不会的题"></a>关于考试不会的题</h1><p>128位种子密钥的AES算法的密钥字节数 176（具体自己去看去，呜呜呜，我哭了）</p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/cypto/">cypto</a>
+                    <a class="has-link-grey -link" href="/tags/RL/">RL</a>
                 </div>
             </div>
         </div>
@@ -289,17 +258,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/ae13c021.html">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Notes for NA test</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/1f605849.html">
-                <span class="level-item">Notes for 沟通技巧</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/556effd8.html">
+                <span class="level-item">Thompson Sampling</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -370,7 +332,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        14
                     </p>
                 </div>
             </div>
@@ -380,7 +342,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        2
                     </p>
                 </div>
             </div>
@@ -390,7 +352,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        4
                     </p>
                 </div>
             </div>
@@ -411,7 +373,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#提纲"><span class="toc-number">1.</span> <span class="toc-text">提纲</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Enigma"><span class="toc-number">2.</span> <span class="toc-text">Enigma</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#散列算法"><span class="toc-number">3.</span> <span class="toc-text">散列算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SHA"><span class="toc-number">3.1.</span> <span class="toc-text">SHA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#md5"><span class="toc-number">3.2.</span> <span class="toc-text">md5</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#加密算法"><span class="toc-number">4.</span> <span class="toc-text">加密算法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#AES"><span class="toc-number">4.1.</span> <span class="toc-text">AES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DES"><span class="toc-number">4.2.</span> <span class="toc-text">DES</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RSA"><span class="toc-number">4.3.</span> <span class="toc-text">RSA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ECC"><span class="toc-number">4.4.</span> <span class="toc-text">ECC</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#加密过程"><span class="toc-number">5.</span> <span class="toc-text">加密过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ECB"><span class="toc-number">5.1.</span> <span class="toc-text">ECB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CBC"><span class="toc-number">5.2.</span> <span class="toc-text">CBC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CFB"><span class="toc-number">5.3.</span> <span class="toc-text">CFB</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四个证明"><span class="toc-number">6.</span> <span class="toc-text">四个证明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#RSA-1"><span class="toc-number">6.1.</span> <span class="toc-text">RSA</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GCD"><span class="toc-number">6.2.</span> <span class="toc-text">GCD</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Euler准则"><span class="toc-number">6.3.</span> <span class="toc-text">Euler准则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#中国剩余定理"><span class="toc-number">6.4.</span> <span class="toc-text">中国剩余定理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#关于考试不会的题"><span class="toc-number">7.</span> <span class="toc-text">关于考试不会的题</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Randomized-Value-Function"><span class="toc-number">1.</span> <span class="toc-text">Randomized Value Function</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Deep-Exploration"><span class="toc-number">2.</span> <span class="toc-text">Deep Exploration</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#example"><span class="toc-number">2.1.</span> <span class="toc-text">example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#description"><span class="toc-number">2.2.</span> <span class="toc-text">description</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Algorithm"><span class="toc-number">3.</span> <span class="toc-text">Algorithm</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Value-Function-Learning"><span class="toc-number">3.1.</span> <span class="toc-text">Value Function Learning</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Least-square-value-iteration"><span class="toc-number">3.2.</span> <span class="toc-text">Least-square value iteration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Randomoized-least-squares-value-iteration"><span class="toc-number">3.3.</span> <span class="toc-text">Randomoized least-squares value iteration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-analysis"><span class="toc-number">3.4.</span> <span class="toc-text">Code analysis</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Prove"><span class="toc-number">4.</span> <span class="toc-text">Prove</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#referen"><span class="toc-number">5.</span> <span class="toc-text">referen</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -434,7 +396,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/Bonny2.png" alt="Notes for cypto test" height="28">
+                    <img src="/images/Bonny2.png" alt="Deep exploration via randomized value" height="28">
                 
                 </a>
                 <p class="is-size-7">
