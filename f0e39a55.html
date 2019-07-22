@@ -18,7 +18,7 @@
 <meta property="og:description" content="辅助需要的统计、线性代数知识">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-19T19:19:04.689Z">
+<meta property="og:updated_time" content="2019-07-22T16:19:39.603Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="辅助知识">
 <meta name="twitter:description" content="辅助需要的统计、线性代数知识">
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 308 words)
+                    3 minutes read (About 483 words)
                 </span>
                 
                 
@@ -177,7 +177,29 @@
         <div class="content">
             <h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><h2 id="置信区间"><a href="#置信区间" class="headerlink" title="置信区间"></a>置信区间</h2><p>&ensp;&ensp;在统计学中，对于一个未知量的估计，总能找到一种量化其置信度的方法。最普遍的分布正态分布（或曰高斯分布） $N(\mu,\delta)$ ，其中的 $\mu$ 就是估计量的期望，而$\delta$ 则表示其不确定性（ $\delta$越大则表示越不可信）。比如你掷一个标准的6面色子，它的平均值是3.5，而如果你只掷一次，比如说到2，那你对平均值的估计只能是2，但是这个置信度应该很低，我们可以知道，这个色子的预估平均值是2，而以95%的置信区间在[1.4,5.2]。<br>&ensp;&ensp;置信区间将点估计转化成区间估计，举例说明。对于分布$X<del>N(\mu,\sigma)$,已知$\sigma$,估计$\mu$。对于一堆采样结果，样本大小为n，样本均值为$$M=\frac{X_1+X_2+···+X_n}{n}$$<br>根据大数定律和中心极限定律，M服从$M\mathop{</del>}N(\mu,\frac{\sigma^2}{n})$</p>
 <h2 id="高斯噪声"><a href="#高斯噪声" class="headerlink" title="高斯噪声"></a>高斯噪声</h2><p>subgaussian<br>&ensp;&ensp;</p>
-<h1 id="线性代数的numpy"><a href="#线性代数的numpy" class="headerlink" title="线性代数的numpy"></a>线性代数的numpy</h1><h1 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h1>
+<h1 id="回归算法"><a href="#回归算法" class="headerlink" title="回归算法"></a>回归算法</h1><p>&ensp;&ensp;线性回归:<br>$$\hat{\theta}=\mathop{argmin}\limits_{\theta}(\sum_{s=1}^t{(r_t-\theta^TA_t)^2+||\theta||_2^2})$$<br>&ensp;&ensp;这一部分也被叫做ridge regression，其中第一部分$\sum$是最小二乘法，第二部分是正则化。正则化的目的是为了避免过拟合，举例说明：<br>&ensp;&ensp;&ensp;&ensp;对多个点{($x_1,y_1$), ··· ,($x_n,y_n$)}做拟合，得到$y=a_1+a_2x$, 如果参数为多维的，$a_1,a_2, ··· ，a_n$,那么就可能过拟合曲线，为了限制这种情况增加一个正则项，使得控制每一个维度的参数限制。</p>
+<h1 id="线性代数的numpy"><a href="#线性代数的numpy" class="headerlink" title="线性代数的numpy"></a>线性代数的numpy</h1><table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">作用</th>
+<th align="center">写法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">np.dot()</td>
+<td align="center">点乘</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">np.transpose</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h1 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h1><ul>
+<li>unit vector</li>
+</ul>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -311,7 +333,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        21
+                        22
                     </p>
                 </div>
             </div>
@@ -331,7 +353,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        7
                     </p>
                 </div>
             </div>
@@ -352,7 +374,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#统计"><span class="toc-number">1.</span> <span class="toc-text">统计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#置信区间"><span class="toc-number">1.1.</span> <span class="toc-text">置信区间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯噪声"><span class="toc-number">1.2.</span> <span class="toc-text">高斯噪声</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#线性代数的numpy"><span class="toc-number">2.</span> <span class="toc-text">线性代数的numpy</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学符号"><span class="toc-number">3.</span> <span class="toc-text">数学符号</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#统计"><span class="toc-number">1.</span> <span class="toc-text">统计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#置信区间"><span class="toc-number">1.1.</span> <span class="toc-text">置信区间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯噪声"><span class="toc-number">1.2.</span> <span class="toc-text">高斯噪声</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#回归算法"><span class="toc-number">2.</span> <span class="toc-text">回归算法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#线性代数的numpy"><span class="toc-number">3.</span> <span class="toc-text">线性代数的numpy</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学符号"><span class="toc-number">4.</span> <span class="toc-text">数学符号</span></a></li></ol>
         </div>
     </div>
 </div>
