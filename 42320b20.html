@@ -18,7 +18,7 @@
 <meta property="og:description" content="优化python科学计算的加速方法，第一次手写程序，速度非常不可观，所以想办法用来加速">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-20T18:33:02.523Z">
+<meta property="og:updated_time" content="2019-07-22T16:23:41.891Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="优化加速">
 <meta name="twitter:description" content="优化python科学计算的加速方法，第一次手写程序，速度非常不可观，所以想办法用来加速">
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 62 words)
+                    a minute read (About 117 words)
                 </span>
                 
                 
@@ -175,7 +175,9 @@
             
         </h1>
         <div class="content">
-            <h1 id="GPU加速"><a href="#GPU加速" class="headerlink" title="GPU加速"></a>GPU加速</h1><h1 id="numba"><a href="#numba" class="headerlink" title="numba"></a>numba</h1><ul>
+            <h1 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h1><h2 id="profile"><a href="#profile" class="headerlink" title="profile"></a>profile</h2><p>用法：</p>
+<p>输出：<br>| ncalls | tottime | percall | cumtime | percall | filename:lineno(function) |<br>|:–:|:–:|:–:|:–:|:–:|:–:|<br>|函数运行次数|函数运行时间（减去子函数）|totime/ncall|函数及其子函数运行时间|cumtime/ncall|名字|</p>
+<h1 id="GPU加速"><a href="#GPU加速" class="headerlink" title="GPU加速"></a>GPU加速</h1><h1 id="numba"><a href="#numba" class="headerlink" title="numba"></a>numba</h1><ul>
 <li>installation： <code>conda install numba</code><ul>
 <li>install roctools: <code>conda install -c numba roctools</code></li>
 </ul>
@@ -352,7 +354,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GPU加速"><span class="toc-number">1.</span> <span class="toc-text">GPU加速</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#numba"><span class="toc-number">2.</span> <span class="toc-text">numba</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">3.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#速度测试"><span class="toc-number">1.</span> <span class="toc-text">速度测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#profile"><span class="toc-number">1.1.</span> <span class="toc-text">profile</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GPU加速"><span class="toc-number">2.</span> <span class="toc-text">GPU加速</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#numba"><span class="toc-number">3.</span> <span class="toc-text">numba</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>
