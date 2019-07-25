@@ -4,31 +4,31 @@
     <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
 <meta name="baidu-site-verification" content="SiMVCIxqau">
 <meta charset="utf-8">
-<title>Stomastic Linear Bandits - Bonny &amp; Pony</title>
+<title>CUDA实战 - Bonny &amp; Pony</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Stomastic Linear Bandits方法">
-<meta name="keywords" content="RL">
+    <meta name="description" content="优化python科学计算的加速方法，第一次手写程序，速度非常不可观，所以想办法用来加速">
+<meta name="keywords" content="CUDA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Stomastic Linear Bandits">
-<meta property="og:url" content="http://www.microyue.com/7411483a.html">
+<meta property="og:title" content="CUDA实战">
+<meta property="og:url" content="http://www.microyue.com/9589fa40.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="Stomastic Linear Bandits方法">
+<meta property="og:description" content="优化python科学计算的加速方法，第一次手写程序，速度非常不可观，所以想办法用来加速">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-20T17:51:37.742Z">
+<meta property="og:updated_time" content="2019-07-25T00:25:46.739Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Stomastic Linear Bandits">
-<meta name="twitter:description" content="Stomastic Linear Bandits方法">
+<meta name="twitter:title" content="CUDA实战">
+<meta name="twitter:description" content="优化python科学计算的加速方法，第一次手写程序，速度非常不可观，所以想办法用来加速">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
 
 
 
-<link rel="alternative" href="dd" title="Stomastic Linear Bandits" type="application/atom+xml">
+<link rel="alternative" href="dd" title="CUDA实战" type="application/atom+xml">
 
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/Bonny2.png" alt="Stomastic Linear Bandits" height="28">
+                <img src="/images/Bonny2.png" alt="CUDA实战" height="28">
             
             </a>
         </div>
@@ -147,7 +147,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-17T21:42:00.000Z">2019-07-17</time>
+                <time class="level-item has-text-grey" datetime="2019-07-23T01:40:00.000Z">2019-07-22</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 48 words)
+                    a few seconds read (About 52 words)
                 </span>
                 
                 
@@ -171,20 +171,32 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <div class="has-title-style">Stomastic Linear Bandits</div>
+                <div class="has-title-style">CUDA实战</div>
             
         </h1>
         <div class="content">
-            <h1 id="下"><a href="#下" class="headerlink" title="下"></a>下</h1><h1 id="辨析"><a href="#辨析" class="headerlink" title="辨析"></a>辨析</h1><p>&ensp;&Enso;linear bandit 和 finite-armed 区别就在feature map， finite是unit vector， 而linear是${\psi(C_t,i):i\in[k]}$</p>
-<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p>-<a href="https://tor-lattimore.com/downloads/book/book.pdf" target="_blank" rel="noopener">Chapter 19</a></p>
-<p># </p>
+            <h1 id="CPU数据"><a href="#CPU数据" class="headerlink" title="CPU数据"></a>CPU数据</h1><p>&ensp;&ensp;</p>
+<ul>
+<li>initialize():</li>
+<li>performWork():</li>
+<li>verifyWork():</li>
+</ul>
+<p>&ensp;&ensp;</p>
+<ul>
+<li>cudaMallocManaged():</li>
+<li>cpuWork():<ul>
+<li>performWork():</li>
+</ul>
+</li>
+<li></li>
+</ul>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/RL/">RL</a>
+                    <a class="has-link-grey -link" href="/tags/CUDA/">CUDA</a>
                 </div>
             </div>
         </div>
@@ -230,17 +242,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/c8d7f3a3.html">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Contextual Bandits方法</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/f0e39a55.html">
-                <span class="level-item">辅助知识</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/42320b20.html">
+                <span class="level-item">优化加速</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -352,7 +357,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#下"><span class="toc-number">1.</span> <span class="toc-text">下</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#辨析"><span class="toc-number">2.</span> <span class="toc-text">辨析</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">3.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CPU数据"><span class="toc-number">1.</span> <span class="toc-text">CPU数据</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -375,7 +380,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/Bonny2.png" alt="Stomastic Linear Bandits" height="28">
+                    <img src="/images/Bonny2.png" alt="CUDA实战" height="28">
                 
                 </a>
                 <p class="is-size-7">

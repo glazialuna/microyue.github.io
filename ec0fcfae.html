@@ -17,7 +17,7 @@
 <meta property="og:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-17T21:11:10.793Z">
+<meta property="og:updated_time" content="2019-07-25T20:02:45.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown语言记录">
 <meta name="twitter:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
@@ -156,7 +156,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 minutes read (About 1356 words)
+                    10 minutes read (About 1558 words)
                 </span>
                 
                 
@@ -174,7 +174,7 @@
             
         </h1>
         <div class="content">
-            <p>Markdown的语言模式以及一些关于插件等的快捷键介绍</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Markdown的语言模式以及一些关于插件等的快捷键介绍</p>
 <a id="more"></a>
 
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&ensp;&ensp;本来想要用wordpress建立博客，偶尔发现了Hexo，以Markdown语言为基础，非常好用。在写博客的过程中很有可能会遇到一些markdown的语言问题，当然这种文本标记语言的显示方式会限制于渲染的工具，所以只能针对Github格式和Hexo（我的主题）格式来看。</p>
@@ -203,10 +203,37 @@
 
 </li>
 </ol>
-<!-- 02 -->
+<h2 id="文档内引用"><a href="#文档内引用" class="headerlink" title="文档内引用"></a>文档内引用</h2><ol>
+<li>html的写法</li>
+</ol>
+<ul>
+<li>在要跳转的地方写上：<code>&lt;h3 id=&quot;2&quot;&gt;s-2 $\sigma$&lt;/h3&gt;</code><ul>
+<li>其中h3是标题的格式，id是跳转的编号，这里主义在hexo中对h3标题的所有设置都会转移过来，等于写了第二个标题</li>
+</ul>
+</li>
+<li>在跳转的目的写上：<code>&lt;a href=&quot;#2&quot;&gt;s-2&lt;/a&gt;</code></li>
+</ul>
+<ol start="2">
+<li>markdown</li>
+</ol>
+<ul>
+<li>我没尝试过 听说加<code>@[TOC]</code>就可以，不动</li>
+</ul>
+<ol start="3">
+<li>markdown脚注</li>
+</ol>
+<ul>
+<li>install plugin：<code>npm install hexo-reference --save</code></li>
+<li>这是用于reference的脚注<ul>
+<li>在被引用的地方加：<code>引用&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;&lt;span class=&quot;hint--top hint--error hint--medium hint--rounded hint--bounce&quot; aria-label=&quot;[参考](source)</code><!-- 02 -->
 <h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><blockquote>
-<p>Markdown语法支持采用LaTex语法写数学公式，而在网页中使用Mathjax插件来显示数学公式。</p>
+<p>Markdown语法支持采用LaTex语法写数学公式，而在网页中使用Mathjax插件来显示数学公式。”&gt;[1]`</p>
 </blockquote>
+</li>
+<li>在参考文献前加（统一出现在最后）：`</li>
+</ul>
+</li>
+</ul>
 <ol>
 <li>写法在行内公式为<code>$math$</code>,段内公式为<code>$$math$$</code>  <ul>
 <li>行内公式：$E=mc^2$,可以让公式在文中与文字或其他东西混编，不独占一行.</li>
@@ -459,6 +486,14 @@
 <td align="center"><code>$\ast$</code></td>
 </tr>
 <tr>
+<td align="center">$\sim$</td>
+<td align="center"><code>$\sim$</code></td>
+</tr>
+<tr>
+<td align="center">$\approx$</td>
+<td align="center"><code>$\approx$</code></td>
+</tr>
+<tr>
 <td align="center">$\bigodot$</td>
 <td align="center"><code>$\bigodot$</code></td>
 </tr>
@@ -503,6 +538,23 @@
 <td align="center"><code>$\coprod$</code></td>
 </tr>
 </tbody></table>
+<h4 id="箭头符号"><a href="#箭头符号" class="headerlink" title="箭头符号"></a>箭头符号</h4><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$ \rightarrow $</td>
+<td align="center"><code>$\rightarrow$</code></td>
+</tr>
+</tbody></table>
+<p>-<a href="https://blog.csdn.net/m0_37167788/article/details/78603307" target="_blank" rel="noopener">箭头符号</a></p>
+<h4 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h4><figure class="highlight taggerscript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$<span class="hljs-symbol">\l</span>eft[<span class="hljs-symbol">\b</span>egin&#123;matrix&#125;1 <span class="hljs-symbol">\\</span><span class="hljs-symbol">\ </span> <span class="hljs-symbol">\v</span>dots <span class="hljs-symbol">\\</span><span class="hljs-symbol">\1</span> <span class="hljs-symbol">\e</span>nd&#123;matrix&#125;<span class="hljs-symbol">\r</span>ight]_p$$</span><br></pre></td></tr></table></figure>
+
+<p>效果：<br>$$\left[\begin{matrix}1 \\  \vdots \\1 \end{matrix}\right]_p$$</p>
+<p>-<a href="https://blog.csdn.net/qq_38228254/article/details/79469727" target="_blank" rel="noopener">矩阵</a></p>
 <!-- 03 -->
 <h4 id="集合运算符"><a href="#集合运算符" class="headerlink" title="集合运算符"></a>集合运算符</h4><table>
 <thead>
@@ -722,7 +774,10 @@
 <h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
 <li><a href="https://markdown-zh.readthedocs.io/en/latest/" target="_blank" rel="noopener">Markdown中文文档</a></li>
 </ul>
-
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="source">参考</a>`
+<!-- 02 -->
+## 数学公式
+&gt;Markdown语法支持采用LaTex语法写数学公式，而在网页中使用Mathjax插件来显示数学公式。<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
         </div>
         
         
@@ -847,7 +902,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        22
+                        23
                     </p>
                 </div>
             </div>
@@ -867,7 +922,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        8
                     </p>
                 </div>
             </div>
@@ -888,7 +943,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文本标记语言"><span class="toc-number">2.</span> <span class="toc-text">文本标记语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#输入操作"><span class="toc-number">2.1.</span> <span class="toc-text">输入操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编辑操作"><span class="toc-number">2.2.</span> <span class="toc-text">编辑操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插入"><span class="toc-number">3.</span> <span class="toc-text">插入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.1.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式"><span class="toc-number">3.2.</span> <span class="toc-text">数学公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#格式"><span class="toc-number">3.2.1.</span> <span class="toc-text">格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数学符号"><span class="toc-number">3.2.2.</span> <span class="toc-text">数学符号</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#希腊字母"><span class="toc-number">3.2.2.1.</span> <span class="toc-text">希腊字母</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关系运算符"><span class="toc-number">3.2.2.2.</span> <span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#集合运算符"><span class="toc-number">3.2.2.3.</span> <span class="toc-text">集合运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对数运算符"><span class="toc-number">3.2.2.4.</span> <span class="toc-text">对数运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三角运算符"><span class="toc-number">3.2.2.5.</span> <span class="toc-text">三角运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微积分运算符"><span class="toc-number">3.2.2.6.</span> <span class="toc-text">微积分运算符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加本地图片"><span class="toc-number">3.3.</span> <span class="toc-text">增加本地图片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一-使用标签插件"><span class="toc-number">3.3.1.</span> <span class="toc-text">方法一 使用标签插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二-markdown使用路径"><span class="toc-number">3.3.2.</span> <span class="toc-text">方法二 markdown使用路径</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加表格"><span class="toc-number">3.4.</span> <span class="toc-text">增加表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一-markdown语言"><span class="toc-number">3.4.1.</span> <span class="toc-text">方法一 markdown语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二-html标签"><span class="toc-number">3.4.2.</span> <span class="toc-text">方法二 html标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#各类快捷键"><span class="toc-number">4.</span> <span class="toc-text">各类快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MarkdownEditing"><span class="toc-number">4.1.</span> <span class="toc-text">MarkdownEditing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OmniMarkupPreviewer"><span class="toc-number">4.2.</span> <span class="toc-text">OmniMarkupPreviewer</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-number">5.</span> <span class="toc-text">参考文档</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文本标记语言"><span class="toc-number">2.</span> <span class="toc-text">文本标记语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#输入操作"><span class="toc-number">2.1.</span> <span class="toc-text">输入操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编辑操作"><span class="toc-number">2.2.</span> <span class="toc-text">编辑操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插入"><span class="toc-number">3.</span> <span class="toc-text">插入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.1.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文档内引用"><span class="toc-number">3.2.</span> <span class="toc-text">文档内引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式"><span class="toc-number">3.3.</span> <span class="toc-text">数学公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#格式"><span class="toc-number">3.3.1.</span> <span class="toc-text">格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数学符号"><span class="toc-number">3.3.2.</span> <span class="toc-text">数学符号</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#希腊字母"><span class="toc-number">3.3.2.1.</span> <span class="toc-text">希腊字母</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关系运算符"><span class="toc-number">3.3.2.2.</span> <span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#箭头符号"><span class="toc-number">3.3.2.3.</span> <span class="toc-text">箭头符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#矩阵"><span class="toc-number">3.3.2.4.</span> <span class="toc-text">矩阵</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#集合运算符"><span class="toc-number">3.3.2.5.</span> <span class="toc-text">集合运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对数运算符"><span class="toc-number">3.3.2.6.</span> <span class="toc-text">对数运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三角运算符"><span class="toc-number">3.3.2.7.</span> <span class="toc-text">三角运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微积分运算符"><span class="toc-number">3.3.2.8.</span> <span class="toc-text">微积分运算符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加本地图片"><span class="toc-number">3.4.</span> <span class="toc-text">增加本地图片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一-使用标签插件"><span class="toc-number">3.4.1.</span> <span class="toc-text">方法一 使用标签插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二-markdown使用路径"><span class="toc-number">3.4.2.</span> <span class="toc-text">方法二 markdown使用路径</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加表格"><span class="toc-number">3.5.</span> <span class="toc-text">增加表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一-markdown语言"><span class="toc-number">3.5.1.</span> <span class="toc-text">方法一 markdown语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二-html标签"><span class="toc-number">3.5.2.</span> <span class="toc-text">方法二 html标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#各类快捷键"><span class="toc-number">4.</span> <span class="toc-text">各类快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MarkdownEditing"><span class="toc-number">4.1.</span> <span class="toc-text">MarkdownEditing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OmniMarkupPreviewer"><span class="toc-number">4.2.</span> <span class="toc-text">OmniMarkupPreviewer</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-number">5.</span> <span class="toc-text">参考文档</span></a></li></ol>
         </div>
     </div>
 </div>

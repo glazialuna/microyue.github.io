@@ -18,7 +18,7 @@
 <meta property="og:description" content="优化python科学计算的加速方法，第一次手写程序，速度非常不可观，所以想办法用来加速">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-22T16:23:41.891Z">
+<meta property="og:updated_time" content="2019-07-22T17:54:55.686Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="优化加速">
 <meta name="twitter:description" content="优化python科学计算的加速方法，第一次手写程序，速度非常不可观，所以想办法用来加速">
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 117 words)
+                    2 minutes read (About 228 words)
                 </span>
                 
                 
@@ -175,10 +175,62 @@
             
         </h1>
         <div class="content">
-            <h1 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h1><h2 id="profile"><a href="#profile" class="headerlink" title="profile"></a>profile</h2><p>用法：</p>
-<p>输出：<br>| ncalls | tottime | percall | cumtime | percall | filename:lineno(function) |<br>|:–:|:–:|:–:|:–:|:–:|:–:|<br>|函数运行次数|函数运行时间（减去子函数）|totime/ncall|函数及其子函数运行时间|cumtime/ncall|名字|</p>
+            <h1 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h1><h2 id="profile"><a href="#profile" class="headerlink" title="profile"></a>profile</h2><p>用法： </p>
+<figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> profile</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun</span><span class="hljs-params">(a)</span>:</span></span><br><span class="line">  <span class="hljs-keyword">return</span> a</span><br><span class="line">profile.run(<span class="hljs-string">"fun(3)"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<table border="1" ">
+    <tr>
+      <td><font size="0.5">ncalls</font></td>
+      <td><font size="0.5">tottime</font></td>
+      <td><font size="0.5">percall</font></td>
+      <td><font size="0.5">cumtime</font></td>
+      <td><font size="0.5">percall</font></td>
+      <td><font size="0.5">filename:lineno(function)</font></td>
+    </tr>
+    <tr>
+      <td><font size="0.3">函数运行次数</font></td>
+      <td><font size="0.3">函数运行时间（减去子函数)</font></td>
+      <td><font size="0.5">totime/ncall</font></td>
+      <td><font size="0.3">函数及其子函数运行时间</font></td>
+      <td><font size="0.5">cumtime/ncall</font></td>
+      <td><font size="0.5">函数名字</font></td>
+    </tr>
+</table>
+
+<h2 id="Cprofile"><a href="#Cprofile" class="headerlink" title="Cprofile"></a>Cprofile</h2><h2 id="line-profiler"><a href="#line-profiler" class="headerlink" title="line_profiler"></a>line_profiler</h2><ul>
+<li><p>安装：</p>
+<ul>
+<li>pip： <code>pip install line_profiler</code></li>
+<li>conda: <code>conda install -c anaconda line_profiler</code></li>
+</ul>
+</li>
+<li><p>用法：</p>
+<ul>
+<li><p>colab：</p>
+<figure class="highlight kotlin hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">def <span class="hljs-function"><span class="hljs-title">fun</span><span class="hljs-params">()</span></span>:</span><br><span class="line">a = <span class="hljs-number">0</span></span><br><span class="line">b = <span class="hljs-number">0</span></span><br><span class="line"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">100000</span>):</span><br><span class="line">    a = a + i * i</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):</span><br><span class="line">    b += <span class="hljs-number">1</span></span><br><span class="line">    time.sleep(<span class="hljs-number">0.1</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">return</span> a + b</span><br><span class="line">%lprun  -f  <span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-keyword">fun</span></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pycharm：</p>
+</li>
+<li><p>Jupyter：</p>
+</li>
+</ul>
+</li>
+<li><p>结果：<br>返回每一行代码的运行结果  </p>
+</li>
+</ul>
+<h2 id="memory-profiler"><a href="#memory-profiler" class="headerlink" title="memory_profiler"></a>memory_profiler</h2><ul>
+<li>安装<ul>
+<li>pip:<code>pip install memory_profiler  
+pip install psutil</code></li>
+<li>conda:``</li>
+</ul>
+</li>
+</ul>
+<p>## </p>
 <h1 id="GPU加速"><a href="#GPU加速" class="headerlink" title="GPU加速"></a>GPU加速</h1><h1 id="numba"><a href="#numba" class="headerlink" title="numba"></a>numba</h1><ul>
-<li>installation： <code>conda install numba</code><ul>
+<li>installation： <ul>
+<li>install numba: <code>conda install numba</code></li>
 <li>install roctools: <code>conda install -c numba roctools</code></li>
 </ul>
 </li>
@@ -186,6 +238,7 @@
 <h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><ul>
 <li><a href>book bandit algorithm</a></li>
 <li><a href>知乎blog</a></li>
+<li><a href="https://blog.csdn.net/xiemanR/article/details/72763234" target="_blank" rel="noopener">Python 7 种性能测试工具</a></li>
 </ul>
         </div>
         
@@ -238,6 +291,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/9589fa40.html">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">CUDA实战</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -313,7 +373,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        22
+                        23
                     </p>
                 </div>
             </div>
@@ -333,7 +393,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        8
                     </p>
                 </div>
             </div>
@@ -354,7 +414,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#速度测试"><span class="toc-number">1.</span> <span class="toc-text">速度测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#profile"><span class="toc-number">1.1.</span> <span class="toc-text">profile</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GPU加速"><span class="toc-number">2.</span> <span class="toc-text">GPU加速</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#numba"><span class="toc-number">3.</span> <span class="toc-text">numba</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#速度测试"><span class="toc-number">1.</span> <span class="toc-text">速度测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#profile"><span class="toc-number">1.1.</span> <span class="toc-text">profile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cprofile"><span class="toc-number">1.2.</span> <span class="toc-text">Cprofile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#line-profiler"><span class="toc-number">1.3.</span> <span class="toc-text">line_profiler</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#memory-profiler"><span class="toc-number">1.4.</span> <span class="toc-text">memory_profiler</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GPU加速"><span class="toc-number">2.</span> <span class="toc-text">GPU加速</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#numba"><span class="toc-number">3.</span> <span class="toc-text">numba</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>
