@@ -18,7 +18,7 @@
 <meta property="og:description" content="Context Bandit with Linear Payoff Functions 论文笔记，其中一些相关的数学问题引用了别的书籍定义，具体见reference">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-25T21:14:34.819Z">
+<meta property="og:updated_time" content="2019-07-26T21:28:51.102Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Context Bandit with Linear Payoff Functions">
 <meta name="twitter:description" content="Context Bandit with Linear Payoff Functions 论文笔记，其中一些相关的数学问题引用了别的书籍定义，具体见reference">
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    10 minutes read (About 1433 words)
+                    10 minutes read (About 1523 words)
                 </span>
                 
                 
@@ -175,13 +175,14 @@
             
         </h1>
         <div class="content">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><p>&ensp;&ensp;LinUCB是在UCB基础上，增加contextual相关的计算方式。简单来说就是在每一步中，我们预估一个胜率，预估的方式是通过前t轮的回报选择的函数。$r_{a,t}$</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><p>&ensp;&ensp;LinUCB是在UCB基础上的改进，这里我们认为reward=$x_{a,t}\theta^T$,然后通过结果不断学习这个$\theta$。简单来说就是在每一步中，我们通过每一轮的所有结果来拟合回归得到最接近$\theta$的值。</p>
 <h1 id="数学表达"><a href="#数学表达" class="headerlink" title="数学表达"></a>数学表达</h1><p>&ensp;&ensp;抽象过程（可以参考推荐系统，多臂老虎机问题等）到数学表达，$r_{a,t}$是选择action $a$在round $t$的回报，我们定义每一轮的回报是：<br>$$r_{a,t}=x_{t,a}^T\theta^{*}+\epsilon_{t}$$  </p>
 <p>&ensp;&ensp;其中 $\epsilon_t$ 是实际观测中的噪声，$\theta^{*}$ 的定义为：<br>$$E(r_{t,a}|x_{t,a})=x_{t,a}^T\theta^{*}$$<br>&ensp;&ensp;我们的目的是经历$t$轮后，使得获得的reward最大,由此我们定义regret为比较结果：<br>$$Regret=\sum_{t=1}^{T}{r_{t,a_t}^*}-\sum_{t=1}^{T}{r_{t,a_t}}$$</p>
-<p>&ensp;&ensp;为了简化计算过程，我们定义在每一轮我们会观测到所有的选择$x_{t,a}$,我们将它map到$X_t$,即$x_{t,a}-X_t$</p>
-<h1 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h1><h2 id="算法过程-1"><a href="#算法过程-1" class="headerlink" title="算法过程"></a>算法过程</h2><p>&ensp;&ensp;我们用最小二乘法来估计$\theta_t$，并增加一个置信区间。<br>&ensp;&ensp;首先使得$\hat{\theta}$为:<br>$$\hat{\theta}=\mathop{argmin}\limits_{\theta}{\sum_{s=1}^{t}{(r_s-\theta^TX_s)}^2+\lambda\left|\theta\right|^2}$$<br>&ensp;&ensp;这里前面的量就是最小二乘法，后面正则化是为了将这个回归的解唯一，也就是防止过拟合。通过运算可以得到$\theta$的解为(推导过程见<a href="#1">s-1</a>)：<br>$$\hat{\theta}=A^{-1}b$$<br>&ensp;&ensp;其中$A=\lambda I+\sum_{s=1}^{t}{X_t^TX_t}$, $b=\sum_{s=1}^{t}{r_tX_T}$<br>&ensp;&ensp;由于只能从历史数据中得到预估，和真实的数据有一定的差距，所以要增加一个置信区间，即使得预估值和真实值之间的举例在一个范围内（推导过程见<a href="#2">s-2</a>）:  </p>
+<p>&ensp;&ensp;为了简化计算过程，我们定义在每一轮我们会观测到$x_{t,a}$,我们将它和k种选择一起map到$X_t$,即$x_{t,a}-f_t$。这一步的意义是让获得的feature与选择和观测context有关，而学习的过程只和feature有关。</p>
+<h1 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h1><h2 id="算法过程-1"><a href="#算法过程-1" class="headerlink" title="算法过程"></a>算法过程</h2><p>&ensp;&ensp;我们用最小二乘法来估计$\theta_t$，并增加一个置信区间的估计。<br>&ensp;&ensp;首先使得$\hat{\theta}$为:<br>$$\hat{\theta}=\mathop{argmin}\limits_{\theta}{\sum_{s=1}^{t}{(r_s-\theta^TX_s)}^2+\lambda\left|\theta\right|^2}$$<br>&ensp;&ensp;这里前面的量就是最小二乘法，后面正则化是为了将这个回归的解唯一，也就是防止过拟合。通过运算可以得到$\theta$的解为(推导过程见<a href="#1">s-1</a>)：<br>$$\hat{\theta}=A^{-1}b$$<br>&ensp;&ensp;其中$A=\lambda I+\sum_{s=1}^{t}{X_t^TX_t}$, $b=\sum_{s=1}^{t}{r_tX_T}$<br>&ensp;&ensp;由于只能从历史数据中得到预估，和真实的数据有一定的差距，所以要增加一个置信区间，即使得预估值和真实值之间的举例在一个范围内（推导过程见<a href="#2">s-2</a>）:<br>$$p\left(|x_j^T\theta_j-E(r|x_j)|\leq\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}\right)\geq1-\delta$$<br>&ensp;&ensp;我们用这个值来逐渐学习到$\theta^{*}$</p>
 <hr>
 <h3 id="1">s-1</h3>
+
 
 
 <hr>
@@ -197,7 +198,7 @@
 <p>$$p\left(|x_j^T\theta_j-E(r|x_j)|\leq\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}\right)\geq1-\delta$$</p>
 </blockquote>
 <p>&ensp;&ensp;即对于某一个action，前面观察出来的所有次数的平均值计算出来的期望和实际的期望相差小于$\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}$的概率大于$1-\delta$，我们用$x_j^T\theta_j+\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}$来作为真实的值。其中$D_j$为被观察m次的特征为d维度组成的矩阵，则$D_j$为${m}\times{d}$维。</p>
-<h3 id="3">s-3 分布补充</h3>
+<h3 id="3">s-3</h3>
 
 <h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>&ensp;&ensp;摘自2011 Yohoo！<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Context Bandit with Linear Payoff Functions](http://proceedings.mlr.press/v15/chu11a/chu11a.pdf)
 ">[1]</span></a></sup>的论文算法<br><img src="/photos/B-1.3-1.JPG" alt="algorithm" title="LinUCB算法"><br>&ensp;&ensp;主要流程就是这样，没有改动，其中有几个小细节的变动。</p>
@@ -345,7 +346,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        23
+                        22
                     </p>
                 </div>
             </div>
@@ -386,7 +387,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#prefix"><span class="toc-number">1.</span> <span class="toc-text">prefix</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学表达"><span class="toc-number">2.</span> <span class="toc-text">数学表达</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法过程"><span class="toc-number">3.</span> <span class="toc-text">算法过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#算法过程-1"><span class="toc-number">3.1.</span> <span class="toc-text">算法过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1"><span class="toc-number">3.1.1.</span> <span class="toc-text">s-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2"><span class="toc-number">3.1.2.</span> <span class="toc-text">s-2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3"><span class="toc-number">3.1.3.</span> <span class="toc-text">s-3 分布补充</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">3.2.</span> <span class="toc-text">代码实现</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#结果"><span class="toc-number">4.</span> <span class="toc-text">结果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#推论证明"><span class="toc-number">5.</span> <span class="toc-text">推论证明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">6.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#prefix"><span class="toc-number">1.</span> <span class="toc-text">prefix</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学表达"><span class="toc-number">2.</span> <span class="toc-text">数学表达</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法过程"><span class="toc-number">3.</span> <span class="toc-text">算法过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#算法过程-1"><span class="toc-number">3.1.</span> <span class="toc-text">算法过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1"><span class="toc-number">3.1.1.</span> <span class="toc-text">s-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2"><span class="toc-number">3.1.2.</span> <span class="toc-text">s-2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3"><span class="toc-number">3.1.3.</span> <span class="toc-text">s-3</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">3.2.</span> <span class="toc-text">代码实现</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#结果"><span class="toc-number">4.</span> <span class="toc-text">结果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#推论证明"><span class="toc-number">5.</span> <span class="toc-text">推论证明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">6.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>

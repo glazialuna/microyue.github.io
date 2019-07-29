@@ -18,7 +18,7 @@
 <meta property="og:description" content="Contextual Bandits方法">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-25T00:19:44.787Z">
+<meta property="og:updated_time" content="2019-07-29T18:29:16.030Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Contextual Bandits方法">
 <meta name="twitter:description" content="Contextual Bandits方法">
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 653 words)
+                    5 minutes read (About 686 words)
                 </span>
                 
                 
@@ -177,8 +177,14 @@
         <div class="content">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>&ensp;&ensp;Contextual的问题，可以认为是老虎机问题，对于n台老虎机，每一台拥有a个选择，每台老虎机的特定选择的胜率（在统计意义上）是一定的，但是用户不知道这个胜率，且每一轮只能选择一个以后得到一个回报。所以我们要选择一种方式，使得胜率最大。<br>&ensp;&ensp;解决这个问题最naive的方法是对每台老虎机的每个选择尝试许多次（$t$）来预估每种选择的胜率，但是这样子的计算量将会是${t^{a}}^n$次的增长。<br>&ensp;&ensp;这个问题的主要重点在于Exploitation-Exploration（E&amp;E），对于老虎机的选择，我们要考虑从已经选择尝试过的结果中预估选择最大概率的胜率，还是从没有选择的老虎机中选择一个概率最大的尝试。对已知的吐钱概率比较高的老虎机，应该更多的去尝试(exploitation)，以便获得一定的累计收益；对未知的或尝试次数较少的老虎机，还要分配一定的尝试机会（exploration），以免错失收益更高的选择，但同时较多的探索也意味着较高的风险（机会成本）。<br>&ensp;&ensp;Bandit算法是一类用来实现Exploitation-Exploration机制的策略。根据是否考虑上下文特征，Bandit算法分为context-free bandit和contextual bandit两大类。</p>
 <h1 id="Contextual-free"><a href="#Contextual-free" class="headerlink" title="Contextual-free"></a>Contextual-free</h1><h2 id="epsilon-greedy"><a href="#epsilon-greedy" class="headerlink" title="$\epsilon$-greedy"></a>$\epsilon$-greedy</h2><h2 id="UCB"><a href="#UCB" class="headerlink" title="UCB"></a>UCB</h2><p>&ensp;&ensp;UCB主要就是对于reward的估计，选择reward均值估计的置信区间上限老表示其对收益的估计:<br>$$\hat{\mu}+\sqrt{\frac{2\ln{n}}{n_i}}$$</p>
-<h2 id="softmax"><a href="#softmax" class="headerlink" title="softmax"></a>softmax</h2><h2 id="Thompson-Sampling"><a href="#Thompson-Sampling" class="headerlink" title="Thompson Sampling"></a>Thompson Sampling</h2><h1 id="Contexutal-bandit"><a href="#Contexutal-bandit" class="headerlink" title="Contexutal-bandit"></a>Contexutal-bandit</h1><h2 id="LinUCB"><a href="#LinUCB" class="headerlink" title="LinUCB"></a>LinUCB</h2><p>&ensp;&ensp;UCB方法是解决Bernoulli Bandit问题的，即每个arm的优劣副总伯努利分布，更具历史计算的$\overline{x_j}$得到分布参数。这是基于统计方法比较简单，但是同时忽略了arm优劣分布和情景的关系。区别于Bernoulli Bandit，就是利用了上下文信息的Contextual Bandit 问题。<br>&ensp;&ensp;LinUCB没有定义一个概率分布来描述每个arm的历史收益情况，而是假设了arm的优劣和描述arm的特征向量存在一个线性关系：$x^T\theta$,来替代$\overline{x_j}$</p>
-<h1 id="Appenddix"><a href="#Appenddix" class="headerlink" title="Appenddix"></a>Appenddix</h1><h2 id="Bernoulli-Bandit"><a href="#Bernoulli-Bandit" class="headerlink" title="Bernoulli Bandit"></a>Bernoulli Bandit</h2><h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><ul>
+<h2 id="softmax"><a href="#softmax" class="headerlink" title="softmax"></a>softmax</h2><h2 id="epsilon-greedy-1"><a href="#epsilon-greedy-1" class="headerlink" title="$\epsilon$-greedy"></a>$\epsilon$-greedy</h2><p>&ensp;&ensp;在纯greedy的情况上加上一定概率的uniform exploration</p>
+<h2 id="Thompson-Sampling"><a href="#Thompson-Sampling" class="headerlink" title="Thompson Sampling"></a>Thompson Sampling</h2><h1 id="Contexutal-bandit"><a href="#Contexutal-bandit" class="headerlink" title="Contexutal-bandit"></a>Contexutal-bandit</h1><h2 id="LinUCB"><a href="#LinUCB" class="headerlink" title="LinUCB"></a>LinUCB</h2><p>&ensp;&ensp;UCB方法是解决Bernoulli Bandit问题的，即每个arm的优劣副总伯努利分布，更具历史计算的$\overline{x_j}$得到分布参数。这是基于统计方法比较简单，但是同时忽略了arm优劣分布和情景的关系。区别于Bernoulli Bandit，就是利用了上下文信息的Contextual Bandit 问题。<br>&ensp;&ensp;LinUCB没有定义一个概率分布来描述每个arm的历史收益情况，而是假设了arm的优劣和描述arm的特征向量存在一个线性关系：$x^T\theta$,来替代$\overline{x_j}$</p>
+<h1 id="Appenddix"><a href="#Appenddix" class="headerlink" title="Appenddix"></a>Appenddix</h1><h3 id="1">Bernoulli Bandit</h3>
+&ensp;&ensp;贝叶斯和非贝叶斯情况
+<a href="#2">s-2</a>
+
+<p>## </p>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><ul>
 <li><a href="https://zhuanlan.zhihu.com/p/35753281" target="_blank" rel="noopener">知乎 Bandit算法</a></li>
 </ul>
         </div>
@@ -314,7 +320,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        23
+                        22
                     </p>
                 </div>
             </div>
@@ -355,7 +361,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Contextual-free"><span class="toc-number">2.</span> <span class="toc-text">Contextual-free</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#epsilon-greedy"><span class="toc-number">2.1.</span> <span class="toc-text">$\epsilon$-greedy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UCB"><span class="toc-number">2.2.</span> <span class="toc-text">UCB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#softmax"><span class="toc-number">2.3.</span> <span class="toc-text">softmax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thompson-Sampling"><span class="toc-number">2.4.</span> <span class="toc-text">Thompson Sampling</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Contexutal-bandit"><span class="toc-number">3.</span> <span class="toc-text">Contexutal-bandit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#LinUCB"><span class="toc-number">3.1.</span> <span class="toc-text">LinUCB</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Appenddix"><span class="toc-number">4.</span> <span class="toc-text">Appenddix</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Bernoulli-Bandit"><span class="toc-number">4.1.</span> <span class="toc-text">Bernoulli Bandit</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">5.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Contextual-free"><span class="toc-number">2.</span> <span class="toc-text">Contextual-free</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#epsilon-greedy"><span class="toc-number">2.1.</span> <span class="toc-text">$\epsilon$-greedy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UCB"><span class="toc-number">2.2.</span> <span class="toc-text">UCB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#softmax"><span class="toc-number">2.3.</span> <span class="toc-text">softmax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#epsilon-greedy-1"><span class="toc-number">2.4.</span> <span class="toc-text">$\epsilon$-greedy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thompson-Sampling"><span class="toc-number">2.5.</span> <span class="toc-text">Thompson Sampling</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Contexutal-bandit"><span class="toc-number">3.</span> <span class="toc-text">Contexutal-bandit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#LinUCB"><span class="toc-number">3.1.</span> <span class="toc-text">LinUCB</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Appenddix"><span class="toc-number">4.</span> <span class="toc-text">Appenddix</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1"><span class="toc-number">4.0.1.</span> <span class="toc-text">Bernoulli Bandit</span></a></li></ol></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">5.</span> <span class="toc-text">reference</span></a></li>
         </div>
     </div>
 </div>

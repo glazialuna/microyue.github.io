@@ -18,7 +18,7 @@
 <meta property="og:description" content="Thompson Sampling method 的介绍">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-16T00:09:32.673Z">
+<meta property="og:updated_time" content="2019-07-29T19:18:07.421Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Thompson Sampling">
 <meta name="twitter:description" content="Thompson Sampling method 的介绍">
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 305 words)
+                    3 minutes read (About 394 words)
                 </span>
                 
                 
@@ -175,7 +175,8 @@
             
         </h1>
         <div class="content">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><h1 id="Multi-Armed-Bandit"><a href="#Multi-Armed-Bandit" class="headerlink" title="Multi-Armed Bandit"></a>Multi-Armed Bandit</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><pre><code>数据不充足的问题，例如，你有四台老虎机，不知道输赢的概率，选择一个最大的概率。naive的方法是大数定义，对一台机器尝试很多次得出大概的概率，显然这个是不现实的爆炸计算量。</code></pre><ul>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><h1 id="Multi-Armed-Bandit"><a href="#Multi-Armed-Bandit" class="headerlink" title="Multi-Armed Bandit"></a>Multi-Armed Bandit</h1><h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>&ensp;&ensp;数据不充足的问题，例如，你有四台老虎机，不知道输赢的概率，选择一个最大的概率。naive的方法是大数定义，对一台机器尝试很多次得出大概的概率，显然这个是不现实的爆炸计算量。</p>
+<ul>
 <li>Bernoulli multi-armed bandit: 对一个元祖 {$A$ , $K$}<ul>
 <li>K 机器， reward 概率 { $\theta_1$, … , $\theta_{K}$ }</li>
 <li>每一个action a， 选择一个machine，并得到一个reward r</li>
@@ -195,10 +196,21 @@
 </ul>
 </li>
 </ul>
-<h2 id="method"><a href="#method" class="headerlink" title="method"></a>method</h2><h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><ul>
-<li><a href="https://lilianweng.github.io/lil-log/2018/01/23/the-multi-armed-bandit-problem-and-its-solutions.html" target="_blank" rel="noopener">Blog for Tompson Sampling</a></li>
-<li><a href="https://arxiv.org/pdf/1707.02038.pdf" target="_blank" rel="noopener">A Tutorial on Thompson Sampling</a></li>
-</ul>
+<h2 id="method"><a href="#method" class="headerlink" title="method"></a>method</h2><h1 id="Appendix-knowledge"><a href="#Appendix-knowledge" class="headerlink" title="Appendix knowledge"></a>Appendix knowledge</h1><h2 id="1">beta 分布</h2>
+
+<h2 id="2">PDF（probability density function）</h2>
+&ensp;&ensp;对于连续随机变量X，它在区间[a, b]的概率为：
+$$P(a\leq X \leq b)=\int_a^b{f_X(x)dx}$$
+&ensp;&ensp;合理的我们得到PDF的两个必要条件：  
+
+<ol>
+<li><p>$f_X(x)\geq0$  </p>
+</li>
+<li><p>$\int_{-\infty}^{\infty}$</p>
+</li>
+</ol>
+<p>&ensp;&ensp;参考csdn文章<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[PDFs](https://blog.csdn.net/xlinsist/article/details/50930589)">[3]</span></a></sup></p>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://lilianweng.github.io/lil-log/2018/01/23/the-multi-armed-bandit-problem-and-its-solutions.html" target="_blank" rel="noopener">Blog for Tompson Sampling</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://arxiv.org/pdf/1707.02038.pdf" target="_blank" rel="noopener">A Tutorial on Thompson Sampling</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/xlinsist/article/details/50930589" target="_blank" rel="noopener">PDFs</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li></ol></div></div>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -332,7 +344,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        23
+                        22
                     </p>
                 </div>
             </div>
@@ -373,7 +385,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#prefix"><span class="toc-number">1.</span> <span class="toc-text">prefix</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Multi-Armed-Bandit"><span class="toc-number">2.</span> <span class="toc-text">Multi-Armed Bandit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Description"><span class="toc-number">2.1.</span> <span class="toc-text">Description</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#method"><span class="toc-number">2.2.</span> <span class="toc-text">method</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">3.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#prefix"><span class="toc-number">1.</span> <span class="toc-text">prefix</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Multi-Armed-Bandit"><span class="toc-number">2.</span> <span class="toc-text">Multi-Armed Bandit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Description"><span class="toc-number">2.1.</span> <span class="toc-text">Description</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#method"><span class="toc-number">2.2.</span> <span class="toc-text">method</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Appendix-knowledge"><span class="toc-number">3.</span> <span class="toc-text">Appendix knowledge</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-number">3.1.</span> <span class="toc-text">beta 分布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-number">3.2.</span> <span class="toc-text">PDF（probability density function）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>
