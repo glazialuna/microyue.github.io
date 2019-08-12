@@ -4,31 +4,31 @@
     <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
 <meta name="baidu-site-verification" content="SiMVCIxqau">
 <meta charset="utf-8">
-<title>Contextual Bandits方法 - Bonny &amp; Pony</title>
+<title>Bayesian lasso UCB method - Bonny &amp; Pony</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Contextual Bandits方法">
-<meta name="keywords" content="RL">
+    <meta name="description" content="在Thompson sampling 基础上的bayesian lasso方法">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Contextual Bandits方法">
-<meta property="og:url" content="http://www.microyue.com/c8d7f3a3.html">
+<meta property="og:title" content="Bayesian lasso UCB method">
+<meta property="og:url" content="http://www.microyue.com/3c5496a6.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="Contextual Bandits方法">
+<meta property="og:description" content="在Thompson sampling 基础上的bayesian lasso方法">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-31T00:27:01.752Z">
+<meta property="og:updated_time" content="2019-07-30T17:56:25.801Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Contextual Bandits方法">
-<meta name="twitter:description" content="Contextual Bandits方法">
+<meta name="twitter:title" content="Bayesian lasso UCB method">
+<meta name="twitter:description" content="在Thompson sampling 基础上的bayesian lasso方法">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
 
 
 
-<link rel="alternative" href="dd" title="Contextual Bandits方法" type="application/atom+xml">
+<link rel="alternative" href="dd" title="Bayesian lasso UCB method" type="application/atom+xml">
 
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/Bonny2.png" alt="Contextual Bandits方法" height="28">
+                <img src="/images/Bonny2.png" alt="Bayesian lasso UCB method" height="28">
             
             </a>
         </div>
@@ -147,7 +147,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-19T18:52:00.000Z">2019-07-19</time>
+                <time class="level-item has-text-grey" datetime="2019-07-30T17:28:00.000Z">2019-07-30</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 minutes read (About 690 words)
+                    8 minutes read (About 1162 words)
                 </span>
                 
                 
@@ -171,32 +171,37 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <div class="has-title-style">Contextual Bandits方法</div>
+                <div class="has-title-style">Bayesian lasso UCB method</div>
             
         </h1>
         <div class="content">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>&ensp;&ensp;Contextual的问题，可以认为是老虎机问题，对于n台老虎机，每一台拥有a个选择，每台老虎机的特定选择的胜率（在统计意义上）是一定的，但是用户不知道这个胜率，且每一轮只能选择一个以后得到一个回报。所以我们要选择一种方式，使得胜率最大。<br>&ensp;&ensp;解决这个问题最naive的方法是对每台老虎机的每个选择尝试许多次（$t$）来预估每种选择的胜率，但是这样子的计算量将会是${t^{a}}^n$次的增长。<br>&ensp;&ensp;这个问题的主要重点在于Exploitation-Exploration（E&amp;E），对于老虎机的选择，我们要考虑从已经选择尝试过的结果中预估选择最大概率的胜率，还是从没有选择的老虎机中选择一个概率最大的尝试。对已知的吐钱概率比较高的老虎机，应该更多的去尝试(exploitation)，以便获得一定的累计收益；对未知的或尝试次数较少的老虎机，还要分配一定的尝试机会（exploration），以免错失收益更高的选择，但同时较多的探索也意味着较高的风险（机会成本）。<br>&ensp;&ensp;Bandit算法是一类用来实现Exploitation-Exploration机制的策略。根据是否考虑上下文特征，Bandit算法分为context-free bandit和contextual bandit两大类。</p>
-<h1 id="Contextual-free"><a href="#Contextual-free" class="headerlink" title="Contextual-free"></a>Contextual-free</h1><h2 id="epsilon-greedy"><a href="#epsilon-greedy" class="headerlink" title="$\epsilon$-greedy"></a>$\epsilon$-greedy</h2><h2 id="UCB"><a href="#UCB" class="headerlink" title="UCB"></a>UCB</h2><p>&ensp;&ensp;UCB主要就是对于reward的估计，选择reward均值估计的置信区间上限老表示其对收益的估计:<br>$$\hat{\mu}+\sqrt{\frac{2\ln{n}}{n_i}}$$</p>
-<h2 id="softmax"><a href="#softmax" class="headerlink" title="softmax"></a>softmax</h2><h2 id="epsilon-greedy-1"><a href="#epsilon-greedy-1" class="headerlink" title="$\epsilon$-greedy"></a>$\epsilon$-greedy</h2><p>&ensp;&ensp;在纯greedy的情况上加上一定概率的uniform exploration</p>
-<h2 id="Thompson-Sampling"><a href="#Thompson-Sampling" class="headerlink" title="Thompson Sampling"></a>Thompson Sampling</h2><h1 id="Contexutal-bandit"><a href="#Contexutal-bandit" class="headerlink" title="Contexutal-bandit"></a>Contexutal-bandit</h1><h2 id="LinUCB"><a href="#LinUCB" class="headerlink" title="LinUCB"></a>LinUCB</h2><p>&ensp;&ensp;UCB方法是解决Bernoulli Bandit问题的，即每个arm的优劣符合伯努利分布，更具历史计算的$\overline{x_j}$得到分布参数。这是基于统计方法比较简单，但是同时忽略了arm优劣分布和情景的关系。区别于Bernoulli Bandit，就是利用了上下文信息的Contextual Bandit 问题。<br>&ensp;&ensp;LinUCB没有定义一个概率分布来描述每个arm的历史收益情况，而是假设了arm的优劣和描述arm的特征向量存在一个线性关系：$x^T\theta$,来替代$\overline{x_j}$</p>
-<h1 id="Appenddix"><a href="#Appenddix" class="headerlink" title="Appenddix"></a>Appenddix</h1><h2 id="1">Bernoulli Bandit
-&ensp;&ensp;贝叶斯和非贝叶斯情况
-<!-- <a href="#2">s-2</a> -->
-context regresarion 
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><h1 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h1><h2 id="1">A-1(范式规则化问题)</h2>
+&Ensp;&Ensp;范式
+&Ensp;&Ensp;参考笔记<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[ML中的范数规则化](https://blog.csdn.net/zouxy09/article/details/24971995)
+">[2]</span></a></sup>
 
-<h2 id="1">Bernoulli Bandit
+<p><a href="#1">A-1</a></p>
+<h2 id="2">A-2(估计方法)</h2>
+&Ensp;&Ensp;先验概率、最大似然估计、贝叶斯估计、最大后验概率这几个是概率论的基础知识，小王非常后悔没有认真学习的概率论的课程，真的非常后悔，导致现在要重新学一遍，希望这是最后一次出现在appendix里面了吧。ORZ·········
+### 先验概率
+&Ensp;&Ensp;先验概率（prior probability）是指根据以往经验和分析得到的概率，如全概率公式，它往往作为"由因求果"问题中的"因"出现的概率。一般分为客观先验概率(利用过去历史资料计算得到的先验概率) 和 主观先验概率(当历史资料无从取得或资料不完全时，凭人们的主观经验来判断而得到的先验概率)。  
+&Ensp;&Ensp; 先验概率是通过古典概率模型加以定义的，故又称为古典概率。古典概率模型要求满足两个条件：  
+(1)试验的所有可能结果是有限的;  
+(2)每一种可能结果出现的可能性(概率)相等。  若所有可能结果的总数为N，随机事件A包括n个可能结果，那么随机事件A出现的概率为n/N。  
+&Ensp;&Ensp; 在贝叶斯统计中，先验概率分布，即关于某个变量 p 的概率分布，是在获得某些信息或者依据前，对 p 的不确定性进行猜测。例如， p 可以是抢火车票开始时，抢到某一车次的概率。这是对不确定性（而不是随机性）赋予一个量化的数值的表征，这个量化数值可以是一个参数，或者是一个潜在的变量。  
+&ensp;&ensp;先验概率仅仅依赖于主观上的经验估计，也就是事先根据已有的知识的推断，在应用贝叶斯理论时，通常将先验概率乘以似然函数（likelihoodfunction）再归一化后，得到后验概率分布，后验概率分布即在已知给定的数据后，对不确定性的条件分布。  
 
-<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><ul>
-<li><a href="https://zhuanlan.zhihu.com/p/35753281" target="_blank" rel="noopener">知乎 Bandit算法</a></li>
-</ul>
-</h2></h2>
+<h3 id="MLE-maximum-likelihood-estimation-，最大似然估计"><a href="#MLE-maximum-likelihood-estimation-，最大似然估计" class="headerlink" title="MLE(maximum likelihood estimation)，最大似然估计"></a>MLE(maximum likelihood estimation)，最大似然估计</h3><p>&ensp;&Ensp;最大似然估计提供了一种给定观察数据来评估模型参数的方法，即：“模型已定，参数未知”。简单而言，假设我们要统计全国人口的身高，首先假设这个身高服从服从正态分布，但是该分布的均值与方差未知。我们没有人力与物力去统计全国每个人的身高，但是可以通过采样，获取部分人的身高，然后通过最大似然估计来获取上述假设中的正态分布的均值与方差。最大似然估计中采样需满足一个很重要的假设，就是所有的采样都是独立同分布的。<br>&ensp;&Ensp;给定一个概率分布 {\displaystyle D} D，已知其概率密度函数（连续分布）或概率质量函数（离散分布）为 {\displaystyle f_{D}} f_D，以及一个分布参数 {\displaystyle \theta } \theta ，我们可以从这个分布中抽出一个具有 {\displaystyle n} n个值的采样 {\displaystyle X_{1},X_{2},\ldots ,X_{n}} X_1, X_2,\ldots, X_n，利用 {\displaystyle f_{D}} f_D计算出其似然函数：<br>&ensp;&Ensp;具体描述一下最大似然估计：<br>&ensp;&Ensp;首先，假设为独立同分布的采样，θ为模型参数,f为我们所使用的模型，遵循我们上述的独立同分布假设。参数为θ的模型f产生上述采样可表示为</p>
+<p>&ensp;&ensp;<a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1" target="_blank" rel="noopener">wiki 最大似然估计</a></p>
+<h3 id="贝叶斯估计"><a href="#贝叶斯估计" class="headerlink" title="贝叶斯估计"></a>贝叶斯估计</h3><h3 id="MAP-Maximum-a-posteriori-estimation-最大后验概率"><a href="#MAP-Maximum-a-posteriori-estimation-最大后验概率" class="headerlink" title="MAP(Maximum a posteriori estimation),最大后验概率"></a>MAP(Maximum a posteriori estimation),最大后验概率</h3><p>&Ensp;&Ensp;参考笔记<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[先验概率，最大似然估计，贝叶斯估计，和最大后验概率](https://blog.csdn.net/guohecang/article/details/52313046)">[3]</span></a></sup>，基本等于转载这篇笔记。</p>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.jstor.org/stable/pdf/27640090.pdf?refreqid=excelsior%3Afb018768702daa257c5dbf00f17073e5&amp;seq=1#page_scan_tab_contents" target="_blank" rel="noopener">Bayesian lasso</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/zouxy09/article/details/24971995" target="_blank" rel="noopener">ML中的范数规则化</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/guohecang/article/details/52313046" target="_blank" rel="noopener">先验概率，最大似然估计，贝叶斯估计，和最大后验概率</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li></ol></div></div>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/RL/">RL</a>
+                    <a class="has-link-grey -link" href="/tags/Python/">Python</a>
                 </div>
             </div>
         </div>
@@ -242,17 +247,10 @@ context regresarion
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/e22800a7.html">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Jupter小手册</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/7411483a.html">
-                <span class="level-item">Stomastic Linear Bandits</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/9589fa40.html">
+                <span class="level-item">CUDA实战</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -364,22 +362,7 @@ context regresarion
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#问题描述"><span class="toc-number">1.</span> <span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Contextual-free"><span class="toc-number">2.</span> <span class="toc-text">Contextual-free</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#epsilon-greedy"><span class="toc-number">2.1.</span> <span class="toc-text">$\epsilon$-greedy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UCB"><span class="toc-number">2.2.</span> <span class="toc-text">UCB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#softmax"><span class="toc-number">2.3.</span> <span class="toc-text">softmax</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#epsilon-greedy-1"><span class="toc-number">2.4.</span> <span class="toc-text">$\epsilon$-greedy</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thompson-Sampling"><span class="toc-number">2.5.</span> <span class="toc-text">Thompson Sampling</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Contexutal-bandit"><span class="toc-number">3.</span> <span class="toc-text">Contexutal-bandit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#LinUCB"><span class="toc-number">3.1.</span> <span class="toc-text">LinUCB</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Appenddix"><span class="toc-number">4.</span> <span class="toc-text">Appenddix</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-number">4.1.</span> <span class="toc-text">Bernoulli Bandit
-  贝叶斯和非贝叶斯情况
-
-context regresarion 
-
-Bernoulli Bandit
-
-reference
-知乎 Bandit算法
-
-</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-number">4.2.</span> <span class="toc-text">Bernoulli Bandit
-
-reference
-知乎 Bandit算法
-
-</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">5.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#prefix"><span class="toc-number">1.</span> <span class="toc-text">prefix</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Appendix"><span class="toc-number">2.</span> <span class="toc-text">Appendix</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-number">2.1.</span> <span class="toc-text">A-1(范式规则化问题)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-number">2.2.</span> <span class="toc-text">A-2(估计方法)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MLE-maximum-likelihood-estimation-，最大似然估计"><span class="toc-number">2.2.1.</span> <span class="toc-text">MLE(maximum likelihood estimation)，最大似然估计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#贝叶斯估计"><span class="toc-number">2.2.2.</span> <span class="toc-text">贝叶斯估计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MAP-Maximum-a-posteriori-estimation-最大后验概率"><span class="toc-number">2.2.3.</span> <span class="toc-text">MAP(Maximum a posteriori estimation),最大后验概率</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">3.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -402,7 +385,7 @@ reference
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/Bonny2.png" alt="Contextual Bandits方法" height="28">
+                    <img src="/images/Bonny2.png" alt="Bayesian lasso UCB method" height="28">
                 
                 </a>
                 <p class="is-size-7">
