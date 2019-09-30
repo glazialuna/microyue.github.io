@@ -18,7 +18,7 @@
 <meta property="og:description" content="Context Bandit with Linear Payoff Functions 论文笔记，其中一些相关的数学问题引用了别的书籍定义，具体见reference">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-31T00:38:01.611Z">
+<meta property="og:updated_time" content="2019-08-10T05:53:21.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Context Bandit with Linear Payoff Functions">
 <meta name="twitter:description" content="Context Bandit with Linear Payoff Functions 论文笔记，其中一些相关的数学问题引用了别的书籍定义，具体见reference">
@@ -147,7 +147,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-17T18:57:00.000Z">2019-07-17</time>
+                <time class="level-item has-text-grey" datetime="2019-07-17T03:57:00.000Z">2019-07-17</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    11 minutes read (About 1596 words)
+                    11 minutes read (About 1636 words)
                 </span>
                 
                 
@@ -202,13 +202,13 @@
 </blockquote>
 <p>&ensp;&ensp;即对于某一个action，前面观察出来的所有次数的平均值计算出来的期望和实际的期望相差小于$\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}$的概率大于$1-\delta$，我们用$x_j^T\theta_j+\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}$来作为真实的值。其中$D_j$为被观察m次的特征为d维度组成的矩阵，则$D_j$为${m}\times{d}$维。</p>
 <h3 id="3">s-3</h3>
-&ensp;&enap;多维分布
+&ensp;&ensp;多维分布
 
 <h3 id="4">s-4</h3>
-&ensp;&Ensp;$\alpha$的证明过程：
+&ensp;&ensp;$\alpha$的证明过程：
 
 <h3 id="5">s-5</h3>
-&ensp;&Ensp;Hoeffding不等式<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Wassily Hoeffding论文，1963](https://www.jstor.org/stable/2282952?seq=1#page_scan_tab_contents)">[5]</span></a></sup>适用于__有界__的随机变量。
+&ensp;&ensp;Hoeffding不等式<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Wassily Hoeffding论文，1963](https://www.jstor.org/stable/2282952?seq=1#page_scan_tab_contents)">[5]</span></a></sup>,适用于有界的随机变量。设有两两独立的一系列随机变量$X_1$,$X_2$,···,$X_n$。假设对所有的$1\leq i \leq n$,$X_i$都是几乎有界的变量
 
 
 <h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>&ensp;&ensp;摘自2011 Yohoo！<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Context Bandit with Linear Payoff Functions](http://proceedings.mlr.press/v15/chu11a/chu11a.pdf)
@@ -357,7 +357,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        23
+                        32
                     </p>
                 </div>
             </div>
@@ -367,7 +367,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        8
                     </p>
                 </div>
             </div>
@@ -377,7 +377,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        11
                     </p>
                 </div>
             </div>
