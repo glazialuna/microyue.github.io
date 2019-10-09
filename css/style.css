@@ -338,8 +338,11 @@ img.thumbnail {
 }
 .has-title-style {
   text-align: center !important;
-  color: #dc32cb !important;
-  font-size: 3.3rem;
+  color: #e8a1a1 !important;
+  font-size: 1.8rem;
+  font-style: '黑体';
+/*https://convertingcolors.com/rgb-color-102_102_102.html*/
+/*'PT Sans Narrow', '雅黑', '文泉驿微米黑', '黑体', sans-serif*/
 /*transition: 0.2s ease*/
 }
 .has-mr-6 {
