@@ -9,19 +9,19 @@
 
 
 
-    <meta name="description" content="随手不认真的记录。">
+    <meta name="description" content="随手不认真的记录。 add pypylon">
 <meta name="keywords" content="Python,小手册">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python | 小手册">
 <meta property="og:url" content="http://www.microyue.com/63f7c9e0.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="随手不认真的记录。">
+<meta property="og:description" content="随手不认真的记录。 add pypylon">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-05T19:17:35.490Z">
+<meta property="og:updated_time" content="2019-10-12T01:15:29.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python | 小手册">
-<meta name="twitter:description" content="随手不认真的记录。">
+<meta name="twitter:description" content="随手不认真的记录。 add pypylon">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 101 words)
+                    2 minutes read (About 276 words)
                 </span>
                 
                 
@@ -175,14 +175,13 @@
             
         </h1>
         <div class="content">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>随手不认真的记录。</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>随手不认真的记录。 add pypylon</p>
 <a id="more"></a>
-<h1 id="ski"><a href="#ski" class="headerlink" title="ski"></a>ski</h1><h1 id="图像处理"><a href="#图像处理" class="headerlink" title="图像处理"></a>图像处理</h1><h2 id="cv2"><a href="#cv2" class="headerlink" title="cv2"></a>cv2</h2><h3 id="install"><a href="#install" class="headerlink" title="install"></a>install</h3><ul>
+<h1 id="各类包"><a href="#各类包" class="headerlink" title="各类包"></a>各类包</h1><h2 id="cv2"><a href="#cv2" class="headerlink" title="cv2"></a>cv2</h2><h3 id="install"><a href="#install" class="headerlink" title="install"></a>install</h3><ul>
 <li>conda:<code>conda install -c https://conda.binstar.org/menpo opencv</code><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3></li>
 </ul>
 <ol>
-<li><p>色彩转换：</p>
-<ul>
+<li>色彩转换：<ul>
 <li>img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # BGR转灰度</li>
 <li>img_bgr = cv2.cvtColor(img_gray, cv2.COLOR_GRAY2BGR) # 灰度转BRG</li>
 <li>img_rgb = cv2.cvtColor(img_gray, cv2.COLOR_GRAY2RGB) # 灰度转RGB</li>
@@ -190,8 +189,46 @@
 <li>img2 = cv2.merge([r,g,b]) #merge成rgb图像</li>
 </ul>
 </li>
-<li></li>
 </ol>
+<h2 id="swig"><a href="#swig" class="headerlink" title="swig"></a>swig</h2><ul>
+<li>install swig package (win) <a href="https://sourceforge.net/projects/swig/" target="_blank" rel="noopener">download</a></li>
+<li>unpack zip in a path</li>
+<li>add path to system variable PATH</li>
+<li>check : cmd -&gt; swig -version</li>
+</ul>
+<h2 id="pypylon"><a href="#pypylon" class="headerlink" title="pypylon"></a>pypylon</h2><p><strong>注意pypylon 只匹配 pylon 5.2.0 (截止2019.10.12) , 安装developer才有sdk包</strong><br>pypylon 是辅助 Basler camera 系列的python API接口 </p>
+<ul>
+<li><p>pre: <a href="https://www.baslerweb.com/cn/sales-support/downloads/software-downloads/pylon-5-2-0-windows/" target="_blank" rel="noopener">pylon</a> , <a href="https://www.python.org/" target="_blank" rel="noopener">python</a> , <a href="https://pip.pypa.io/en/stable/" target="_blank" rel="noopener">pip</a> ,<a href="https://github.com/basler/pypylon" target="_blank" rel="noopener">pyplon</a></p>
+</li>
+<li><p>install (fron wheel):</p>
+<ul>
+<li>download wheel(builded) for your system, <a href="https://github.com/Basler/pypylon/releases" target="_blank" rel="noopener">release</a></li>
+<li>install wheel :<code>pip install XXX/X/XX.wheel</code></li>
+</ul>
+</li>
+<li><p>install (from source)</p>
+<ul>
+<li><p>prepare version (<a href="http://www.swig.org/" target="_blank" rel="noopener">swag &gt; 3.0.12</a> , <a href="https://www.python.org/" target="_blank" rel="noopener">python &gt; 3.4</a>)</p>
+</li>
+<li><p>install :</p>
+<figure class="highlight crmsh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/basler/pypylon.git</span><br><span class="line">cd pypylon</span><br><span class="line">pip install .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>build in python : <code>python setup.py develop</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>test: in file tests/</li>
+</ul>
+<h2 id="swag"><a href="#swag" class="headerlink" title="swag"></a>swag</h2><ul>
+<li>pip: <code>pip install swag</code></li>
+</ul>
+<h1 id="appendix"><a href="#appendix" class="headerlink" title="appendix"></a>appendix</h1><h2 id="wheel-amd64-vs-win32"><a href="#wheel-amd64-vs-win32" class="headerlink" title="wheel amd64 vs win32"></a>wheel amd64 vs win32</h2><ul>
+<li>check python platform: 64 for amd64, 32 for win32<figure class="highlight awk hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import platform</span><br><span class="line">platform.architecture()</span><br><span class="line">(<span class="hljs-string">'64bit'</span>,<span class="hljs-string">'WindowsPE'</span>)</span><br><span class="line"><span class="hljs-keyword">exit</span>()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 
         </div>
         
@@ -326,7 +363,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        34
+                        36
                     </p>
                 </div>
             </div>
@@ -336,7 +373,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        9
                     </p>
                 </div>
             </div>
@@ -346,7 +383,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        12
+                        14
                     </p>
                 </div>
             </div>
@@ -367,7 +404,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ski"><span class="toc-number">1.</span> <span class="toc-text">ski</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图像处理"><span class="toc-number">2.</span> <span class="toc-text">图像处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cv2"><span class="toc-number">2.1.</span> <span class="toc-text">cv2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#install"><span class="toc-number">2.1.1.</span> <span class="toc-text">install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数"><span class="toc-number">2.1.2.</span> <span class="toc-text">函数</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#各类包"><span class="toc-number">1.</span> <span class="toc-text">各类包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#cv2"><span class="toc-number">1.1.</span> <span class="toc-text">cv2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#install"><span class="toc-number">1.1.1.</span> <span class="toc-text">install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数"><span class="toc-number">1.1.2.</span> <span class="toc-text">函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#swig"><span class="toc-number">1.2.</span> <span class="toc-text">swig</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#pypylon"><span class="toc-number">1.3.</span> <span class="toc-text">pypylon</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#swag"><span class="toc-number">1.4.</span> <span class="toc-text">swag</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#appendix"><span class="toc-number">2.</span> <span class="toc-text">appendix</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#wheel-amd64-vs-win32"><span class="toc-number">2.1.</span> <span class="toc-text">wheel amd64 vs win32</span></a></li></ol></li></ol>
         </div>
     </div>
 </div>
