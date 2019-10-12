@@ -18,7 +18,7 @@
 <meta property="og:description" content="优化python科学计算的加速方法，第一次手写程序，速度非常不可观，所以想办法用来加速">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-07-22T17:54:55.686Z">
+<meta property="og:updated_time" content="2019-10-12T02:53:46.737Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="优化加速">
 <meta name="twitter:description" content="优化python科学计算的加速方法，第一次手写程序，速度非常不可观，所以想办法用来加速">
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 228 words)
+                    a minute read (About 219 words)
                 </span>
                 
                 
@@ -175,7 +175,7 @@
             
         </h1>
         <div class="content">
-            <h1 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h1><h2 id="profile"><a href="#profile" class="headerlink" title="profile"></a>profile</h2><p>用法： </p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="速度测试"><a href="#速度测试" class="headerlink" title="速度测试"></a>速度测试</h1><h2 id="profile"><a href="#profile" class="headerlink" title="profile"></a>profile</h2><p>用法： </p>
 <figure class="highlight py hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> profile</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fun</span><span class="hljs-params">(a)</span>:</span></span><br><span class="line">  <span class="hljs-keyword">return</span> a</span><br><span class="line">profile.run(<span class="hljs-string">"fun(3)"</span>)</span><br></pre></td></tr></table></figure>
 
 <p>输出：</p>
@@ -227,19 +227,14 @@ pip install psutil</code></li>
 </ul>
 </li>
 </ul>
-<p>## </p>
-<h1 id="GPU加速"><a href="#GPU加速" class="headerlink" title="GPU加速"></a>GPU加速</h1><h1 id="numba"><a href="#numba" class="headerlink" title="numba"></a>numba</h1><ul>
+<h1 id="numba"><a href="#numba" class="headerlink" title="numba"></a>numba</h1><ul>
 <li>installation： <ul>
 <li>install numba: <code>conda install numba</code></li>
 <li>install roctools: <code>conda install -c numba roctools</code></li>
 </ul>
 </li>
 </ul>
-<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><ul>
-<li><a href>book bandit algorithm</a></li>
-<li><a href>知乎blog</a></li>
-<li><a href="https://blog.csdn.net/xiemanR/article/details/72763234" target="_blank" rel="noopener">Python 7 种性能测试工具</a></li>
-</ul>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/xiemanR/article/details/72763234" target="_blank" rel="noopener">Python 7 种性能测试工具</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -302,7 +297,7 @@ pip install psutil</code></li>
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/e22800a7.html">
-                <span class="level-item">Jupter小手册</span>
+                <span class="level-item">Jupter | 小手册</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -373,7 +368,7 @@ pip install psutil</code></li>
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        36
+                        37
                     </p>
                 </div>
             </div>
@@ -383,7 +378,7 @@ pip install psutil</code></li>
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        9
+                        8
                     </p>
                 </div>
             </div>
@@ -393,7 +388,7 @@ pip install psutil</code></li>
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        14
+                        17
                     </p>
                 </div>
             </div>
@@ -414,7 +409,7 @@ pip install psutil</code></li>
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#速度测试"><span class="toc-number">1.</span> <span class="toc-text">速度测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#profile"><span class="toc-number">1.1.</span> <span class="toc-text">profile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cprofile"><span class="toc-number">1.2.</span> <span class="toc-text">Cprofile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#line-profiler"><span class="toc-number">1.3.</span> <span class="toc-text">line_profiler</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#memory-profiler"><span class="toc-number">1.4.</span> <span class="toc-text">memory_profiler</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GPU加速"><span class="toc-number">2.</span> <span class="toc-text">GPU加速</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#numba"><span class="toc-number">3.</span> <span class="toc-text">numba</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">4.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#速度测试"><span class="toc-number">1.</span> <span class="toc-text">速度测试</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#profile"><span class="toc-number">1.1.</span> <span class="toc-text">profile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cprofile"><span class="toc-number">1.2.</span> <span class="toc-text">Cprofile</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#line-profiler"><span class="toc-number">1.3.</span> <span class="toc-text">line_profiler</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#memory-profiler"><span class="toc-number">1.4.</span> <span class="toc-text">memory_profiler</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#numba"><span class="toc-number">2.</span> <span class="toc-text">numba</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">3.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>
