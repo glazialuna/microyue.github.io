@@ -18,7 +18,7 @@
 <meta property="og:description" content="Linux Unbunt 18.04 各类包安装小手册（包括云服务器的Unbuntu）">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-12T02:59:08.315Z">
+<meta property="og:updated_time" content="2019-10-15T06:24:56.614Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux | 小手册">
 <meta name="twitter:description" content="Linux Unbunt 18.04 各类包安装小手册（包括云服务器的Unbuntu）">
@@ -157,7 +157,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 241 words)
+                    3 minutes read (About 394 words)
                 </span>
                 
                 
@@ -175,15 +175,44 @@
             
         </h1>
         <div class="content">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><p><font size="6"><strong>临时设置</strong></font></p>
-<h1 id="编辑器-amp-编译器"><a href="#编辑器-amp-编译器" class="headerlink" title="编辑器&amp;编译器"></a>编辑器&amp;编译器</h1><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><figure class="highlight actionscript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="hljs-keyword">get</span> install <span class="hljs-keyword">default</span>-jre <span class="hljs-keyword">default</span>-jdk</span><br></pre></td></tr></table></figure>
-
-<h2 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h2><p>安装Hadoop 3</p>
-<p>通过<a href="https://hadoop.apache.org/releases.html" target="_blank" rel="noopener">Apache Hadoop</a>官方下载页面选择最新的Binary版本进行下载（截止2019年9月30日，Hadoop最新稳定版本为3.2.1),<a href="https://www.apache.org/dyn/closer.cgi/hadoop/common" target="_blank" rel="noopener">官方镜像文件</a>.</p>
-<p>Binary版本是编译好的二进制版本，可以直接解压安装；另一个包含 src 的则是 Hadoop 源代码，需要进行编译才可使用。</p>
-<p>下面安装：</p>
-<figure class="highlight jboss-cli hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget http:<span class="hljs-string">//ftp.cuhk.edu.hk/pub/packages/apache.org/hadoop/common/hadoop-3.1.2/hadoop-3.1.2.tar.gz</span></span><br><span class="line">sudo tar -zxvf  hadoop-3.1.2.tar.gz -C <span class="hljs-string">/usr/local</span>    <span class="hljs-comment">#解压到/usr/local目录下</span></span><br><span class="line"><span class="hljs-keyword">cd</span> <span class="hljs-string">/usr/local</span></span><br><span class="line">sudo mv <span class="hljs-string">./hadoop-3.1.2/</span> <span class="hljs-string">./hadoop</span>                      <span class="hljs-comment">#重命名为hadoop</span></span><br><span class="line">sudo chown -R hadoop <span class="hljs-string">./hadoop</span>                        <span class="hljs-comment">#修改文件权限</span></span><br></pre></td></tr></table></figure>
-
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><ul>
+<li><code>vi ~/.bashrc</code><br><code>source ~/.bashrc</code></li>
+</ul>
+<h1 id="编辑器-amp-编译器"><a href="#编辑器-amp-编译器" class="headerlink" title="编辑器&amp;编译器"></a>编辑器&amp;编译器</h1><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><p>java JDK 是基本的env工具，具体安装过程如下：</p>
+<ul>
+<li>installation :  <code>sudo apt-get install default-jre default-jdk</code></li>
+<li>configuration env:  <ul>
+<li><code>vi ~/.bashrc # vim bashrc file</code> </li>
+<li><code>export JAVA_HOME=/usr/lib/jvm/default-java # add to environment # add to bashrc</code></li>
+<li>‘source ~/.bashrc # the configuration take effect’</li>
+</ul>
+</li>
+<li>test:<ul>
+<li><code>echo $JAVA_HOME</code></li>
+<li><code>java -version</code></li>
+</ul>
+</li>
+</ul>
+<p>测试结果为：<br><img src="/photos/java.png" alt="java" title="java"></p>
+<p>需要注意的是：</p>
+<ol>
+<li>vim 版本问题解决：<br><code>sudo apt-get update</code><br><code>sudo apt-get install vim-gtk</code></li>
+<li>export 等号前后不能有空格</li>
+</ol>
+<h2 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h2><p><a href="www.microyue.com/c316c862.html#more">安装分布式Hadoop 3在服务器上</a></p>
+<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><h2 id="ssh建立服务器联系"><a href="#ssh建立服务器联系" class="headerlink" title="ssh建立服务器联系"></a>ssh建立服务器联系</h2><p>以网易云为例，建立多个节点的服务器联系。</p>
+<ul>
+<li>创建多台服务器和申请ip，绑定主服务器和ip address<br><img src="/photos/cloud1.png" alt="ipbing"><br><img src="/photos/cloud2.png" alt="ipbing"><br><img src="/photos/bingip.png" alt="ipbing"></li>
+<li>ssh连接<ul>
+<li><code>ssh-keygen -t rsa # genertate key pairs # generate</code></li>
+<li><code>cd ~/.ssh</code></li>
+<li>添加ssh密钥在云服务器上,复制pubkey(本地到hadoop1 主节点，其他增加hadoop1<br>1 的pub key)<br><img src="/photos/ssh1.png" alt="ssh"><br><img src="/photos/ssh2.png" alt="ssh"></li>
+<li>本地登陆 <code>ssh root@ip_hadoop1</code>, 从hadoop 1 SSH登陆hadoop其他节点</li>
+</ul>
+</li>
+<li>通过配置hosts文件建立直接hostname的连接方式<br><code>sudo vi /ect/hosts # configure hosts</code><br><code>10.173.32.21 hadoop1 # 添加hostname和节点</code><br><code>scp -r /etc/hosts root@hadoop2:etc # send to other nodes</code><br>  传送host到别的节点</li>
+<li>刷新hostname<br><code>ssh-keygen -f &quot;/root/.ssh/known_hosts&quot; -R hadoop2</code><br><img src="/photos/1l2.png" alt="ssh成功连接" title="成功连接">  </li>
+</ul>
 <h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://fuhailin.github.io/Essential-Apps-for-Ubuntu/#JAVA" target="_blank" rel="noopener">fuhanlin's blog</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
         </div>
         
@@ -318,7 +347,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        37
+                        39
                     </p>
                 </div>
             </div>
@@ -359,7 +388,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">1.</span> <span class="toc-text">基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置环境变量"><span class="toc-number">1.1.</span> <span class="toc-text">设置环境变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编辑器-amp-编译器"><span class="toc-number">2.</span> <span class="toc-text">编辑器&amp;编译器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库"><span class="toc-number">3.</span> <span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发工具"><span class="toc-number">4.</span> <span class="toc-text">开发工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#java"><span class="toc-number">4.1.</span> <span class="toc-text">java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop"><span class="toc-number">4.2.</span> <span class="toc-text">Hadoop</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">5.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">1.</span> <span class="toc-text">基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置环境变量"><span class="toc-number">1.1.</span> <span class="toc-text">设置环境变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编辑器-amp-编译器"><span class="toc-number">2.</span> <span class="toc-text">编辑器&amp;编译器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库"><span class="toc-number">3.</span> <span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发工具"><span class="toc-number">4.</span> <span class="toc-text">开发工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#java"><span class="toc-number">4.1.</span> <span class="toc-text">java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop"><span class="toc-number">4.2.</span> <span class="toc-text">Hadoop</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器"><span class="toc-number">5.</span> <span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh建立服务器联系"><span class="toc-number">5.1.</span> <span class="toc-text">ssh建立服务器联系</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">6.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>
