@@ -143,6 +143,10 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
     
+    
+    
+
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -175,7 +179,7 @@
             
         </h1>
         <div class="content">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><p>&ensp;&ensp;LinUCB是在UCB基础上的改进，这里我们认为reward=$x_{a,t}\theta^T$,然后通过结果不断学习这个$\theta$。简单来说就是在每一步中，我们通过每一轮的所有结果来拟合回归得到最接近$\theta$的值。</p>
+            <h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><p>&ensp;&ensp;LinUCB是在UCB基础上的改进，这里我们认为reward=$x_{a,t}\theta^T$,然后通过结果不断学习这个$\theta$。简单来说就是在每一步中，我们通过每一轮的所有结果来拟合回归得到最接近$\theta$的值。</p>
 <h1 id="数学表达"><a href="#数学表达" class="headerlink" title="数学表达"></a>数学表达</h1><p>&ensp;&ensp;抽象过程（可以参考推荐系统，多臂老虎机问题等）到数学表达，$r_{a,t}$是选择action $a$在round $t$的回报，我们定义每一轮的回报是：<br>$$r_{a,t}=x_{t,a}^T\theta^{*}+\epsilon_{t}$$  </p>
 <p>&ensp;&ensp;其中 $\epsilon_t$ 是实际观测中的噪声，$\theta^{*}$ 的定义为：<br>$$E(r_{t,a}|x_{t,a})=x_{t,a}^T\theta^{*}$$<br>&ensp;&ensp;我们的目的是经历$t$轮后，使得获得的reward最大,由此我们定义regret为比较结果：<br>$$Regret=\sum_{t=1}^{T}{r_{t,a_t}^*}-\sum_{t=1}^{T}{r_{t,a_t}}$$</p>
 <p>&ensp;&ensp;为了简化计算过程，我们定义在每一轮我们会观测到$x_{t,a}$,我们将它和k种选择一起map到$X_t$,即$x_{t,a}-f_t$。这一步的意义是让获得的feature与选择和观测context有关，而学习的过程只和feature有关。</p>
