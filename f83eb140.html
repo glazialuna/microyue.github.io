@@ -143,10 +143,9 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
     
-    
-    
 
     
+
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -179,7 +178,7 @@
             
         </h1>
         <div class="content">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><p>&ensp;&ensp;LinUCB是在UCB基础上的改进，这里我们认为reward=$x_{a,t}\theta^T$,然后通过结果不断学习这个$\theta$。简单来说就是在每一步中，我们通过每一轮的所有结果来拟合回归得到最接近$\theta$的值。</p>
+            <h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><p>&ensp;&ensp;LinUCB是在UCB基础上的改进，这里我们认为reward=$x_{a,t}\theta^T$,然后通过结果不断学习这个$\theta$。简单来说就是在每一步中，我们通过每一轮的所有结果来拟合回归得到最接近$\theta$的值。</p>
 <h1 id="数学表达"><a href="#数学表达" class="headerlink" title="数学表达"></a>数学表达</h1><p>&ensp;&ensp;抽象过程（可以参考推荐系统，多臂老虎机问题等）到数学表达，$r_{a,t}$是选择action $a$在round $t$的回报，我们定义每一轮的回报是：<br>$$r_{a,t}=x_{t,a}^T\theta^{*}+\epsilon_{t}$$  </p>
 <p>&ensp;&ensp;其中 $\epsilon_t$ 是实际观测中的噪声，$\theta^{*}$ 的定义为：<br>$$E(r_{t,a}|x_{t,a})=x_{t,a}^T\theta^{*}$$<br>&ensp;&ensp;我们的目的是经历$t$轮后，使得获得的reward最大,由此我们定义regret为比较结果：<br>$$Regret=\sum_{t=1}^{T}{r_{t,a_t}^*}-\sum_{t=1}^{T}{r_{t,a_t}}$$</p>
 <p>&ensp;&ensp;为了简化计算过程，我们定义在每一轮我们会观测到$x_{t,a}$,我们将它和k种选择一起map到$X_t$,即$x_{t,a}-f_t$。这一步的意义是让获得的feature与选择和观测context有关，而学习的过程只和feature有关。</p>
@@ -193,14 +192,12 @@
 
 <hr>
 <h3 id="2">s-2</h3>
-&ensp;&ensp; UCB的基础是Hoeffding's inequality<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Hoeffding's inequality](https://en.wikipedia.org/wiki/Hoeffding%27s_inequality)
-">[4]</span></a></sup>,定义如下：
+&ensp;&ensp; UCB的基础是Hoeffding's inequality[^4],定义如下：
 
 <blockquote>
 <p>假设$X_1$,$X_2$,···,$X_n$是同一个分布产生的$n$个独立变量，其均值为$\overline{X}=\cfrac{1}{n}\sum_{i=1}^nX_i$,则如下公式成立:$$p(|E[X]-\overline{X}|\leq\delta)\geq1-2\exp^{-2n\delta^2}$$</p>
 </blockquote>
-<p>&ensp;&ensp;也就是表示<strong>n个独立同分布的变量的均值与该变量的真实期望的误差小于某个预设的阈值$\mu$会以概率$1-2\exp^{-2n\mu^2}$恒成立</strong><br>&ensp;&ensp;那么从我们的问题意义上来看，我们可以将$X_1$,$X_2$,···,$X_n$看作某个action在n次实验中获得的收益，通过上面的不等式并设定一个$\delta$使得公式成立，然后用$\hat{X}+\delta$来近似真实的收益，$E(X)$，理论上也可以用$\hat{X}+\delta$。<br>&ensp;&ensp;在UCB中推导出的Hoeffding’s inequality（细致内容见<a href="#5">hoeffding</a>）不能够直接应用到LinUCB中，关于linear UCB的bound的推导在09年论文<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[09年论文-Exploring compact reinforcement-learning representations with linear regression](https://arxiv.org/ftp/arxiv/papers/1205/1205.2606.pdf)
-">[3]</span></a></sup>中有详细介绍，具体证明看<a href="#4">alpha的证明</a>。最终的表达形式如下：</p>
+<p>&ensp;&ensp;也就是表示<strong>n个独立同分布的变量的均值与该变量的真实期望的误差小于某个预设的阈值$\mu$会以概率$1-2\exp^{-2n\mu^2}$恒成立</strong><br>&ensp;&ensp;那么从我们的问题意义上来看，我们可以将$X_1$,$X_2$,···,$X_n$看作某个action在n次实验中获得的收益，通过上面的不等式并设定一个$\delta$使得公式成立，然后用$\hat{X}+\delta$来近似真实的收益，$E(X)$，理论上也可以用$\hat{X}+\delta$。<br>&ensp;&ensp;在UCB中推导出的Hoeffding’s inequality（细致内容见<a href="#5">hoeffding</a>）不能够直接应用到LinUCB中，关于linear UCB的bound的推导在09年论文[^3]中有详细介绍，具体证明看<a href="#4">alpha的证明</a>。最终的表达形式如下：</p>
 <blockquote>
 <p>$$p\left(|x_j^T\theta_j-E(r|x_j)|\leq\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}\right)\geq1-\delta$$</p>
 </blockquote>
@@ -212,11 +209,10 @@
 &ensp;&ensp;$\alpha$的证明过程：
 
 <h3 id="5">s-5</h3>
-&ensp;&ensp;Hoeffding不等式<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Wassily Hoeffding论文，1963](https://www.jstor.org/stable/2282952?seq=1#page_scan_tab_contents)">[5]</span></a></sup>,适用于有界的随机变量。设有两两独立的一系列随机变量$X_1$,$X_2$,···,$X_n$。假设对所有的$1\leq i \leq n$,$X_i$都是几乎有界的变量
+&ensp;&ensp;Hoeffding不等式[^5],适用于有界的随机变量。设有两两独立的一系列随机变量$X_1$,$X_2$,···,$X_n$。假设对所有的$1\leq i \leq n$,$X_i$都是几乎有界的变量
 
 
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>&ensp;&ensp;摘自2011 Yohoo！<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Context Bandit with Linear Payoff Functions](http://proceedings.mlr.press/v15/chu11a/chu11a.pdf)
-">[1]</span></a></sup>的论文算法<br><img src="/photos/B-1.3-1.JPG" alt="algorithm" title="LinUCB算法"><br>&ensp;&ensp;主要流程就是这样，没有改动，其中有几个小细节的变动。</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>&ensp;&ensp;摘自2011 Yohoo！[^1]的论文算法<br><img src="/photos/B-1.3-1.JPG" alt="algorithm" title="LinUCB算法"><br>&ensp;&ensp;主要流程就是这样，没有改动，其中有几个小细节的变动。</p>
 <ol>
 <li>在生成context的时候，我们让context服从分布$X\sim(\left[\begin{matrix}1 \\  \vdots \\1 \end{matrix}\right]_p,I_p)$,其中p为X的维数，关于这个分布的具体含义见<a href="#3">s-3</a>。</li>
 <li>在map函数我们简单处理成为，对于得到的context$X_t$,我们有k种选择，为了体现选择和context的不同（这里可以理解为，context是用户，选择是用户的喜好，每一个用户我们有不同的map特征，map就是将用户和衡量用户的各种方式结合成为一个feature），我们将它们map到k个feature上，将feature定义为1<em>（k</em>p）维，第i个feature的第（（i-1）p,ip）位就是context的值，其他为0。<br><img src="/photos/B-1.3-2.JPG" alt="map" title="context到feature的map"></li>
@@ -227,7 +223,7 @@
 <p>&ensp;&ensp;上图的参数分别为（k=3, p=5, $\delta=0.1$, T=2000, run=100, noise$\sim Gausin(0,1)$,）,第一图为100个run分别的曲线，第二图为100个run平均的曲线。</p>
 <p>&ensp;&ensp;之后考虑增加delay reward obeservation，具体见我的其他blog（懒人不放链接.jpg)哈哈哈哈哈。</p>
 <h1 id="推论证明"><a href="#推论证明" class="headerlink" title="推论证明"></a>推论证明</h1><p>&ensp;&ensp;最后结果满足$regret(T)=O(\sqrt{T})$  </p>
-<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://proceedings.mlr.press/v15/chu11a/chu11a.pdf" target="_blank" rel="noopener">Context Bandit with Linear Payoff Functions</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="http://wulc.me/2019/01/05/EE(Exploitation%20Exploration)%20%E9%97%AE%E9%A2%98%E6%A6%82%E8%BF%B0/" target="_blank" rel="noopener">WULC的解释</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://arxiv.org/ftp/arxiv/papers/1205/1205.2606.pdf" target="_blank" rel="noopener">09年论文-Exploring compact reinforcement-learning representations with linear regression</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://en.wikipedia.org/wiki/Hoeffding%27s_inequality" target="_blank" rel="noopener">Hoeffding's inequality</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.jstor.org/stable/2282952?seq=1#page_scan_tab_contents" target="_blank" rel="noopener">Wassily Hoeffding论文，1963</a><a href="#fnref:5" rev="footnote"> ↩</a></span></li></ol></div></div>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p>[^1]: <a href="http://proceedings.mlr.press/v15/chu11a/chu11a.pdf" target="_blank" rel="noopener">Context Bandit with Linear Payoff Functions</a><br>[^2]: <a href="http://wulc.me/2019/01/05/EE(Exploitation%20Exploration)%20%E9%97%AE%E9%A2%98%E6%A6%82%E8%BF%B0/" target="_blank" rel="noopener">WULC的解释</a><br>[^3]: <a href="https://arxiv.org/ftp/arxiv/papers/1205/1205.2606.pdf" target="_blank" rel="noopener">09年论文-Exploring compact reinforcement-learning representations with linear regression</a><br>[^4]: <a href="https://en.wikipedia.org/wiki/Hoeffding%27s_inequality" target="_blank" rel="noopener">Hoeffding’s inequality</a><br>[^5]: <a href="https://www.jstor.org/stable/2282952?seq=1#page_scan_tab_contents" target="_blank" rel="noopener">Wassily Hoeffding论文，1963</a></p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -381,7 +377,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        16
                     </p>
                 </div>
             </div>

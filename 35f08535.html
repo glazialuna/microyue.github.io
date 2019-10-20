@@ -143,10 +143,9 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
     
-    
-    
 
     
+
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -175,10 +174,9 @@
             
         </h1>
         <div class="content">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&ensp;&ensp;聚类属于无监督学习，以往的回归、朴素贝叶斯、SVM等都是有类别标签y的，也就是说样例中已经给出了样例的分类。而聚类的样本中却没有给定y，只有特征x，比如假设宇宙中的星星可以表示成三维空间中的点集${x,y,j}$。聚类的目的是找到每个样本x潜在的类别y，并将同类别y的样本x放在一起。比如上面的星星，聚类后结果是一个个星团，星团里面的点相互距离比较近，星团间的星星距离就比较远了。</p>
+            <p>&ensp;&ensp;聚类属于无监督学习，以往的回归、朴素贝叶斯、SVM等都是有类别标签y的，也就是说样例中已经给出了样例的分类。而聚类的样本中却没有给定y，只有特征x，比如假设宇宙中的星星可以表示成三维空间中的点集${x,y,j}$。聚类的目的是找到每个样本x潜在的类别y，并将同类别y的样本x放在一起。比如上面的星星，聚类后结果是一个个星团，星团里面的点相互距离比较近，星团间的星星距离就比较远了。</p>
 <p>&ensp;&ensp;在聚类算法中我们有$x^1,x^2,…,x^m$ m个样本点，最后被分为多个类。</p>
-<h1 id="k-means算法"><a href="#k-means算法" class="headerlink" title="k-means算法"></a>k-means算法</h1><p>&ensp;&ensp;k-means算法<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[K-means算法](https://www.cnblogs.com/jerrylead/archive/2011/04/06/2006910.html)
-">[1]</span></a></sup>通过不断迭代更新k类质心获取结果，主要流程为下：</p>
+<h1 id="k-means算法"><a href="#k-means算法" class="headerlink" title="k-means算法"></a>k-means算法</h1><p>&ensp;&ensp;k-means算法<a href="[K-means算法](https://www.cnblogs.com/jerrylead/archive/2011/04/06/2006910.html)">^1</a>通过不断迭代更新k类质心获取结果，主要流程为下：</p>
 <hr>
 <p>input:$\mbox{m个样本}:x^1,x^2,…,x^m$<br>&ensp;&ensp;&ensp;&ensp;&ensp;$\mbox{k个质心}:\mu_1,\mu_2,…\mu_k$<br>repeat<br>&ensp;&ensp;&ensp;&ensp;$c^i:=\underset{j}{\arg\min} {\left| {x^i-u_j} \right|}^2 \mbox{计算每个样本的类别}$<br>&ensp;&ensp;&ensp;&ensp;$\mu_j:=\frac{\sum_{i=1}^{m}{c^i=j}x^i}{\sum_{i=1}^{m}{c^i=j}} \mbox{计算每个类别的质心}$<br>until:$\mbox{迭代条件}$</p>
 <hr>
@@ -201,7 +199,6 @@ $$J(c,\mu)=\sum_{i=1}^{m}{\left\| x^{i}-\mu_{c^i}\right\|}^2$$
 <h1 id="DBSCAN-基于密度聚类"><a href="#DBSCAN-基于密度聚类" class="headerlink" title="DBSCAN 基于密度聚类"></a>DBSCAN 基于密度聚类</h1><h1 id="GMM-和-EM"><a href="#GMM-和-EM" class="headerlink" title="GMM 和 EM"></a>GMM 和 EM</h1><p><img src="/photos/gmean.gif" alt></p>
 <h1 id="凝聚层次聚类"><a href="#凝聚层次聚类" class="headerlink" title="凝聚层次聚类"></a>凝聚层次聚类</h1><p><img src="/photos/lmean.gif" alt></p>
 <h1 id="图团体检测"><a href="#图团体检测" class="headerlink" title="图团体检测"></a>图团体检测</h1><p><img src="/photos/gramean.png" alt></p>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.cnblogs.com/jerrylead/archive/2011/04/06/2006910.html" target="_blank" rel="noopener">K-means算法</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/Katherine_hsr/article/details/79382249" target="_blank" rel="noopener">常见六大算法gif动图来源</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -348,7 +345,7 @@ $$J(c,\mu)=\sum_{i=1}^{m}{\left\| x^{i}-\mu_{c^i}\right\|}^2$$
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        16
                     </p>
                 </div>
             </div>

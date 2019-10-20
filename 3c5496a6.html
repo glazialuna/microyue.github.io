@@ -143,10 +143,9 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
     
-    
-    
 
     
+
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
@@ -179,7 +178,7 @@
             
         </h1>
         <div class="content">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><h2 id="置信区间"><a href="#置信区间" class="headerlink" title="置信区间"></a>置信区间</h2><p>&ensp;&ensp;在统计学中，对于一个未知量的估计，总能找到一种量化其置信度的方法。最普遍的分布正态分布（或曰高斯分布） $N(\mu,\delta)$ ，其中的 $\mu$ 就是估计量的期望，而$\delta$ 则表示其不确定性（ $\delta$越大则表示越不可信）。比如你掷一个标准的6面色子，它的平均值是3.5，而如果你只掷一次，比如说到2，那你对平均值的估计只能是2，但是这个置信度应该很低，我们可以知道，这个色子的预估平均值是2，而以95%的置信区间在[1.4,5.2]。<br>&ensp;&ensp;置信区间将点估计转化成区间估计，举例说明。对于分布$X<del>N(\mu,\sigma)$,已知$\sigma$,估计$\mu$。对于一堆采样结果，样本大小为n，样本均值为$$M=\frac{X_1+X_2+···+X_n}{n}$$<br>根据大数定律和中心极限定律，M服从$M\mathop{</del>}N(\mu,\frac{\sigma^2}{n})$</p>
+            <h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><h2 id="置信区间"><a href="#置信区间" class="headerlink" title="置信区间"></a>置信区间</h2><p>&ensp;&ensp;在统计学中，对于一个未知量的估计，总能找到一种量化其置信度的方法。最普遍的分布正态分布（或曰高斯分布） $N(\mu,\delta)$ ，其中的 $\mu$ 就是估计量的期望，而$\delta$ 则表示其不确定性（ $\delta$越大则表示越不可信）。比如你掷一个标准的6面色子，它的平均值是3.5，而如果你只掷一次，比如说到2，那你对平均值的估计只能是2，但是这个置信度应该很低，我们可以知道，这个色子的预估平均值是2，而以95%的置信区间在[1.4,5.2]。<br>&ensp;&ensp;置信区间将点估计转化成区间估计，举例说明。对于分布$X<del>N(\mu,\sigma)$,已知$\sigma$,估计$\mu$。对于一堆采样结果，样本大小为n，样本均值为$$M=\frac{X_1+X_2+···+X_n}{n}$$<br>根据大数定律和中心极限定律，M服从$M\mathop{</del>}N(\mu,\frac{\sigma^2}{n})$</p>
 <h2 id="高斯噪声"><a href="#高斯噪声" class="headerlink" title="高斯噪声"></a>高斯噪声</h2><p>subgaussian<br>&ensp;&ensp;</p>
 <h1 id="回归算法"><a href="#回归算法" class="headerlink" title="回归算法"></a>回归算法</h1><p>&ensp;&ensp;线性回归:<br>$$\hat{\theta}=\mathop{argmin}\limits_{\theta}(\sum_{s=1}^t{(r_t-\theta^TA_t)^2+||\theta||_2^2})$$<br>&ensp;&ensp;这一部分也被叫做ridge regression，其中第一部分$\sum$是最小二乘法，第二部分是正则化。正则化的目的是为了避免过拟合，举例说明：<br>&ensp;&ensp;&ensp;&ensp;对多个点{($x_1,y_1$), ··· ,($x_n,y_n$)}做拟合，得到$y=a_1+a_2x$, 如果参数为多维的，$a_1,a_2, ··· ，a_n$,那么就可能过拟合曲线，为了限制这种情况增加一个正则项，使得控制每一个维度的参数限制。</p>
 <h1 id="分布："><a href="#分布：" class="headerlink" title="分布："></a>分布：</h1><ul>
@@ -198,8 +197,7 @@
 </ul>
 <h1 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h1><h2 id="1">A-1(范式规则化问题)</h2>
 &Ensp;&Ensp;范式
-&Ensp;&Ensp;参考笔记<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[ML中的范数规则化](https://blog.csdn.net/zouxy09/article/details/24971995)
-">[2]</span></a></sup>
+&Ensp;&Ensp;参考笔记[^2]
 
 <p><a href="#1">A-1</a></p>
 <h2 id="2">A-2(估计方法)</h2>
@@ -214,8 +212,8 @@
 
 <h3 id="MLE-maximum-likelihood-estimation-，最大似然估计"><a href="#MLE-maximum-likelihood-estimation-，最大似然估计" class="headerlink" title="MLE(maximum likelihood estimation)，最大似然估计"></a>MLE(maximum likelihood estimation)，最大似然估计</h3><p>&ensp;&Ensp;最大似然估计提供了一种给定观察数据来评估模型参数的方法，即：“模型已定，参数未知”。简单而言，假设我们要统计全国人口的身高，首先假设这个身高服从服从正态分布，但是该分布的均值与方差未知。我们没有人力与物力去统计全国每个人的身高，但是可以通过采样，获取部分人的身高，然后通过最大似然估计来获取上述假设中的正态分布的均值与方差。最大似然估计中采样需满足一个很重要的假设，就是所有的采样都是独立同分布的。<br>&ensp;&Ensp;给定一个概率分布 {\displaystyle D} D，已知其概率密度函数（连续分布）或概率质量函数（离散分布）为 {\displaystyle f_{D}} f_D，以及一个分布参数 {\displaystyle \theta } \theta ，我们可以从这个分布中抽出一个具有 {\displaystyle n} n个值的采样 {\displaystyle X_{1},X_{2},\ldots ,X_{n}} X_1, X_2,\ldots, X_n，利用 {\displaystyle f_{D}} f_D计算出其似然函数：<br>&ensp;&Ensp;具体描述一下最大似然估计：<br>&ensp;&Ensp;首先，假设为独立同分布的采样，θ为模型参数,f为我们所使用的模型，遵循我们上述的独立同分布假设。参数为θ的模型f产生上述采样可表示为</p>
 <p>&ensp;&ensp;<a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1" target="_blank" rel="noopener">wiki 最大似然估计</a></p>
-<h3 id="贝叶斯估计"><a href="#贝叶斯估计" class="headerlink" title="贝叶斯估计"></a>贝叶斯估计</h3><h3 id="MAP-Maximum-a-posteriori-estimation-最大后验概率"><a href="#MAP-Maximum-a-posteriori-estimation-最大后验概率" class="headerlink" title="MAP(Maximum a posteriori estimation),最大后验概率"></a>MAP(Maximum a posteriori estimation),最大后验概率</h3><p>&Ensp;&Ensp;参考笔记<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[先验概率，最大似然估计，贝叶斯估计，和最大后验概率](https://blog.csdn.net/guohecang/article/details/52313046)">[3]</span></a></sup>，基本等于转载这篇笔记。</p>
-<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://www.jstor.org/stable/pdf/27640090.pdf?refreqid=excelsior%3Afb018768702daa257c5dbf00f17073e5&amp;seq=1#page_scan_tab_contents" target="_blank" rel="noopener">Bayesian lasso</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/zouxy09/article/details/24971995" target="_blank" rel="noopener">ML中的范数规则化</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://blog.csdn.net/guohecang/article/details/52313046" target="_blank" rel="noopener">先验概率，最大似然估计，贝叶斯估计，和最大后验概率</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li></ol></div></div>
+<h3 id="贝叶斯估计"><a href="#贝叶斯估计" class="headerlink" title="贝叶斯估计"></a>贝叶斯估计</h3><h3 id="MAP-Maximum-a-posteriori-estimation-最大后验概率"><a href="#MAP-Maximum-a-posteriori-estimation-最大后验概率" class="headerlink" title="MAP(Maximum a posteriori estimation),最大后验概率"></a>MAP(Maximum a posteriori estimation),最大后验概率</h3><p>&Ensp;&Ensp;参考笔记[^3]，基本等于转载这篇笔记。</p>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p>[^1]: <a href="https://www.jstor.org/stable/pdf/27640090.pdf?refreqid=excelsior%3Afb018768702daa257c5dbf00f17073e5&seq=1#page_scan_tab_contents" target="_blank" rel="noopener">Bayesian lasso</a><br>[^2]: <a href="https://blog.csdn.net/zouxy09/article/details/24971995" target="_blank" rel="noopener">ML中的范数规则化</a><br>[^3]: <a href="https://blog.csdn.net/guohecang/article/details/52313046" target="_blank" rel="noopener">先验概率，最大似然估计，贝叶斯估计，和最大后验概率</a></p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -369,7 +367,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        16
                     </p>
                 </div>
             </div>

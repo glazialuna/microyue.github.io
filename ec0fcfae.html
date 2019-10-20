@@ -4,31 +4,31 @@
     <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
 <meta name="baidu-site-verification" content="SiMVCIxqau">
 <meta charset="utf-8">
-<title>Markdown语言记录 - Bonny &amp; Pony</title>
+<title>Latex | 小手册 - Bonny &amp; Pony</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
-<meta name="keywords" content="小手册,markdown">
+    <meta name="description" content="Latex常用（我用过的）整理，方便自用查询">
+<meta name="keywords" content="小手册,Latex">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown语言记录">
+<meta property="og:title" content="Latex | 小手册">
 <meta property="og:url" content="http://www.microyue.com/ec0fcfae.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
+<meta property="og:description" content="Latex常用（我用过的）整理，方便自用查询">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-12T02:49:57.332Z">
+<meta property="og:updated_time" content="2019-10-14T04:45:05.537Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown语言记录">
-<meta name="twitter:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
+<meta name="twitter:title" content="Latex | 小手册">
+<meta name="twitter:description" content="Latex常用（我用过的）整理，方便自用查询">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
 
 
 
-<link rel="alternative" href="dd" title="Markdown语言记录" type="application/atom+xml">
+<link rel="alternative" href="dd" title="Latex | 小手册" type="application/atom+xml">
 
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/Bonny2.png" alt="Markdown语言记录" height="28">
+                <img src="/images/Bonny2.png" alt="Latex | 小手册" height="28">
             
             </a>
         </div>
@@ -143,15 +143,14 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
     
-    
-    
 
     
+
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-01-01T05:17:07.000Z">2019-01-01</time>
+                <time class="level-item has-text-grey" datetime="2019-08-05T03:00:01.000Z">2019-08-05</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
@@ -161,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    11 minutes read (About 1586 words)
+                    a minute read (About 137 words)
                 </span>
                 
                 
@@ -175,618 +174,36 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <div class="has-title-style">Markdown语言记录</div>
+                <div class="has-title-style">Latex | 小手册</div>
             
         </h1>
         <div class="content">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&ensp;&ensp;本来想要用wordpress建立博客，偶尔发现了Hexo，以Markdown语言为基础，非常好用。在写博客的过程中很有可能会遇到一些markdown的语言问题，当然这种文本标记语言的显示方式会限制于渲染的工具，所以只能针对Github格式和Hexo（我的主题）格式来看。</p>
-<!-- part 1 -->
-<h1 id="文本标记语言"><a href="#文本标记语言" class="headerlink" title="文本标记语言"></a>文本标记语言</h1><p>&ensp;&ensp;markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
-<!-- 01 -->
-<h2 id="输入操作"><a href="#输入操作" class="headerlink" title="输入操作"></a>输入操作</h2><hr>
-<ol>
-<li><p><strong>换行</strong><br>Method1：使用br标签 <code>&lt;br&gt;</code><br>Method2：在句末加上两个空格后换行,这种方法可能会因为其他标记导致顺序混乱，除非大段文本，不然轻易别用。<br>Method3：两个换行号。(虽然尝试不行，但文档里说可以)  </p>
-</li>
-<li><p><strong>首行缩进</strong><br>Method1：使用特殊占位符,_注意后面的分号不能省略_。<br>[1] <code>&amp;ensp;</code>或者<code>&amp;#8194</code><br>&ensp;半角字符款式<br>[2] <code>&amp;emsp;</code>或者<code>&amp;#8195;</code><br>&emsp;全角字符款式<br>[3] <code>&amp;nbsp;</code>或者<code>&amp;#160;</code><br>&nbsp;最小缩进款式<br>Method2：全角输入情况下双击两次空格，转换全角(shift+空格)，暂时没发现能用的方法。  </p>
-</li>
-<li><p><strong>居中</strong><br>Method1:引用html标签<code>&lt;center&gt;str&lt;center&gt;</code></p>
-<center>--center--</center>
-
-</li>
-</ol>
-<!-- 02 -->
-<h2 id="编辑操作"><a href="#编辑操作" class="headerlink" title="编辑操作"></a>编辑操作</h2><ol>
-<li>字体<br>大小：<font size="5">5</font>  <code>&lt;font size=&quot;5&quot;&gt;5&lt;/font&gt;</code><br> 颜色：<font color="Green">Red</font> <code>&lt;font color=&quot;Green&quot;&gt;Red&lt;/font&gt;</code><br> 字体：<font face="微软雅黑">微软雅黑</font> <code>&lt;font face=&quot;微软雅黑&quot;&gt;微软雅黑&lt;/font&gt;</code><br> 加粗：<strong>加粗</strong> <code>*加粗*</code> 或者 <code>__加粗__</code><br> 倾斜：<em>倾斜</em> <code>*倾斜*</code> 或者 <code>_倾斜_</code>  </li>
-</ol>
-<!-- part 2 -->
-<h1 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h1><!-- 01 -->
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
-<li>插入代码段<code>&#39;&#39;&#39; code &#39;&#39;&#39;</code>  <figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="文档内引用"><a href="#文档内引用" class="headerlink" title="文档内引用"></a>文档内引用</h2><ol>
-<li>html的写法</li>
-</ol>
-<ul>
-<li>在要跳转的地方写上：<code>&lt;h3 id=&quot;2&quot;&gt;s-2 $\sigma$&lt;/h3&gt;</code><ul>
-<li>其中h3是标题的格式，id是跳转的编号，这里主义在hexo中对h3标题的所有设置都会转移过来，等于写了第二个标题</li>
-</ul>
-</li>
-<li>在跳转的目的写上：<code>&lt;a href=&quot;#2&quot;&gt;s-2&lt;/a&gt;</code></li>
-</ul>
-<ol start="2">
-<li>markdown</li>
-</ol>
-<ul>
-<li>我没尝试过 听说加<code>@[TOC]</code>就可以，不动</li>
-</ul>
-<ol start="3">
-<li>markdown脚注</li>
-</ol>
-<ul>
-<li>install plugin：<code>npm install hexo-reference --save</code></li>
-<li>这是用于reference的脚注<ul>
-<li>在被引用的地方加：<code>引用&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; rel=&quot;footnote&quot;&gt;&lt;span class=&quot;hint--top hint--error hint--medium hint--rounded hint--bounce&quot; aria-label=&quot;[参考](source)</code>“&gt;[1]`</li>
-<li>在参考文献前加（统一出现在最后）：`</li>
-</ul>
-</li>
-</ul>
-<!-- 02 -->
-<h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><blockquote>
-<p>Markdown语法支持采用LaTex语法写数学公式，而在网页中使用Mathjax插件来显示数学公式。</p>
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&ensp;&ensp;</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="windows下安装工具"><a href="#windows下安装工具" class="headerlink" title="windows下安装工具"></a>windows下安装工具</h2><h2 id="宏包安装"><a href="#宏包安装" class="headerlink" title="宏包安装"></a>宏包安装</h2><p>#</p>
+<h1 id="中文使用"><a href="#中文使用" class="headerlink" title="中文使用"></a>中文使用</h1><h2 id="使用CTex"><a href="#使用CTex" class="headerlink" title="使用CTex"></a>使用CTex</h2><ul>
+<li>安装ctex宏包</li>
+<li>案例：<blockquote>
+<p>\documentclass{article}<br>\usepackage[UTF8]{ctex}<br>\begin{document}<br>你好，这是一个测试文档。<br>\end{document}</p>
 </blockquote>
-<ol>
-<li>写法在行内公式为<code>$math$</code>,段内公式为<code>$$math$$</code>  <ul>
-<li>行内公式：$E=mc^2$,可以让公式在文中与文字或其他东西混编，不独占一行.</li>
-<li>段内公式：使公式单独占一行，不与文中其他文字等混编。<br>$$E=mc^2$$  </li>
+</li>
 </ul>
-</li>
-</ol>
-<!-- 1） -->
-<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><ol>
-<li><p>上下标：</p>
-<ul>
-<li>上标<code>^</code>,下标<code>_</code>,扩号为整体<code>{}</code>  </li>
-<li>两边都有<code>$\sideset{^2_2}{^3_4}A$</code>,例如：$\sideset{^2_2}{^3_4}A$</li>
+<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><h2 id="插入figure"><a href="#插入figure" class="headerlink" title="插入figure"></a>插入figure</h2><ul>
+<li>figure参数：h 此处（here）t 页顶（top）b 页底（bottom）p 独立一页（page）</li>
 </ul>
+<h1 id="插入code"><a href="#插入code" class="headerlink" title="插入code"></a>插入code</h1><ul>
+<li>代码配置</li>
+<li>插入代码<figure class="highlight arduino hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\lstset&#123;language=C&#125;</span><br><span class="line">\<span class="hljs-built_in">begin</span>&#123;lstlisting&#125;</span><br><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">int</span> main()</span><br><span class="line">&#123;</span><br><span class="line">    cout&lt;&lt;<span class="hljs-string">"hello"</span>&lt;&lt;endl;</span><br><span class="line">    <span class="hljs-built_in">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">\<span class="hljs-built_in">end</span>&#123;lstlisting&#125;</span><br></pre></td></tr></table></figure>
+
 </li>
-<li><p>括号：</p>
-<ul>
-<li>普通的<code>(</code>,<code>[</code>,<code>{</code>因为有特殊作用想要显示的时候得<code>\lbrace或者\rbrace</code></li>
 </ul>
-</li>
-<li><p>分数：</p>
-<ul>
-<li><code>\frac{numerator}{denmorator}</code>，例如：<code>$\frac{1}{2}$</code>显示为$\frac{1}{2}$</li>
-<li>将公式放的清楚一点可以用<code>\cfrac{numerator}{denmorator}</code>，例如：$\cfrac{1}{2}$</li>
-</ul>
-</li>
-<li><p>开方：</p>
-<ul>
-<li>开方使用<code>\sqrt[次数]{被开方数}</code>这样的语法</li>
-</ul>
-</li>
-<li><p>正上下方标：</p>
-<ul>
-<li>对于max等数学符号直接用<code>\limit</code>,例如<code>$\max\limits_{a&lt;b&lt;c}$</code>显示$\max\limits_{a&lt;b&lt;c}$</li>
-<li>d</li>
-<li>对于非数学符号，用<code>\mathop转化</code>，例如<code>$\mathop{\mu}\limits^{-}$</code>显示$\mathop{\mu}\limits^{-}$</li>
-</ul>
-</li>
-<li><p>上下画线与花括号：</p>
-<ul>
-<li><code>$\overline$</code>,例如<code>$\overline{a+b+c}$</code>显示$\overline{a+b+c}$</li>
-<li><code>$\underline$</code>例如<code>$\underline{a+b+c}$</code>显示$\underline{a+b+c}$</li>
-<li><code>$\overbrace$</code>例如<code>$\overbrace{a+b+c}$</code>显示$\overbrace{a+b+c}$</li>
-<li><code>$\underbrace$</code>例如<code>$\underbrace{a+b+c}$</code>显示$\underbrace{a+b+c}$</li>
-</ul>
-</li>
-<li><p>特殊上下标字母</p>
-<ul>
-<li>^: <code>$\hat{\mu}$</code> 或 <code>$\widehat{\mu}$</code>显示$\hat{\mu}$或$\widehat{\mu}$</li>
-<li>波浪线：<code>$\widetilde{\mu}$</code> 显示$\widetilde{\mu}$</li>
-<li>一个点：<code>$\dot{\mu}$</code> 显示$\dot{\mu}$</li>
-<li>两个点：<code>$\ddot{\mu}$</code> 显示$\ddot{\mu}$</li>
-</ul>
-</li>
-</ol>
-<!-- 2） -->
-<h3 id="数学符号"><a href="#数学符号" class="headerlink" title="数学符号"></a>数学符号</h3><!-- 01 符号 -->
-<h4 id="希腊字母"><a href="#希腊字母" class="headerlink" title="希腊字母"></a>希腊字母</h4><table>
-<thead>
-<tr>
-<th align="center">大写</th>
-<th align="center">代码</th>
-<th align="center">小写</th>
-<th align="center">代码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">$A$</td>
-<td align="center"><code>$A$</code></td>
-<td align="center">$\alpha$</td>
-<td align="center"><code>$\alpha$</code></td>
-</tr>
-<tr>
-<td align="center">$B$</td>
-<td align="center"><code>$B$</code></td>
-<td align="center">$\beta$</td>
-<td align="center"><code>$\beta$</code></td>
-</tr>
-<tr>
-<td align="center">$\Gamma$</td>
-<td align="center"><code>$\Gamma$</code></td>
-<td align="center">$\gamma$</td>
-<td align="center"><code>$\gamma$</code></td>
-</tr>
-<tr>
-<td align="center">$\Delta$</td>
-<td align="center"><code>$\Delta$</code></td>
-<td align="center">$\delta$</td>
-<td align="center"><code>$\delta$</code></td>
-</tr>
-<tr>
-<td align="center">$E$</td>
-<td align="center"><code>$E$</code></td>
-<td align="center">$\epsilon$</td>
-<td align="center"><code>$\epsilon$</code></td>
-</tr>
-<tr>
-<td align="center">$Z$</td>
-<td align="center"><code>$Z$</code></td>
-<td align="center">$\zeta$</td>
-<td align="center"><code>$\zeta$</code></td>
-</tr>
-<tr>
-<td align="center">$H$</td>
-<td align="center"><code>$H$</code></td>
-<td align="center">$\eta$</td>
-<td align="center"><code>$\eta$</code></td>
-</tr>
-<tr>
-<td align="center">$\Theta$</td>
-<td align="center"><code>$\Theta$</code></td>
-<td align="center">$\theta$</td>
-<td align="center"><code>$\theta$</code></td>
-</tr>
-<tr>
-<td align="center">$I$</td>
-<td align="center"><code>$I$</code></td>
-<td align="center">$\iota$</td>
-<td align="center"><code>$\iota$</code></td>
-</tr>
-<tr>
-<td align="center">$K$</td>
-<td align="center"><code>$K$</code></td>
-<td align="center">$\kappa$</td>
-<td align="center"><code>$\kappa$</code></td>
-</tr>
-<tr>
-<td align="center">$\Lambda$</td>
-<td align="center"><code>$\Lambda$</code></td>
-<td align="center">$\lambda$</td>
-<td align="center"><code>$\lambda$</code></td>
-</tr>
-<tr>
-<td align="center">$M$</td>
-<td align="center"><code>$M$</code></td>
-<td align="center">$\mu$</td>
-<td align="center"><code>$\mu$</code></td>
-</tr>
-<tr>
-<td align="center">$N$</td>
-<td align="center"><code>$N$</code></td>
-<td align="center">$\nu$</td>
-<td align="center"><code>$\nu$</code></td>
-</tr>
-<tr>
-<td align="center">$\Xi$</td>
-<td align="center"><code>$\Xi$</code></td>
-<td align="center">$\xi$</td>
-<td align="center"><code>$\xi$</code></td>
-</tr>
-<tr>
-<td align="center">$O$</td>
-<td align="center"><code>$O$</code></td>
-<td align="center">$\omicron$</td>
-<td align="center"><code>$\omicron$</code></td>
-</tr>
-<tr>
-<td align="center">$\Pi$</td>
-<td align="center"><code>$\Pi$</code></td>
-<td align="center">$\pi$</td>
-<td align="center"><code>$\pi$</code></td>
-</tr>
-<tr>
-<td align="center">$P$</td>
-<td align="center"><code>$P$</code></td>
-<td align="center">$\rho$</td>
-<td align="center"><code>$\rho$</code></td>
-</tr>
-<tr>
-<td align="center">$\Sigma$</td>
-<td align="center"><code>$\Sigma$</code></td>
-<td align="center">$\sigma$</td>
-<td align="center"><code>$\sigma$</code></td>
-</tr>
-<tr>
-<td align="center">$T$</td>
-<td align="center"><code>$T$</code></td>
-<td align="center">$\tau$</td>
-<td align="center"><code>$\tau$</code></td>
-</tr>
-<tr>
-<td align="center">$\Upsilon$</td>
-<td align="center"><code>$\Upsilon$</code></td>
-<td align="center">$\upsilon$</td>
-<td align="center"><code>$\upsilon$</code></td>
-</tr>
-<tr>
-<td align="center">$\Phi$</td>
-<td align="center"><code>$\Phi$</code></td>
-<td align="center">$\phi$</td>
-<td align="center"><code>$\phi$</code></td>
-</tr>
-<tr>
-<td align="center">$X$</td>
-<td align="center"><code>$X$</code></td>
-<td align="center">$\chi$</td>
-<td align="center"><code>$\chi$</code></td>
-</tr>
-<tr>
-<td align="center">$\Psi$</td>
-<td align="center"><code>$\Psi$</code></td>
-<td align="center">$\psi$</td>
-<td align="center"><code>$\psi$</code></td>
-</tr>
-<tr>
-<td align="center">$\Omega$</td>
-<td align="center"><code>$\Omega$</code></td>
-<td align="center">$\omega$</td>
-<td align="center"><code>$\omega$</code></td>
-</tr>
-</tbody></table>
-<!-- 02 符号 -->
-<h4 id="关系运算符"><a href="#关系运算符" class="headerlink" title="关系运算符"></a>关系运算符</h4><table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">代码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">$ \pm $</td>
-<td align="center"><code>$\pm$</code></td>
-</tr>
-<tr>
-<td align="center">$\times$</td>
-<td align="center"><code>$\times$</code></td>
-</tr>
-<tr>
-<td align="center">$\div$</td>
-<td align="center"><code>$\div$</code></td>
-</tr>
-<tr>
-<td align="center">$\mid$</td>
-<td align="center"><code>$\mid$</code></td>
-</tr>
-<tr>
-<td align="center">$\nmid$</td>
-<td align="center"><code>$\nmid$</code></td>
-</tr>
-<tr>
-<td align="center">$\cdot$</td>
-<td align="center"><code>$\cdot$</code></td>
-</tr>
-<tr>
-<td align="center">$\circ$</td>
-<td align="center"><code>$\circ$</code></td>
-</tr>
-<tr>
-<td align="center">$\ast$</td>
-<td align="center"><code>$\ast$</code></td>
-</tr>
-<tr>
-<td align="center">$\sim$</td>
-<td align="center"><code>$\sim$</code></td>
-</tr>
-<tr>
-<td align="center">$\approx$</td>
-<td align="center"><code>$\approx$</code></td>
-</tr>
-<tr>
-<td align="center">$\bigodot$</td>
-<td align="center"><code>$\bigodot$</code></td>
-</tr>
-<tr>
-<td align="center">$\bigotimes$</td>
-<td align="center"><code>$\bigotimes$</code></td>
-</tr>
-<tr>
-<td align="center">$\bigoplus$</td>
-<td align="center"><code>$\bigoplus$</code></td>
-</tr>
-<tr>
-<td align="center">$\leq$</td>
-<td align="center"><code>$\leq$</code></td>
-</tr>
-<tr>
-<td align="center">$\geq$</td>
-<td align="center"><code>$\geq$</code></td>
-</tr>
-<tr>
-<td align="center">$\neq$</td>
-<td align="center"><code>$\neq$</code></td>
-</tr>
-<tr>
-<td align="center">$\approx$</td>
-<td align="center"><code>$\approx$</code></td>
-</tr>
-<tr>
-<td align="center">$\equiv$</td>
-<td align="center"><code>$\equiv$</code></td>
-</tr>
-<tr>
-<td align="center">$\sum$</td>
-<td align="center"><code>$\sum$</code></td>
-</tr>
-<tr>
-<td align="center">$\prod$</td>
-<td align="center"><code>$\prod$</code></td>
-</tr>
-<tr>
-<td align="center">$\coprod$</td>
-<td align="center"><code>$\coprod$</code></td>
-</tr>
-</tbody></table>
-<h4 id="箭头符号"><a href="#箭头符号" class="headerlink" title="箭头符号"></a>箭头符号</h4><table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">代码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">$ \rightarrow $</td>
-<td align="center"><code>$\rightarrow$</code></td>
-</tr>
-</tbody></table>
-<p>-<a href="https://blog.csdn.net/m0_37167788/article/details/78603307" target="_blank" rel="noopener">箭头符号</a></p>
-<h4 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h4><figure class="highlight taggerscript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$$<span class="hljs-symbol">\l</span>eft[<span class="hljs-symbol">\b</span>egin&#123;matrix&#125;1 <span class="hljs-symbol">\\</span><span class="hljs-symbol">\ </span> <span class="hljs-symbol">\v</span>dots <span class="hljs-symbol">\\</span><span class="hljs-symbol">\1</span> <span class="hljs-symbol">\e</span>nd&#123;matrix&#125;<span class="hljs-symbol">\r</span>ight]_p$$</span><br></pre></td></tr></table></figure>
-
-<p>效果：<br>$$\left[\begin{matrix}1 \\  \vdots \\1 \end{matrix}\right]_p$$</p>
-<p>-<a href="https://blog.csdn.net/qq_38228254/article/details/79469727" target="_blank" rel="noopener">矩阵</a></p>
-<!-- 03 -->
-<h4 id="集合运算符"><a href="#集合运算符" class="headerlink" title="集合运算符"></a>集合运算符</h4><table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">代码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">$\emptyset$</td>
-<td align="center"><code>$\emptyset$</code></td>
-</tr>
-<tr>
-<td align="center">$\in$</td>
-<td align="center"><code>$\in$</code></td>
-</tr>
-<tr>
-<td align="center">$\notin$</td>
-<td align="center"><code>$\notin$</code></td>
-</tr>
-<tr>
-<td align="center">$\subset$</td>
-<td align="center"><code>$\subset$</code></td>
-</tr>
-<tr>
-<td align="center">$\supset$</td>
-<td align="center"><code>$\supset$</code></td>
-</tr>
-<tr>
-<td align="center">$\subseteq$</td>
-<td align="center"><code>$\subseteq$</code></td>
-</tr>
-<tr>
-<td align="center">$\supseteq$</td>
-<td align="center"><code>$\supseteq$</code></td>
-</tr>
-<tr>
-<td align="center">$\bigcap$</td>
-<td align="center"><code>$\bigcap$</code></td>
-</tr>
-<tr>
-<td align="center">$\bigcup$</td>
-<td align="center"><code>$\bigcup$</code></td>
-</tr>
-<tr>
-<td align="center">$\bigvee$</td>
-<td align="center"><code>$\bigvee$</code></td>
-</tr>
-<tr>
-<td align="center">$\bigwedge$</td>
-<td align="center"><code>$\bigwedge$</code></td>
-</tr>
-<tr>
-<td align="center">$\biguplus$</td>
-<td align="center"><code>$\biguplus$</code></td>
-</tr>
-<tr>
-<td align="center">$\bigsqcup$</td>
-<td align="center"><code>$\bigsqcup$</code></td>
-</tr>
-</tbody></table>
-<!-- 04 -->
-<h4 id="对数运算符"><a href="#对数运算符" class="headerlink" title="对数运算符"></a>对数运算符</h4><table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">代码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">$\log$</td>
-<td align="center"><code>$\log$</code></td>
-</tr>
-<tr>
-<td align="center">$\lg$</td>
-<td align="center"><code>$\lg$</code></td>
-</tr>
-<tr>
-<td align="center">$\ln$</td>
-<td align="center"><code>$\ln$</code></td>
-</tr>
-</tbody></table>
-<!-- 05 -->
-<h4 id="三角运算符"><a href="#三角运算符" class="headerlink" title="三角运算符"></a>三角运算符</h4><table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">代码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">$\bot$</td>
-<td align="center"><code>$\bot$</code></td>
-</tr>
-<tr>
-<td align="center">$\angle$</td>
-<td align="center"><code>$\angle$</code></td>
-</tr>
-<tr>
-<td align="center">$\sin$</td>
-<td align="center"><code>$\sin$</code></td>
-</tr>
-<tr>
-<td align="center">$\cos$</td>
-<td align="center"><code>$\cos$</code></td>
-</tr>
-<tr>
-<td align="center">$\tan$</td>
-<td align="center"><code>$\tan$</code></td>
-</tr>
-<tr>
-<td align="center">$\cot$</td>
-<td align="center"><code>$\cot$</code></td>
-</tr>
-<tr>
-<td align="center">$\sec$</td>
-<td align="center"><code>$\sec$</code></td>
-</tr>
-<tr>
-<td align="center">$\csc$</td>
-<td align="center"><code>$\csc$</code></td>
-</tr>
-</tbody></table>
-<!-- 06 -->
-<h4 id="微积分运算符"><a href="#微积分运算符" class="headerlink" title="微积分运算符"></a>微积分运算符</h4><table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="center">代码</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">$\prime$</td>
-<td align="center"><code>$\prime$</code></td>
-</tr>
-<tr>
-<td align="center">$\int$</td>
-<td align="center"><code>$\int$</code></td>
-</tr>
-<tr>
-<td align="center">$\iint$</td>
-<td align="center"><code>$\iint$</code></td>
-</tr>
-<tr>
-<td align="center">$\iiint$</td>
-<td align="center"><code>$\iiint$</code></td>
-</tr>
-<tr>
-<td align="center">$\iiiint$</td>
-<td align="center"><code>$\iiiint$</code></td>
-</tr>
-<tr>
-<td align="center">$\oint$</td>
-<td align="center"><code>$\oint$</code></td>
-</tr>
-<tr>
-<td align="center">$\lim$</td>
-<td align="center"><code>$\lim$</code></td>
-</tr>
-<tr>
-<td align="center">$\infty$</td>
-<td align="center"><code>$\infty$</code></td>
-</tr>
-<tr>
-<td align="center">$\nabla$</td>
-<td align="center"><code>$\nabla$</code></td>
-</tr>
-<tr>
-<td align="center">$\mathrm{d}$</td>
-<td align="center"><code>$\mathrm{d}$</code></td>
-</tr>
-</tbody></table>
-<!-- 03 -->
-<h2 id="增加本地图片"><a href="#增加本地图片" class="headerlink" title="增加本地图片"></a>增加本地图片</h2><h3 id="方法一-使用标签插件"><a href="#方法一-使用标签插件" class="headerlink" title="方法一 使用标签插件"></a><strong>方法一 使用标签插件</strong></h3><p>&ensp;&ensp;这个是HEXO 3 之前一位网友为图片路径开发的插件，被集成在了Hexo3 里面，官方文档的使用方法如下：</p>
-<figure class="highlight md hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>使用案例：</p>
-<figure class="highlight ebnf hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attribute">meixie</span></span><br></pre></td></tr></table></figure>
-
-<p>这种方式的问题在于，使用markdown文档编辑器时不能看到图片，只能显示标签代码</p>
-<h3 id="方法二-markdown使用路径"><a href="#方法二-markdown使用路径" class="headerlink" title="方法二 markdown使用路径"></a><strong>方法二 markdown使用路径</strong></h3><p>传统的markdown语法插入方式：</p>
-<figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="hljs-string">描述文字</span>](<span class="hljs-link">url</span>)</span><br></pre></td></tr></table></figure>
-
-<p>实例代码</p>
-<figure class="highlight md hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="hljs-string">阁楼图片</span>](<span class="hljs-link">\photos\Notre-Dame_de_Paris_1.jpg</span>)</span><br></pre></td></tr></table></figure>
-
-<p>然而这种方法的问题在于不能够设置大小</p>
-<!-- ### __方法三 CDN引用（加速）__ -->
-
-
-<!-- 03 -->
-<h2 id="增加表格"><a href="#增加表格" class="headerlink" title="增加表格"></a>增加表格</h2><h3 id="方法一-markdown语言"><a href="#方法一-markdown语言" class="headerlink" title="方法一 markdown语言"></a>方法一 markdown语言</h3><figure class="highlight elixir hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| 大写 | 代码 |小写 | 代码 |</span><br><span class="line">|<span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span></span><br><span class="line">|<span class="hljs-variable">$A</span><span class="hljs-variable">$|</span>` <span class="hljs-variable">$A</span><span class="hljs-variable">$ </span>`|<span class="hljs-variable">$\</span>alpha<span class="hljs-variable">$|</span>` <span class="hljs-variable">$\</span>alpha<span class="hljs-variable">$ </span>`|</span><br></pre></td></tr></table></figure>
-
-<p>表现为：<br>| 大写 | 代码 |小写 | 代码 |<br>|:–:|:–:|:–:|:–:|<br>|$A$|<code>$A$</code>|$\alpha$|<code>$\alpha$</code>|</p>
-<h3 id="方法二-html标签"><a href="#方法二-html标签" class="headerlink" title="方法二 html标签"></a>方法二 html标签</h3><blockquote>
-<p>rowspan<br>colspan<br>style=”width: 10px;height:=12;”<br>实例:</p>
-</blockquote>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">rowspan</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 10px;"</span>&gt;</span>输入重定向<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>    </span><br><span class="line">        &lt;td &gt;语法：command &lt; input-file&lt;/td&gt;  </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> &gt;</span>行三列二<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>  可以改变表格的宽度、长度、跨行等操作<br>注意html语句中间的换行号会显示在表格前面</p>
-<!-- part 3 -->
-<h1 id="各类快捷键"><a href="#各类快捷键" class="headerlink" title="各类快捷键"></a>各类快捷键</h1><hr>
-<p>&ensp;&ensp;主要看sublime的插件的快捷键，和其他可能用到markdown的工具的快捷键。</p>
-<!-- Sublime-MarkdownEditing -->
-<h2 id="MarkdownEditing"><a href="#MarkdownEditing" class="headerlink" title="MarkdownEditing"></a>MarkdownEditing</h2><p>&emsp;&emsp;主要东西可以参见官方文档，主要的几个如下:<br>图片标记：mdi+tab<br>连接标记：mdl+tab<br><a href="link">MarkdownEditing官方文档</a></p>
-<!-- 02 Sublime-OmniMarkupPreviewer -->
-<h2 id="OmniMarkupPreviewer"><a href="#OmniMarkupPreviewer" class="headerlink" title="OmniMarkupPreviewer"></a>OmniMarkupPreviewer</h2><ol>
-<li>快捷键1<br> [“ctrl+alt+o”] 显示 omni_markup_preview  </li>
-</ol>
-<p><strong>注意，可能会报错:</strong>  </p>
-<p><img src="/photos/Hexo1.jpg" alt="ctrl+alt+o报错" title="Optional title"><br><strong>解决方案：</strong><br>在setting-user中加入</p>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    "renderer_options-MarkdownRenderer": &#123;</span><br><span class="line">        "extensions": ["tables", "fenced_code", "codehilite"]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><p>快捷键2<br>[“ctrl+alt+x”] omni_markup_export</p>
-</li>
-<li><p>快捷键3<br>[“ctrl+alt+c”]</p>
-</li>
-</ol>
-<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><ul>
-<li><a href="https://markdown-zh.readthedocs.io/en/latest/" target="_blank" rel="noopener">Markdown中文文档</a></li>
-</ul>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="source">参考</a>`<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/markdown/">markdown</a>, <a class="has-link-grey -link" href="/tags/小手册/">小手册</a>
+                    <a class="has-link-grey -link" href="/tags/Latex/">Latex</a>, <a class="has-link-grey -link" href="/tags/小手册/">小手册</a>
                 </div>
             </div>
         </div>
@@ -833,16 +250,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/ad6445f8.html">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/e92178a3.html">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Notre-Dame de Paris</span>
+                <span class="level-item">Latex | 小手册</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/7901ddff.html">
-                <span class="level-item">Hexo|主题优化小手册</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/3c5496a6.html">
+                <span class="level-item">Bayesian lasso UCB method</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -933,7 +350,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        16
                     </p>
                 </div>
             </div>
@@ -954,7 +371,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文本标记语言"><span class="toc-number">2.</span> <span class="toc-text">文本标记语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#输入操作"><span class="toc-number">2.1.</span> <span class="toc-text">输入操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编辑操作"><span class="toc-number">2.2.</span> <span class="toc-text">编辑操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插入"><span class="toc-number">3.</span> <span class="toc-text">插入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.1.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文档内引用"><span class="toc-number">3.2.</span> <span class="toc-text">文档内引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式"><span class="toc-number">3.3.</span> <span class="toc-text">数学公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#格式"><span class="toc-number">3.3.1.</span> <span class="toc-text">格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数学符号"><span class="toc-number">3.3.2.</span> <span class="toc-text">数学符号</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#希腊字母"><span class="toc-number">3.3.2.1.</span> <span class="toc-text">希腊字母</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关系运算符"><span class="toc-number">3.3.2.2.</span> <span class="toc-text">关系运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#箭头符号"><span class="toc-number">3.3.2.3.</span> <span class="toc-text">箭头符号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#矩阵"><span class="toc-number">3.3.2.4.</span> <span class="toc-text">矩阵</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#集合运算符"><span class="toc-number">3.3.2.5.</span> <span class="toc-text">集合运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对数运算符"><span class="toc-number">3.3.2.6.</span> <span class="toc-text">对数运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三角运算符"><span class="toc-number">3.3.2.7.</span> <span class="toc-text">三角运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#微积分运算符"><span class="toc-number">3.3.2.8.</span> <span class="toc-text">微积分运算符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加本地图片"><span class="toc-number">3.4.</span> <span class="toc-text">增加本地图片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一-使用标签插件"><span class="toc-number">3.4.1.</span> <span class="toc-text">方法一 使用标签插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二-markdown使用路径"><span class="toc-number">3.4.2.</span> <span class="toc-text">方法二 markdown使用路径</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加表格"><span class="toc-number">3.5.</span> <span class="toc-text">增加表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#方法一-markdown语言"><span class="toc-number">3.5.1.</span> <span class="toc-text">方法一 markdown语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二-html标签"><span class="toc-number">3.5.2.</span> <span class="toc-text">方法二 html标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#各类快捷键"><span class="toc-number">4.</span> <span class="toc-text">各类快捷键</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MarkdownEditing"><span class="toc-number">4.1.</span> <span class="toc-text">MarkdownEditing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OmniMarkupPreviewer"><span class="toc-number">4.2.</span> <span class="toc-text">OmniMarkupPreviewer</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#参考文档"><span class="toc-number">5.</span> <span class="toc-text">参考文档</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#windows下安装工具"><span class="toc-number">2.1.</span> <span class="toc-text">windows下安装工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#宏包安装"><span class="toc-number">2.2.</span> <span class="toc-text">宏包安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#中文使用"><span class="toc-number">3.</span> <span class="toc-text">中文使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用CTex"><span class="toc-number">3.1.</span> <span class="toc-text">使用CTex</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插入图片"><span class="toc-number">4.</span> <span class="toc-text">插入图片</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#插入figure"><span class="toc-number">4.1.</span> <span class="toc-text">插入figure</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插入code"><span class="toc-number">5.</span> <span class="toc-text">插入code</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">6.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -977,7 +394,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/Bonny2.png" alt="Markdown语言记录" height="28">
+                    <img src="/images/Bonny2.png" alt="Latex | 小手册" height="28">
                 
                 </a>
                 <p class="is-size-7">
