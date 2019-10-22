@@ -9,19 +9,19 @@
 
 
 
-    <meta name="description" content="善用python函数库，是一种美德。">
+    <meta name="description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python | 函数库">
 <meta property="og:url" content="http://www.microyue.com/89aec4a9.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="善用python函数库，是一种美德。">
+<meta property="og:description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-18T13:38:03.247Z">
+<meta property="og:updated_time" content="2019-10-22T15:05:15.136Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python | 函数库">
-<meta name="twitter:description" content="善用python函数库，是一种美德。">
+<meta name="twitter:description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
@@ -150,7 +150,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-17T16:32:28.000Z">2019-10-18</time>
+                <time class="level-item has-text-grey" datetime="2019-10-10T16:32:28.000Z">2019-10-11</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 15 words)
+                    3 minutes read (About 452 words)
                 </span>
                 
                 
@@ -178,7 +178,58 @@
             
         </h1>
         <div class="content">
-            <h1 id="sklearn"><a href="#sklearn" class="headerlink" title="sklearn"></a>sklearn</h1>
+            <h1 id="caffe"><a href="#caffe" class="headerlink" title="caffe"></a>caffe</h1><p>caffe 主流有两种下载方式：</p>
+<ul>
+<li><p>Berkey 的框架<a href="https://github.com/BVLC/caffe" target="_blank" rel="noopener">caffe</a>，<a href="http://caffe.berkeleyvision.org/installation.html" target="_blank" rel="noopener">官方install instruction</a></p>
+<ul>
+<li><p>For windows:<a href="https://github.com/BVLC/caffe/tree/windows" target="_blank" rel="noopener">官方指南</a></p>
+</li>
+<li><p>compile and build</p>
+<blockquote>
+<p>git clone <a href="https://github.com/BVLC/caffe.git" target="_blank" rel="noopener">https://github.com/BVLC/caffe.git</a><br>cd caffe<br>git checkout windows<br>cd scripts<br>./build_win.cmd</p>
+</blockquote>
+</li>
+<li><p>Erros:</p>
+<figure class="highlight groovy hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-- Could NOT find GFlags (<span class="hljs-string">missing:</span> GFLAGS_INCLUDE_DIR GFLAGS_LIBRARY)</span><br><span class="line">-- Could NOT find Glog (<span class="hljs-string">missing:</span> GLOG_INCLUDE_DIR GLOG_LIBRARY)</span><br><span class="line">CMake Error at <span class="hljs-string">C:</span><span class="hljs-regexp">/Program Files/</span>CMake<span class="hljs-regexp">/share/</span>cmake<span class="hljs-number">-3.14</span><span class="hljs-regexp">/Modules/</span>FindPackageHandleStandardArgs.<span class="hljs-string">cmake:</span><span class="hljs-number">137</span> (message):</span><br><span class="line">Could NOT find Protobuf (<span class="hljs-string">missing:</span> Protobuf_LIBRARIES Protobuf_INCLUDE_DIR)</span><br><span class="line">Call Stack (most recent call first):</span><br><span class="line"><span class="hljs-string">C:</span><span class="hljs-regexp">/Program Files/</span>CMake<span class="hljs-regexp">/share/</span>cmake<span class="hljs-number">-3.14</span><span class="hljs-regexp">/Modules/</span>FindPackageHandleStandardArgs.<span class="hljs-string">cmake:</span><span class="hljs-number">378</span> (_FPHSA_FAILURE_MESSAGE)</span><br><span class="line"><span class="hljs-string">C:</span><span class="hljs-regexp">/Program Files/</span>CMake<span class="hljs-regexp">/share/</span>cmake<span class="hljs-number">-3.14</span><span class="hljs-regexp">/Modules/</span>FindProtobuf.<span class="hljs-string">cmake:</span><span class="hljs-number">594</span> (FIND_PACKAGE_HANDLE_STANDARD_ARGS)</span><br><span class="line">cmake/ProtoBuf.<span class="hljs-string">cmake:</span><span class="hljs-number">9</span> (find_package)</span><br><span class="line">cmake/Dependencies.<span class="hljs-string">cmake:</span><span class="hljs-number">48</span> (include)</span><br><span class="line">CMakeLists.<span class="hljs-string">txt:</span><span class="hljs-number">80</span> (include)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<ul>
+<li>这里的解决方法是安装依赖库，但是依赖库的安装需要Ubuntu的版本，然后也是没有看到好的方法。</li>
+</ul>
+</li>
+<li><p>另外一种来自于微软的官方文档，<a href="https://github.com/Microsoft/caffe" target="_blank" rel="noopener">微软的方法</a>。</p>
+</li>
+<li></li>
+</ul>
+<h1 id="windows下的Ubuntu"><a href="#windows下的Ubuntu" class="headerlink" title="windows下的Ubuntu"></a>windows下的Ubuntu</h1><p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" target="_blank" rel="noopener">官方文档</a></p>
+<ul>
+<li><p>安装适用于 Linux 的 Windows 子系统</p>
+<ul>
+<li>以管理员身份打开 PowerShell 并运行<blockquote>
+<p>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</p>
+</blockquote>
+</li>
+<li>出现提示时，重启计算机</li>
+</ul>
+</li>
+<li><p>安装所选的Linux分发版(其他办法见文档，这里使用<a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-manual" target="_blank" rel="noopener">命令行下载首选的发行版</a>)</p>
+<ul>
+<li>使用 PowerShell 下载发行版，请使用WebRequest cmdlet。 下面是下载 Ubuntu 16.04 的示例说明<blockquote>
+<p>Invoke-WebRequest -Uri <a href="https://aka.ms/wsl-ubuntu-1604" target="_blank" rel="noopener">https://aka.ms/wsl-ubuntu-1604</a> -OutFile Ubuntu.appx -UseBasicParsing</p>
+</blockquote>
+</li>
+<li>如果下载需要很长时间，请通过设置来关闭进度栏<code>$ProgressPreference = &#39;SilentlyContinue&#39;</code></li>
+</ul>
+</li>
+<li><p>初始化新安装的分发版</p>
+<ul>
+<li>开始菜单找到 ubuntuXX.appx文件，点击打开</li>
+<li>约3-10分钟初始化，之后就可以使用了</li>
+</ul>
+</li>
+</ul>
+<h1 id="deeplab"><a href="#deeplab" class="headerlink" title="deeplab"></a>deeplab</h1><p><a href>deeplab blog</a></p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -232,16 +283,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/133c0eae.html">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/1f233a0a.html">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Linux | 命令</span>
+                <span class="level-item">Deeplab v1,v2,v3,v3+</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/c316c862.html">
-                <span class="level-item">Linux-Hadoop</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/bca9060f.html">
+                <span class="level-item">解决Onenote字体问题</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -312,7 +363,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        43
+                        46
                     </p>
                 </div>
             </div>
@@ -353,7 +404,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#sklearn"><span class="toc-number">1.</span> <span class="toc-text">sklearn</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#caffe"><span class="toc-number">1.</span> <span class="toc-text">caffe</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#windows下的Ubuntu"><span class="toc-number">2.</span> <span class="toc-text">windows下的Ubuntu</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#deeplab"><span class="toc-number">3.</span> <span class="toc-text">deeplab</span></a></li></ol>
         </div>
     </div>
 </div>
