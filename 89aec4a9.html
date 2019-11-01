@@ -18,7 +18,7 @@
 <meta property="og:description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-22T15:05:15.136Z">
+<meta property="og:updated_time" content="2019-10-23T06:34:30.955Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python | 函数库">
 <meta name="twitter:description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab">
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 452 words)
+                    5 minutes read (About 752 words)
                 </span>
                 
                 
@@ -199,8 +199,36 @@
 </ul>
 </li>
 <li><p>另外一种来自于微软的官方文档，<a href="https://github.com/Microsoft/caffe" target="_blank" rel="noopener">微软的方法</a>。</p>
+<ul>
+<li><p>由于版本不一样，需要修改适应我的环境<code>Cuda 10.1 Cudnn 7.5.1 VS2017 python3.7 vs141</code> 注意原来的版本是VS2013，用的是mscv120工具，VS2017可以直接升级为vs141</p>
 </li>
-<li></li>
+<li><p>git clone项目</p>
+</li>
+<li><p>复制CommonSettings.props.example 到 CommonSettings.props,并修改以下配置<br>主要就是python的路径和cudnn的版本</p>
+<blockquote>
+<p><cpuonlybuild>false</cpuonlybuild><br><usecudnn>true</usecudnn><br><cudaversion>10.1</cudaversion><br><pythondir>C:\ProgramData\Anaconda3</pythondir></p>
+</blockquote>
+</li>
+<li><p>打开../windows/Caffe.sln</p>
+</li>
+<li><p>修改../windows/scriptsBinplaceCudaDependencies.cmd 第22行改为<br>高版本cuda默认解压不带cuda子文件夹，该cmd不修改编译会出现MSB3073错误</p>
+<blockquote>
+<p>copy /y “%CUDNN_PATH%\bin\cudnn*.dll” “%OUTPUT_DIR%”</p>
+</blockquote>
+</li>
+<li><p>修改../caffe-master/include/caffe/util/cndnn.hpp 第115行<br>为增添CUDNN_CHECK宏添加一个参数CUDNN_DATA_DOUBLE，这是因高版本CUDA接口与低版本接口不一致导致的</p>
+<blockquote>
+<p>#else<br>CUDNN_CHECK(cudnnSetConvolution2dDescriptor(*conv,<br> pad_h, pad_w, stride_h, stride_w, 1, 1, CUDNN_CROSS_CORRELATION，CUDNN_DATA_DOUBLE));<br>#endif</p>
+</blockquote>
+</li>
+<li><p>修改好后编译libcaffe项目，设置项目属性关闭C++，将警告视为错误，然后生成</p>
+</li>
+<li><p>然后编译整个项目</p>
+</li>
+</ul>
+</li>
+<li><p>如果你嫌自己一个个调整麻烦，可以参考我修改过的项目，其中需要更改的步骤列在readme里面了.<a href>caffe-win10</a></p>
+</li>
 </ul>
 <h1 id="windows下的Ubuntu"><a href="#windows下的Ubuntu" class="headerlink" title="windows下的Ubuntu"></a>windows下的Ubuntu</h1><p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" target="_blank" rel="noopener">官方文档</a></p>
 <ul>
@@ -229,7 +257,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="deeplab"><a href="#deeplab" class="headerlink" title="deeplab"></a>deeplab</h1><p><a href>deeplab blog</a></p>
+<h1 id="deeplab"><a href="#deeplab" class="headerlink" title="deeplab"></a>deeplab</h1><p><a href="http://www.microyue.com/1f233a0a.html#more">deeplab blog</a></p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -363,7 +391,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        46
+                        47
                     </p>
                 </div>
             </div>
@@ -383,7 +411,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        16
                     </p>
                 </div>
             </div>

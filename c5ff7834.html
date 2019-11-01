@@ -18,7 +18,7 @@
 <meta property="og:description" content="Git使用手册，包括">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-12T03:20:09.090Z">
+<meta property="og:updated_time" content="2019-10-23T05:33:55.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git | 小手册">
 <meta name="twitter:description" content="Git使用手册，包括">
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 81 words)
+                    a minute read (About 161 words)
                 </span>
                 
                 
@@ -178,7 +178,20 @@
             
         </h1>
         <div class="content">
-            <h1 id="repository"><a href="#repository" class="headerlink" title="repository"></a>repository</h1><ul>
+            <h1 id="SSH-链接"><a href="#SSH-链接" class="headerlink" title="SSH 链接"></a>SSH 链接</h1><ul>
+<li>下载<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git 工具</a></li>
+<li>绑定用户<blockquote>
+<p>git config –global user.name “username”<br>git config –global user.email “<a href="mailto:usermail@163.com" target="_blank" rel="noopener">usermail@163.com</a>“</p>
+</blockquote>
+</li>
+<li>SSH 链接<ul>
+<li><code>ssh-keygen -t rsa</code> 生成密钥</li>
+<li><code>cd ~/.ssh</code> 查看文件密钥生成（3个文件）复制id_rsa.pub</li>
+<li>打开github网页 -&gt; setting -&gt; SSH菜单 -&gt; Add SSH key ,粘贴 id_rsa.pub文件</li>
+</ul>
+</li>
+</ul>
+<h1 id="repository"><a href="#repository" class="headerlink" title="repository"></a>repository</h1><ul>
 <li><p>quick setup<br>+ </p>
 </li>
 <li><p>create new one:</p>
@@ -330,7 +343,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        46
+                        47
                     </p>
                 </div>
             </div>
@@ -350,7 +363,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        16
                     </p>
                 </div>
             </div>
@@ -371,7 +384,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#repository"><span class="toc-number">1.</span> <span class="toc-text">repository</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">2.</span> <span class="toc-text">Reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#SSH-链接"><span class="toc-number">1.</span> <span class="toc-text">SSH 链接</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#repository"><span class="toc-number">2.</span> <span class="toc-text">repository</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">3.</span> <span class="toc-text">Reference</span></a></li></ol>
         </div>
     </div>
 </div>
