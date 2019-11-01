@@ -4,31 +4,31 @@
     <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
 <meta name="baidu-site-verification" content="SiMVCIxqau">
 <meta charset="utf-8">
-<title>Python | 小手册 - Bonny &amp; Pony</title>
+<title>Markdown | 小手册 - Bonny &amp; Pony</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="python各种实用的库/包的安装–pypylon,swag,swig,cv2,dlib,pycocotools">
-<meta name="keywords" content="小手册,Python">
+    <meta name="description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
+<meta name="keywords" content="小手册,Markdown">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python | 小手册">
-<meta property="og:url" content="http://www.microyue.com/63f7c9e0.html">
+<meta property="og:title" content="Markdown | 小手册">
+<meta property="og:url" content="http://www.microyue.com/a1a07a57.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="python各种实用的库/包的安装–pypylon,swag,swig,cv2,dlib,pycocotools">
+<meta property="og:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-28T09:00:40.401Z">
+<meta property="og:updated_time" content="2019-11-01T03:06:14.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python | 小手册">
-<meta name="twitter:description" content="python各种实用的库/包的安装–pypylon,swag,swig,cv2,dlib,pycocotools">
+<meta name="twitter:title" content="Markdown | 小手册">
+<meta name="twitter:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
 
 
 
-<link rel="alternative" href="dd" title="Python | 小手册" type="application/atom+xml">
+<link rel="alternative" href="dd" title="Markdown | 小手册" type="application/atom+xml">
 
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/Bonny2.png" alt="Python | 小手册" height="28">
+                <img src="/images/Bonny2.png" alt="Markdown | 小手册" height="28">
             
             </a>
         </div>
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 509 words)
+                    5 minutes read (About 793 words)
                 </span>
                 
                 
@@ -174,148 +174,84 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <div class="has-title-style">Python | 小手册</div>
+                <div class="has-title-style">Markdown | 小手册</div>
             
         </h1>
         <div class="content">
-            <h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><ol>
-<li>PIP</li>
+            <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>&ensp;&ensp;本来想要用wordpress建立博客，偶尔发现了Hexo，以Markdown语言为基础，非常好用。在写博客的过程中很有可能会遇到一些markdown的语言问题，当然这种文本标记语言的显示方式会限制于渲染的工具，所以只能针对Github格式和Hexo（我的主题）格式来看。</p>
+<h1 id="文本标记语言"><a href="#文本标记语言" class="headerlink" title="文本标记语言"></a>文本标记语言</h1><p>&ensp;&ensp;markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<h2 id="输入操作"><a href="#输入操作" class="headerlink" title="输入操作"></a>输入操作</h2><ol>
+<li><p><strong>换行</strong><br>Method1：使用br标签 <code>&lt;br&gt;</code><br>Method2：在句末加上两个空格后换行,这种方法可能会因为其他标记导致顺序混乱，除非大段文本，不然轻易别用。<br>Method3：两个换行号。(虽然尝试不行，但文档里说可以)  </p>
+</li>
+<li><p><strong>首行缩进</strong><br>Method1：使用特殊占位符,_注意后面的分号不能省略_。<br>[1] <code>&amp;ensp;</code>或者<code>&amp;#8194</code><br>&ensp;半角字符款式<br>[2] <code>&amp;emsp;</code>或者<code>&amp;#8195;</code><br>&emsp;全角字符款式<br>[3] <code>&amp;nbsp;</code>或者<code>&amp;#160;</code><br>&nbsp;最小缩进款式<br>Method2：全角输入情况下双击两次空格，转换全角(shift+空格)，暂时没发现能用的方法。  </p>
+</li>
+<li><p><strong>居中</strong><br>Method1:引用html标签<code>&lt;center&gt;str&lt;center&gt;</code></p>
+<center>--center--</center>
+
+</li>
+</ol>
+<h2 id="编辑操作"><a href="#编辑操作" class="headerlink" title="编辑操作"></a>编辑操作</h2><ol>
+<li>字体<br>大小：<font size="5">5</font>  <code>&lt;font size=&quot;5&quot;&gt;5&lt;/font&gt;</code><br> 颜色：<font color="Green">Red</font> <code>&lt;font color=&quot;Green&quot;&gt;Red&lt;/font&gt;</code><br> 字体：<font face="微软雅黑">微软雅黑</font> <code>&lt;font face=&quot;微软雅黑&quot;&gt;微软雅黑&lt;/font&gt;</code><br> 加粗：<strong>加粗</strong> <code>*加粗*</code> 或者 <code>__加粗__</code><br> 倾斜：<em>倾斜</em> <code>*倾斜*</code> 或者 <code>_倾斜_</code>  </li>
+</ol>
+<h1 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h1><h2 id="文档内引用"><a href="#文档内引用" class="headerlink" title="文档内引用"></a>文档内引用</h2><ol>
+<li>html的写法</li>
 </ol>
 <ul>
-<li>pip upgrade：<blockquote>
-<p>python -m pip install –upgrade pip</p>
-</blockquote>
+<li>在要跳转的地方写上：<code>&lt;h3 id=&quot;2&quot;&gt;s-2 $\sigma$&lt;/h3&gt;</code><ul>
+<li>其中h3是标题的格式，id是跳转的编号，这里主义在hexo中对h3标题的所有设置都会转移过来，等于写了第二个标题</li>
+</ul>
 </li>
-<li>pip install:<blockquote>
-<p>pip install XX=xx.xx</p>
-</blockquote>
-</li>
+<li>在跳转的目的写上：<code>&lt;a href=&quot;#2&quot;&gt;s-2&lt;/a&gt;</code></li>
 </ul>
 <ol start="2">
-<li>Conda</li>
-<li>Ninja</li>
+<li>markdown</li>
 </ol>
 <ul>
-<li>install ninja:<blockquote>
-<p>conda config –add channels conda-forge<br>conda install ninja –yes</p>
-</blockquote>
-</li>
+<li>我没尝试过 听说加<code>@[TOC]</code>就可以，不动</li>
 </ul>
-<ol start="4">
-<li><p>查看cuda版本 win</p>
-<blockquote>
-<p>nvcc –version<br>Cuda compilation tools, release 10.1, V10.1.105</p>
-</blockquote>
-</li>
-<li><p>查看cudnn版本 win</p>
-</li>
+<ol start="3">
+<li>markdown脚注</li>
 </ol>
 <ul>
-<li>进入目录C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include\cudnn.h查看<blockquote>
-<p>#define CUDNN_MAJOR 7<br>#define CUDNN_MINOR 5<br>#define CUDNN_PATCHLEVEL 0<br>本机为7.5.0</p>
-</blockquote>
+<li>install plugin：<code>npm install hexo-reference --save</code></li>
+<li>这是用于reference的脚注，专门用在hexo的渲染中<ul>
+<li>在被引用的地方加：<code>引用[^1]</code></li>
+<li>在参考文献前加（统一出现在最后）：<code>[^1]: [参考](source)</code></li>
+</ul>
 </li>
 </ul>
-<ol start="6">
-<li>各类wheel的后缀区别</li>
-</ol>
-<ul>
-<li>check python platform: 64 for amd64, 32 for win32<blockquote>
-<p>import platform<br>platform.architecture()<br>(‘64bit’,’WindowsPE’)<br>exit()</p>
+<h2 id="数学公式"><a href="#数学公式" class="headerlink" title="数学公式"></a>数学公式</h2><blockquote>
+<p>Markdown语法支持采用LaTex语法写数学公式，而在网页中使用Mathjax插件来显示数学公式。</p>
 </blockquote>
-</li>
-</ul>
-<h1 id="cv2"><a href="#cv2" class="headerlink" title="cv2"></a>cv2</h1><ul>
-<li>install conda:<blockquote>
-<ul>
-<li>conda:`conda install -c <a href="https://conda.binstar.org/menpo" target="_blank" rel="noopener">https://conda.binstar.org/menpo</a> opencv</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<h2 id="py2-VS-py3"><a href="#py2-VS-py3" class="headerlink" title="py2 VS. py3"></a>py2 VS. py3</h2><ol>
-<li>print htlm -&gt; print(html)</li>
-<li>import urllib2  –&gt; import urllib.request</li>
-<li>import urlparse –&gt; import urllib.parse</li>
-<li>import Queue –&gt; import queue</li>
-</ol>
-<h2 id="函数使用"><a href="#函数使用" class="headerlink" title="函数使用"></a>函数使用</h2><ol>
-<li>色彩转换：<ul>
-<li>img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # BGR转灰度</li>
-<li>img_bgr = cv2.cvtColor(img_gray, cv2.COLOR_GRAY2BGR) # 灰度转BRG</li>
-<li>img_rgb = cv2.cvtColor(img_gray, cv2.COLOR_GRAY2RGB) # 灰度转RGB</li>
-<li>b,g,r = cv2.split(img) #bgr图像分离三个通道</li>
-<li>img2 = cv2.merge([r,g,b]) #merge成rgb图像</li>
-</ul>
+<p><a href="http://www.microyue.com/9e1c189d.html">见latex公式</a></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
+<li>插入代码段<code>&#39;&#39;&#39; code &#39;&#39;&#39;</code>  <figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
-<h1 id="swig"><a href="#swig" class="headerlink" title="swig"></a>swig</h1><ul>
-<li>install swig package (win) <a href="https://sourceforge.net/projects/swig/" target="_blank" rel="noopener">download</a></li>
-<li>unpack zip in a path</li>
-<li>add path to system variable PATH</li>
-<li>check : cmd -&gt; swig -version</li>
-</ul>
-<h1 id="swag"><a href="#swag" class="headerlink" title="swag"></a>swag</h1><ul>
-<li>pip: <code>pip install swag</code></li>
-</ul>
-<h1 id="dlib"><a href="#dlib" class="headerlink" title="dlib"></a>dlib</h1><p>人脸识别模块</p>
-<ul>
-<li><p>PIP 安装：pip install dlib==19.18(bonny 尝试速度较慢)</p>
-</li>
-<li><p>自己编译(Python)</p>
-<ul>
-<li>download from website<a href="http://dlib.net/" target="_blank" rel="noopener">dlib face detector</a></li>
-<li>bash compile :<code>python setup.py install</code></li>
-<li>test:<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">cd</span> dlib/<span class="hljs-built_in">test</span></span><br><span class="line">mkdir build</span><br><span class="line"><span class="hljs-built_in">cd</span> build</span><br><span class="line">cmake ..</span><br><span class="line">cmake --build . --config Release</span><br><span class="line">./dtest --runall</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>Error:</p>
-<ul>
-<li><code>You have CUDA installed, but we can&#39;t use it unless you put visual studio
-in 64bit mode.</code>:貌似是VS2017的问题，反正不影响使用可以忽略。</li>
-</ul>
-</li>
-</ul>
-<h1 id="pypylon"><a href="#pypylon" class="headerlink" title="pypylon"></a>pypylon</h1><p><strong>注意pypylon 只匹配 pylon 5.2.0 (截止2019.10.12) , 安装developer才有sdk包</strong><br>pypylon 是辅助 Basler camera 系列的python API接口 </p>
-<ul>
-<li><p>pre: <a href="https://www.baslerweb.com/cn/sales-support/downloads/software-downloads/pylon-5-2-0-windows/" target="_blank" rel="noopener">pylon</a> , <a href="https://www.python.org/" target="_blank" rel="noopener">python</a> , <a href="https://pip.pypa.io/en/stable/" target="_blank" rel="noopener">pip</a> ,<a href="https://github.com/basler/pypylon" target="_blank" rel="noopener">pyplon</a></p>
-</li>
-<li><p>install (fron wheel):</p>
-<ul>
-<li>download wheel(builded) for your system, <a href="https://github.com/Basler/pypylon/releases" target="_blank" rel="noopener">release</a></li>
-<li>install wheel :<code>pip install XXX/X/XX.wheel</code></li>
-</ul>
-</li>
-<li><p>install (from source)</p>
-<ul>
-<li><p>prepare version (<a href="http://www.swig.org/" target="_blank" rel="noopener">swag &gt; 3.0.12</a> , <a href="https://www.python.org/" target="_blank" rel="noopener">python &gt; 3.4</a>)</p>
-</li>
-<li><p>install :</p>
-<figure class="highlight crmsh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/basler/pypylon.git</span><br><span class="line">cd pypylon</span><br><span class="line">pip install .</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>build in python : <code>python setup.py develop</code></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>test: in file tests/</li>
-</ul>
-<h1 id="pycocotools"><a href="#pycocotools" class="headerlink" title="pycocotools"></a>pycocotools</h1><p><a href="https://pypi.org/project/pycocotools/#history" target="_blank" rel="noopener">官方文档</a><br><a href="https://github.com/cocodataset/cocoapi" target="_blank" rel="noopener">Github repo</a></p>
-<ul>
-<li>wondows: pip<blockquote>
-<p>pip install pycocotools</p>
+<h2 id="增加本地图片"><a href="#增加本地图片" class="headerlink" title="增加本地图片"></a>增加本地图片</h2><h3 id="markdown使用路径"><a href="#markdown使用路径" class="headerlink" title="markdown使用路径"></a><strong>markdown使用路径</strong></h3><p>传统的markdown语法插入方式：</p>
+<figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="hljs-string">描述文字</span>](<span class="hljs-link">url</span>)</span><br></pre></td></tr></table></figure>
+
+<p>实例代码</p>
+<figure class="highlight md hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="hljs-string">阁楼图片</span>](<span class="hljs-link">\photos\Notre-Dame_de_Paris_1.jpg</span>)</span><br></pre></td></tr></table></figure>
+
+<p>然而这种方法的问题在于不能够设置大小</p>
+<h2 id="增加表格"><a href="#增加表格" class="headerlink" title="增加表格"></a>增加表格</h2><h3 id="markdown语言"><a href="#markdown语言" class="headerlink" title="markdown语言"></a>markdown语言</h3><figure class="highlight elixir hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| 大写 | 代码 |小写 | 代码 |</span><br><span class="line">|<span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span></span><br><span class="line">|<span class="hljs-variable">$A</span><span class="hljs-variable">$|</span>` <span class="hljs-variable">$A</span><span class="hljs-variable">$ </span>`|<span class="hljs-variable">$\</span>alpha<span class="hljs-variable">$|</span>` <span class="hljs-variable">$\</span>alpha<span class="hljs-variable">$ </span>`|</span><br></pre></td></tr></table></figure>
+
+<p>表现为：<br>| 大写 | 代码 |小写 | 代码 |<br>|:–:|:–:|:–:|:–:|<br>|$A$|<code>$A$</code>|$\alpha$|<code>$\alpha$</code>|</p>
+<h3 id="方法二-html标签"><a href="#方法二-html标签" class="headerlink" title="方法二 html标签"></a>方法二 html标签</h3><blockquote>
+<p>rowspan<br>colspan<br>style=”width: 10px;height:=12;”<br>实例:</p>
 </blockquote>
-</li>
-</ul>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">rowspan</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 10px;"</span>&gt;</span>输入重定向<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>    </span><br><span class="line">        &lt;td &gt;语法：command &lt; input-file&lt;/td&gt;  </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> &gt;</span>行三列二<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>  可以改变表格的宽度、长度、跨行等操作<br>注意html语句中间的换行号会显示在表格前面</p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/Python/">Python</a>, <a class="has-link-grey -link" href="/tags/小手册/">小手册</a>
+                    <a class="has-link-grey -link" href="/tags/Markdown/">Markdown</a>, <a class="has-link-grey -link" href="/tags/小手册/">小手册</a>
                 </div>
             </div>
         </div>
@@ -362,16 +298,16 @@ in 64bit mode.</code>:貌似是VS2017的问题，反正不影响使用可以忽�
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/da362fd2.html">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/63f7c9e0.html">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">瑞幸咖啡上市是个HE ？ BE</span>
+                <span class="level-item">Python | 小手册</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/a1a07a57.html">
-                <span class="level-item">Markdown | 小手册</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/eff0b37f.html">
+                <span class="level-item">Codelab</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -483,7 +419,7 @@ in 64bit mode.</code>:貌似是VS2017的问题，反正不影响使用可以忽�
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">1.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cv2"><span class="toc-number">2.</span> <span class="toc-text">cv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#py2-VS-py3"><span class="toc-number">2.1.</span> <span class="toc-text">py2 VS. py3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数使用"><span class="toc-number">2.2.</span> <span class="toc-text">函数使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#swig"><span class="toc-number">3.</span> <span class="toc-text">swig</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#swag"><span class="toc-number">4.</span> <span class="toc-text">swag</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dlib"><span class="toc-number">5.</span> <span class="toc-text">dlib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pypylon"><span class="toc-number">6.</span> <span class="toc-text">pypylon</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pycocotools"><span class="toc-number">7.</span> <span class="toc-text">pycocotools</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文本标记语言"><span class="toc-number">2.</span> <span class="toc-text">文本标记语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#输入操作"><span class="toc-number">2.1.</span> <span class="toc-text">输入操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编辑操作"><span class="toc-number">2.2.</span> <span class="toc-text">编辑操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插入"><span class="toc-number">3.</span> <span class="toc-text">插入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文档内引用"><span class="toc-number">3.1.</span> <span class="toc-text">文档内引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式"><span class="toc-number">3.2.</span> <span class="toc-text">数学公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加本地图片"><span class="toc-number">3.4.</span> <span class="toc-text">增加本地图片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown使用路径"><span class="toc-number">3.4.1.</span> <span class="toc-text">markdown使用路径</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加表格"><span class="toc-number">3.5.</span> <span class="toc-text">增加表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown语言"><span class="toc-number">3.5.1.</span> <span class="toc-text">markdown语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二-html标签"><span class="toc-number">3.5.2.</span> <span class="toc-text">方法二 html标签</span></a></li></ol></li></ol></li></ol>
         </div>
     </div>
 </div>
@@ -506,7 +442,7 @@ in 64bit mode.</code>:貌似是VS2017的问题，反正不影响使用可以忽�
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/Bonny2.png" alt="Python | 小手册" height="28">
+                    <img src="/images/Bonny2.png" alt="Markdown | 小手册" height="28">
                 
                 </a>
                 <p class="is-size-7">
