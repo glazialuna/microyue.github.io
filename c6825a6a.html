@@ -4,31 +4,31 @@
     <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
 <meta name="baidu-site-verification" content="SiMVCIxqau">
 <meta charset="utf-8">
-<title>分类器 - Bonny &amp; Pony</title>
+<title>贝叶斯分类器 - Bonny &amp; Pony</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="分类器设计，包括朴素贝叶斯">
+    <meta name="description" content="贝叶斯分类器">
 <meta name="keywords" content="ML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="分类器">
+<meta property="og:title" content="贝叶斯分类器">
 <meta property="og:url" content="http://www.microyue.com/c6825a6a.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="分类器设计，包括朴素贝叶斯">
+<meta property="og:description" content="贝叶斯分类器">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-11-01T02:43:12.719Z">
+<meta property="og:updated_time" content="2019-11-05T19:18:00.453Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类器">
-<meta name="twitter:description" content="分类器设计，包括朴素贝叶斯">
+<meta name="twitter:title" content="贝叶斯分类器">
+<meta name="twitter:description" content="贝叶斯分类器">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
 
 
 
-<link rel="alternative" href="dd" title="分类器" type="application/atom+xml">
+<link rel="alternative" href="dd" title="贝叶斯分类器" type="application/atom+xml">
 
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/Bonny2.png" alt="分类器" height="28">
+                <img src="/images/Bonny2.png" alt="贝叶斯分类器" height="28">
             
             </a>
         </div>
@@ -156,7 +156,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 27 words)
+                    4 minutes read (About 626 words)
                 </span>
                 
                 
@@ -170,11 +170,30 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <div class="has-title-style">分类器</div>
+                <div class="has-title-style">贝叶斯分类器</div>
             
         </h1>
         <div class="content">
-            <h1 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h1><p>朴素贝叶斯方法是</p>
+            <p>贝叶斯分类器是基于贝叶斯公式的一系列分类的方法，包括有。</p>
+<p>贝叶斯公式，非常简单而有用的强大公式：<br>$$P(B|A) = \frac{P(A|B)P(B)}{P(A)} $$</p>
+<p>解释起来，就是在某个特征A下属于B类的概率为在该类别下出现特征的概率乘以类别的概率除以特征的概率。 </p>
+<p>在分类器中的解释语言：</p>
+<ol>
+<li>$P(c)$被称为先验概率</li>
+<li>$P(A|B)$被成为样本A或特征A相对于类B的条件概率，也称作似然概率</li>
+<li>$P(A)$用于归一化的因子，对于给定样本A该因子与类无关，所以概率估计可以基于训练数据</li>
+</ol>
+<p>贝叶斯分类器的原理就是通过先验概率，利用贝叶斯公式计算出后验概率，选择最大的后验概率所对应的分类结果。</p>
+<p>分类任务也非常简单，就是将样本$x$给一个类$y$：<br>$$y=f(x)=\underset{c_j}{\arg\max{P(c_j|x)}}$$</p>
+<h1 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h1><p>朴素贝叶斯方法是基于贝叶斯定理的分类方法，简单来说就是分类结果为条件概率最大的类。 这里需要基于一个假设，各个特征独立，也就是朴素的含义。这里的先验概率和条件概率都基于训练集D来估计。</p>
+<p>用数学语言描述：</p>
+<ol>
+<li>对于样本$x$, 有特征$x_1, x_2, …, x_i$</li>
+<li>计算似然概率可以使用连乘$P(x_1,x_2,..,,x_j|c)=\prod_{k=1}^{j}{P(x_k|c)}$</li>
+</ol>
+<p>离散属性计算<br>$$P(x_i|c)=\frac{|D_{c,x_i}|}{|D_c|}$$<br>即在c类中有特征$x_i$的个数占c类总数之比。</p>
+<p>连续属性计算<br>$$$$</p>
+<p>这里为了避免其他特征的信息被训练集中未出现的特征抹去，在估计是通常用拉普拉斯修正来平滑估计。<br>$$\hat{P}(c)=\frac{|D_c|+1}{|D|+N}$$<br>$$\hat{P}(x_i|c)=\frac{|D_{c,x_i}|+1}{|D_c|+N_i}$$<br>这里$D$拉普拉斯修正避免了因训练集样本不充分而导致概率估值为零的问题，并且在训练集变大时，修正过程所引入的先验的影响也会逐渐变得可忽略，使得估值逐渐趋向于实际的概率值。</p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -236,8 +255,8 @@
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/35f08535.html">
-                <span class="level-item">聚类算法</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/133c0eae.html">
+                <span class="level-item">Linux | 命令</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -308,7 +327,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        48
+                        28
                     </p>
                 </div>
             </div>
@@ -318,7 +337,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        7
                     </p>
                 </div>
             </div>
@@ -328,7 +347,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        11
                     </p>
                 </div>
             </div>
@@ -372,7 +391,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/Bonny2.png" alt="分类器" height="28">
+                    <img src="/images/Bonny2.png" alt="贝叶斯分类器" height="28">
                 
                 </a>
                 <p class="is-size-7">

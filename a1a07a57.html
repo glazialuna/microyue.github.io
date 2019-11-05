@@ -18,7 +18,7 @@
 <meta property="og:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-11-05T17:53:16.422Z">
+<meta property="og:updated_time" content="2019-11-05T18:16:26.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown | 小手册">
 <meta name="twitter:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 minutes read (About 801 words)
+                    5 minutes read (About 821 words)
                 </span>
                 
                 
@@ -232,7 +232,7 @@
 </blockquote>
 <p><a href="http://www.microyue.com/9e1c189d.html">见latex公式</a></p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>插入代码段<code>&#39;&#39;&#39; code &#39;&#39;&#39;</code>  </p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int main(void)&#123;</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="增加表格"><a href="#增加表格" class="headerlink" title="增加表格"></a>增加表格</h2><h3 id="markdown语言"><a href="#markdown语言" class="headerlink" title="markdown语言"></a>markdown语言</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| 大写 | 代码 |小写 | 代码 |</span><br><span class="line">|:--:|:--:|:--:|:--:|</span><br><span class="line">|$A$|` $A$ `|$\alpha$|` $\alpha$ `|</span><br></pre></td></tr></table></figure>
 
@@ -259,9 +259,10 @@
 <li>style=”width: 10px;height:=12;”</li>
 </ul>
 <p>实例:</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td rowspan=&quot;2&quot; style=&quot;width: 10px;&quot;&gt;输入重定向&lt;/td&gt;    </span><br><span class="line">        &lt;td &gt;语法 &lt; input-file&lt;/td&gt;  </span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td &gt;行三列二&lt;/td&gt;  </span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">rowspan</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 10px;"</span>&gt;</span>输入重定向<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>    </span><br><span class="line">        &lt;td &gt;语法 &lt; input-file&lt;/td&gt;  </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> &gt;</span>行三列二<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
 
-<p>可以改变表格的宽度、长度、跨行等操作<br>注意html语句中间的换行号会显示在表格前面,解决方法是在html语句前后添加<code>` 和 `</code></p>
+<p>效果如下：</p>
+
 <table>
     <tr>
         <td rowspan="2" style="width: 10px;">输入重定向</td>    
@@ -272,6 +273,15 @@
     </tr>
 </table>
 
+
+
+
+<ul>
+<li>html语句可以改变表格的宽度、长度、跨行等操作<ul>
+<li>注意html语句中间的换行号(<code>&lt;br&gt;</code>)会以空行的形式出现在表格前面,解决方法是在html语句前后添加raw和endraw</li>
+</ul>
+</li>
+</ul>
 <h1 id="md语言快捷键"><a href="#md语言快捷键" class="headerlink" title="md语言快捷键"></a>md语言快捷键</h1><blockquote>
 <p>快捷键的使用显然和编辑器有关，这里bonny使用的是sublime，具体操作见下链接</p>
 </blockquote>
@@ -409,7 +419,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        48
+                        28
                     </p>
                 </div>
             </div>
@@ -419,7 +429,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        7
                     </p>
                 </div>
             </div>
@@ -429,7 +439,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        11
                     </p>
                 </div>
             </div>

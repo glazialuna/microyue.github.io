@@ -18,7 +18,7 @@
 <meta property="og:description" content="关于hexo主题的一些操作。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-20T19:44:25.828Z">
+<meta property="og:updated_time" content="2019-11-05T17:57:55.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo | 小手册(一)">
 <meta name="twitter:description" content="关于hexo主题的一些操作。">
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    8 minutes read (About 1223 words)
+                    9 minutes read (About 1275 words)
                 </span>
                 
                 
@@ -272,7 +272,8 @@
 <h1 id="可能问题及解决办法"><a href="#可能问题及解决办法" class="headerlink" title="可能问题及解决办法"></a>可能问题及解决办法</h1><ol>
 <li>在toc渲染时toc失效，检查标题后直接更&gt;语句删除，检查公式拼写正确完整。</li>
 <li>在hexo s后没有立即刷新基本有问题，但是不一定报错。</li>
-<li>本地渲染无错，上传出错：清除浏览器缓存</li>
+<li>本地渲染无错，上传出错：清除浏览器缓存, 或者 <code>hexo clean</code> 后重新 <code>hexo g</code> 检查错误</li>
+<li><code>TypeError: Cannot set property &#39;lastIndex&#39; of undefined at highlight</code> 问题，可能是<code>```c</code>的时候不支持，解决方法：将config文件中的highlight: autodetect:改为false</li>
 </ol>
         </div>
         
@@ -407,7 +408,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        48
+                        28
                     </p>
                 </div>
             </div>
@@ -417,7 +418,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        7
                     </p>
                 </div>
             </div>
@@ -427,7 +428,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        17
+                        11
                     </p>
                 </div>
             </div>
