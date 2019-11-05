@@ -18,7 +18,7 @@
 <meta property="og:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-11-05T17:16:22.227Z">
+<meta property="og:updated_time" content="2019-11-05T17:53:16.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown | 小手册">
 <meta name="twitter:description" content="Markdown的语言模式以及一些关于插件等的快捷键介绍">
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6 minutes read (About 849 words)
+                    5 minutes read (About 801 words)
                 </span>
                 
                 
@@ -210,19 +210,13 @@
 <li>html的写法</li>
 </ol>
 <ul>
-<li>在要跳转的地方写上：<code>&lt;h3 id=&quot;2&quot;&gt;s-2 $\sigma$&lt;/h3&gt;</code><ul>
+<li>在要跳转的地方写上：<code>&lt;h3 id=&quot;2&quot;&gt;s-2 $\sigma$&lt;/h3&gt;</code>。<ul>
 <li>其中h3是标题的格式，id是跳转的编号，这里主义在hexo中对h3标题的所有设置都会转移过来，等于写了第二个标题</li>
 </ul>
 </li>
 <li>在跳转的目的写上：<code>&lt;a href=&quot;#2&quot;&gt;s-2&lt;/a&gt;</code></li>
 </ul>
 <ol start="2">
-<li>markdown</li>
-</ol>
-<ul>
-<li>我没尝试过 听说加<code>@[TOC]</code>就可以，不动</li>
-</ul>
-<ol start="3">
 <li>markdown脚注</li>
 </ol>
 <ul>
@@ -237,29 +231,49 @@
 <p>Markdown语法支持采用LaTex语法写数学公式，而在网页中使用Mathjax插件来显示数学公式。</p>
 </blockquote>
 <p><a href="http://www.microyue.com/9e1c189d.html">见latex公式</a></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
-<li>插入代码段<code>&#39;&#39;&#39; code &#39;&#39;&#39;</code>  <figure class="highlight c hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>&#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>插入代码段<code>&#39;&#39;&#39; code &#39;&#39;&#39;</code>  </p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int main(void)&#123;</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
-<h2 id="增加本地图片"><a href="#增加本地图片" class="headerlink" title="增加本地图片"></a>增加本地图片</h2><h3 id="markdown使用路径"><a href="#markdown使用路径" class="headerlink" title="markdown使用路径"></a><strong>markdown使用路径</strong></h3><p>传统的markdown语法插入方式：</p>
-<figure class="highlight markdown hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="hljs-string">描述文字</span>](<span class="hljs-link">url</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="增加表格"><a href="#增加表格" class="headerlink" title="增加表格"></a>增加表格</h2><h3 id="markdown语言"><a href="#markdown语言" class="headerlink" title="markdown语言"></a>markdown语言</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| 大写 | 代码 |小写 | 代码 |</span><br><span class="line">|:--:|:--:|:--:|:--:|</span><br><span class="line">|$A$|` $A$ `|$\alpha$|` $\alpha$ `|</span><br></pre></td></tr></table></figure>
 
-<p>实例代码</p>
-<figure class="highlight md hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="hljs-string">阁楼图片</span>](<span class="hljs-link">\photos\Notre-Dame_de_Paris_1.jpg</span>)</span><br></pre></td></tr></table></figure>
+<p>表现为：</p>
+<table>
+<thead>
+<tr>
+<th align="center">大写</th>
+<th align="center">代码</th>
+<th align="center">小写</th>
+<th align="center">代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">$A$</td>
+<td align="center"><code>$A$</code></td>
+<td align="center">$\alpha$</td>
+<td align="center"><code>$\alpha$</code></td>
+</tr>
+</tbody></table>
+<h3 id="方法二-html标签"><a href="#方法二-html标签" class="headerlink" title="方法二 html标签"></a>方法二 html标签</h3><ul>
+<li>rowspan</li>
+<li>colspan</li>
+<li>style=”width: 10px;height:=12;”</li>
+</ul>
+<p>实例:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td rowspan=&quot;2&quot; style=&quot;width: 10px;&quot;&gt;输入重定向&lt;/td&gt;    </span><br><span class="line">        &lt;td &gt;语法 &lt; input-file&lt;/td&gt;  </span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">    &lt;tr&gt;</span><br><span class="line">        &lt;td &gt;行三列二&lt;/td&gt;  </span><br><span class="line">    &lt;/tr&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure>
 
-<p>然而这种方法的问题在于不能够设置大小</p>
-<h2 id="增加表格"><a href="#增加表格" class="headerlink" title="增加表格"></a>增加表格</h2><h3 id="markdown语言"><a href="#markdown语言" class="headerlink" title="markdown语言"></a>markdown语言</h3><figure class="highlight elixir hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">| 大写 | 代码 |小写 | 代码 |</span><br><span class="line">|<span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span><span class="hljs-symbol">:--</span><span class="hljs-symbol">:|</span></span><br><span class="line">|<span class="hljs-variable">$A</span><span class="hljs-variable">$|</span>` <span class="hljs-variable">$A</span><span class="hljs-variable">$ </span>`|<span class="hljs-variable">$\</span>alpha<span class="hljs-variable">$|</span>` <span class="hljs-variable">$\</span>alpha<span class="hljs-variable">$ </span>`|</span><br></pre></td></tr></table></figure>
+<p>可以改变表格的宽度、长度、跨行等操作<br>注意html语句中间的换行号会显示在表格前面,解决方法是在html语句前后添加<code>` 和 `</code></p>
+<table>
+    <tr>
+        <td rowspan="2" style="width: 10px;">输入重定向</td>    
+        <td>语法 < input-file</td>  
+    </tr>
+    <tr>
+        <td>行三列二</td>  
+    </tr>
+</table>
 
-<p>表现为：<br>| 大写 | 代码 |小写 | 代码 |<br>|:–:|:–:|:–:|:–:|<br>|$A$|<code>$A$</code>|$\alpha$|<code>$\alpha$</code>|</p>
-<h3 id="方法二-html标签"><a href="#方法二-html标签" class="headerlink" title="方法二 html标签"></a>方法二 html标签</h3><blockquote>
-<p>rowspan<br>colspan<br>style=”width: 10px;height:=12;”<br>实例:</p>
-</blockquote>
-<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">rowspan</span>=<span class="hljs-string">"2"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width: 10px;"</span>&gt;</span>输入重定向<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>    </span><br><span class="line">        &lt;td &gt;语法：command &lt; input-file&lt;/td&gt;  </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">td</span> &gt;</span>行三列二<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>  </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>  可以改变表格的宽度、长度、跨行等操作<br>注意html语句中间的换行号会显示在表格前面</p>
 <h1 id="md语言快捷键"><a href="#md语言快捷键" class="headerlink" title="md语言快捷键"></a>md语言快捷键</h1><blockquote>
-<p>快捷键的使用显然和编辑器有关，这里bonny使用的是sublime，具体操作见下</p>
+<p>快捷键的使用显然和编辑器有关，这里bonny使用的是sublime，具体操作见下链接</p>
 </blockquote>
 <p><a href="http://www.microyue.com/358d93b2.html#%E5%BF%AB%E6%8D%B7%E9%94%AE">Sublime md快捷键</a></p>
         </div>
@@ -315,16 +329,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/63f7c9e0.html">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/da362fd2.html">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Python | 小手册</span>
+                <span class="level-item">瑞幸咖啡上市是个HE ？ BE</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/eff0b37f.html">
-                <span class="level-item">Codelab</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/63f7c9e0.html">
+                <span class="level-item">Python | 小手册</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -436,7 +450,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文本标记语言"><span class="toc-number">2.</span> <span class="toc-text">文本标记语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#输入操作"><span class="toc-number">2.1.</span> <span class="toc-text">输入操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编辑操作"><span class="toc-number">2.2.</span> <span class="toc-text">编辑操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插入"><span class="toc-number">3.</span> <span class="toc-text">插入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文档内引用"><span class="toc-number">3.1.</span> <span class="toc-text">文档内引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式"><span class="toc-number">3.2.</span> <span class="toc-text">数学公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加本地图片"><span class="toc-number">3.4.</span> <span class="toc-text">增加本地图片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown使用路径"><span class="toc-number">3.4.1.</span> <span class="toc-text">markdown使用路径</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加表格"><span class="toc-number">3.5.</span> <span class="toc-text">增加表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown语言"><span class="toc-number">3.5.1.</span> <span class="toc-text">markdown语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二-html标签"><span class="toc-number">3.5.2.</span> <span class="toc-text">方法二 html标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#md语言快捷键"><span class="toc-number">4.</span> <span class="toc-text">md语言快捷键</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文本标记语言"><span class="toc-number">2.</span> <span class="toc-text">文本标记语言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#输入操作"><span class="toc-number">2.1.</span> <span class="toc-text">输入操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#编辑操作"><span class="toc-number">2.2.</span> <span class="toc-text">编辑操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#插入"><span class="toc-number">3.</span> <span class="toc-text">插入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#文档内引用"><span class="toc-number">3.1.</span> <span class="toc-text">文档内引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学公式"><span class="toc-number">3.2.</span> <span class="toc-text">数学公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-number">3.3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#增加表格"><span class="toc-number">3.4.</span> <span class="toc-text">增加表格</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown语言"><span class="toc-number">3.4.1.</span> <span class="toc-text">markdown语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#方法二-html标签"><span class="toc-number">3.4.2.</span> <span class="toc-text">方法二 html标签</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#md语言快捷键"><span class="toc-number">4.</span> <span class="toc-text">md语言快捷键</span></a></li></ol>
         </div>
     </div>
 </div>
