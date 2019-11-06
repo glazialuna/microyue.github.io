@@ -18,7 +18,7 @@
 <meta property="og:description" content="贝叶斯分类器">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-11-05T19:18:00.453Z">
+<meta property="og:updated_time" content="2019-11-06T13:35:08.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="贝叶斯分类器">
 <meta name="twitter:description" content="贝叶斯分类器">
@@ -156,7 +156,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 626 words)
+                    8 minutes read (About 1217 words)
                 </span>
                 
                 
@@ -174,26 +174,80 @@
             
         </h1>
         <div class="content">
-            <p>贝叶斯分类器是基于贝叶斯公式的一系列分类的方法，包括有。</p>
+            <p>贝叶斯分类器是基于贝叶斯公式的一系列分类的方法，包括有高斯贝叶斯分类器、多项式贝叶斯分类器、伯努利贝叶斯分类器。</p>
 <p>贝叶斯公式，非常简单而有用的强大公式：<br>$$P(B|A) = \frac{P(A|B)P(B)}{P(A)} $$</p>
 <p>解释起来，就是在某个特征A下属于B类的概率为在该类别下出现特征的概率乘以类别的概率除以特征的概率。 </p>
 <p>在分类器中的解释语言：</p>
 <ol>
-<li>$P(c)$被称为先验概率</li>
-<li>$P(A|B)$被成为样本A或特征A相对于类B的条件概率，也称作似然概率</li>
-<li>$P(A)$用于归一化的因子，对于给定样本A该因子与类无关，所以概率估计可以基于训练数据</li>
+<li>$P(B)$被称为先验概率，是根据以往的数据分析或经验得到的概率。</li>
+<li>$P(A|B)$被称为样本A或特征A相对于类B的条件概率，也称作似然概率</li>
+<li>$P(A)$被称为归一化的因子，对于给定样本A该因子与类无关，所以概率估计可以基于训练数据</li>
+<li>$P(B|A)$被称为后验概率，是得到本次试验的信息从而重新修正的概率。</li>
 </ol>
 <p>贝叶斯分类器的原理就是通过先验概率，利用贝叶斯公式计算出后验概率，选择最大的后验概率所对应的分类结果。</p>
 <p>分类任务也非常简单，就是将样本$x$给一个类$y$：<br>$$y=f(x)=\underset{c_j}{\arg\max{P(c_j|x)}}$$</p>
 <h1 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h1><p>朴素贝叶斯方法是基于贝叶斯定理的分类方法，简单来说就是分类结果为条件概率最大的类。 这里需要基于一个假设，各个特征独立，也就是朴素的含义。这里的先验概率和条件概率都基于训练集D来估计。</p>
 <p>用数学语言描述：</p>
 <ol>
-<li>对于样本$x$, 有特征$x_1, x_2, …, x_i$</li>
-<li>计算似然概率可以使用连乘$P(x_1,x_2,..,,x_j|c)=\prod_{k=1}^{j}{P(x_k|c)}$</li>
+<li><p>对于样本$\vec{x}=(x^1, x^2, …, x^i)\in{X}$,我们分类其属于类$y\in{Y}$</p>
+<ul>
+<li>假定训练数据集$D=(\vec{x_1},y_1),…,(\vec{x_N},y_N)$，我们可以学习到联合分布$P(X,Y)$，其中$|Y|=K$<ul>
+<li>$P(Y=c_k|X=\vec{x})=\frac{P(X=\vec{x}|Y=c_k)P(Y=c_k)}{\sum_{j=1}^K{P(X=\vec{x}|Y=c_j)P(Y=c_j)}}$</li>
+</ul>
+</li>
+<li>分类器表示为<ul>
+<li>$y=f(\vec{x})=\underset{c_k}{\arg\max}{\frac{\prod{P(X^i=x^i|Y=c_k)}P(Y=c_k)}{\sum_{j=1}^K{P(X=\vec{x}|Y=c_j)P(Y=c_j)}}}$</li>
+<li>对于所有的$c_k$分母($P(\vec{x})$)一定，可不用计算下面的分母</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>在朴素假设下，分类确定的条件下，用于分类的特征是条件独立的</p>
+<ul>
+<li>计算似然概率可以使用连乘$P(\vec{x}|c)=\prod_{k=1}^{j}{P(x^k|c)}$</li>
+</ul>
+</li>
+<li><p>不同的特征计算似然概率方式为：</p>
+<ul>
+<li>离散特征计算条件概率<ul>
+<li>$P(x^i|c)=\frac{|D_{c,x^i}|}{|D_c|}$即在c类中有特征$x^i$的个数占c类总数之比。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>拉普拉斯修正：</p>
+<ul>
+<li>这里为了避免其他特征的信息被训练集中未出现的特征抹去，估计通常用拉普拉斯修正来平滑估计。拉普拉斯修正避免了因训练集样本不充分而导致概率估值为零的问题，并且在训练集变大时，修正过程所引入的先验的影响也会逐渐变得可忽略，使得估值逐渐趋向于实际的概率值。</li>
+<li>$\hat{P}(c)=\frac{|D_c|+1}{|D|+N}$，$N$表示训练集D中类别的总数</li>
+<li>$\hat{P}(x^i|c)=\frac{|D_{c,x^i}|+1}{|D_c|+N_i}$，$N_i$表示第i个特征可能的取值数</li>
+</ul>
+</li>
 </ol>
-<p>离散属性计算<br>$$P(x_i|c)=\frac{|D_{c,x_i}|}{|D_c|}$$<br>即在c类中有特征$x_i$的个数占c类总数之比。</p>
-<p>连续属性计算<br>$$$$</p>
-<p>这里为了避免其他特征的信息被训练集中未出现的特征抹去，在估计是通常用拉普拉斯修正来平滑估计。<br>$$\hat{P}(c)=\frac{|D_c|+1}{|D|+N}$$<br>$$\hat{P}(x_i|c)=\frac{|D_{c,x_i}|+1}{|D_c|+N_i}$$<br>这里$D$拉普拉斯修正避免了因训练集样本不充分而导致概率估值为零的问题，并且在训练集变大时，修正过程所引入的先验的影响也会逐渐变得可忽略，使得估值逐渐趋向于实际的概率值。</p>
+<h2 id="高斯朴素贝叶斯"><a href="#高斯朴素贝叶斯" class="headerlink" title="高斯朴素贝叶斯"></a>高斯朴素贝叶斯</h2><ul>
+<li>连续特征计算条件概率，假设特征的条件概率分布满足高斯分布<ul>
+<li>$p(X^j=x^j|y=c_k)=\frac{1}{\sqrt{2\pi}\sigma_{c_k,j}}\exp{(-\frac{(x^j-\mu_{c,i})^2}{2\sigma^2_{c_k,j}})}$</li>
+<li>均值和方差通过极大似然法估计得到，假设概率密度$p(x|c)\sim N(\mu_c,\sigma_c^2)$,则参数的极大似然估计为：<ul>
+<li>$\hat{\mu_c}=\frac{1}{|D_c|}\sum_{x\in{D_c}}{x}$</li>
+<li>$\hat{\sigma}^2=\frac{1}{|D_c|}\sum_{x\in{D_c}}{(x-\hat{\mu}_c)(x-\hat{\mu}_c)^T}$</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="多项式朴素贝叶斯"><a href="#多项式朴素贝叶斯" class="headerlink" title="多项式朴素贝叶斯"></a>多项式朴素贝叶斯</h2><ul>
+<li>特征的条件概率分布满足多项式分布<ul>
+<li>$P(X^j=a_{s_j}|y=c_k)=\frac{N_{k_j}+\alpha}{N_k+\alpha_n}$，$\alpha_{s_j}$表示特征的取值</li>
+<li>$N_k=\sum_{i=1}^N{I(y_i=c_k)}$表示属于类别的$c_k$的样本数量</li>
+<li>$N_{kj}=\sum_{i=1}^N{I(y_i=c_k,X^j=a_{s_j})}$表示属于类别$c_k$且特征$X^j=a_{sj}$的样本数量</li>
+</ul>
+</li>
+</ul>
+<h2 id="伯努利朴素贝叶斯"><a href="#伯努利朴素贝叶斯" class="headerlink" title="伯努利朴素贝叶斯"></a>伯努利朴素贝叶斯</h2><ul>
+<li>特征的条件概率分布满足二项分布<ul>
+<li>$P(X^j|y=c_k)=pX^j+(1-p)(1-X^j)$,其中$P(X^j|y=c_k)=p$</li>
+</ul>
+</li>
+</ul>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -368,7 +422,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#朴素贝叶斯"><span class="toc-number">1.</span> <span class="toc-text">朴素贝叶斯</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#朴素贝叶斯"><span class="toc-number">1.</span> <span class="toc-text">朴素贝叶斯</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯朴素贝叶斯"><span class="toc-number">1.1.</span> <span class="toc-text">高斯朴素贝叶斯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多项式朴素贝叶斯"><span class="toc-number">1.2.</span> <span class="toc-text">多项式朴素贝叶斯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伯努利朴素贝叶斯"><span class="toc-number">1.3.</span> <span class="toc-text">伯努利朴素贝叶斯</span></a></li></ol></li></ol>
         </div>
     </div>
 </div>
