@@ -18,7 +18,7 @@
 <meta property="og:description" content="python各种实用的库/包的安装–pypylon,swag,swig,cv2,dlib,pycocotools">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-11-05T15:18:58.718Z">
+<meta property="og:updated_time" content="2019-12-18T02:27:26.228Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python | 小手册">
 <meta name="twitter:description" content="python各种实用的库/包的安装–pypylon,swag,swig,cv2,dlib,pycocotools">
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 549 words)
+                    4 minutes read (About 657 words)
                 </span>
                 
                 
@@ -315,6 +315,21 @@ in 64bit mode.</code>:貌似是VS2017的问题，反正不影响使用可以忽�
 </blockquote>
 </li>
 </ul>
+<h1 id="安装包时遇到问题"><a href="#安装包时遇到问题" class="headerlink" title="安装包时遇到问题"></a>安装包时遇到问题</h1><ol>
+<li><p><code>pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host=&#39;files.pythonhosted.org&#39;, port=443): Read timed out.</code></p>
+<p>这个是在网络状态不佳时出现的问题，解决方法是修改默认的timeout(默认100)，如</p>
+<blockquote>
+<p>pip install spacy<br>pip install –default-timeout=1000 spacy</p>
+</blockquote>
+</li>
+<li><p><code>Could not install packages due to an EnvironmentError: [WinError 5] 拒绝访问。: &#39;c:\\programdata\\anaconda3\\lib\\site-packages\\importlib_metadata-0.6.dist-info\\INSTALLER&#39;
+Consider using the</code>–user<code>option or check the permissions.</code></p>
+<p>解决方法：</p>
+<blockquote>
+<p>pip install spacy<br>pip install spacy –user</p>
+</blockquote>
+</li>
+</ol>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -368,16 +383,16 @@ in 64bit mode.</code>:貌似是VS2017的问题，反正不影响使用可以忽�
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/a1a07a57.html">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/da362fd2.html">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Markdown | 小手册</span>
+                <span class="level-item">瑞幸咖啡上市是个HE ？ BE</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/eff0b37f.html">
-                <span class="level-item">Codelab</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/a1a07a57.html">
+                <span class="level-item">Markdown | 小手册</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -448,7 +463,7 @@ in 64bit mode.</code>:貌似是VS2017的问题，反正不影响使用可以忽�
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        28
+                        31
                     </p>
                 </div>
             </div>
@@ -468,7 +483,7 @@ in 64bit mode.</code>:貌似是VS2017的问题，反正不影响使用可以忽�
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        11
+                        12
                     </p>
                 </div>
             </div>
@@ -489,7 +504,7 @@ in 64bit mode.</code>:貌似是VS2017的问题，反正不影响使用可以忽�
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">1.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Anaconda使用"><span class="toc-number">2.</span> <span class="toc-text">Anaconda使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cv2"><span class="toc-number">3.</span> <span class="toc-text">cv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#py2-VS-py3"><span class="toc-number">3.1.</span> <span class="toc-text">py2 VS. py3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数使用"><span class="toc-number">3.2.</span> <span class="toc-text">函数使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#swig"><span class="toc-number">4.</span> <span class="toc-text">swig</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#swag"><span class="toc-number">5.</span> <span class="toc-text">swag</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dlib"><span class="toc-number">6.</span> <span class="toc-text">dlib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pypylon"><span class="toc-number">7.</span> <span class="toc-text">pypylon</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pycocotools"><span class="toc-number">8.</span> <span class="toc-text">pycocotools</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">1.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Anaconda使用"><span class="toc-number">2.</span> <span class="toc-text">Anaconda使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cv2"><span class="toc-number">3.</span> <span class="toc-text">cv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#py2-VS-py3"><span class="toc-number">3.1.</span> <span class="toc-text">py2 VS. py3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数使用"><span class="toc-number">3.2.</span> <span class="toc-text">函数使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#swig"><span class="toc-number">4.</span> <span class="toc-text">swig</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#swag"><span class="toc-number">5.</span> <span class="toc-text">swag</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dlib"><span class="toc-number">6.</span> <span class="toc-text">dlib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pypylon"><span class="toc-number">7.</span> <span class="toc-text">pypylon</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pycocotools"><span class="toc-number">8.</span> <span class="toc-text">pycocotools</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装包时遇到问题"><span class="toc-number">9.</span> <span class="toc-text">安装包时遇到问题</span></a></li></ol>
         </div>
     </div>
 </div>

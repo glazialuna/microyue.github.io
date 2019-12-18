@@ -18,7 +18,7 @@
 <meta property="og:description" content="Linux Unbunt 18.04 各类包安装小手册（包括云服务器的Unbuntu）">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-18T13:38:57.735Z">
+<meta property="og:updated_time" content="2019-11-20T07:26:22.503Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux | 小手册">
 <meta name="twitter:description" content="Linux Unbunt 18.04 各类包安装小手册（包括云服务器的Unbuntu）">
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 394 words)
+                    4 minutes read (About 541 words)
                 </span>
                 
                 
@@ -202,7 +202,22 @@
 <li>vim 版本问题解决：<br><code>sudo apt-get update</code><br><code>sudo apt-get install vim-gtk</code></li>
 <li>export 等号前后不能有空格</li>
 </ol>
-<h2 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h2><p><a href="www.microyue.com/c316c862.html#more">安装分布式Hadoop 3在服务器上</a></p>
+<h2 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h2><p><a href="www.microyue.com/14734f2c.html#Spark-安装">安装分布式Hadoop 3.12.0 在服务器上</a></p>
+<h2 id="Scala"><a href="#Scala" class="headerlink" title="Scala"></a>Scala</h2><ul>
+<li><p>下载scala安装包，包的最新版本可参考<a href="https://www.scala-lang.org/download/" target="_blank" rel="noopener">scala官网</a>，截止2019.11.20 最新为2.13.1</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://downloads.lightbend.com/scala/2.13.0/scala-2.13.0.tgz <span class="hljs-comment"># 下载包</span></span><br><span class="line">sudo tar -zxvf scala-2.13.0.tgz -C /usr/<span class="hljs-built_in">local</span> <span class="hljs-comment"># 解压缩</span></span><br><span class="line">sudo mv ./scala-2.13.0/ ./scala <span class="hljs-comment"># 修改名字</span></span><br><span class="line">sudo chown -R root ./scala <span class="hljs-comment"># 配置权限</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置环境变量</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.bashrc # 向配置文件中加入路径</span><br><span class="line">export SCALA_HOME=/usr/local/scala</span><br><span class="line">export PATH=$PATH:$SCALA_HOME/bin</span><br><span class="line">source ~/.bashrc # 配置生效</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检验</p>
+<ul>
+<li><code>scala -version</code> 查看版本安装<br><img src="/photos/scala.png" alt="scala -version"></li>
+<li><code>scala</code> 运行scala<br><img src="/photos/scala2.png" alt="scala"></li>
+</ul>
+</li>
+</ul>
+<h2 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h2><p><a href="www.microyue.com/14734f2c.html#more">安装分布式spark</a></p>
 <h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><h2 id="ssh建立服务器联系"><a href="#ssh建立服务器联系" class="headerlink" title="ssh建立服务器联系"></a>ssh建立服务器联系</h2><p>以网易云为例，建立多个节点的服务器联系。</p>
 <ul>
 <li>创建多台服务器和申请ip，绑定主服务器和ip address<br><img src="/photos/cloud1.png" alt="ipbing"><br><img src="/photos/cloud2.png" alt="ipbing"><br><img src="/photos/bingip.png" alt="ipbing"></li>
@@ -350,7 +365,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        28
+                        31
                     </p>
                 </div>
             </div>
@@ -370,7 +385,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        11
+                        12
                     </p>
                 </div>
             </div>
@@ -391,7 +406,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">1.</span> <span class="toc-text">基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置环境变量"><span class="toc-number">1.1.</span> <span class="toc-text">设置环境变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编辑器-amp-编译器"><span class="toc-number">2.</span> <span class="toc-text">编辑器&amp;编译器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库"><span class="toc-number">3.</span> <span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发工具"><span class="toc-number">4.</span> <span class="toc-text">开发工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#java"><span class="toc-number">4.1.</span> <span class="toc-text">java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop"><span class="toc-number">4.2.</span> <span class="toc-text">Hadoop</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器"><span class="toc-number">5.</span> <span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh建立服务器联系"><span class="toc-number">5.1.</span> <span class="toc-text">ssh建立服务器联系</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">6.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">1.</span> <span class="toc-text">基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置环境变量"><span class="toc-number">1.1.</span> <span class="toc-text">设置环境变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#编辑器-amp-编译器"><span class="toc-number">2.</span> <span class="toc-text">编辑器&amp;编译器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库"><span class="toc-number">3.</span> <span class="toc-text">数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发工具"><span class="toc-number">4.</span> <span class="toc-text">开发工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#java"><span class="toc-number">4.1.</span> <span class="toc-text">java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop"><span class="toc-number">4.2.</span> <span class="toc-text">Hadoop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scala"><span class="toc-number">4.3.</span> <span class="toc-text">Scala</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spark"><span class="toc-number">4.4.</span> <span class="toc-text">Spark</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器"><span class="toc-number">5.</span> <span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh建立服务器联系"><span class="toc-number">5.1.</span> <span class="toc-text">ssh建立服务器联系</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">6.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>
