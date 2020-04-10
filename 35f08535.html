@@ -4,31 +4,31 @@
     <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
 <meta name="baidu-site-verification" content="SiMVCIxqau">
 <meta charset="utf-8">
-<title>面试总结 - Bonny &amp; Pony</title>
+<title>聚类|Kmeans - Bonny &amp; Pony</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="各类技术面题目和准备材料，此处列出的题目都是真题重现">
-<meta name="keywords" content="面试">
+    <meta name="description" content="聚类算法，包括K-means。">
+<meta name="keywords" content="ML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面试总结">
-<meta property="og:url" content="http://www.microyue.com/8094e965.html">
+<meta property="og:title" content="聚类|Kmeans">
+<meta property="og:url" content="http://www.microyue.com/35f08535.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="各类技术面题目和准备材料，此处列出的题目都是真题重现">
+<meta property="og:description" content="聚类算法，包括K-means。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-04-03T11:59:15.165Z">
+<meta property="og:updated_time" content="2019-11-12T04:49:50.958Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面试总结">
-<meta name="twitter:description" content="各类技术面题目和准备材料，此处列出的题目都是真题重现">
+<meta name="twitter:title" content="聚类|Kmeans">
+<meta name="twitter:description" content="聚类算法，包括K-means。">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
 
 
 
-<link rel="alternative" href="dd" title="面试总结" type="application/atom+xml">
+<link rel="alternative" href="dd" title="聚类|Kmeans" type="application/atom+xml">
 
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/Bonny2.png" alt="面试总结" height="28">
+                <img src="/images/Bonny2.png" alt="聚类|Kmeans" height="28">
             
             </a>
         </div>
@@ -150,17 +150,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-21T06:01:00.000Z">2019-05-21</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2019-10-18T13:34:01.000Z">2019-10-18</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 196 words)
+                    9 minutes read (About 1385 words)
                 </span>
                 
                 
@@ -174,25 +170,42 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <div class="has-title-style">面试总结</div>
+                <div class="has-title-style">聚类|Kmeans</div>
             
         </h1>
         <div class="content">
-            <hr>
-<h1 id="协会技术面"><a href="#协会技术面" class="headerlink" title="协会技术面"></a>协会技术面</h1><ol>
-<li>找出不同的数字：给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</li>
-</ol>
-<p>加强版：给定一个非空整数数组，除了两个元素只出现一次以外，其余每个元素均出现两次。找出那两个只出现了一次的元素。</p>
-<h1 id="Google-SWE-intern-phone"><a href="#Google-SWE-intern-phone" class="headerlink" title="Google SWE intern phone"></a>Google SWE intern phone</h1><ol>
-<li>一个连续的数组，求连续的子数列，满足数列内最大值和最小值不能超过k，这样的子数列最长的长度</li>
-</ol>
+            <p>&ensp;&ensp;聚类属于无监督学习，以往的回归、朴素贝叶斯、SVM等都是有类别标签y的，也就是说样例中已经给出了样例的分类。而聚类的样本中却没有给定y，只有特征x，比如假设宇宙中的星星可以表示成三维空间中的点集${x,y,j}$。聚类的目的是找到每个样本x潜在的类别y，并将同类别y的样本x放在一起。比如上面的星星，聚类后结果是一个个星团，星团里面的点相互距离比较近，星团间的星星距离就比较远了。</p>
+<p>&ensp;&ensp;在聚类算法中我们有$x^1,x^2,…,x^m$ m个样本点，最后被分为多个类。</p>
+<h1 id="k-means算法"><a href="#k-means算法" class="headerlink" title="k-means算法"></a>k-means算法</h1><p>&ensp;&ensp;k-means算法<a href="[K-means算法](https://www.cnblogs.com/jerrylead/archive/2011/04/06/2006910.html)">^1</a>通过不断迭代更新k类质心获取结果，主要流程为下：</p>
+<hr>
+<p>input:$\mbox{m个样本}:x^1,x^2,…,x^m$<br>&ensp;&ensp;&ensp;&ensp;&ensp;$\mbox{k个质心}:\mu_1,\mu_2,…\mu_k$<br>repeat<br>&ensp;&ensp;&ensp;&ensp;$c^i:=\underset{j}{\arg\min} {\left| {x^i-u_j} \right|}^2 \mbox{计算每个样本的类别}$<br>&ensp;&ensp;&ensp;&ensp;$\mu_j:=\frac{\sum_{i=1}^{m}{c^i=j}x^i}{\sum_{i=1}^{m}{c^i=j}} \mbox{计算每个类别的质心}$<br>until:$\mbox{迭代条件}$</p>
+<hr>
+<p><img src="/photos/kmeans.gif" alt></p>
+<p>&ensp;&ensp;其中，需要保证k-means是收敛的，才能跳出迭代过程。k-means具有特征，完全保证收敛性和局部最优解。</p>
+<center>-- 1 : 收敛完整,局部最优 --</center>
+&ensp;&ensp;我们定义畸变函数：
+$$J(c,\mu)=\sum_{i=1}^{m}{\left\| x^{i}-\mu_{c^i}\right\|}^2$$
+
+<p>&ensp;&ensp;J函数表示每个样本点到其质心的距离平方和。K-means是要将J调整到最小。假设当前J没有达到最小值，那么首先可以固定每个类的质心$\mu$，调整每个样例的所属的类别$\c_i$来让J函数减少，同样，固定\c，调整每个类的质心$\mu$也可以使J减小。这两个过程就是内循环中使J单调递减的过程。当J递减到最小时，$\mu$和c也同时收敛。（在理论上，可以有多组不同的$\mu$和c值能够使得J取得最小值，但这种现象实际上很少见）。</p>
+<p>&ensp;&ensp;由于畸变函数J是非凸函数，意味着我们不能保证取得的最小值是全局最小值，也就是说k-means对质心初始位置的选取比较感冒，但一般情况下k-means达到的局部最优已经满足需求。但如果你怕陷入局部最优，那么可以选取不同的初始值跑多遍k-means，然后取其中最小的J对应的$\mu$和c输出。</p>
+<center>-- 2 : k-means和EM的关系 --</center>
+&ensp;&ensp;下面累述一下K-means与EM的关系，首先回到初始问题，我们目的是将样本分成k个类，其实说白了就是求每个样例x的隐含类别y，然后利用隐含类别将x归类。
+
+<p>&ensp;&ensp;由于我们事先不知道类别y，那么我们首先可以对每个样例假定一个y吧，但是怎么知道假定的对不对呢？怎么评价假定的好不好呢？我们使用样本的极大似然估计来度量，这里是就是x和y的联合分布P(x,y)了。如果找到的y能够使P(x,y)最大，那么我们找到的y就是样例x的最佳类别了，x顺手就聚类了。</p>
+<p>&ensp;&ensp;但是我们第一次指定的y不一定会让P(x,y)最大，而且P(x,y)还依赖于其他未知参数，当然在给定y的情况下，我们可以调整其他参数让P(x,y)最大。但是调整完参数后，我们发现有更好的y可以指定，那么我们重新指定y，然后再计算P(x,y)最大时的参数，反复迭代直至没有更好的y可以指定。</p>
+<p>&ensp;&ensp;这个过程有几个难点，第一怎么假定y？是每个样例硬指派一个y还是不同的y有不同的概率，概率如何度量。第二如何估计P(x,y)，P(x,y)还可能依赖很多其他参数，如何调整里面的参数让P(x,y)最大。这些问题在以后的篇章里回答。</p>
+<p>&ensp;&ensp;这里只是指出EM的思想，E步就是估计隐含类别y的期望值，M步调整其他参数使得在给定类别y的情况下，极大似然估计P(x,y)能够达到极大值。然后在其他参数确定的情况下，重新估计y，周而复始，直至收敛。</p>
+<h1 id="均值漂移聚类"><a href="#均值漂移聚类" class="headerlink" title="均值漂移聚类"></a>均值漂移聚类</h1><p><img src="/photos/mean.gif" alt="计算步骤"><br><img src="/photos/mean2.gif" alt="滑动窗口整个过程"></p>
+<h1 id="DBSCAN-基于密度聚类"><a href="#DBSCAN-基于密度聚类" class="headerlink" title="DBSCAN 基于密度聚类"></a>DBSCAN 基于密度聚类</h1><h1 id="GMM-和-EM"><a href="#GMM-和-EM" class="headerlink" title="GMM 和 EM"></a>GMM 和 EM</h1><p><img src="/photos/gmean.gif" alt></p>
+<h1 id="凝聚层次聚类"><a href="#凝聚层次聚类" class="headerlink" title="凝聚层次聚类"></a>凝聚层次聚类</h1><p><img src="/photos/lmean.gif" alt></p>
+<h1 id="图团体检测"><a href="#图团体检测" class="headerlink" title="图团体检测"></a>图团体检测</h1><p><img src="/photos/gramean.png" alt></p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/面试/">面试</a>
+                    <a class="has-link-grey -link" href="/tags/ML/">ML</a>
                 </div>
             </div>
         </div>
@@ -238,17 +251,10 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/c5ff7834.html">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Git | 小手册</span>
-            </a>
-        </div>
-        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/358d93b2.html">
-                <span class="level-item">Sublime的插件们（一）</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/c5ff7834.html">
+                <span class="level-item">Git | 小手册</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -360,7 +366,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#协会技术面"><span class="toc-number">1.</span> <span class="toc-text">协会技术面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Google-SWE-intern-phone"><span class="toc-number">2.</span> <span class="toc-text">Google SWE intern phone</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#k-means算法"><span class="toc-number">1.</span> <span class="toc-text">k-means算法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#均值漂移聚类"><span class="toc-number">2.</span> <span class="toc-text">均值漂移聚类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#DBSCAN-基于密度聚类"><span class="toc-number">3.</span> <span class="toc-text">DBSCAN 基于密度聚类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GMM-和-EM"><span class="toc-number">4.</span> <span class="toc-text">GMM 和 EM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#凝聚层次聚类"><span class="toc-number">5.</span> <span class="toc-text">凝聚层次聚类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#图团体检测"><span class="toc-number">6.</span> <span class="toc-text">图团体检测</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -383,7 +389,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/Bonny2.png" alt="面试总结" height="28">
+                    <img src="/images/Bonny2.png" alt="聚类|Kmeans" height="28">
                 
                 </a>
                 <p class="is-size-7">

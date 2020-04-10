@@ -4,30 +4,30 @@
     <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
 <meta name="baidu-site-verification" content="SiMVCIxqau">
 <meta charset="utf-8">
-<title>Notes for 沟通技巧 - Bonny &amp; Pony</title>
+<title>CTF-PWN - Bonny &amp; Pony</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="翁恺沟通技巧课程笔记 2019 Spring">
+    <meta name="description" content="CTF的工具和题目writeup list">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Notes for 沟通技巧">
+<meta property="og:title" content="CTF-PWN">
 <meta property="og:url" content="http://www.microyue.com/1f605849.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="翁恺沟通技巧课程笔记 2019 Spring">
+<meta property="og:description" content="CTF的工具和题目writeup list">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-12T02:51:11.780Z">
+<meta property="og:updated_time" content="2020-03-29T07:35:30.279Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Notes for 沟通技巧">
-<meta name="twitter:description" content="翁恺沟通技巧课程笔记 2019 Spring">
+<meta name="twitter:title" content="CTF-PWN">
+<meta name="twitter:description" content="CTF的工具和题目writeup list">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
 
 
 
-<link rel="alternative" href="dd" title="Notes for 沟通技巧" type="application/atom+xml">
+<link rel="alternative" href="dd" title="CTF-PWN" type="application/atom+xml">
 
 
 
@@ -102,7 +102,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/Bonny2.png" alt="Notes for 沟通技巧" height="28">
+                <img src="/images/Bonny2.png" alt="CTF-PWN" height="28">
             
             </a>
         </div>
@@ -149,17 +149,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-06-24T22:44:00.000Z">2019-06-25</time>
+                <time class="level-item has-text-grey" datetime="2019-03-26T22:44:00.000Z">2019-03-27</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Class/">Class</a>
+                <a class="has-link-grey -link" href="/categories/CTF/">CTF</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    12 minutes read (About 1812 words)
+                    2 minutes read (About 266 words)
                 </span>
                 
                 
@@ -173,211 +173,48 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <div class="has-title-style">Notes for 沟通技巧</div>
+                <div class="has-title-style">CTF-PWN</div>
             
         </h1>
         <div class="content">
-            <h1 id="line"><a href="#line" class="headerlink" title="line"></a>line</h1><ul>
-<li>个人观点表达</li>
-<li>团队有效沟通</li>
-<li>文献检索阅读</li>
-<li>技术文档写作</li>
-<li>演示方法</li>
-</ul>
-<h1 id="个人观点表达"><a href="#个人观点表达" class="headerlink" title="个人观点表达"></a>个人观点表达</h1><ul>
-<li>说服原则（4)<ul>
-<li>说什么：全局、要点、举例、总结</li>
-<li>为什么听：了解听众、关注点、好奇心、扣点</li>
-<li>文贵简：主题、提要</li>
-<li>互动</li>
-</ul>
-</li>
-<li>说服技巧（3）<ul>
-<li>讲故事</li>
-<li>友好、不争辩</li>
-<li>独特</li>
-</ul>
-</li>
-<li>提问（5）<ul>
-<li>准备：上网、FAQ、说明书、尝试</li>
-<li>找对人：论坛</li>
-<li>说对话：细节+尝试、标题（问题对象-问题）、代码+注释+排版、重现问题方法<ul>
-<li>代码（测试样本、审核关注、解决）</li>
-</ul>
-</li>
-<li>提问：谦逊、几个小时、基础、无意义疑问、不紧急</li>
-<li>解决：标题+描述+方案（状态、方法、步骤、帮助者）</li>
-</ul>
-</li>
-<li>误解（2）<ul>
-<li>“透明度错觉”：自动脑补、主客差异</li>
-<li>被动：清晰直白、不厌其烦、全神贯注</li>
-</ul>
+            <h1 id="Ubuntu-运行i386程序"><a href="#Ubuntu-运行i386程序" class="headerlink" title="Ubuntu 运行i386程序"></a>Ubuntu 运行i386程序</h1><ul>
+<li>Ubuntu运行32位的程序需要增加libc<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg --add-architecture i386</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install zlib1g:i386 libstdc++6:i386 libc6:i386</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<h1 id="团队有效沟通"><a href="#团队有效沟通" class="headerlink" title="团队有效沟通"></a>团队有效沟通</h1><ul>
-<li>个人品质（7）：需求敏感、直言不讳+意见、抗压性、公平、细节、脚踏实地、责任心强</li>
-<li>团队（3）：目标一致、信任、各有所长</li>
-<li>沟通总则（4）：尊重不欣赏、长处、对事、听</li>
-<li>聆听：hearing、listenging、understanding</li>
-<li>协调：兴趣、从善如流、心胸宽阔、吸取意见、妥协</li>
-<li>见面：自我介绍（场合时间、活动团队信息）、联系方式（归属感存在感）</li>
-<li>团队抉择（3）：求同存异、不投票、契约精神<ul>
-<li>选择题目：兴趣特长人脉工作量</li>
-<li>场地：大桌子、站着、圆桌</li>
-<li>开会（5）：<ul>
-<li>议程：主持人准备、人手一份、提前、包括（上次回顾、议题介绍、汇报人和讨论时间）</li>
-<li>主持人：计划、控制范围、引导、时间</li>
-<li>流程推进：介绍背景、争议、不同、用心聆听+意见机会</li>
-<li>会议纪要：时间、地点、参会人、既要人、丹田群发、记录（总结、决议、责任人、落实时间）、下次计划</li>
-<li>总结计划：回顾、陈述决议、责任人和时间、意见下次（计划）</li>
-</ul>
+<h1 id="GDB-工具"><a href="#GDB-工具" class="headerlink" title="GDB 工具"></a>GDB 工具</h1><h2 id="pwngdb"><a href="#pwngdb" class="headerlink" title="pwngdb"></a>pwngdb</h2><ul>
+<li>安装<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-built_in">clone</span> https://github.com/pwndbg/pwndbg</span><br><span class="line"><span class="hljs-built_in">cd</span> pwndbg</span><br><span class="line">sudo ./setup.sh</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-</li>
-<li>礼仪（5)：<ul>
-<li>致谢前者</li>
-<li>推荐下一位</li>
-<li>引用前面伙伴</li>
-<li>肢体语言和表情（内外有别）</li>
-<li>自己专注（查漏补缺、外人信任）</li>
-</ul>
-</li>
-<li>团队协作工具<ul>
-<li>（4)沟通记录+查询+引用、时间安排展示、阶段成果传递分享、远程沟通手段</li>
-<li>看板：制现场生产流程的工具，对生产的优先顺序能够一目 了然，易于管理</li>
-<li>白板：</li>
-<li>trello：水平化、列表列表</li>
-<li>有道云：资料管理、即时通讯、多人在线编辑</li>
-</ul>
+<h2 id="gdb-peda"><a href="#gdb-peda" class="headerlink" title="gdb-peda"></a>gdb-peda</h2><ul>
+<li>安装<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-built_in">clone</span> https://github.com/longld/peda.git ~/Documents/peda</span><br><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-string">"source ~/Documents/peda/peda.py"</span> &gt;&gt; ~/.gdbinit</span><br><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-string">"DONE! debug your program with gdb and enjoy"</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<h1 id="文献检索阅读"><a href="#文献检索阅读" class="headerlink" title="文献检索阅读"></a>文献检索阅读</h1><ul>
-<li>信息获取、管理、分析能力</li>
-<li>搜索引擎<ul>
-<li>逻辑运算 + @ ￥ # - “ * 。。</li>
-</ul>
-</li>
-<li>文献数据库：付费，加工整理<ul>
-<li>ACMIEEE Springer</li>
-<li>WOC VS IEEE/ACM   IEEE vs ACM</li>
-<li>搜索引擎 vs 数据库 ： 信息源、结果、结果分析、结果输出</li>
-</ul>
-</li>
-<li>文献工具：<ul>
-<li>困难：阅读、管理pdf（IEE，ACM）、摘要+引用+标题</li>
-<li>EverNote：文献目录管理软件包</li>
-<li>有道云</li>
-<li>为知笔记</li>
-</ul>
-</li>
-<li>有效阅读：<ul>
-<li>入门：最近高引用，相关工作，综述性文章，参考文献，顶级会议，网站论文集，素材</li>
-<li>阅读（）<ul>
-<li>思路，结论此文是否值得深读</li>
-<li>详读并记笔记： 内容解释清楚 可以向别人综述该文的结论和支撑论据</li>
-<li>批判性思考：整重构作者的工  真正的创新点和弱点  找出进一步改进的方向</li>
-</ul>
-</li>
-<li>是对某个主题的学术观点和理论方法的整理 ，是批判性的归纳和评论，不是简单堆</li>
-</ul>
-</li>
-<li>文献综述结构<ul>
-<li>该领域的研究意义</li>
-<li>研究背景和发展脉络 </li>
-<li>目前研究水平、存在问题及可能的原因</li>
-<li>进一步研究的课题、发展方向概述 </li>
-<li>自己的见解和感想 </li>
-<li>参考文献列表（</li>
-</ul>
+<h2 id="gdb-gef"><a href="#gdb-gef" class="headerlink" title="gdb-gef"></a>gdb-gef</h2><ul>
+<li>安装<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># via the install script</span></span><br><span class="line"><span class="hljs-comment">#下载 `gef.sh` 并执行</span></span><br><span class="line">wget -q -O- https://github.com/hugsy/gef/raw/master/gef.sh | sh</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 下载 `gef.py`, 并将其 `source` 写入 `.gdbinit`</span></span><br><span class="line">wget -q -O ~/.gdbinit-gef.py https://github.com/hugsy/gef/raw/master/gef.py</span><br><span class="line"><span class="hljs-built_in">echo</span> <span class="hljs-built_in">source</span> ~/.gdbinit-gef.py &gt;&gt; ~/.gdbinit</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
-<h1 id="技术文档写作"><a href="#技术文档写作" class="headerlink" title="技术文档写作"></a>技术文档写作</h1><ul>
-<li><p>实习报告</p>
+<h1 id="Pwntools"><a href="#Pwntools" class="headerlink" title="Pwntools"></a>Pwntools</h1><blockquote>
+<p>Pwntools 作为ctf的一个重要工具，在构建payload，与服务器交互等有着重要作用</p>
+</blockquote>
 <ul>
-<li>项⽬概况 <ul>
-<li>背景介绍 </li>
-<li>工作任务及内容 </li>
-</ul>
+<li><p>安装pwntools:</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pwntools</span><br></pre></td></tr></table></figure>
 </li>
-<li>⼯工作成果及⽔水平 <ul>
-<li>完成了了哪些任务 </li>
-<li>⼯工作中的难点有哪些，如何解决的（技术含量量）  </li>
-</ul>
+<li><p>注意如果安装出错可以考虑更换安装源</p>
 </li>
-<li>项⽬目收获 <ul>
-<li>技术⽅方⾯面的收获 </li>
-<li>其他⽅方⾯面的收获  </li>
-</ul>
-</li>
-<li>⼯工作建议</li>
-</ul>
-</li>
-<li><p>开题报告</p>
-<ul>
-<li>项⽬概况 <ul>
-<li>背景介绍 </li>
-<li>工作任务及内容 </li>
-</ul>
+<li><p>如果<code>pip install --upgrade pwntools</code>提示warning版本过时，可以用<code>pip install pwntools</code>更换</p>
 </li>
 </ul>
+<h1 id="ROPgadget"><a href="#ROPgadget" class="headerlink" title="ROPgadget"></a>ROPgadget</h1><ul>
+<li><p>安装</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/JonathanSalwan/ROPgadget.git</span><br><span class="line">cd ROPgadget</span><br><span class="line">sudo python setup.py install</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>毕业论文</p>
+<li><p>使用：<code>ROPgadget --binary bof-ret2libc --only &quot;pop|ret&quot;</code></p>
 </li>
-</ul>
-<h1 id="演示方法"><a href="#演示方法" class="headerlink" title="演示方法"></a>演示方法</h1><ul>
-<li>PPT制作-内容：让别⼈人了了解你的思想<ul>
-<li>逻辑思路（大纲）</li>
-<li>页面结构<ul>
-<li>要点1：主次分明</li>
-<li>要点2：善⽤用模板，但是简洁 ：标题位置醒⽬目  列列表排版⼀一致 每⻚页展示的概念不不要超过7个 内容越少，提供的视觉信息就越直观 </li>
-<li>要点3：善⽤用图⽚片、慎⽤用图⽚片： 画⾯面布局影响阅读次序与重点判断 适当留留⽩白可以减缓⼼心理理压⼒力力  少数的⼈人可能对图⽚片会有负⾯面解读</li>
-</ul>
-</li>
-<li>色彩字体<ul>
-<li>冷色：不不引⼈人注意，适 合作为主题内容 的背景</li>
-<li>暖面：有扑⾯面⽽而来的效 果，适合作为前 景⽂文字</li>
-<li>高对比度：</li>
-<li>当背景光线强（如教室、⼤大会议室）时，浅⾊色 背景是安全的选择 </li>
-<li>整体不不要超过3种⾊色系</li>
-<li>图⽚片元素简单少变化 图⽚片元素简单少变化</li>
-<li>⼀一般认为宋体严谨，适合正⽂文；⿊黑体庄重，适 合标题  最好⽤用同⼀一种字体 </li>
-</ul>
-</li>
-<li>动画图表<ul>
-<li>动画必须有明确的⽬目的 过渡 • 强调 • 简化 • 重现</li>
-<li>图⽚片的作⽤用 美观 视觉刺激 加强解释 加深记忆</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>PPT制作-样式</li>
-<li>PPT制作-格式</li>
-<li>简报：<ul>
-<li>材料<ul>
-<li>听众⽬目标正确 </li>
-<li>精简（⼤大多数简报应该删除50%以上的内 容</li>
-<li>提⾼高说故事的能⼒力力 </li>
-<li>⼀一份简报内容量量约为书的⼀一章</li>
-</ul>
-</li>
-<li>结构<ul>
-<li>采⽤用链状（⾮非树状）组织⽅方式 </li>
-<li>注意每章投影⽚片的修辞属性与⽐比例例</li>
-<li>移除⼤大纲，改⽤用总结</li>
-</ul>
-</li>
-<li>修饰</li>
-</ul>
-</li>
-</ul>
-<h1 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h1><ul>
-<li>week2：视频质量、表达质量、参与度、书面议程纪要</li>
-<li>week7： ⻚页⾯面布局、⾊色彩搭配、动画、其他细节 |||| 内容设计、流程控制、仪态及肢体语⾔言 ||||| 参与度</li>
-</ul>
-<h1 id="上课讨论"><a href="#上课讨论" class="headerlink" title="上课讨论"></a>上课讨论</h1><ul>
-<li>写（特长、分工、时间计划）</li>
-<li>搜索人名、论文</li>
 </ul>
         </div>
         
@@ -423,19 +260,12 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/894e9493.html">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/358d93b2.html">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Bonny status</span>
+                <span class="level-item">Sublime的插件们（一）</span>
             </a>
         </div>
         
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/9df4ac75.html">
-                <span class="level-item">致比乌斯领悟</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
         
     </div>
 </div>
@@ -503,7 +333,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        31
+                        5
                     </p>
                 </div>
             </div>
@@ -513,7 +343,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        7
+                        3
                     </p>
                 </div>
             </div>
@@ -523,7 +353,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        12
+                        4
                     </p>
                 </div>
             </div>
@@ -544,7 +374,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#line"><span class="toc-number">1.</span> <span class="toc-text">line</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#个人观点表达"><span class="toc-number">2.</span> <span class="toc-text">个人观点表达</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#团队有效沟通"><span class="toc-number">3.</span> <span class="toc-text">团队有效沟通</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文献检索阅读"><span class="toc-number">4.</span> <span class="toc-text">文献检索阅读</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#技术文档写作"><span class="toc-number">5.</span> <span class="toc-text">技术文档写作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#演示方法"><span class="toc-number">6.</span> <span class="toc-text">演示方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#评价"><span class="toc-number">7.</span> <span class="toc-text">评价</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#上课讨论"><span class="toc-number">8.</span> <span class="toc-text">上课讨论</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu-运行i386程序"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu 运行i386程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#GDB-工具"><span class="toc-number">2.</span> <span class="toc-text">GDB 工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#pwngdb"><span class="toc-number">2.1.</span> <span class="toc-text">pwngdb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gdb-peda"><span class="toc-number">2.2.</span> <span class="toc-text">gdb-peda</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gdb-gef"><span class="toc-number">2.3.</span> <span class="toc-text">gdb-gef</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pwntools"><span class="toc-number">3.</span> <span class="toc-text">Pwntools</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ROPgadget"><span class="toc-number">4.</span> <span class="toc-text">ROPgadget</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -567,11 +397,11 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/Bonny2.png" alt="Notes for 沟通技巧" height="28">
+                    <img src="/images/Bonny2.png" alt="CTF-PWN" height="28">
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 glazia_luna&nbsp;
+                &copy; 2020 glazia_luna&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 <br>
