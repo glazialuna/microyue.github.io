@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
+<meta name="baidu-site-verification" content="SiMVCIxqau">
+<meta charset="utf-8">
+<title>Context Bandit with Linear Payoff Functions - Bonny &amp; Pony</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="Context Bandit with Linear Payoff Functions 论文笔记，其中一些相关的数学问题引用了别的书籍定义，具体见reference, 算法证明没有补齐">
+<meta name="keywords" content="RL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Context Bandit with Linear Payoff Functions">
+<meta property="og:url" content="http://www.microyue.com/f83eb140.html">
+<meta property="og:site_name" content="Bonny &amp; Pony">
+<meta property="og:description" content="Context Bandit with Linear Payoff Functions 论文笔记，其中一些相关的数学问题引用了别的书籍定义，具体见reference, 算法证明没有补齐">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://www.microyue.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-04-10T11:19:45.012Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Context Bandit with Linear Payoff Functions">
+<meta name="twitter:description" content="Context Bandit with Linear Payoff Functions 论文笔记，其中一些相关的数学问题引用了别的书籍定义，具体见reference, 算法证明没有补齐">
+<meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="dd" title="Context Bandit with Linear Payoff Functions" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/pitty.jpg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/Bonny2.png" alt="Context Bandit with Linear Payoff Functions" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+
+    
+
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-17T03:57:00.000Z">2019-07-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    11 minutes read (About 1674 words)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span> visits
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <div class="has-title-style">Context Bandit with Linear Payoff Functions</div>
+            
+        </h1>
+        <div class="content">
+            <h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><p>&ensp;&ensp; LinUCB是在UCB基础上的改进，这里我们认为reward=$x_{a,t} \theta^T$,然后通过结果不断学习这个$\theta$。</p>
+<p>简单来说就是在每一步中，我们通过每一轮的所有结果来拟合回归得到最接近$\theta$的值。</p>
+<h1 id="数学表达"><a href="#数学表达" class="headerlink" title="数学表达"></a>数学表达</h1><p>&ensp;&ensp;抽象过程（可以参考推荐系统，多臂老虎机问题等）到数学表达，$r_{a,t}$是选择action $a$在round $t$的回报，我们定义每一轮的回报是：<br>$$r_{a,t}=x_{t,a}^T\theta^{*}+\epsilon_{t}$$  </p>
+<p>&ensp;&ensp;其中 $\epsilon_t$ 是实际观测中的噪声，$\theta^{*}$ 的定义为：<br>$$E(r_{t,a}|x_{t,a})=x_{t,a}^T\theta^{*}$$<br>&ensp;&ensp;我们的目的是经历$t$轮后，使得获得的reward最大,由此我们定义regret为比较结果：<br>$$Regret=\sum_{t=1}^{T}{r_{t,a_t}^*}-\sum_{t=1}^{T}{r_{t,a_t}}$$</p>
+<p>&ensp;&ensp;为了简化计算过程，我们定义在每一轮我们会观测到$x_{t,a}$,我们将它和k种选择一起map到$X_t$,即$x_{t,a}-f_t$。这一步的意义是让获得的feature与选择和观测context有关，而学习的过程只和feature有关。</p>
+<h1 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h1><h2 id="算法过程-1"><a href="#算法过程-1" class="headerlink" title="算法过程"></a>算法过程</h2><p>&ensp;&ensp;我们用最小二乘法来估计$\theta_t$，并增加一个置信区间的估计。<br>&ensp;&ensp;首先使得$\hat{\theta}$为:<br>$$\hat{\theta}=\mathop{argmin}\limits_{\theta}{\sum_{s=1}^{t}{(r_s-\theta^TX_s)}^2+\lambda\left|\theta\right|^2}$$<br>&ensp;&ensp;这里前面的量就是最小二乘法，后面正则化是为了将这个回归的解唯一，也就是防止过拟合。通过运算可以得到$\theta$的解为(推导过程见<a href="#1">s-1</a>)：<br>$$\hat{\theta}=A^{-1}b$$<br>&ensp;&ensp;其中$A=\lambda I+\sum_{s=1}^{t}{X_t^TX_t}$, $b=\sum_{s=1}^{t}{r_tX_T}$<br>&ensp;&ensp;由于只能从历史数据中得到预估，和真实的数据有一定的差距，所以要增加一个置信区间，即使得预估值和真实值之间的举例在一个范围内（推导过程见<a href="#2">s-2</a>）:<br>$$p\left(|x_j^T\theta_j-E(r|x_j)|\leq\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}\right)\geq1-\delta$$<br>&ensp;&ensp;我们用这个值来逐渐学习到$\theta^{*}$</p>
+<hr>
+<h3 id="1">s-1</h3>
+&ensp;&ensp;$\theta$的解：具体方法就是计算Loss，求区域解即可，比较简单的推导，这里不详说
+
+
+
+
+<hr>
+<h3 id="2">s-2</h3>
+&ensp;&ensp; UCB的基础是Hoeffding's inequality[^4],定义如下：
+
+<blockquote>
+<p>假设$X_1$,$X_2$,···,$X_n$是同一个分布产生的$n$个独立变量，其均值为$\overline{X}=\cfrac{1}{n}\sum_{i=1}^nX_i$,则如下公式成立:$$p(|E[X]-\overline{X}|\leq\delta)\geq1-2\exp^{-2n\delta^2}$$</p>
+</blockquote>
+<p>&ensp;&ensp;也就是表示<strong>n个独立同分布的变量的均值与该变量的真实期望的误差小于某个预设的阈值$\mu$会以概率$1-2\exp^{-2n\mu^2}$恒成立</strong><br>&ensp;&ensp;那么从我们的问题意义上来看，我们可以将$X_1$,$X_2$,···,$X_n$看作某个action在n次实验中获得的收益，通过上面的不等式并设定一个$\delta$使得公式成立，然后用$\hat{X}+\delta$来近似真实的收益，$E(X)$，理论上也可以用$\hat{X}+\delta$。<br>&ensp;&ensp;在UCB中推导出的Hoeffding’s inequality（细致内容见<a href="#5">hoeffding</a>）不能够直接应用到LinUCB中，关于linear UCB的bound的推导在09年论文[^3]中有详细介绍，具体证明看<a href="#4">alpha的证明</a>。最终的表达形式如下：</p>
+<blockquote>
+<p>$$p\left(|x_j^T\theta_j-E(r|x_j)|\leq\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}\right)\geq1-\delta$$</p>
+</blockquote>
+<p>&ensp;&ensp;即对于某一个action，前面观察出来的所有次数的平均值计算出来的期望和实际的期望相差小于$\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}$的概率大于$1-\delta$，我们用$x_j^T\theta_j+\alpha\sqrt{x_j^T(D_j^TD_j+I)^{-1}x_j}$来作为真实的值。其中$D_j$为被观察m次的特征为d维度组成的矩阵，则$D_j$为${m}\times{d}$维。</p>
+<h3 id="3">s-3</h3>
+&ensp;&ensp;多维分布
+
+<h3 id="4">s-4</h3>
+&ensp;&ensp;$\alpha$的证明过程：
+
+<h3 id="5">s-5</h3>
+&ensp;&ensp;Hoeffding不等式[^5],适用于有界的随机变量。设有两两独立的一系列随机变量$X_1$,$X_2$,···,$X_n$。假设对所有的$1\leq i \leq n$,$X_i$都是几乎有界的变量
+
+
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><p>&ensp;&ensp;摘自2011 Yohoo！[^1]的论文算法<br><img src="/photos/B-1.3-1.JPG" alt="algorithm" title="LinUCB算法"><br>&ensp;&ensp;主要流程就是这样，没有改动，其中有几个小细节的变动。</p>
+<ol>
+<li>在生成context的时候，我们让context服从分布$X\sim(\left[\begin{matrix}1 \\  \vdots \\1 \end{matrix}\right]_p,I_p)$,其中p为X的维数，关于这个分布的具体含义见<a href="#3">s-3</a>。</li>
+<li>在map函数我们简单处理成为，对于得到的context$X_t$,我们有k种选择，为了体现选择和context的不同（这里可以理解为，context是用户，选择是用户的喜好，每一个用户我们有不同的map特征，map就是将用户和衡量用户的各种方式结合成为一个feature），我们将它们map到k个feature上，将feature定义为1<em>（k</em>p）维，第i个feature的第（（i-1）p,ip）位就是context的值，其他为0。<br><img src="/photos/B-1.3-2.JPG" alt="map" title="context到feature的map"></li>
+<li>在计算regret的时候，我们定义$$Regret(T)=\sum\limits_{s=0}^t{\max\limits_aX_{a,s}^T\theta^{*}-X_{a,s}^T\theta^{*}}$$</li>
+</ol>
+<p><a href="https://github.com/glazialuna/Bandits/tree/master/LinUCB" target="_blank" rel="noopener">LinUCB加上plot代码</a></p>
+<h1 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h1><p>&ensp;&ensp;通过plot得到函数的效果如下图:<br><img src="/photos/B-1.3-3.JPG" alt="regret-T" title="LinUCB算法"></p>
+<p>&ensp;&ensp;上图的参数分别为（k=3, p=5, $\delta=0.1$, T=2000, run=100, noise$\sim Gausin(0,1)$,）,第一图为100个run分别的曲线，第二图为100个run平均的曲线。</p>
+<p>&ensp;&ensp;之后考虑增加delay reward obeservation，具体见我的其他blog（懒人不放链接.jpg)哈哈哈哈哈。</p>
+<h1 id="推论证明"><a href="#推论证明" class="headerlink" title="推论证明"></a>推论证明</h1><p>&ensp;&ensp;最后结果满足$regret(T)=O(\sqrt{T})$  </p>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p>[^1]: <a href="http://proceedings.mlr.press/v15/chu11a/chu11a.pdf" target="_blank" rel="noopener">Context Bandit with Linear Payoff Functions</a><br>[^2]: <a href="http://wulc.me/2019/01/05/EE(Exploitation%20Exploration)%20%E9%97%AE%E9%A2%98%E6%A6%82%E8%BF%B0/" target="_blank" rel="noopener">WULC的解释</a><br>[^3]: <a href="https://arxiv.org/ftp/arxiv/papers/1205/1205.2606.pdf" target="_blank" rel="noopener">09年论文-Exploring compact reinforcement-learning representations with linear regression</a><br>[^4]: <a href="https://en.wikipedia.org/wiki/Hoeffding%27s_inequality" target="_blank" rel="noopener">Hoeffding’s inequality</a><br>[^5]: <a href="https://www.jstor.org/stable/2282952?seq=1#page_scan_tab_contents" target="_blank" rel="noopener">Wassily Hoeffding论文，1963</a></p>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/RL/">RL</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>Alipay</span>
+    <div class="qrcode"><img src="/images/alipay.png" alt="Alipay"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>Wechat</span>
+    <div class="qrcode"><img src="/images/wechat.png" alt="Wechat"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/c8d7f3a3.html">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Contextual Bandits方法</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/9df4ac75.html">
+                <span class="level-item">致比乌斯领悟</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'TPBtxcsBL7twTkvXDy2IXo5w-gzGzoHsz',
+        app_key: 'KRkeN0cpUJjjfeqwXrvVrfkR',
+        placeholder: 'have something to say......'
+    });
+</script>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/pitty.jpg" alt="Bonny &amp; Ponny">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Bonny &amp; Ponny
+                    </p>
+                    
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>HZ,ZJ</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        25
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        9
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        13
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/glazialuna" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#prefix"><span class="toc-number">1.</span> <span class="toc-text">prefix</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数学表达"><span class="toc-number">2.</span> <span class="toc-text">数学表达</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#算法过程"><span class="toc-number">3.</span> <span class="toc-text">算法过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#算法过程-1"><span class="toc-number">3.1.</span> <span class="toc-text">算法过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1"><span class="toc-number">3.1.1.</span> <span class="toc-text">s-1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2"><span class="toc-number">3.1.2.</span> <span class="toc-text">s-2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3"><span class="toc-number">3.1.3.</span> <span class="toc-text">s-3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4"><span class="toc-number">3.1.4.</span> <span class="toc-text">s-4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5"><span class="toc-number">3.1.5.</span> <span class="toc-text">s-5</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码实现"><span class="toc-number">3.2.</span> <span class="toc-text">代码实现</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#结果"><span class="toc-number">4.</span> <span class="toc-text">结果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#推论证明"><span class="toc-number">5.</span> <span class="toc-text">推论证明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">6.</span> <span class="toc-text">reference</span></a></li></ol>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/Bonny2.png" alt="Context Bandit with Linear Payoff Functions" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 glazia_luna&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

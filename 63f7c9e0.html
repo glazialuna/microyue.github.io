@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
+<meta name="baidu-site-verification" content="SiMVCIxqau">
+<meta charset="utf-8">
+<title>Python | 小手册 - Bonny &amp; Pony</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="python各种实用的库/包的安装–pypylon,swag,swig,cv2,dlib,pycocotools">
+<meta name="keywords" content="Python,小手册">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python | 小手册">
+<meta property="og:url" content="http://www.microyue.com/63f7c9e0.html">
+<meta property="og:site_name" content="Bonny &amp; Pony">
+<meta property="og:description" content="python各种实用的库/包的安装–pypylon,swag,swig,cv2,dlib,pycocotools">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://www.microyue.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-12-18T11:38:54.810Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python | 小手册">
+<meta name="twitter:description" content="python各种实用的库/包的安装–pypylon,swag,swig,cv2,dlib,pycocotools">
+<meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="dd" title="Python | 小手册" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/pitty.jpg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/Bonny2.png" alt="Python | 小手册" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+
+    
+
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-05-16T16:32:28.000Z">2019-05-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 minutes read (About 694 words)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span> visits
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <div class="has-title-style">Python | 小手册</div>
+            
+        </h1>
+        <div class="content">
+            <h1 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h1><ol>
+<li>PIP</li>
+</ol>
+<ul>
+<li>pip upgrade：<blockquote>
+<p>python -m pip install –upgrade pip</p>
+</blockquote>
+</li>
+<li>pip install:<blockquote>
+<p>pip install XX=xx.xx</p>
+</blockquote>
+</li>
+</ul>
+<ol start="2">
+<li>Conda</li>
+<li>Ninja</li>
+</ol>
+<ul>
+<li>install ninja:<blockquote>
+<p>conda config –add channels conda-forge<br>conda install ninja –yes</p>
+</blockquote>
+</li>
+</ul>
+<ol start="4">
+<li><p>查看cuda版本 win</p>
+<blockquote>
+<p>nvcc –version<br>Cuda compilation tools, release 10.1, V10.1.105</p>
+</blockquote>
+</li>
+<li><p>查看cudnn版本 win</p>
+</li>
+</ol>
+<ul>
+<li>进入目录C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include\cudnn.h查看<blockquote>
+<p>#define CUDNN_MAJOR 7<br>#define CUDNN_MINOR 5<br>#define CUDNN_PATCHLEVEL 0<br>本机为7.5.0</p>
+</blockquote>
+</li>
+</ul>
+<ol start="6">
+<li>各类wheel的后缀区别</li>
+</ol>
+<ul>
+<li>check python platform: 64 for amd64, 32 for win32<blockquote>
+<p>import platform<br>platform.architecture()<br>(‘64bit’,’WindowsPE’)<br>exit()</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="Anaconda使用"><a href="#Anaconda使用" class="headerlink" title="Anaconda使用"></a>Anaconda使用</h1><ol>
+<li>查看conda所有环境：<code>conda info --env</code></li>
+<li>创建conda环境：<code>conda create --name python35 python=3.5</code></li>
+<li>激活环境：<code>conda activate python35</code></li>
+<li>退出环境：<code>conda deactivate</code></li>
+</ol>
+<h1 id="cv2"><a href="#cv2" class="headerlink" title="cv2"></a>cv2</h1><ul>
+<li>install conda:<blockquote>
+<ul>
+<li>conda:`conda install -c <a href="https://conda.binstar.org/menpo" target="_blank" rel="noopener">https://conda.binstar.org/menpo</a> opencv</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="py2-VS-py3"><a href="#py2-VS-py3" class="headerlink" title="py2 VS. py3"></a>py2 VS. py3</h2><ol>
+<li>print htlm -&gt; print(html)</li>
+<li>import urllib2  –&gt; import urllib.request</li>
+<li>import urlparse –&gt; import urllib.parse</li>
+<li>import Queue –&gt; import queue</li>
+</ol>
+<h2 id="函数使用"><a href="#函数使用" class="headerlink" title="函数使用"></a>函数使用</h2><ol>
+<li>色彩转换：<ul>
+<li>img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) # BGR转灰度</li>
+<li>img_bgr = cv2.cvtColor(img_gray, cv2.COLOR_GRAY2BGR) # 灰度转BRG</li>
+<li>img_rgb = cv2.cvtColor(img_gray, cv2.COLOR_GRAY2RGB) # 灰度转RGB</li>
+<li>b,g,r = cv2.split(img) #bgr图像分离三个通道</li>
+<li>img2 = cv2.merge([r,g,b]) #merge成rgb图像</li>
+</ul>
+</li>
+</ol>
+<h1 id="swig"><a href="#swig" class="headerlink" title="swig"></a>swig</h1><ul>
+<li>install swig package (win) <a href="https://sourceforge.net/projects/swig/" target="_blank" rel="noopener">download</a></li>
+<li>unpack zip in a path</li>
+<li>add path to system variable PATH</li>
+<li>check : cmd -&gt; swig -version</li>
+</ul>
+<h1 id="swag"><a href="#swag" class="headerlink" title="swag"></a>swag</h1><ul>
+<li>pip: <code>pip install swag</code></li>
+</ul>
+<h1 id="dlib"><a href="#dlib" class="headerlink" title="dlib"></a>dlib</h1><p>人脸识别模块</p>
+<ul>
+<li><p>PIP 安装：pip install dlib==19.18(bonny 尝试速度较慢)</p>
+</li>
+<li><p>自己编译(Python)</p>
+<ul>
+<li>download from website<a href="http://dlib.net/" target="_blank" rel="noopener">dlib face detector</a></li>
+<li>bash compile :<code>python setup.py install</code></li>
+<li>test:<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">cd</span> dlib/<span class="hljs-built_in">test</span></span><br><span class="line">mkdir build</span><br><span class="line"><span class="hljs-built_in">cd</span> build</span><br><span class="line">cmake ..</span><br><span class="line">cmake --build . --config Release</span><br><span class="line">./dtest --runall</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Error:</p>
+<ul>
+<li><code>You have CUDA installed, but we can&#39;t use it unless you put visual studio
+in 64bit mode.</code>:貌似是VS2017的问题，反正不影响使用可以忽略。</li>
+</ul>
+</li>
+</ul>
+<h1 id="pypylon"><a href="#pypylon" class="headerlink" title="pypylon"></a>pypylon</h1><p><strong>注意pypylon 只匹配 pylon 5.2.0 (截止2019.10.12) , 安装developer才有sdk包</strong><br>pypylon 是辅助 Basler camera 系列的python API接口 </p>
+<ul>
+<li><p>pre: <a href="https://www.baslerweb.com/cn/sales-support/downloads/software-downloads/pylon-5-2-0-windows/" target="_blank" rel="noopener">pylon</a> , <a href="https://www.python.org/" target="_blank" rel="noopener">python</a> , <a href="https://pip.pypa.io/en/stable/" target="_blank" rel="noopener">pip</a> ,<a href="https://github.com/basler/pypylon" target="_blank" rel="noopener">pyplon</a></p>
+</li>
+<li><p>install (fron wheel):</p>
+<ul>
+<li>download wheel(builded) for your system, <a href="https://github.com/Basler/pypylon/releases" target="_blank" rel="noopener">release</a></li>
+<li>install wheel :<code>pip install XXX/X/XX.wheel</code></li>
+</ul>
+</li>
+<li><p>install (from source)</p>
+<ul>
+<li><p>prepare version (<a href="http://www.swig.org/" target="_blank" rel="noopener">swag &gt; 3.0.12</a> , <a href="https://www.python.org/" target="_blank" rel="noopener">python &gt; 3.4</a>)</p>
+</li>
+<li><p>install :</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/basler/pypylon.git</span><br><span class="line">cd pypylon</span><br><span class="line">pip install .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>build in python : <code>python setup.py develop</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>test: in file tests/</li>
+</ul>
+<h1 id="pycocotools"><a href="#pycocotools" class="headerlink" title="pycocotools"></a>pycocotools</h1><p><a href="https://pypi.org/project/pycocotools/#history" target="_blank" rel="noopener">官方文档</a><br><a href="https://github.com/cocodataset/cocoapi" target="_blank" rel="noopener">Github repo</a></p>
+<ul>
+<li>wondows: pip<blockquote>
+<p>pip install pycocotools</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="安装包时遇到问题"><a href="#安装包时遇到问题" class="headerlink" title="安装包时遇到问题"></a>安装包时遇到问题</h1><ol>
+<li><p><code>pip._vendor.urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host=&#39;files.pythonhosted.org&#39;, port=443): Read timed out.</code></p>
+<p>这个是在网络状态不佳时出现的问题，解决方法是修改默认的timeout(默认100)，如</p>
+<blockquote>
+<p>pip install spacy<br>pip install –default-timeout=1000 spacy</p>
+</blockquote>
+</li>
+<li><p><code>Could not install packages due to an EnvironmentError: [WinError 5] 拒绝访问。: &#39;c:\\programdata\\anaconda3\\lib\\site-packages\\importlib_metadata-0.6.dist-info\\INSTALLER&#39;
+Consider using the</code>–user<code>option or check the permissions.</code></p>
+<p>解决方法：</p>
+<blockquote>
+<p>pip install spacy<br>pip install spacy –user</p>
+</blockquote>
+</li>
+<li><p><code>OverflowError: Python int too large to convert to C long</code></p>
+<p>解决方法:修改torchtext的utils.py</p>
+<blockquote>
+<ul>
+<li>csv.field_size_limit(sys.maxsize)</li>
+</ul>
+<ul>
+<li>csv.field_size_limit(int(ctypes.c_ulong(-1).value // 2))</li>
+<li>import ctypes</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Python/">Python</a>, <a class="has-link-grey -link" href="/tags/小手册/">小手册</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>Alipay</span>
+    <div class="qrcode"><img src="/images/alipay.png" alt="Alipay"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>Wechat</span>
+    <div class="qrcode"><img src="/images/wechat.png" alt="Wechat"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/da362fd2.html">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">瑞幸咖啡上市是个HE ？ BE</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/a1a07a57.html">
+                <span class="level-item">Markdown | 小手册</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'TPBtxcsBL7twTkvXDy2IXo5w-gzGzoHsz',
+        app_key: 'KRkeN0cpUJjjfeqwXrvVrfkR',
+        placeholder: 'have something to say......'
+    });
+</script>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/pitty.jpg" alt="Bonny &amp; Ponny">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Bonny &amp; Ponny
+                    </p>
+                    
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>HZ,ZJ</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        25
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        9
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        13
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/glazialuna" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">1.</span> <span class="toc-text">基础命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Anaconda使用"><span class="toc-number">2.</span> <span class="toc-text">Anaconda使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cv2"><span class="toc-number">3.</span> <span class="toc-text">cv2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#py2-VS-py3"><span class="toc-number">3.1.</span> <span class="toc-text">py2 VS. py3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数使用"><span class="toc-number">3.2.</span> <span class="toc-text">函数使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#swig"><span class="toc-number">4.</span> <span class="toc-text">swig</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#swag"><span class="toc-number">5.</span> <span class="toc-text">swag</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#dlib"><span class="toc-number">6.</span> <span class="toc-text">dlib</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pypylon"><span class="toc-number">7.</span> <span class="toc-text">pypylon</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#pycocotools"><span class="toc-number">8.</span> <span class="toc-text">pycocotools</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装包时遇到问题"><span class="toc-number">9.</span> <span class="toc-text">安装包时遇到问题</span></a></li></ol>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/Bonny2.png" alt="Python | 小手册" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 glazia_luna&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

@@ -4,31 +4,31 @@
     <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
 <meta name="baidu-site-verification" content="SiMVCIxqau">
 <meta charset="utf-8">
-<title>面试总结 - Bonny &amp; Pony</title>
+<title>统计知识汇总 - Bonny &amp; Pony</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="各类技术面题目和准备材料，此处列出的题目都是真题重现">
-<meta name="keywords" content="面试">
+    <meta name="description" content="持续更新中">
+<meta name="keywords" content="statics">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面试总结">
-<meta property="og:url" content="http://www.microyue.com/8094e965.html">
+<meta property="og:title" content="统计知识汇总">
+<meta property="og:url" content="http://www.microyue.com/3c5496a6.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="各类技术面题目和准备材料，此处列出的题目都是真题重现">
+<meta property="og:description" content="持续更新中">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-04-03T11:59:15.165Z">
+<meta property="og:updated_time" content="2019-10-12T03:09:35.611Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面试总结">
-<meta name="twitter:description" content="各类技术面题目和准备材料，此处列出的题目都是真题重现">
+<meta name="twitter:title" content="统计知识汇总">
+<meta name="twitter:description" content="持续更新中">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
 
 
 
-<link rel="alternative" href="dd" title="面试总结" type="application/atom+xml">
+<link rel="alternative" href="dd" title="统计知识汇总" type="application/atom+xml">
 
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/Bonny2.png" alt="面试总结" height="28">
+                <img src="/images/Bonny2.png" alt="统计知识汇总" height="28">
             
             </a>
         </div>
@@ -150,7 +150,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-05-21T06:01:00.000Z">2019-05-21</time>
+                <time class="level-item has-text-grey" datetime="2019-07-30T02:28:00.000Z">2019-07-30</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 196 words)
+                    11 minutes read (About 1636 words)
                 </span>
                 
                 
@@ -174,25 +174,53 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <div class="has-title-style">面试总结</div>
+                <div class="has-title-style">统计知识汇总</div>
             
         </h1>
         <div class="content">
-            <hr>
-<h1 id="协会技术面"><a href="#协会技术面" class="headerlink" title="协会技术面"></a>协会技术面</h1><ol>
-<li>找出不同的数字：给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</li>
-</ol>
-<p>加强版：给定一个非空整数数组，除了两个元素只出现一次以外，其余每个元素均出现两次。找出那两个只出现了一次的元素。</p>
-<h1 id="Google-SWE-intern-phone"><a href="#Google-SWE-intern-phone" class="headerlink" title="Google SWE intern phone"></a>Google SWE intern phone</h1><ol>
-<li>一个连续的数组，求连续的子数列，满足数列内最大值和最小值不能超过k，这样的子数列最长的长度</li>
-</ol>
+            <h1 id="prefix"><a href="#prefix" class="headerlink" title="prefix"></a>prefix</h1><h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1><h2 id="置信区间"><a href="#置信区间" class="headerlink" title="置信区间"></a>置信区间</h2><p>&ensp;&ensp;在统计学中，对于一个未知量的估计，总能找到一种量化其置信度的方法。最普遍的分布正态分布（或曰高斯分布） $N(\mu,\delta)$ ，其中的 $\mu$ 就是估计量的期望，而$\delta$ 则表示其不确定性（ $\delta$越大则表示越不可信）。比如你掷一个标准的6面色子，它的平均值是3.5，而如果你只掷一次，比如说到2，那你对平均值的估计只能是2，但是这个置信度应该很低，我们可以知道，这个色子的预估平均值是2，而以95%的置信区间在[1.4,5.2]。<br>&ensp;&ensp;置信区间将点估计转化成区间估计，举例说明。对于分布$X<del>N(\mu,\sigma)$,已知$\sigma$,估计$\mu$。对于一堆采样结果，样本大小为n，样本均值为$$M=\frac{X_1+X_2+···+X_n}{n}$$<br>根据大数定律和中心极限定律，M服从$M\mathop{</del>}N(\mu,\frac{\sigma^2}{n})$</p>
+<h2 id="高斯噪声"><a href="#高斯噪声" class="headerlink" title="高斯噪声"></a>高斯噪声</h2><p>subgaussian<br>&ensp;&ensp;</p>
+<h1 id="回归算法"><a href="#回归算法" class="headerlink" title="回归算法"></a>回归算法</h1><p>&ensp;&ensp;线性回归:<br>$$\hat{\theta}=\mathop{argmin}\limits_{\theta}(\sum_{s=1}^t{(r_t-\theta^TA_t)^2+||\theta||_2^2})$$<br>&ensp;&ensp;这一部分也被叫做ridge regression，其中第一部分$\sum$是最小二乘法，第二部分是正则化。正则化的目的是为了避免过拟合，举例说明：<br>&ensp;&ensp;&ensp;&ensp;对多个点{($x_1,y_1$), ··· ,($x_n,y_n$)}做拟合，得到$y=a_1+a_2x$, 如果参数为多维的，$a_1,a_2, ··· ，a_n$,那么就可能过拟合曲线，为了限制这种情况增加一个正则项，使得控制每一个维度的参数限制。</p>
+<h1 id="分布："><a href="#分布：" class="headerlink" title="分布："></a>分布：</h1><ul>
+<li><p>高斯分布</p>
+</li>
+<li><p>正态分布</p>
+</li>
+<li><p>卡方分布</p>
+</li>
+<li><p>gama函数</p>
+</li>
+<li><p>拉普拉斯先验</p>
+</li>
+<li><p>(MLE、MAP、Bayes)[<a href="https://blog.csdn.net/bitcarmanlee/article/details/81417151]" target="_blank" rel="noopener">https://blog.csdn.net/bitcarmanlee/article/details/81417151]</a></p>
+</li>
+</ul>
+<h1 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h1><h2 id="1">A-1(范式规则化问题)</h2>
+&Ensp;&Ensp;范式
+&Ensp;&Ensp;参考笔记[^2]
+
+<p><a href="#1">A-1</a></p>
+<h2 id="2">A-2(估计方法)</h2>
+&Ensp;&Ensp;先验概率、最大似然估计、贝叶斯估计、最大后验概率这几个是概率论的基础知识，小王非常后悔没有认真学习的概率论的课程，真的非常后悔，导致现在要重新学一遍，希望这是最后一次出现在appendix里面了吧。ORZ·········
+### 先验概率
+&Ensp;&Ensp;先验概率（prior probability）是指根据以往经验和分析得到的概率，如全概率公式，它往往作为"由因求果"问题中的"因"出现的概率。一般分为客观先验概率(利用过去历史资料计算得到的先验概率) 和 主观先验概率(当历史资料无从取得或资料不完全时，凭人们的主观经验来判断而得到的先验概率)。  
+&Ensp;&Ensp; 先验概率是通过古典概率模型加以定义的，故又称为古典概率。古典概率模型要求满足两个条件：  
+(1)试验的所有可能结果是有限的;  
+(2)每一种可能结果出现的可能性(概率)相等。  若所有可能结果的总数为N，随机事件A包括n个可能结果，那么随机事件A出现的概率为n/N。  
+&Ensp;&Ensp; 在贝叶斯统计中，先验概率分布，即关于某个变量 p 的概率分布，是在获得某些信息或者依据前，对 p 的不确定性进行猜测。例如， p 可以是抢火车票开始时，抢到某一车次的概率。这是对不确定性（而不是随机性）赋予一个量化的数值的表征，这个量化数值可以是一个参数，或者是一个潜在的变量。  
+&ensp;&ensp;先验概率仅仅依赖于主观上的经验估计，也就是事先根据已有的知识的推断，在应用贝叶斯理论时，通常将先验概率乘以似然函数（likelihoodfunction）再归一化后，得到后验概率分布，后验概率分布即在已知给定的数据后，对不确定性的条件分布。  
+
+<h3 id="MLE-maximum-likelihood-estimation-，最大似然估计"><a href="#MLE-maximum-likelihood-estimation-，最大似然估计" class="headerlink" title="MLE(maximum likelihood estimation)，最大似然估计"></a>MLE(maximum likelihood estimation)，最大似然估计</h3><p>&ensp;&Ensp;最大似然估计提供了一种给定观察数据来评估模型参数的方法，即：“模型已定，参数未知”。简单而言，假设我们要统计全国人口的身高，首先假设这个身高服从服从正态分布，但是该分布的均值与方差未知。我们没有人力与物力去统计全国每个人的身高，但是可以通过采样，获取部分人的身高，然后通过最大似然估计来获取上述假设中的正态分布的均值与方差。最大似然估计中采样需满足一个很重要的假设，就是所有的采样都是独立同分布的。<br>&ensp;&Ensp;给定一个概率分布 {\displaystyle D} D，已知其概率密度函数（连续分布）或概率质量函数（离散分布）为 {\displaystyle f_{D}} f_D，以及一个分布参数 {\displaystyle \theta } \theta ，我们可以从这个分布中抽出一个具有 {\displaystyle n} n个值的采样 {\displaystyle X_{1},X_{2},\ldots ,X_{n}} X_1, X_2,\ldots, X_n，利用 {\displaystyle f_{D}} f_D计算出其似然函数：<br>&ensp;&Ensp;具体描述一下最大似然估计：<br>&ensp;&Ensp;首先，假设为独立同分布的采样，θ为模型参数,f为我们所使用的模型，遵循我们上述的独立同分布假设。参数为θ的模型f产生上述采样可表示为</p>
+<p>&ensp;&ensp;<a href="https://zh.wikipedia.org/wiki/%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1" target="_blank" rel="noopener">wiki 最大似然估计</a></p>
+<h3 id="贝叶斯估计"><a href="#贝叶斯估计" class="headerlink" title="贝叶斯估计"></a>贝叶斯估计</h3><h3 id="MAP-Maximum-a-posteriori-estimation-最大后验概率"><a href="#MAP-Maximum-a-posteriori-estimation-最大后验概率" class="headerlink" title="MAP(Maximum a posteriori estimation),最大后验概率"></a>MAP(Maximum a posteriori estimation),最大后验概率</h3><p>&Ensp;&Ensp;参考笔记[^3]，基本等于转载这篇笔记。</p>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p>[^1]: <a href="https://www.jstor.org/stable/pdf/27640090.pdf?refreqid=excelsior%3Afb018768702daa257c5dbf00f17073e5&seq=1#page_scan_tab_contents" target="_blank" rel="noopener">Bayesian lasso</a><br>[^2]: <a href="https://blog.csdn.net/zouxy09/article/details/24971995" target="_blank" rel="noopener">ML中的范数规则化</a><br>[^3]: <a href="https://blog.csdn.net/guohecang/article/details/52313046" target="_blank" rel="noopener">先验概率，最大似然估计，贝叶斯估计，和最大后验概率</a></p>
         </div>
         
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
                     <span class="is-size-6 has-text-grey has-mr-7">#</span>
-                    <a class="has-link-grey -link" href="/tags/面试/">面试</a>
+                    <a class="has-link-grey -link" href="/tags/statics/">statics</a>
                 </div>
             </div>
         </div>
@@ -239,16 +267,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/c5ff7834.html">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/9e1c189d.html">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Git | 小手册</span>
+                <span class="level-item">Latex | 公式</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/358d93b2.html">
-                <span class="level-item">Sublime的插件们（一）</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/42320b20.html">
+                <span class="level-item">优化加速</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -319,7 +347,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        25
                     </p>
                 </div>
             </div>
@@ -329,7 +357,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        9
                     </p>
                 </div>
             </div>
@@ -339,7 +367,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        13
                     </p>
                 </div>
             </div>
@@ -360,7 +388,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#协会技术面"><span class="toc-number">1.</span> <span class="toc-text">协会技术面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Google-SWE-intern-phone"><span class="toc-number">2.</span> <span class="toc-text">Google SWE intern phone</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#prefix"><span class="toc-number">1.</span> <span class="toc-text">prefix</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#统计"><span class="toc-number">2.</span> <span class="toc-text">统计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#置信区间"><span class="toc-number">2.1.</span> <span class="toc-text">置信区间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#高斯噪声"><span class="toc-number">2.2.</span> <span class="toc-text">高斯噪声</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#回归算法"><span class="toc-number">3.</span> <span class="toc-text">回归算法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分布："><span class="toc-number">4.</span> <span class="toc-text">分布：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Appendix"><span class="toc-number">5.</span> <span class="toc-text">Appendix</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1"><span class="toc-number">5.1.</span> <span class="toc-text">A-1(范式规则化问题)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-number">5.2.</span> <span class="toc-text">A-2(估计方法)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MLE-maximum-likelihood-estimation-，最大似然估计"><span class="toc-number">5.2.1.</span> <span class="toc-text">MLE(maximum likelihood estimation)，最大似然估计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#贝叶斯估计"><span class="toc-number">5.2.2.</span> <span class="toc-text">贝叶斯估计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MAP-Maximum-a-posteriori-estimation-最大后验概率"><span class="toc-number">5.2.3.</span> <span class="toc-text">MAP(Maximum a posteriori estimation),最大后验概率</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">6.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -383,7 +411,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/Bonny2.png" alt="面试总结" height="28">
+                    <img src="/images/Bonny2.png" alt="统计知识汇总" height="28">
                 
                 </a>
                 <p class="is-size-7">

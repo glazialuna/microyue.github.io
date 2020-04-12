@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
+<meta name="baidu-site-verification" content="SiMVCIxqau">
+<meta charset="utf-8">
+<title>Linux-Hadoop - Bonny &amp; Pony</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="Unbuntu - Hadoop 分布">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux-Hadoop">
+<meta property="og:url" content="http://www.microyue.com/c316c862.html">
+<meta property="og:site_name" content="Bonny &amp; Pony">
+<meta property="og:description" content="Unbuntu - Hadoop 分布">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://www.microyue.com/images/og_image.png">
+<meta property="og:updated_time" content="2019-10-15T06:56:35.342Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux-Hadoop">
+<meta name="twitter:description" content="Unbuntu - Hadoop 分布">
+<meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="dd" title="Linux-Hadoop" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/pitty.jpg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/Bonny2.png" alt="Linux-Hadoop" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+
+    
+
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-14T03:00:01.000Z">2019-10-14</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 minutes read (About 1497 words)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span> visits
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <div class="has-title-style">Linux-Hadoop</div>
+            
+        </h1>
+        <div class="content">
+            <h1 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h1><ul>
+<li>JDK(<a href="http://www.microyue.com/dfed39d9.html#%E7%BC%96%E8%BE%91%E5%99%A8-amp-%E7%BC%96%E8%AF%91%E5%99%A8">java installation</a>)</li>
+<li>cloud server(<a href="http://www.microyue.com/dfed39d9.html#ssh%E5%BB%BA%E7%AB%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%81%94%E7%B3%BB">服务器节点</a>)</li>
+</ul>
+<h1 id="安装hadoop压缩包"><a href="#安装hadoop压缩包" class="headerlink" title="安装hadoop压缩包"></a>安装hadoop压缩包</h1><p>通过<a href="https://hadoop.apache.org/releases.html" target="_blank" rel="noopener">Apache Hadoop</a>官方下载页面选择最新的Binary版本进行下载（截止2019年9月30日，Hadoop最新稳定版本为3.2.1),<a href="https://www.apache.org/dyn/closer.cgi/hadoop/common" target="_blank" rel="noopener">官方镜像文件</a>.</p>
+<p>Binary版本是编译好的二进制版本，可以直接解压安装；另一个包含 src 的则是 Hadoop 源代码，需要进行编译才可使用。</p>
+<p>下面安装：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget http://ftp.cuhk.edu.hk/pub/packages/apache.org/hadoop/common/hadoop-3.1.2/hadoop-3.1.2.tar.gz</span><br><span class="line">scp -r ./hadoop-3.2.1.tar.gz root@59.111.91.121:~ # 从本地传送到服务器</span><br><span class="line">sudo tar -zxvf  hadoop-3.1.2.tar.gz -C /usr/local    #解压到/usr/local目录下</span><br><span class="line">cd /usr/local</span><br><span class="line">sudo mv ./hadoop-3.1.2/ ./hadoop                      #重命名为hadoop</span><br><span class="line">sudo chown -R hadoop ./hadoop                        #修改文件权限</span><br></pre></td></tr></table></figure>
+
+<h1 id="配置hadoop环境变量"><a href="#配置hadoop环境变量" class="headerlink" title="配置hadoop环境变量"></a>配置hadoop环境变量</h1><p>目录在/usr/local 下</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo vim ~/.bashrc          #配置环境变量</span><br><span class="line"># 添加下列环境变量</span><br><span class="line">export HADOOP_HOME=/usr/local/hadoop</span><br><span class="line">export CLASSPATH=$($HADOOP_HOME/bin/hadoop classpath):$CLASSPATH</span><br><span class="line">export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native</span><br><span class="line">export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc # 环境变量生效</span><br><span class="line">hadoop version # 检查安装结果</span><br></pre></td></tr></table></figure>
+
+<p><img src="/photos/hadoop.png" alt="hadoop version 检查"></p>
+<h1 id="修改hadoop配置文件"><a href="#修改hadoop配置文件" class="headerlink" title="修改hadoop配置文件"></a>修改hadoop配置文件</h1><p>目录在 /usr/local/hadoop/etc/hadoop/：</p>
+<ul>
+<li><code>cd $HADOOP_HOME/etc/hadoop</code>  </li>
+<li>修改文件：slaves core-site.xml hdfs-site.xml marpred-site.xml yarn-site.xml hadoop-env.sh</li>
+<li>这里注意 hadoop 3.x 后 slaves文件改为workers文件</li>
+<li>hadoop 3.x 还需要修改目录 “/usr/local/hadoop/sbin/”下的start-dfs.sh，start-yarn.sh文件</li>
+</ul>
+<p>具体修改内容如下：</p>
+<ul>
+<li><p>hadoop-env.sh:</p>
+<ul>
+<li>export JAVA_HOME=/usr/lib/jvm/default-java</li>
+</ul>
+</li>
+<li><p>workers</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hadoop2</span><br><span class="line">hadoop3</span><br><span class="line">hadoop4</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>core-site.xml</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt; </span><br><span class="line">    &lt;!-- 指定hdfs的nameservice为ns1 --&gt;</span><br><span class="line">    &lt;property&gt;                </span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;                </span><br><span class="line">        &lt;value&gt;hdfs://hadoop1:9000&lt;/value&gt;        </span><br><span class="line">    &lt;/property&gt; </span><br><span class="line">    &lt;!--  --&gt;</span><br><span class="line">    &lt;property&gt;                </span><br><span class="line">        &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;                </span><br><span class="line">        &lt;value&gt;file:/usr/local/hadoop/tmp&lt;/value&gt;                </span><br><span class="line">        &lt;description&gt;Abase for other temporary directories.</span><br><span class="line">        &lt;/description&gt;        </span><br><span class="line">    &lt;/property&gt; </span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>hdfs-site.xml</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;        </span><br><span class="line">    &lt;property&gt;                </span><br><span class="line">        &lt;name&gt;dfs.namenode.secondary.http-address&lt;/name&gt;                </span><br><span class="line">        &lt;value&gt;hadoop1:50090&lt;/value&gt;        </span><br><span class="line">    &lt;/property&gt;        </span><br><span class="line">    &lt;property&gt;                </span><br><span class="line">        &lt;name&gt;dfs.replication&lt;/name&gt;                </span><br><span class="line">        &lt;value&gt;3&lt;/value&gt;        </span><br><span class="line">    &lt;/property&gt;        </span><br><span class="line">    &lt;property&gt;</span><br><span class="line">        &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;                </span><br><span class="line">        &lt;value&gt;file:/usr/local/hadoop/tmp/dfs/name&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt;        </span><br><span class="line">    &lt;property&gt;                </span><br><span class="line">        &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</span><br><span class="line">        &lt;value&gt;file:/usr/local/hadoop/tmp/dfs/data&lt;/value&gt;</span><br><span class="line">    &lt;/property&gt; </span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>marpred-site.xml</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;        </span><br><span class="line">    &lt;property&gt;                </span><br><span class="line">        &lt;name&gt;mapreduce.framework.name&lt;/name&gt;                </span><br><span class="line">        &lt;value&gt;yarn&lt;/value&gt;        </span><br><span class="line">    &lt;/property&gt;        </span><br><span class="line">    &lt;property&gt;                </span><br><span class="line">        &lt;name&gt;mapreduce.jobhistory.address&lt;/name&gt;                </span><br><span class="line">        &lt;value&gt;hadoop1:10020&lt;/value&gt;        </span><br><span class="line">    &lt;/property&gt;</span><br><span class="line">    &lt;property&gt;                </span><br><span class="line">        &lt;name&gt;mapreduce.jobhistory.webapp.address&lt;/name&gt;                </span><br><span class="line">        &lt;value&gt;hadoop1:19888&lt;/value&gt;        </span><br><span class="line">    &lt;/property&gt; </span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>yarn-site.xml</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;        </span><br><span class="line">    &lt;property&gt;                </span><br><span class="line">        &lt;name&gt;yarn.resourcemanager.hostname&lt;/name&gt;                </span><br><span class="line">        &lt;value&gt;hadoop1&lt;/value&gt;        </span><br><span class="line">    &lt;/property&gt;        </span><br><span class="line">    &lt;property&gt;                </span><br><span class="line">        &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;                </span><br><span class="line">        &lt;value&gt;mapreduce_shuffle&lt;/value&gt;        </span><br><span class="line">    &lt;/property&gt; </span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修正</p>
+<ul>
+<li><p>/usr/local/hadoop/sbin/start-dfs.sh</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HDFS_DATANODE_USER=root</span><br><span class="line">HADOOP_SECURE_DN_USER=hdfs</span><br><span class="line">HDFS_NAMENODE_USER=root</span><br><span class="line">HDFS_SECONDARYNAMENODE_USER=root</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>/usr/local/hadoop/sbin/start-yarn.sh</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">YARN_RESOURCEMANAGER_USER=root</span><br><span class="line">HADOOP_SECURE_DN_USER=yarn</span><br><span class="line">YARN_NODEMANAGER_USER=root</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<p>如果是多节点服务器，复制同样的配置到各个节点上，如果是单节点的可以掠过以下内容</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- sudo tar -zcvf ~/hadoop.master.tar.gz /usr/local/hadoop  #压缩hadoop配置</span><br><span class="line">- scp ./hadoop.master.tar.gz hadoop2:~  # 对hadoop2，3，4操作</span><br><span class="line">- sudo tar -zvxf ~/hadoop.master.tar.gz -C /usr/local</span><br></pre></td></tr></table></figure>
+
+<h1 id="测试运行"><a href="#测试运行" class="headerlink" title="测试运行"></a>测试运行</h1><p>hadoop1主机启动hadoop</p>
+<ul>
+<li><code>hdfs namenode -format</code>  #首次启动需要先在 hadoop1 节点执行 NameNode 的格式化<br><img src="/photos/hadoop1.png" alt="namenode"><br>可能会有一些warning，没关系，只要如图successful 就好了。 namenode格式化只执行一次，如果执行多次，删除 “/usr/local/hadoop/tmp”文件夹后再重新格式化。</li>
+<li><code>start-dfs.sh</code><br><img src="/photos/hadoop2.png" alt="start-dfs.sh"></li>
+<li><code>start-yarn.sh</code><br><img src="/photos/hadoop3.png" alt="start-yarn.sh"></li>
+<li><code>mr-jobhistory-daemon.sh start historyserver</code><br><img src="/photos/hadoop4.png" alt="job"></li>
+<li><code>jps</code> jps 查看各个节点启动的进程 ，如果正确可以看到以下进程。缺少其中任何进程都错误。 <ul>
+<li>hadoop1:JobHistoryServer、ResourceManager、NameNode、SecondrryNameNode</li>
+<li>hadoop2，3，4:DataNode、NodeManager<br><img src="/photos/hadoop5.png" alt="jps"></li>
+</ul>
+</li>
+<li><code>hdfs dfsadmin -report</code> 查看 DataNode 是否正常.启动，如果 Live datanodes 不为 0 ，则说明集群启动成功.输入hadoop1的公网IP:50070,在浏览器产看相关信息。<br><img src="/photos/hadoop6.png" alt="hdfs"><br>检查启动正确以后，可以通过start-all.sh替代以上命令<br>停止指令如下：<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">stop-yarn.sh</span><br><span class="line">stop-dfs.sh</span><br><span class="line">mr-jobhistory-daemon.sh stop historyserver</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="执行分布式实例"><a href="#执行分布式实例" class="headerlink" title="执行分布式实例"></a>执行分布式实例</h1><ul>
+<li>首先创建 HDFS 上的用户目录 ： <code>hdfs dfs -mkdir -p /user/root/input</code></li>
+<li>将 /usr/local/hadoop/etc/hadoop 中的配置文件作为输入文件复制到分布式文件系统中:<br><code>hdfs dfs -put /usr/local/hadoop/etc/hadoop/*.xml /user/root/input</code></li>
+<li>运行程序：<code>hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoopmapreduce-examples-*.jar grep input output &#39;dfs[a-z.]+&#39;</code><br><img src="/photos/mapreduce3.png" alt="执行结果"></li>
+</ul>
+<h1 id="使用命令行编译打包运行自己的MapReduce程序"><a href="#使用命令行编译打包运行自己的MapReduce程序" class="headerlink" title="使用命令行编译打包运行自己的MapReduce程序"></a>使用命令行编译打包运行自己的MapReduce程序</h1><p>命令行编译打包运行<br><img src="/photos/mapreduce1.png" alt="map"></p>
+<p>编写wordcount.java</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">import java.io.IOException; import java.util.Iterator; import java.util.StringTokenizer; import org.apache.hadoop.conf.Configuration; import org.apache.hadoop.fs.Path; import org.apache.hadoop.io.IntWritable; import org.apache.hadoop.io.Text; import org.apache.hadoop.mapreduce.Job; import org.apache.hadoop.mapreduce.Mapper; import org.apache.hadoop.mapreduce.Reducer; import org.apache.hadoop.mapreduce.lib.input.FileInputFormat; import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat; import org.apache.hadoop.util.GenericOptionsParser;</span><br><span class="line"> </span><br><span class="line">public class WordCount &#123;    public WordCount() &#123;    &#125;</span><br><span class="line"> </span><br><span class="line">    public static void main(String[] args) throws Exception &#123;        Configuration conf = new Configuration();        String[] otherArgs = (new GenericOptionsParser(conf, args)).getRemainingArgs();        if(otherArgs.length &lt; 2) &#123;            System.err.println(&quot;Usage: wordcount &lt;in&gt; [&lt;in&gt;...] &lt;out&gt;&quot;);            System.exit(2);</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        Job job = Job.getInstance(conf, &quot;word count&quot;);        job.setJarByClass(WordCount.class);        job.setMapperClass(WordCount.TokenizerMapper.class);        job.setCombinerClass(WordCount.IntSumReducer.class);        job.setReducerClass(WordCount.IntSumReducer.class);        job.setOutputKeyClass(Text.class);        job.setOutputValueClass(IntWritable.class);</span><br><span class="line"> </span><br><span class="line">        for(int i = 0; i &lt; otherArgs.length - 1; ++i) &#123;            FileInputFormat.addInputPath(job, new Path(otherArgs[i]));        &#125;</span><br><span class="line"> </span><br><span class="line">        FileOutputFormat.setOutputPath(job, new Path(otherArgs[otherArgs.length - 1]));        System.exit(job.waitForCompletion(true)?0:1);    &#125;</span><br><span class="line"> </span><br><span class="line">    public static class IntSumReducer extends Reducer&lt;Text, IntWritable, Text, IntWritable&gt; &#123;        private IntWritable result = new IntWritable();</span><br><span class="line"> </span><br><span class="line">        public IntSumReducer() &#123;        &#125;</span><br><span class="line"> </span><br><span class="line">        public void reduce(Text key, Iterable&lt;IntWritable&gt; values, Reducer&lt;Text, IntWritable, Text, IntWritable&gt;.Context context) throws IOException, InterruptedException &#123;            int sum = 0;</span><br><span class="line"> </span><br><span class="line">            IntWritable val;            for(Iterator i$ = values.iterator(); i$.hasNext(); sum += val.get()) &#123;                val = (IntWritable)i$.next();</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">            this.result.set(sum);            context.write(key, this.result);        &#125;    &#125;</span><br><span class="line"> </span><br><span class="line">    public static class TokenizerMapper extends Mapper&lt;Object, Text, Text, IntWritable&gt; &#123;        private static final IntWritable one = new IntWritable(1);        private Text word = new Text();</span><br><span class="line"> </span><br><span class="line">        public TokenizerMapper() &#123;        &#125;</span><br><span class="line"> </span><br><span class="line">        public void map(Object key, Text value, Mapper&lt;Object, Text, Text, IntWritable&gt;.Context context) throws IOException, InterruptedException &#123;            StringTokenizer itr = new StringTokenizer(value.toString());</span><br><span class="line"> </span><br><span class="line">            while(itr.hasMoreTokens()) &#123;                this.word.set(itr.nextToken());                context.write(this.word, one);            &#125;</span><br><span class="line"> </span><br><span class="line">        &#125;    &#125; &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>我们在hadoop1下当前目录～新建个目录wordcount，copy代码进去WordCount.java，编译， 打包jar</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir wordcount cd wordcount/ </span><br><span class="line">sudo vi WordCount.java</span><br><span class="line">javac WordCount.java </span><br><span class="line">jar -cvf WordCount.jar WordCount*.class</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打包完成后，运行试试，创建几个输入文件</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir input </span><br><span class="line">echo &apos;this is my first hadoop lab&apos; &gt; input/file0 </span><br><span class="line">echo &apos;waiting a minute&apos; &gt; input/file1 </span><br><span class="line">echo &apos;this is my second hadoop try&apos; &gt; input/file2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把本地文件上传到分布式HDFS上</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hdfs dfs -mkdir -p /user/hadoop # 重新创建个hdfs用户目录</span><br><span class="line">hadoop fs -put input/ /user/hadoop/ # 把本地文件上传到分布式HDFS上 </span><br><span class="line">hadoop jar WordCount.jar WordCount /user/hadoop/input /user/hadoop/output #开始运行</span><br><span class="line">hdfs dfs -cat /user/hadoop/output/part-r-00000  # 查看结果</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Linux/">Linux</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>Alipay</span>
+    <div class="qrcode"><img src="/images/alipay.png" alt="Alipay"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>Wechat</span>
+    <div class="qrcode"><img src="/images/wechat.png" alt="Wechat"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/35f08535.html">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">聚类|Kmeans</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/89aec4a9.html">
+                <span class="level-item">Python | 函数库</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'TPBtxcsBL7twTkvXDy2IXo5w-gzGzoHsz',
+        app_key: 'KRkeN0cpUJjjfeqwXrvVrfkR',
+        placeholder: 'have something to say......'
+    });
+</script>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/pitty.jpg" alt="Bonny &amp; Ponny">
+                        </figure>
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Bonny &amp; Ponny
+                    </p>
+                    
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>HZ,ZJ</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        25
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        9
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        13
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/glazialuna" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Preparation"><span class="toc-number">1.</span> <span class="toc-text">Preparation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装hadoop压缩包"><span class="toc-number">2.</span> <span class="toc-text">安装hadoop压缩包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置hadoop环境变量"><span class="toc-number">3.</span> <span class="toc-text">配置hadoop环境变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改hadoop配置文件"><span class="toc-number">4.</span> <span class="toc-text">修改hadoop配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#测试运行"><span class="toc-number">5.</span> <span class="toc-text">测试运行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#执行分布式实例"><span class="toc-number">6.</span> <span class="toc-text">执行分布式实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#使用命令行编译打包运行自己的MapReduce程序"><span class="toc-number">7.</span> <span class="toc-text">使用命令行编译打包运行自己的MapReduce程序</span></a></li></ol>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/Bonny2.png" alt="Linux-Hadoop" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 glazia_luna&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
