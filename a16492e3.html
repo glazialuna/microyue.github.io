@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
+<meta name="baidu-site-verification" content="SiMVCIxqau">
+<meta charset="utf-8">
+<title>服务器 - Bonny &amp; Pony</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="作为一个撸代码的学生，掌握如何优雅地使用服务器是一件非常重要的事情，然而我并还不能够熟练地掌握技能，白白浪费巨大的服务器资源。可恶！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务器">
+<meta property="og:url" content="http://www.microyue.com/a16492e3.html">
+<meta property="og:site_name" content="Bonny &amp; Pony">
+<meta property="og:description" content="作为一个撸代码的学生，掌握如何优雅地使用服务器是一件非常重要的事情，然而我并还不能够熟练地掌握技能，白白浪费巨大的服务器资源。可恶！">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://www.microyue.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-04-18T02:12:48.723Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="服务器">
+<meta name="twitter:description" content="作为一个撸代码的学生，掌握如何优雅地使用服务器是一件非常重要的事情，然而我并还不能够熟练地掌握技能，白白浪费巨大的服务器资源。可恶！">
+<meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
+
+
+
+
+
+<link rel="alternative" href="dd" title="服务器" type="application/atom+xml">
+
+
+
+<link rel="icon" href="/images/pitty.jpg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/monokai.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/Bonny2.png" alt="服务器" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
+    
+
+    
+
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-07-03T16:00:00.000Z">2019-07-04</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 minutes read (About 783 words)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span> visits
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <div class="has-title-style">服务器</div>
+            
+        </h1>
+        <div class="content">
+            <h1 id="传输文件"><a href="#传输文件" class="headerlink" title="传输文件"></a>传输文件</h1><ul>
+<li>window下，利用rz/sz<ul>
+<li><code>sudo apt-get install lrzsz</code>安装工具包</li>
+<li>有些客户端不支持，比如putty，支持的有SecureCRT、Xshell</li>
+<li>使用方式：上传<code>rz</code>-弹出窗口；下载<code>sz file</code>-弹出窗口</li>
+</ul>
+</li>
+<li>Linux下，利用scp</li>
+</ul>
+<h1 id="用Pycharm连接服务器"><a href="#用Pycharm连接服务器" class="headerlink" title="用Pycharm连接服务器"></a>用Pycharm连接服务器</h1><h2 id="配置链接远程服务器"><a href="#配置链接远程服务器" class="headerlink" title="配置链接远程服务器"></a>配置链接远程服务器</h2><blockquote>
+<p>这个配置完成了之后，其实是相当于配置了一个ftp工具可以连接到服务器上，从而可以查看和修改服务器上的文件。</p>
+<ul>
+<li>配置服务器<ul>
+<li><code>Tools-&gt;Deployment-&gt;Configuration</code>下新建<code>sftp</code></li>
+<li><code>Connection</code>下填写Host：远程服务器ip，User name：账号名称，Password:账号密码、链接的root路径：在服务器下的路径</li>
+<li><code>Mapping</code>下设置本地与远程的路径：Local path：在本机的路径下，Deployment path:在之前设置的root路径下的</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>同步本地文件<ul>
+<li><code>Tools-&gt;Deployment-&gt;Browse Remote Host</code>可以查看服务器上的文件，显示范围是Deployment中Connection下配置的Root path下的文件及文件夹。右边会出现菜单栏，查看远程文件。</li>
+<li>点开本地文件-右键 选择<code>Deployment-Upload</code></li>
+<li>点开远程文件-邮件 选择<code>Download from here</code>或<code>Upload from here</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="配置python解释器"><a href="#配置python解释器" class="headerlink" title="配置python解释器"></a>配置python解释器</h2><ul>
+<li><code>File-Setting-Project Interpreter</code>中的<code>Project Interpreter</code>中<code>Add</code></li>
+<li><code>SSH Interpreter</code>中选择<code>New environment</code>(如果之前已经做过链接，有远程服务器的环境选择<code>Existing environment</code>)<ul>
+<li>填写相应的host，port和username，下一步</li>
+<li>填写password，下一步</li>
+<li>这里python的路径选择查看服务器的python路径,可以用<code>which python</code>命令查看，这里的map地址如果是本地写本地地址，或者远程服务器的地址，用来调试相应的文件</li>
+</ul>
+</li>
+</ul>
+<h2 id="配置CUDA"><a href="#配置CUDA" class="headerlink" title="配置CUDA"></a>配置CUDA</h2><ul>
+<li><code>Run-&gt;Edit Configurations</code>进入<code>Environment variables</code></li>
+<li>增加cuda的路径<code>LD_LIBRARY_PATH</code>:<code>/usr/local/cuda/lib64:$LD_LIBRARY_PATH</code>,<code>PATH</code>:<code>/usr/local/cuda/bin:$PATH</code>两个变量的具体值从<code>cat ~/.bashrc</code>中查看</li>
+<li>若配置CUDA环境路径碰到链接失败，可能原因是Pycharm自动设置的了反向代理，<a href="https://blog.csdn.net/MrR1ght/article/details/102570282" target="_blank" rel="noopener">解决方法</a></li>
+</ul>
+<h1 id="服务器GPU状态查询"><a href="#服务器GPU状态查询" class="headerlink" title="服务器GPU状态查询"></a>服务器GPU状态查询</h1><ol>
+<li>服务器GPU状态查询<ul>
+<li>lspci | grep -i nvidia 可以查询所有nvidia显卡</li>
+<li>lspci -v -s [显卡编号] 可以查看显卡具体属性</li>
+<li>nvidia-smi 可以查看显卡的显存利用率</li>
+</ul>
+</li>
+<li>torch.cuda主要函数<ul>
+<li>查看是否有可用GPU、可用GPU数量： torch.cuda.is_available(), torch.cuda.device_count()</li>
+<li>查看当前使用的GPU序号：torch.cuda.current_device()</li>
+<li>查看指定GPU的容量、名称：torch.cuda.get_device_capability(device),  torch.cuda.get_device_name(device)</li>
+<li>清空程序占用的GPU资源： torch.cuda.empty_cache()</li>
+<li>为GPU设置随机种子：torch.cuda.manual_seed(seed), torch.cuda.manual_seed_all(seed)</li>
+</ul>
+</li>
+</ol>
+<h1 id="MD5-校验"><a href="#MD5-校验" class="headerlink" title="MD5 校验"></a>MD5 校验</h1><ul>
+<li>windows下cmd：<code>CertUtil -hashfile C:\TEMP\MyDataFile.img MD5</code></li>
+</ul>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">Like this article? Support the author with</h3>
+        <div class="buttons is-centered">
+            
+                
+<a class="button is-info donate">
+    <span class="icon is-small">
+        <i class="fab fa-alipay"></i>
+    </span>
+    <span>Alipay</span>
+    <div class="qrcode"><img src="/images/alipay.png" alt="Alipay"></div>
+</a>
+
+                
+                
+<a class="button is-success donate">
+    <span class="icon is-small">
+        <i class="fab fa-weixin"></i>
+    </span>
+    <span>Wechat</span>
+    <div class="qrcode"><img src="/images/wechat.png" alt="Wechat"></div>
+</a>
+
+                
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/f83eb140.html">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Context Bandit with Linear Payoff Functions</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/9df4ac75.html">
+                <span class="level-item">致比乌斯领悟</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: false,
+        app_id: 'TPBtxcsBL7twTkvXDy2IXo5w-gzGzoHsz',
+        app_key: 'KRkeN0cpUJjjfeqwXrvVrfkR',
+        placeholder: 'have something to say......'
+    });
+</script>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-4-widescreen  has-order-1 column-left is-sticky">
+    
+        
+<div class="card widget" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#传输文件"><span class="toc-number">1.</span> <span class="toc-text">传输文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用Pycharm连接服务器"><span class="toc-number">2.</span> <span class="toc-text">用Pycharm连接服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置链接远程服务器"><span class="toc-number">2.1.</span> <span class="toc-text">配置链接远程服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置python解释器"><span class="toc-number">2.2.</span> <span class="toc-text">配置python解释器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置CUDA"><span class="toc-number">2.3.</span> <span class="toc-text">配置CUDA</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器GPU状态查询"><span class="toc-number">3.</span> <span class="toc-text">服务器GPU状态查询</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MD5-校验"><span class="toc-number">4.</span> <span class="toc-text">MD5 校验</span></a></li></ol>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/Bonny2.png" alt="服务器" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 glazia_luna&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
+
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

@@ -18,7 +18,7 @@
 <meta property="og:description" content="关于hexo主题的一些操作。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-04-10T11:02:34.969Z">
+<meta property="og:updated_time" content="2020-04-12T03:53:55.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo | 小手册(一)">
 <meta name="twitter:description" content="关于hexo主题的一些操作。">
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 minutes read (About 1324 words)
+                    10 minutes read (About 1478 words)
                 </span>
                 
                 
@@ -272,6 +272,24 @@
 </ul>
 </li>
 <li><p><a href="https://www.jianshu.com/p/86557c34b671" target="_blank" rel="noopener">Hexo SEO优化</a></p>
+</li>
+</ul>
+<h1 id="配置设置"><a href="#配置设置" class="headerlink" title="配置设置"></a>配置设置</h1><h2 id="SSH-免密deploy"><a href="#SSH-免密deploy" class="headerlink" title="SSH 免密deploy"></a>SSH 免密deploy</h2><blockquote>
+<p>通过ssh增加项目的rsa对称密钥，免密登陆</p>
+</blockquote>
+<ul>
+<li><p>生成ssh密钥</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">cd</span> ~/.ssh</span><br><span class="line">ssh-keygen -t rsa -C <span class="hljs-string">"youremail@email.com"</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line"><span class="hljs-comment"># 下面三项可以跳过</span></span><br><span class="line">Enter file <span class="hljs-keyword">in</span> <span class="hljs-built_in">which</span> to save the key (/c/Users/wangyue/.ssh/id_rsa): </span><br><span class="line">Enter passphrase (empty <span class="hljs-keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>为项目配置rsa key</p>
+<ul>
+<li>打开github项目setting，进入<code>Deploy Keys</code>,add key</li>
+<li>将生成的rsa密钥对中<code>xx.pub</code>文件内容输入，增加key</li>
+<li>检查配置:<code>ssh -T git@github.com</code><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi glazialuna! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>成功:<code>hexo deploy</code>不需要输入密码</p>
 </li>
 </ul>
 <h1 id="可能问题及解决办法"><a href="#可能问题及解决办法" class="headerlink" title="可能问题及解决办法"></a>可能问题及解决办法</h1><ol>
@@ -413,7 +431,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        25
+                        30
                     </p>
                 </div>
             </div>
@@ -433,7 +451,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        13
+                        16
                     </p>
                 </div>
             </div>
@@ -454,7 +472,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#插件"><span class="toc-number">1.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#增加摘要"><span class="toc-number">1.1.</span> <span class="toc-text">增加摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加参考"><span class="toc-number">1.2.</span> <span class="toc-text">添加参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章加密"><span class="toc-number">1.3.</span> <span class="toc-text">文章加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加引用-文章内"><span class="toc-number">1.4.</span> <span class="toc-text">添加引用(文章内)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改Toc可折叠"><span class="toc-number">2.</span> <span class="toc-text">修改Toc可折叠</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">2.1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改"><span class="toc-number">2.2.</span> <span class="toc-text">修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#几个坑"><span class="toc-number">2.3.</span> <span class="toc-text">几个坑</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SEO优化"><span class="toc-number">3.</span> <span class="toc-text">SEO优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#导航结构"><span class="toc-number">3.1.</span> <span class="toc-text">导航结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加站点地图"><span class="toc-number">3.2.</span> <span class="toc-text">添加站点地图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#可能问题及解决办法"><span class="toc-number">4.</span> <span class="toc-text">可能问题及解决办法</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#插件"><span class="toc-number">1.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#增加摘要"><span class="toc-number">1.1.</span> <span class="toc-text">增加摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加参考"><span class="toc-number">1.2.</span> <span class="toc-text">添加参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文章加密"><span class="toc-number">1.3.</span> <span class="toc-text">文章加密</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加引用-文章内"><span class="toc-number">1.4.</span> <span class="toc-text">添加引用(文章内)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改Toc可折叠"><span class="toc-number">2.</span> <span class="toc-text">修改Toc可折叠</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#准备"><span class="toc-number">2.1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改"><span class="toc-number">2.2.</span> <span class="toc-text">修改</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#几个坑"><span class="toc-number">2.3.</span> <span class="toc-text">几个坑</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SEO优化"><span class="toc-number">3.</span> <span class="toc-text">SEO优化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#导航结构"><span class="toc-number">3.1.</span> <span class="toc-text">导航结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#添加站点地图"><span class="toc-number">3.2.</span> <span class="toc-text">添加站点地图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置设置"><span class="toc-number">4.</span> <span class="toc-text">配置设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SSH-免密deploy"><span class="toc-number">4.1.</span> <span class="toc-text">SSH 免密deploy</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#可能问题及解决办法"><span class="toc-number">5.</span> <span class="toc-text">可能问题及解决办法</span></a></li></ol>
         </div>
     </div>
 </div>
