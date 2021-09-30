@@ -4,31 +4,31 @@
     <meta name="google-site-verification" content="lcNjDrWvrcYo5n7BreZlPf12CBz9TH_eaDlyxEV3tiU">
 <meta name="baidu-site-verification" content="SiMVCIxqau">
 <meta charset="utf-8">
-<title>BadNets - Bonny &amp; Pony</title>
+<title>One Pixel Attack - Bonny &amp; Pony</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="BadNets 论文笔记，探索backdoor attck的实际应用">
+    <meta name="description" content="One Pixel Attack for Fooling Deep Neural Networks 论文笔记，探索adversarial的实际应用">
 <meta name="keywords" content="Security">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BadNets">
+<meta property="og:title" content="One Pixel Attack">
 <meta property="og:url" content="http://www.microyue.com/566a0ced.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="BadNets 论文笔记，探索backdoor attck的实际应用">
+<meta property="og:description" content="One Pixel Attack for Fooling Deep Neural Networks 论文笔记，探索adversarial的实际应用">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-04-12T15:26:46.255Z">
+<meta property="og:updated_time" content="2020-04-14T00:52:22.674Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BadNets">
-<meta name="twitter:description" content="BadNets 论文笔记，探索backdoor attck的实际应用">
+<meta name="twitter:title" content="One Pixel Attack">
+<meta name="twitter:description" content="One Pixel Attack for Fooling Deep Neural Networks 论文笔记，探索adversarial的实际应用">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
 
 
 
-<link rel="alternative" href="dd" title="BadNets" type="application/atom+xml">
+<link rel="alternative" href="dd" title="One Pixel Attack" type="application/atom+xml">
 
 
 
@@ -103,7 +103,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/Bonny2.png" alt="BadNets" height="28">
+                <img src="/images/Bonny2.png" alt="One Pixel Attack" height="28">
             
             </a>
         </div>
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 211 words)
+                    a few seconds read (About 28 words)
                 </span>
                 
                 
@@ -174,30 +174,12 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <div class="has-title-style">BadNets</div>
+                <div class="has-title-style">One Pixel Attack</div>
             
         </h1>
         <div class="content">
-            <h1 id="文章贡献"><a href="#文章贡献" class="headerlink" title="文章贡献"></a>文章贡献</h1><p>启发于数据污染，文章提出了通过对数据集的简单修改，造成数据分类结果的错误问题。</p>
-<h1 id="实验模型"><a href="#实验模型" class="headerlink" title="实验模型"></a>实验模型</h1><h2 id="Minst-Digit"><a href="#Minst-Digit" class="headerlink" title="Minst Digit"></a>Minst Digit</h2><ul>
-<li>model：很简单的2卷积+1全连接</li>
-<li>dataset：Minst</li>
-<li>流程<ul>
-<li>向图片增加一块像素点，变为黑色，污染的图片标签由i变为j</li>
-<li>带着污染的数据集进行训练</li>
-<li>测试得到，网络整体的准确率变化不大，对于测试在同一块像素点变黑的图片，得到的标签为j的准确率也很高</li>
-</ul>
-</li>
-<li>贡献：证明了Backdoor的有效性</li>
-</ul>
-<h2 id="Traffic-Sign-attack"><a href="#Traffic-Sign-attack" class="headerlink" title="Traffic Sign attack"></a>Traffic Sign attack</h2><ul>
-<li>model：state-of-art object</li>
-<li>dataset：Faster-RCNN</li>
-<li>流程<ul>
-<li>attack trigger：yellow square， bomb image，flower image</li>
-<li>表现很好</li>
-</ul>
-</li>
+            <ul>
+<li><a href="https://arxiv.org/pdf/1710.08864.pdf" target="_blank" rel="noopener">paper</a></li>
 </ul>
         </div>
         
@@ -254,7 +236,7 @@
         <div class="level-start">
             <a class="level level-item has-link-grey  article-nav-prev" href="/566a0ced.html">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">One Pixel Attack</span>
+                <span class="level-item">BadNets</span>
             </a>
         </div>
         
@@ -373,7 +355,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#文章贡献"><span class="toc-number">1.</span> <span class="toc-text">文章贡献</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实验模型"><span class="toc-number">2.</span> <span class="toc-text">实验模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Minst-Digit"><span class="toc-number">2.1.</span> <span class="toc-text">Minst Digit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Traffic-Sign-attack"><span class="toc-number">2.2.</span> <span class="toc-text">Traffic Sign attack</span></a></li></ol></li></ol>
+            
         </div>
     </div>
 </div>
@@ -396,7 +378,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/Bonny2.png" alt="BadNets" height="28">
+                    <img src="/images/Bonny2.png" alt="One Pixel Attack" height="28">
                 
                 </a>
                 <p class="is-size-7">
