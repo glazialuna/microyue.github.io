@@ -18,7 +18,7 @@
 <meta property="og:description" content="Linux Unbunt 18.04 各类包安装小手册（包括云服务器的Unbuntu）千万不要安装 18.10 各种问题">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-04-10T11:09:51.106Z">
+<meta property="og:updated_time" content="2020-08-20T05:10:27.533Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux | 小手册">
 <meta name="twitter:description" content="Linux Unbunt 18.04 各类包安装小手册（包括云服务器的Unbuntu）千万不要安装 18.10 各种问题">
@@ -150,7 +150,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-29T16:22:00.000Z">2019-09-30</time>
+                <time class="level-item has-text-grey" datetime="2019-09-30T05:22:00.000Z">2019-09-30</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Tools/">Tools</a>
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    9 minutes read (About 1296 words)
+                    9 minutes read (About 1391 words)
                 </span>
                 
                 
@@ -199,6 +199,18 @@
 </ul>
 <h2 id="基础安装"><a href="#基础安装" class="headerlink" title="基础安装"></a>基础安装</h2><ul>
 <li>pip：</li>
+</ul>
+<h2 id="共享文件夹"><a href="#共享文件夹" class="headerlink" title="共享文件夹"></a>共享文件夹</h2><ul>
+<li>问题看不见<code>/mnt/hgfs</code>下的共享文件夹<ul>
+<li>ll /mnt下面是有hgfs文件夹的，但是ll /mnt/hgfs下面是没共享文件夹的；</li>
+<li>输入vmware-hgfsclient可以看到共享文件夹</li>
+<li>输入sudo mount -t vmhgfs .host:/ /mnt/hgfs 报送Error: cannot mount filesystem: No such device错误</li>
+</ul>
+</li>
+<li>解决方法：<blockquote>
+<p>sudo vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other,nonempty</p>
+</blockquote>
+</li>
 </ul>
 <h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><p>java JDK 是基本的env工具，具体安装过程如下：</p>
 <ul>
@@ -418,7 +430,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        30
+                        32
                     </p>
                 </div>
             </div>
@@ -438,7 +450,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        18
                     </p>
                 </div>
             </div>
@@ -459,7 +471,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu-虚拟机安装"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu 虚拟机安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">2.</span> <span class="toc-text">基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置环境变量"><span class="toc-number">2.1.</span> <span class="toc-text">设置环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础安装"><span class="toc-number">2.2.</span> <span class="toc-text">基础安装</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发工具"><span class="toc-number">3.</span> <span class="toc-text">开发工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#java"><span class="toc-number">3.1.</span> <span class="toc-text">java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop"><span class="toc-number">3.2.</span> <span class="toc-text">Hadoop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scala"><span class="toc-number">3.3.</span> <span class="toc-text">Scala</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spark"><span class="toc-number">3.4.</span> <span class="toc-text">Spark</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sublime"><span class="toc-number">3.5.</span> <span class="toc-text">Sublime</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器"><span class="toc-number">4.</span> <span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh建立服务器联系"><span class="toc-number">4.1.</span> <span class="toc-text">ssh建立服务器联系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#换镜像"><span class="toc-number">4.2.</span> <span class="toc-text">换镜像</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">5.</span> <span class="toc-text">reference</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu-虚拟机安装"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu 虚拟机安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#基础命令"><span class="toc-number">2.</span> <span class="toc-text">基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置环境变量"><span class="toc-number">2.1.</span> <span class="toc-text">设置环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基础安装"><span class="toc-number">2.2.</span> <span class="toc-text">基础安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#共享文件夹"><span class="toc-number">2.3.</span> <span class="toc-text">共享文件夹</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#开发工具"><span class="toc-number">3.</span> <span class="toc-text">开发工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#java"><span class="toc-number">3.1.</span> <span class="toc-text">java</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hadoop"><span class="toc-number">3.2.</span> <span class="toc-text">Hadoop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scala"><span class="toc-number">3.3.</span> <span class="toc-text">Scala</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Spark"><span class="toc-number">3.4.</span> <span class="toc-text">Spark</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sublime"><span class="toc-number">3.5.</span> <span class="toc-text">Sublime</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器"><span class="toc-number">4.</span> <span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh建立服务器联系"><span class="toc-number">4.1.</span> <span class="toc-text">ssh建立服务器联系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#换镜像"><span class="toc-number">4.2.</span> <span class="toc-text">换镜像</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reference"><span class="toc-number">5.</span> <span class="toc-text">reference</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -486,7 +498,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2020 glazia_luna&nbsp;
+                &copy; 2021 glazia_luna&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 <br>

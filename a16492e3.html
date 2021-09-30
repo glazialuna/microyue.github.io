@@ -17,7 +17,7 @@
 <meta property="og:description" content="作为一个撸代码的学生，掌握如何优雅地使用服务器是一件非常重要的事情，然而我并还不能够熟练地掌握技能，白白浪费巨大的服务器资源。可恶！">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-04-18T02:12:48.723Z">
+<meta property="og:updated_time" content="2020-08-20T05:08:12.651Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器">
 <meta name="twitter:description" content="作为一个撸代码的学生，掌握如何优雅地使用服务器是一件非常重要的事情，然而我并还不能够熟练地掌握技能，白白浪费巨大的服务器资源。可恶！">
@@ -149,13 +149,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-03T16:00:00.000Z">2019-07-04</time>
+                <time class="level-item has-text-grey" datetime="2019-07-04T05:00:00.000Z">2019-07-04</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    5 minutes read (About 783 words)
+                    7 minutes read (About 1078 words)
                 </span>
                 
                 
@@ -219,7 +219,7 @@
 <li>服务器GPU状态查询<ul>
 <li>lspci | grep -i nvidia 可以查询所有nvidia显卡</li>
 <li>lspci -v -s [显卡编号] 可以查看显卡具体属性</li>
-<li>nvidia-smi 可以查看显卡的显存利用率</li>
+<li>nvidia-smi 可以查看显卡的显存利用率，<code>watch -n 10 nvidia-smi</code></li>
 </ul>
 </li>
 <li>torch.cuda主要函数<ul>
@@ -234,6 +234,58 @@
 <h1 id="MD5-校验"><a href="#MD5-校验" class="headerlink" title="MD5 校验"></a>MD5 校验</h1><ul>
 <li>windows下cmd：<code>CertUtil -hashfile C:\TEMP\MyDataFile.img MD5</code></li>
 </ul>
+<h1 id="虚拟环境设置"><a href="#虚拟环境设置" class="headerlink" title="虚拟环境设置"></a>虚拟环境设置</h1><ul>
+<li>conda 配置虚拟环境<ul>
+<li>查看虚拟环境列表 <code>conda info --envs</code> <ul>
+<li><code>conda create -n BBB --clone AAA</code></li>
+<li><code>conda env create -f env_config.yml</code></li>
+<li><code>conda env update --file local.yml</code></li>
+</ul>
+</li>
+<li><code>conda create -n env_name</code> <code>conda remove -n env_name --all</code></li>
+<li><code>source activate glazia</code> <code>source deactivate</code></li>
+<li><code>conda install -n my_env_name [package]</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="Screen"><a href="#Screen" class="headerlink" title="Screen"></a>Screen</h1><ul>
+<li><code>screen -S name</code></li>
+</ul>
+<h1 id="shadowsocks-proxychain4-创建服务器"><a href="#shadowsocks-proxychain4-创建服务器" class="headerlink" title="shadowsocks + proxychain4 创建服务器"></a>shadowsocks + proxychain4 创建服务器</h1><h2 id="先搭建shadowsocks的server平台"><a href="#先搭建shadowsocks的server平台" class="headerlink" title="先搭建shadowsocks的server平台"></a>先搭建shadowsocks的server平台</h2><ul>
+<li><p>安装:<code>pip3 install https://github.com/shadowsocks/shadowsocks/archive/master.zip</code></p>
+</li>
+<li><p>配置jason文件：shadowsocks.jason，随意放一个目录</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;: &quot;0.0.0.0&quot;,</span><br><span class="line">  &quot;server_port&quot;:8389,</span><br><span class="line">  &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">  &quot;local_port&quot;: 1080,</span><br><span class="line">  &quot;password&quot;:&quot;12345&quot;,</span><br><span class="line">  &quot;timeout&quot;: 600,</span><br><span class="line">  &quot;method&quot;: &quot;aes-256-cfb&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开启服务</p>
+<ul>
+<li>没有root权限：<code>nohup ssserver -c shadowsocks.jason &amp;</code></li>
+<li>有root权限：<code>ssserver -c shadowsocks.jason -d start</code></li>
+<li>stop：<code>ssserver -c shadowsocks.jason -d stop</code></li>
+<li>stop：<code>kill</code></li>
+</ul>
+</li>
+<li><p>检查开启正常，可以自己的电脑连接一下查看</p>
+</li>
+</ul>
+<h2 id="配置client客户"><a href="#配置client客户" class="headerlink" title="配置client客户"></a>配置client客户</h2><ul>
+<li>同安装shadowsocks</li>
+<li>配置文件：sslocal.jason</li>
+<li>开启服务<ul>
+<li>没有root权限：<code>nohup ssserver -c shadowsocks.jason &amp;</code></li>
+<li>有root权限：<code>ssserver -c shadowsocks.jason -d start</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="sslocal"><a href="#sslocal" class="headerlink" title="sslocal"></a>sslocal</h1><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">pip install shadowsocks</span><br><span class="line"></span><br><span class="line">shadowsocks.jason</span><br><span class="line">&#123;</span><br><span class="line">  &quot;server&quot;: &quot;0.0.0.0&quot;,</span><br><span class="line">  &quot;local_address&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">  &quot;local_port&quot;: 1080,</span><br><span class="line">  &quot;port_password&quot;: &#123;</span><br><span class="line">    &quot;8888&quot;: &quot;password&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;timeout&quot;: 600,</span><br><span class="line">  &quot;method&quot;: &quot;aes-256-cfb&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://zhgcao.github.io/2016/05/10/ubuntu-install-shadowsocks/" target="_blank" rel="noopener">https://zhgcao.github.io/2016/05/10/ubuntu-install-shadowsocks/</a></p>
+<p>ssserver -c shadowsocks.jason</p>
+<p>sslocal -c sslocal.jason</p>
+<p>netstat -lnp|grep 1080</p>
+<p>ssh -f -N -D bindaddress:port name@server<br>systemctl status shadowsocks -l</p>
+<p>pip3 install <a href="https://github.com/shadowsocks/shadowsocks/archive/master.zip" target="_blank" rel="noopener">https://github.com/shadowsocks/shadowsocks/archive/master.zip</a></p>
+<p>proxychains4 curl <a href="https://api.ipify.org/?format=json" target="_blank" rel="noopener">https://api.ipify.org/?format=json</a></p>
         </div>
         
         
@@ -332,7 +384,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#传输文件"><span class="toc-number">1.</span> <span class="toc-text">传输文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用Pycharm连接服务器"><span class="toc-number">2.</span> <span class="toc-text">用Pycharm连接服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置链接远程服务器"><span class="toc-number">2.1.</span> <span class="toc-text">配置链接远程服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置python解释器"><span class="toc-number">2.2.</span> <span class="toc-text">配置python解释器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置CUDA"><span class="toc-number">2.3.</span> <span class="toc-text">配置CUDA</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器GPU状态查询"><span class="toc-number">3.</span> <span class="toc-text">服务器GPU状态查询</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MD5-校验"><span class="toc-number">4.</span> <span class="toc-text">MD5 校验</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#传输文件"><span class="toc-number">1.</span> <span class="toc-text">传输文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用Pycharm连接服务器"><span class="toc-number">2.</span> <span class="toc-text">用Pycharm连接服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置链接远程服务器"><span class="toc-number">2.1.</span> <span class="toc-text">配置链接远程服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置python解释器"><span class="toc-number">2.2.</span> <span class="toc-text">配置python解释器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置CUDA"><span class="toc-number">2.3.</span> <span class="toc-text">配置CUDA</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#服务器GPU状态查询"><span class="toc-number">3.</span> <span class="toc-text">服务器GPU状态查询</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MD5-校验"><span class="toc-number">4.</span> <span class="toc-text">MD5 校验</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#虚拟环境设置"><span class="toc-number">5.</span> <span class="toc-text">虚拟环境设置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Screen"><span class="toc-number">6.</span> <span class="toc-text">Screen</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#shadowsocks-proxychain4-创建服务器"><span class="toc-number">7.</span> <span class="toc-text">shadowsocks + proxychain4 创建服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#先搭建shadowsocks的server平台"><span class="toc-number">7.1.</span> <span class="toc-text">先搭建shadowsocks的server平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置client客户"><span class="toc-number">7.2.</span> <span class="toc-text">配置client客户</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#sslocal"><span class="toc-number">8.</span> <span class="toc-text">sslocal</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -359,7 +411,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2020 glazia_luna&nbsp;
+                &copy; 2021 glazia_luna&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 <br>

@@ -9,19 +9,19 @@
 
 
 
-    <meta name="description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab">
+    <meta name="description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab,tensorflow">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python | 函数库">
 <meta property="og:url" content="http://www.microyue.com/89aec4a9.html">
 <meta property="og:site_name" content="Bonny &amp; Pony">
-<meta property="og:description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab">
+<meta property="og:description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab,tensorflow">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://www.microyue.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-10-23T06:34:30.955Z">
+<meta property="og:updated_time" content="2020-06-08T07:04:50.491Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python | 函数库">
-<meta name="twitter:description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab">
+<meta name="twitter:description" content="一些比较重坑的python依赖框架caffe，MSL(win下的库)，deeplab,tensorflow">
 <meta name="twitter:image" content="http://www.microyue.com/images/og_image.png">
 
 
@@ -150,7 +150,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-10T16:32:28.000Z">2019-10-11</time>
+                <time class="level-item has-text-grey" datetime="2019-10-11T05:32:28.000Z">2019-10-11</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Skill/">Skill</a>
@@ -160,7 +160,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    5 minutes read (About 752 words)
+                    6 minutes read (About 920 words)
                 </span>
                 
                 
@@ -178,7 +178,17 @@
             
         </h1>
         <div class="content">
-            <h1 id="caffe"><a href="#caffe" class="headerlink" title="caffe"></a>caffe</h1><p>caffe 主流有两种下载方式：</p>
+            <h1 id="安装基本"><a href="#安装基本" class="headerlink" title="安装基本"></a>安装基本</h1><ol>
+<li>pip安装换源：<code>pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade package==version</code></li>
+<li>pip换源 windows方法：<ul>
+<li>打开文件夹(资源输入%appdata%),新建pip文件夹配置pip.ini文件</li>
+<li>输入<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">timeout = 6000</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line">trusted-host = pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="caffe"><a href="#caffe" class="headerlink" title="caffe"></a>caffe</h1><p>caffe 主流有两种下载方式：</p>
 <ul>
 <li><p>Berkey 的框架<a href="https://github.com/BVLC/caffe" target="_blank" rel="noopener">caffe</a>，<a href="http://caffe.berkeleyvision.org/installation.html" target="_blank" rel="noopener">官方install instruction</a></p>
 <ul>
@@ -258,6 +268,21 @@
 </li>
 </ul>
 <h1 id="deeplab"><a href="#deeplab" class="headerlink" title="deeplab"></a>deeplab</h1><p><a href="http://www.microyue.com/1f233a0a.html#more">deeplab blog</a></p>
+<h1 id="tensorflow"><a href="#tensorflow" class="headerlink" title="tensorflow"></a>tensorflow</h1><ol>
+<li><p>tensorflow+keras+Tensorboard的问题：</p>
+<ul>
+<li>tensorflow和适配的tensorboard有版本匹配，<a href="https://docs.floydhub.com/guides/environments/" target="_blank" rel="noopener">查询</a></li>
+<li>tensorboard查看：<code>tensorboard --logdir ./results/tb_results</code></li>
+</ul>
+</li>
+<li><p>tensorflow-gpu</p>
+<ul>
+<li>安装tensorflow-gpu后和keras如果有冲突upgrade一下</li>
+<li>一般自动监测GPU运行，如果想要手动指定：<code>with tf.device(&#39;/cpu:0&#39;):</code> 后跟上命令(一般cudn出错和cuda版本有关系)</li>
+</ul>
+</li>
+</ol>
+<h1 id="end"><a href="#end" class="headerlink" title="end"></a>end</h1>
         </div>
         
         <div class="level is-size-7 is-uppercase">
@@ -391,7 +416,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        30
+                        32
                     </p>
                 </div>
             </div>
@@ -411,7 +436,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        18
                     </p>
                 </div>
             </div>
@@ -432,7 +457,7 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#caffe"><span class="toc-number">1.</span> <span class="toc-text">caffe</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#windows下的Ubuntu"><span class="toc-number">2.</span> <span class="toc-text">windows下的Ubuntu</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#deeplab"><span class="toc-number">3.</span> <span class="toc-text">deeplab</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#安装基本"><span class="toc-number">1.</span> <span class="toc-text">安装基本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#caffe"><span class="toc-number">2.</span> <span class="toc-text">caffe</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#windows下的Ubuntu"><span class="toc-number">3.</span> <span class="toc-text">windows下的Ubuntu</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#deeplab"><span class="toc-number">4.</span> <span class="toc-text">deeplab</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tensorflow"><span class="toc-number">5.</span> <span class="toc-text">tensorflow</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#end"><span class="toc-number">6.</span> <span class="toc-text">end</span></a></li></ol>
         </div>
     </div>
 </div>
@@ -459,7 +484,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2020 glazia_luna&nbsp;
+                &copy; 2021 glazia_luna&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 <br>
